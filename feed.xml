@@ -3,12 +3,24 @@
     <title>Zastave i grbovi</title>
     <link href="https://borna12.github.io/zastave-grbovi/feed.xml" rel="self" />
     <link href="https://borna12.github.io/zastave-grbovi" />
-    <updated>2022-04-08T09:56:45+02:00</updated>
+    <updated>2022-04-08T12:28:00+02:00</updated>
     <author>
         <name>LZMK</name>
     </author>
     <id>https://borna12.github.io/zastave-grbovi</id>
 
+    <entry>
+        <title>Testiranje</title>
+        <author>
+            <name>LZMK</name>
+        </author>
+        <link href="https://borna12.github.io/zastave-grbovi/testiranje/"/>
+        <id>https://borna12.github.io/zastave-grbovi/testiranje/</id>
+
+        <updated>2022-04-08T12:28:00+02:00</updated>
+            <summary></summary>
+        <content></content>
+    </entry>
     <entry>
         <title>Impresum</title>
         <author>
