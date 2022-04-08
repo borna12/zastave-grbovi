@@ -4,7 +4,7 @@ var json = (function () {
   $.ajax({
     'async': false,
     'global': false,
-    'url': './media/files/js/podatci.json',
+    'url': 'js/podatci.json',
     'dataType': "json",
     'success': function (data) {
       json = data;
