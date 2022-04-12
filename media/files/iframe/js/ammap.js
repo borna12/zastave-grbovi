@@ -1,6 +1,5 @@
 (function() {
     var d;
-    var podatci;
     window.AmCharts ? d = window.AmCharts : (d = {}, window.AmCharts = d, d.themes = {}, d.maps = {}, d.inheriting = {}, d.charts = [], d.onReadyArray = [], d.useUTC = !1, d.updateRate = 60, d.uid = 0, d.lang = {}, d.translations = {}, d.mapTranslations = {}, d.windows = {}, d.initHandlers = [], d.amString = "am", d.pmString = "pm");
     d.Class = function(a) {
         var b = function() {
@@ -4096,9 +4095,18 @@
             a || (a = this.selectedObject);
             this.allowMultipleDescriptionWindows || this.closeAllDescriptions();
             if (a.customData) {
+                kontinent=a.customData.kontinent;
+                drzava= a.customData.država;
+                grad=a.customData.glavni_grad;
+                smjestaj=a.customData.smještaj;
+                stanovnici=a.customData.broj_stanovnika;
+                zastava=a.customData.zastava_url;
+                opis_zastava=a.customData.zastava_opis;
+                grb=a.customData.grb_url;
+                grb_opis=a.customData.grb_opis,
+                enciklopedija=a.customData.doznaj_više_url;
                 podatci=
-                
-                "<p class='metapodatci'>KONTINENT: "+a.customData.kontinent+"<br> DRŽAVA: "+a.customData.država+"<br>GLAVNI GRAD: "+a.customData.glavni_grad+"<br> SMJEŠTAJ: "+a.customData.smještaj+"<br> BROJ STANOVNIKA: "+a.customData.broj_stanovnika+"</p><p style='text-align:center'><img src='"+a.customData.zastava_url+"'><p id='zastava_opis'>"+a.customData.zastava_opis+"</p><p style='text-align:center'><img src='"+a.customData.grb_url+"'></p><p id='grb_opis'>"+a.customData.grb_opis+"</p><p style='text-align:center'><a href='"+a.customData.doznaj_više_url+"' target='_blank'>doznaj više...</a></p>";
+                "<p class='metapodatci'><span id='kontinent'>KONTINENT: "+kontinent+"<br> </span><span id='drzava'>DRŽAVA: "+drzava+"<br></span><span id='grad'>GLAVNI GRAD: "+grad+"<br> </span><span id='smjestaj'>SMJEŠTAJ: "+smjestaj+"<br> </span><span id='stanovnici'>BROJ STANOVNIKA: "+stanovnici+"</p><p style='text-align:center' id='zastava'><img src='"+zastava+"'></p><p id='opis_zastava'>"+opis_zastava+"</p><p style='text-align:center' id='grb'><img src='"+grb+"'></p><p id='grb_opis'>"+grb_opis+"</p><p style='text-align:center' id='enciklopedija'><a href='"+enciklopedija+"' target='_blank'>doznaj više...</a></p>";
                 var b = a.descriptionWindow;
                 b && b.close();
                 b = new d.DescriptionWindow;
@@ -6172,6 +6180,9 @@
             b.style.maxHeight = g.maxHeight - d - 20 + "px";
             f.appendChild(b);
             b.innerHTML = podatci;
+            if (kontinent==null || kontinent==""){
+                document.getElementById("kontinent").style.display = "none";
+            }
         },
         close: function() {
             try {
