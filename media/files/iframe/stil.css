@@ -193,6 +193,8 @@ body,html{margin: 0;overflow: hidden;}
     height: 400px;
     width: 100%;
   }
+
+  #opis_zastava{text-align: justify;}
     @media screen and (min-width: 700px) {
       .paralax {
         height: 500px;

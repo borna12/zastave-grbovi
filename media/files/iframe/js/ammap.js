@@ -4106,7 +4106,7 @@
                 grb_opis=a.customData.grb_opis,
                 enciklopedija=a.customData.doznaj_više_url;
                 podatci=
-                "<p class='metapodatci'><span id='kontinent'>KONTINENT: "+kontinent+"<br> </span><span id='drzava'>DRŽAVA: "+drzava+"<br></span><span id='grad'>GLAVNI GRAD: "+grad+"<br> </span><span id='smjestaj'>SMJEŠTAJ: "+smjestaj+"<br> </span><span id='stanovnici'>BROJ STANOVNIKA: "+stanovnici+"</p><p style='text-align:center' id='zastava'><img src='"+zastava+"'></p><p id='opis_zastava'>"+opis_zastava+"</p><p style='text-align:center' id='grb'><img src='"+grb+"'></p><p id='grb_opis'>"+grb_opis+"</p><p style='text-align:center' id='enciklopedija'><a href='"+enciklopedija+"' target='_blank'>doznaj više...</a></p>";
+                "<p class='metapodatci'><span id='kontinent'>KONTINENT: "+kontinent+"<br> </span><span id='drzava'>DRŽAVA: "+drzava+"<br></span><span id='grad'>GLAVNI GRAD: "+grad+"<br> </span><span id='smjestaj'>SMJEŠTAJ: "+smjestaj+"<br> </span><span id='stanovnici'>BROJ STANOVNIKA: "+stanovnici+"</p><p style='text-align:center' id='zastava'><img src='zastave/"+zastava+"'></p><p id='opis_zastava'>"+opis_zastava+"</p><p style='text-align:center' id='grb'><img src='grbovi/"+grb+"'></p><p id='grb_opis'>"+grb_opis+"</p><p style='text-align:center' id='enciklopedija'><a href='"+enciklopedija+"' target='_blank'>doznaj više...</a></p>";
                 var b = a.descriptionWindow;
                 b && b.close();
                 b = new d.DescriptionWindow;
@@ -6183,6 +6183,35 @@
             if (kontinent==null || kontinent==""){
                 document.getElementById("kontinent").style.display = "none";
             }
+            if (drzava==null || drzava==""){
+                document.getElementById("drzava").style.display = "none";
+            }
+            if (grad==null || grad==""){
+                document.getElementById("grad").style.display = "none";
+            }
+            if (smjestaj==null || smjestaj==""){
+                document.getElementById("smjestaj").style.display = "none";
+            }
+            if (stanovnici==null || stanovnici==""){
+                document.getElementById("stanovnici").style.display = "none";
+            }
+            if (zastava==null || zastava==""){
+                document.getElementById("zastava").style.display = "none";
+            }
+            if (opis_zastava==null || opis_zastava==""){
+                document.getElementById("opis_zastava").style.display = "none";
+            }
+            if (grb==null || grb==""){
+                document.getElementById("grb").style.display = "none";
+            }
+            if (grb_opis==null || grb_opis==""){
+                document.getElementById("grb_opis").style.display = "none";
+            }
+
+            if (enciklopedija==null || enciklopedija==""){
+                document.getElementById("enciklopedija").style.display = "none";
+            }
+         
         },
         close: function() {
             try {
