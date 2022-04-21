@@ -1,28 +1,28 @@
-(function() {
+(function () {
     var d;
     window.AmCharts ? d = window.AmCharts : (d = {}, window.AmCharts = d, d.themes = {}, d.maps = {}, d.inheriting = {}, d.charts = [], d.onReadyArray = [], d.useUTC = !1, d.updateRate = 60, d.uid = 0, d.lang = {}, d.translations = {}, d.mapTranslations = {}, d.windows = {}, d.initHandlers = [], d.amString = "am", d.pmString = "pm");
-    d.Class = function(a) {
-        var b = function() {
+    d.Class = function (a) {
+        var b = function () {
             arguments[0] !== d.inheriting && (this.events = {}, this.construct.apply(this, arguments))
         };
-        a.inherits ? (b.prototype = new a.inherits(d.inheriting), b.base = a.inherits.prototype, delete a.inherits) : (b.prototype.createEvents = function() {
+        a.inherits ? (b.prototype = new a.inherits(d.inheriting), b.base = a.inherits.prototype, delete a.inherits) : (b.prototype.createEvents = function () {
             for (var a = 0; a < arguments.length; a++) this.events[arguments[a]] = []
-        }, b.prototype.listenTo = function(a, b, c) {
+        }, b.prototype.listenTo = function (a, b, c) {
             this.removeListener(a, b, c);
             a.events[b].push({
                 handler: c,
                 scope: this
             })
-        }, b.prototype.addListener = function(a, b, c) {
+        }, b.prototype.addListener = function (a, b, c) {
             this.removeListener(this, a, b);
             a && this.events[a] && this.events[a].push({
                 handler: b,
                 scope: c
             })
-        }, b.prototype.removeListener = function(a, b, c) {
+        }, b.prototype.removeListener = function (a, b, c) {
             if (a && a.events && (a = a.events[b]))
                 for (b = a.length - 1; 0 <= b; b--) a[b].handler === c && a.splice(b, 1)
-        }, b.prototype.fire = function(a) {
+        }, b.prototype.fire = function (a) {
             for (var b = this.events[a.type], c = 0; c < b.length; c++) {
                 var d = b[c];
                 d.handler.call(d.scope, a)
@@ -31,24 +31,24 @@
         for (var c in a) b.prototype[c] = a[c];
         return b
     };
-    d.addChart = function(a) {
-        window.requestAnimationFrame ? d.animationRequested || (d.animationRequested = !0, window.requestAnimationFrame(d.update)) : d.updateInt || (d.updateInt = setInterval(function() {
+    d.addChart = function (a) {
+        window.requestAnimationFrame ? d.animationRequested || (d.animationRequested = !0, window.requestAnimationFrame(d.update)) : d.updateInt || (d.updateInt = setInterval(function () {
             d.update()
         }, Math.round(1E3 / d.updateRate)));
         d.charts.push(a)
     };
-    d.removeChart = function(a) {
+    d.removeChart = function (a) {
         for (var b = d.charts, c = b.length - 1; 0 <= c; c--) b[c] == a && b.splice(c, 1);
         0 === b.length && (d.requestAnimation && (window.cancelAnimationFrame(d.requestAnimation), d.animationRequested = !1), d.updateInt && (clearInterval(d.updateInt), d.updateInt = NaN))
     };
     d.isModern = !0;
-    d.getIEVersion = function() {
+    d.getIEVersion = function () {
         var a = 0,
             b, c;
         "Microsoft Internet Explorer" == navigator.appName && (b = navigator.userAgent, c = /MSIE ([0-9]{1,}[.0-9]{0,})/, null !== c.exec(b) && (a = parseFloat(RegExp.$1)));
         return a
     };
-    d.applyLang = function(a, b) {
+    d.applyLang = function (a, b) {
         var c = d.translations;
         b.dayNames = d.extend({}, d.dayNames);
         b.shortDayNames = d.extend({}, d.shortDayNames);
@@ -67,25 +67,25 @@
     if (document.addEventListener || window.opera) d.isNN = !0, d.isIE = !1, d.dx = .5, d.dy = .5;
     document.attachEvent && (d.isNN = !1, d.isIE = !0, d.isModern || (d.dx = 0, d.dy = 0));
     window.chrome && (d.chrome = !0);
-    d.handleMouseUp = function(a) {
+    d.handleMouseUp = function (a) {
         for (var b = d.charts, c = 0; c < b.length; c++) {
             var e = b[c];
             e && e.handleReleaseOutside && e.handleReleaseOutside(a)
         }
     };
-    d.handleMouseMove = function(a) {
+    d.handleMouseMove = function (a) {
         for (var b = d.charts, c = 0; c < b.length; c++) {
             var e = b[c];
             e && e.handleMouseMove && e.handleMouseMove(a)
         }
     };
-    d.handleKeyUp = function(a) {
+    d.handleKeyUp = function (a) {
         for (var b = d.charts, c = 0; c < b.length; c++) {
             var e = b[c];
             e && e.handleKeyUp && e.handleKeyUp(a)
         }
     };
-    d.handleWheel = function(a) {
+    d.handleWheel = function (a) {
         for (var b = d.charts, c = 0; c < b.length; c++) {
             var e = b[c];
             if (e && e.mouseIsOver) {
@@ -94,16 +94,16 @@
             }
         }
     };
-    d.resetMouseOver = function() {
+    d.resetMouseOver = function () {
         for (var a = d.charts, b = 0; b < a.length; b++) {
             var c = a[b];
             c && (c.mouseIsOver = !1)
         }
     };
-    d.ready = function(a) {
+    d.ready = function (a) {
         d.onReadyArray.push(a)
     };
-    d.handleLoad = function() {
+    d.handleLoad = function () {
         d.isReady = !0;
         for (var a = d.onReadyArray, b = 0; b < a.length; b++) {
             var c = a[b];
@@ -111,13 +111,13 @@
         }
         d.onReadyArray = []
     };
-    d.addInitHandler = function(a, b) {
+    d.addInitHandler = function (a, b) {
         d.initHandlers.push({
             method: a,
             types: b
         })
     };
-    d.callInitHandler = function(a) {
+    d.callInitHandler = function (a) {
         var b = d.initHandlers;
         if (d.initHandlers)
             for (var c = 0; c < b.length; c++) {
@@ -125,15 +125,15 @@
                 e.types ? d.isInArray(e.types, a.type) && e.method(a) : e.method(a)
             }
     };
-    d.getUniqueId = function() {
+    d.getUniqueId = function () {
         d.uid++;
         return "AmChartsEl-" + d.uid
     };
-    d.addGlobalListeners = function() {
+    d.addGlobalListeners = function () {
         d.globalListenersAdded || (d.globalListenersAdded = !0, d.isNN && (document.addEventListener("mousemove", d.handleMouseMove), document.addEventListener("keyup", d.handleKeyUp), document.addEventListener("mouseup", d.handleMouseUp, !0), window.addEventListener("load", d.handleLoad, !0)), d.isIE && (document.attachEvent("onmousemove", d.handleMouseMove), document.attachEvent("onmouseup", d.handleMouseUp), window.attachEvent("onload", d.handleLoad)))
     };
     d.addGlobalListeners();
-    d.addWheelListeners = function() {
+    d.addWheelListeners = function () {
         d.wheelIsListened || (d.isNN && (window.addEventListener("DOMMouseScroll", d.handleWheel, {
             passive: !1,
             useCapture: !0
@@ -143,7 +143,7 @@
         })), d.isIE && document.attachEvent("onmousewheel", d.handleWheel));
         d.wheelIsListened = !0
     };
-    d.clear = function() {
+    d.clear = function () {
         var a = d.charts;
         if (a)
             for (var b = a.length - 1; 0 <= b; b--) a[b].clear();
@@ -155,7 +155,7 @@
         d.globalListenersAdded = !1;
         d.wheelIsListened = !1
     };
-    d.makeChart = function(a, b, c) {
+    d.makeChart = function (a, b, c) {
         var e = b.type,
             g = b.theme;
         d.addGlobalListeners();
@@ -190,21 +190,21 @@
                 f = new d.AmGanttChart(g)
         }
         d.extend(f, b);
-        d.isReady ? isNaN(c) ? f.write(a) : setTimeout(function() {
+        d.isReady ? isNaN(c) ? f.write(a) : setTimeout(function () {
             d.realWrite(f, a)
-        }, c) : d.ready(function() {
-            isNaN(c) ? f.write(a) : setTimeout(function() {
+        }, c) : d.ready(function () {
+            isNaN(c) ? f.write(a) : setTimeout(function () {
                 d.realWrite(f, a)
             }, c)
         });
         return f
     };
-    d.realWrite = function(a, b) {
+    d.realWrite = function (a, b) {
         a.write(b)
     };
     d.updateCount = 0;
     d.validateAt = Math.round(d.updateRate / 10);
-    d.update = function() {
+    d.update = function () {
         var a = d.charts;
         d.updateCount++;
         var b = !1;
@@ -215,9 +215,9 @@
     };
     "complete" == document.readyState && d.handleLoad()
 })();
-(function() {
+(function () {
     var d = window.AmCharts;
-    d.toBoolean = function(a, b) {
+    d.toBoolean = function (a, b) {
         if (void 0 === a) return b;
         switch (String(a).toLowerCase()) {
             case "true":
@@ -233,12 +233,12 @@
                 return !!a
         }
     };
-    d.removeFromArray = function(a, b) {
+    d.removeFromArray = function (a, b) {
         var c;
         if (void 0 !== b && void 0 !== a)
             for (c = a.length - 1; 0 <= c; c--) a[c] == b && a.splice(c, 1)
     };
-    d.getPath = function() {
+    d.getPath = function () {
         var a = document.getElementsByTagName("script");
         if (a)
             for (var b = 0; b < a.length; b++) {
@@ -246,23 +246,23 @@
                 if (-1 !== c.search(/\/(amcharts|ammap)\.js/)) return c.replace(/\/(amcharts|ammap)\.js.*/, "/")
             }
     };
-    d.normalizeUrl = function(a) {
+    d.normalizeUrl = function (a) {
         return "" !== a && -1 === a.search(/\/$/) ? a + "/" : a
     };
-    d.isAbsolute = function(a) {
+    d.isAbsolute = function (a) {
         return 0 === a.search(/^http[s]?:|^\//)
     };
-    d.isInArray = function(a, b) {
+    d.isInArray = function (a, b) {
         for (var c = 0; c < a.length; c++)
             if (a[c] == b) return !0;
         return !1
     };
-    d.getDecimals = function(a) {
+    d.getDecimals = function (a) {
         var b = 0;
         isNaN(a) || (a = String(a), -1 != a.indexOf("e-") ? b = Number(a.split("-")[1]) : -1 != a.indexOf(".") && (b = a.split(".")[1].length));
         return b
     };
-    d.wordwrap = function(a, b, c, e) {
+    d.wordwrap = function (a, b, c, e) {
         var g, f, k, h;
         a += "";
         if (1 > b) return a;
@@ -274,10 +274,10 @@
         }
         return h.join(c)
     };
-    d.trim = function(a) {
+    d.trim = function (a) {
         return a.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, "")
     };
-    d.wrappedText = function(a, b, c, e, g, f, k, h) {
+    d.wrappedText = function (a, b, c, e, g, f, k, h) {
         var l = d.text(a, b, c, e, g, f, k);
         if (l) {
             var m = l.getBBox();
@@ -293,33 +293,33 @@
         }
         return l
     };
-    d.getStyle = function(a, b) {
+    d.getStyle = function (a, b) {
         var c = "";
         if (document.defaultView && document.defaultView.getComputedStyle) try {
             c = document.defaultView.getComputedStyle(a, "").getPropertyValue(b)
-        } catch (e) {} else a.currentStyle && (b = b.replace(/\-(\w)/g, function(a, b) {
+        } catch (e) { } else a.currentStyle && (b = b.replace(/\-(\w)/g, function (a, b) {
             return b.toUpperCase()
         }), c = a.currentStyle[b]);
         return c
     };
-    d.removePx = function(a) {
+    d.removePx = function (a) {
         if (void 0 !== a) return Number(a.substring(0, a.length - 2))
     };
-    d.getURL = function(a, b) {
+    d.getURL = function (a, b) {
         if (a)
             if ("_self" != b && b)
                 if ("_top" == b && window.top) window.top.location.href = a;
                 else if ("_parent" == b && window.parent) window.parent.location.href = a;
-        else if ("_blank" == b) window.open(a);
-        else {
-            var c = document.getElementsByName(b)[0];
-            c ? c.src = a : (c = d.windows[b]) ? c.opener && !c.opener.closed ? c.location.href = a : d.windows[b] = window.open(a) : d.windows[b] = window.open(a)
-        } else window.location.href = a
+                else if ("_blank" == b) window.open(a);
+                else {
+                    var c = document.getElementsByName(b)[0];
+                    c ? c.src = a : (c = d.windows[b]) ? c.opener && !c.opener.closed ? c.location.href = a : d.windows[b] = window.open(a) : d.windows[b] = window.open(a)
+                } else window.location.href = a
     };
-    d.ifArray = function(a) {
+    d.ifArray = function (a) {
         return a && "object" == typeof a && 0 < a.length ? !0 : !1
     };
-    d.callMethod = function(a, b) {
+    d.callMethod = function (a, b) {
         var c;
         for (c = 0; c < b.length; c++) {
             var e = b[c];
@@ -336,10 +336,10 @@
             }
         }
     };
-    d.toNumber = function(a) {
+    d.toNumber = function (a) {
         return "number" == typeof a ? a : Number(String(a).replace(/[^0-9\-.]+/g, ""))
     };
-    d.toColor = function(a) {
+    d.toColor = function (a) {
         if ("" !== a && void 0 !== a)
             if (-1 != a.indexOf(",")) {
                 a = a.split(",");
@@ -351,28 +351,28 @@
             } else a = a.substring(a.length - 6, a.length), a = "#" + a;
         return a
     };
-    d.toCoordinate = function(a, b, c) {
+    d.toCoordinate = function (a, b, c) {
         var e;
         void 0 !== a && (a = String(a), c && c < b && (b = c), e = Number(a), -1 != a.indexOf("!") && (e = b - Number(a.substr(1))), -1 != a.indexOf("%") && (e = b * Number(a.substr(0, a.length - 1)) / 100));
         return e
     };
-    d.fitToBounds = function(a, b, c) {
+    d.fitToBounds = function (a, b, c) {
         a < b && (a = b);
         a > c && (a = c);
         return a
     };
-    d.isDefined = function(a) {
+    d.isDefined = function (a) {
         return void 0 === a ? !1 : !0
     };
-    d.stripNumbers = function(a) {
+    d.stripNumbers = function (a) {
         return a.replace(/[0-9]+/g, "")
     };
-    d.roundTo = function(a, b) {
+    d.roundTo = function (a, b) {
         if (0 > b) return a;
         var c = Math.pow(10, b);
         return Math.round(a * c) / c
     };
-    d.toFixed = function(a, b) {
+    d.toFixed = function (a, b) {
         var c = !1;
         0 > a && (c = !0, a = Math.abs(a));
         var e = String(Math.round(a * Math.pow(10, b)));
@@ -389,7 +389,7 @@
         }
         return String(e)
     };
-    d.formatDuration = function(a, b, c, e, g, f) {
+    d.formatDuration = function (a, b, c, e, g, f) {
         var k = d.intervals,
             h = f.decimalSeparator;
         if (a >= k[b].contains) {
@@ -410,7 +410,7 @@
         ":" == c.charAt(c.length - 1) && (c = c.substring(0, c.length - 1));
         return c
     };
-    d.formatNumber = function(a, b, c, e, g) {
+    d.formatNumber = function (a, b, c, e, g) {
         a = d.roundTo(a, b.precision);
         isNaN(c) && (c = b.precision);
         var f = b.decimalSeparator;
@@ -438,12 +438,12 @@
         !0 === g && (m += "%");
         return m
     };
-    d.addZeroes = function(a, b, c) {
+    d.addZeroes = function (a, b, c) {
         a = a.split(b);
         void 0 === a[1] && 0 < c && (a[1] = "0");
         return a[1].length < c ? (a[1] += "0", d.addZeroes(a[0] + b + a[1], b, c)) : void 0 !== a[1] ? a[0] + b + a[1] : a[0]
     };
-    d.scientificToNormal = function(a) {
+    d.scientificToNormal = function (a) {
         var b;
         a = String(a).split("e");
         var c;
@@ -460,16 +460,16 @@
         }
         return b
     };
-    d.toScientific = function(a, b) {
+    d.toScientific = function (a, b) {
         if (0 === a) return "0";
         var c = Math.floor(Math.log(Math.abs(a)) * Math.LOG10E),
             e = String(e).split(".").join(b);
         return String(e) + "e" + c
     };
-    d.randomColor = function() {
+    d.randomColor = function () {
         return "#" + ("00000" + (16777216 * Math.random() << 0).toString(16)).substr(-6)
     };
-    d.hitTest = function(a, b, c) {
+    d.hitTest = function (a, b, c) {
         var e = !1,
             g = a.x,
             f = a.x + a.width,
@@ -483,13 +483,13 @@
         e || !0 === c || (e = d.hitTest(b, a, !0));
         return e
     };
-    d.isInRectangle = function(a, b, c) {
+    d.isInRectangle = function (a, b, c) {
         return a >= c.x - 5 && a <= c.x + c.width + 5 && b >= c.y - 5 && b <= c.y + c.height + 5 ? !0 : !1
     };
-    d.isPercents = function(a) {
+    d.isPercents = function (a) {
         if (-1 != String(a).indexOf("%")) return !0
     };
-    d.formatValue = function(a, b, c, e, g, f, k, h) {
+    d.formatValue = function (a, b, c, e, g, f, k, h) {
         if (b) {
             void 0 === g && (g = "");
             var l;
@@ -501,7 +501,7 @@
         }
         return a
     };
-    d.formatDataContextValue = function(a, b) {
+    d.formatDataContextValue = function (a, b) {
         if (a) {
             var c = a.match(/\[\[.*?\]\]/g),
                 e;
@@ -513,7 +513,7 @@
         }
         return a
     };
-    d.massReplace = function(a, b) {
+    d.massReplace = function (a, b) {
         for (var c in b)
             if (b.hasOwnProperty(c)) {
                 var e = b[c];
@@ -521,10 +521,10 @@
                 a = a.replace(c, e)
             } return a
     };
-    d.cleanFromEmpty = function(a) {
+    d.cleanFromEmpty = function (a) {
         return a.replace(/\[\[[^\]]*\]\]/g, "")
     };
-    d.addPrefix = function(a, b, c, e, g) {
+    d.addPrefix = function (a, b, c, e, g) {
         var f = d.formatNumber(a, e),
             k = "",
             h, l, m;
@@ -534,33 +534,33 @@
         if (1 < a)
             for (h = b.length - 1; - 1 < h; h--) {
                 if (a >= b[h].number && (l = a / b[h].number, m = Number(e.precision), 1 > m && (m = 1), c = d.roundTo(l, m), m = d.formatNumber(c, {
-                        precision: -1,
-                        decimalSeparator: e.decimalSeparator,
-                        thousandsSeparator: e.thousandsSeparator
-                    }), !g || l == c)) {
+                    precision: -1,
+                    decimalSeparator: e.decimalSeparator,
+                    thousandsSeparator: e.thousandsSeparator
+                }), !g || l == c)) {
                     f = k + "" + m + "" + b[h].prefix;
                     break
                 }
             } else
-                for (h = 0; h < c.length; h++)
-                    if (a <= c[h].number) {
-                        l = a / c[h].number;
-                        m = Math.abs(Math.floor(Math.log(l) * Math.LOG10E));
-                        l = d.roundTo(l, m);
-                        f = k + "" + l + "" + c[h].prefix;
-                        break
-                    } return f
+            for (h = 0; h < c.length; h++)
+                if (a <= c[h].number) {
+                    l = a / c[h].number;
+                    m = Math.abs(Math.floor(Math.log(l) * Math.LOG10E));
+                    l = d.roundTo(l, m);
+                    f = k + "" + l + "" + c[h].prefix;
+                    break
+                } return f
     };
-    d.remove = function(a) {
+    d.remove = function (a) {
         a && a.remove()
     };
-    d.getEffect = function(a) {
+    d.getEffect = function (a) {
         ">" == a && (a = "easeOutSine");
         "<" == a && (a = "easeInSine");
         "elastic" == a && (a = "easeOutElastic");
         return a
     };
-    d.getObjById = function(a, b) {
+    d.getObjById = function (a, b) {
         var c, e;
         for (e = 0; e < a.length; e++) {
             var d = a[e];
@@ -571,69 +571,69 @@
         }
         return c
     };
-    d.applyTheme = function(a, b, c) {
+    d.applyTheme = function (a, b, c) {
         b || (b = d.theme);
         try {
             b = JSON.parse(JSON.stringify(b))
-        } catch (e) {}
+        } catch (e) { }
         b && b[c] && d.extend(a, b[c])
     };
-    d.isString = function(a) {
+    d.isString = function (a) {
         return "string" == typeof a ? !0 : !1
     };
-    d.extend = function(a, b, c) {
+    d.extend = function (a, b, c) {
         var e;
         a || (a = {});
         for (e in b) c ? a.hasOwnProperty(e) || (a[e] = b[e]) : a[e] = b[e];
         return a
     };
-    d.copyProperties = function(a, b) {
+    d.copyProperties = function (a, b) {
         for (var c in a) a.hasOwnProperty(c) && "events" != c && void 0 !== a[c] && "function" != typeof a[c] && "cname" != c && (b[c] = a[c])
     };
-    d.processObject = function(a, b, c, e) {
+    d.processObject = function (a, b, c, e) {
         if (!1 === a instanceof b && (a = e ? d.extend(new b(c), a) : d.extend(a, new b(c), !0), a.listeners))
             for (var g in a.listeners) b = a.listeners[g], a.addListener(b.event, b.method);
         return a
     };
-    d.fixNewLines = function(a) {
+    d.fixNewLines = function (a) {
         var b = RegExp("\\n", "g");
         a && (a = a.replace(b, "<br />"));
         return a
     };
-    d.fixBrakes = function(a) {
+    d.fixBrakes = function (a) {
         if (d.isModern) {
             var b = RegExp("<br>", "g");
             a && (a = a.replace(b, "\n"))
         } else a = d.fixNewLines(a);
         return a
     };
-    d.deleteObject = function(a, b) {
+    d.deleteObject = function (a, b) {
         if (a) {
             if (void 0 === b || null === b) b = 20;
             if (0 !== b)
                 if ("[object Array]" === Object.prototype.toString.call(a))
                     for (var c = 0; c < a.length; c++) d.deleteObject(a[c], b - 1), a[c] = null;
                 else if (a && !a.tagName) try {
-                for (c in a.theme = null, a) a[c] && ("object" == typeof a[c] && d.deleteObject(a[c], b - 1), "function" != typeof a[c] && (a[c] = null))
-            } catch (e) {}
+                    for (c in a.theme = null, a) a[c] && ("object" == typeof a[c] && d.deleteObject(a[c], b - 1), "function" != typeof a[c] && (a[c] = null))
+                } catch (e) { }
         }
     };
-    d.bounce = function(a, b, c, e, d) {
+    d.bounce = function (a, b, c, e, d) {
         return (b /= d) < 1 / 2.75 ? 7.5625 * e * b * b + c : b < 2 / 2.75 ? e * (7.5625 * (b -= 1.5 / 2.75) * b + .75) + c : b < 2.5 / 2.75 ? e * (7.5625 * (b -= 2.25 / 2.75) * b + .9375) + c : e * (7.5625 * (b -= 2.625 / 2.75) * b + .984375) + c
     };
-    d.easeInOutQuad = function(a, b, c, e, d) {
+    d.easeInOutQuad = function (a, b, c, e, d) {
         b /= d / 2;
         if (1 > b) return e / 2 * b * b + c;
         b--;
         return -e / 2 * (b * (b - 2) - 1) + c
     };
-    d.easeInSine = function(a, b, c, e, d) {
+    d.easeInSine = function (a, b, c, e, d) {
         return -e * Math.cos(b / d * (Math.PI / 2)) + e + c
     };
-    d.easeOutSine = function(a, b, c, e, d) {
+    d.easeOutSine = function (a, b, c, e, d) {
         return e * Math.sin(b / d * (Math.PI / 2)) + c
     };
-    d.easeOutElastic = function(a, b, c, e, d) {
+    d.easeOutElastic = function (a, b, c, e, d) {
         a = 1.70158;
         var f = 0,
             k = e;
@@ -643,13 +643,13 @@
         k < Math.abs(e) ? (k = e, a = f / 4) : a = f / (2 * Math.PI) * Math.asin(e / k);
         return k * Math.pow(2, -10 * b) * Math.sin(2 * (b * d - a) * Math.PI / f) + e + c
     };
-    d.fixStepE = function(a) {
+    d.fixStepE = function (a) {
         a = a.toExponential(0).split("e");
         var b = Number(a[1]);
         9 == Number(a[0]) && b++;
         return d.generateNumber(1, b)
     };
-    d.generateNumber = function(a, b) {
+    d.generateNumber = function (a, b) {
         var c = "",
             e;
         e = 0 > b ? Math.abs(b) - 1 : Math.abs(b);
@@ -657,7 +657,7 @@
         for (d = 0; d < e; d++) c += "0";
         return 0 > b ? Number("0." + c + String(a)) : Number(String(a) + c)
     };
-    d.setCN = function(a, b, c, e) {
+    d.setCN = function (a, b, c, e) {
         if (a.addClassNames && b && (b = b.node) && c) {
             var d = b.getAttribute("class");
             a = a.classNamePrefix + "-";
@@ -665,10 +665,10 @@
             d ? b.setAttribute("class", d + " " + a + c) : b.setAttribute("class", a + c)
         }
     };
-    d.removeCN = function(a, b, c) {
+    d.removeCN = function (a, b, c) {
         b && (b = b.node) && c && (b = b.classList) && b.remove(a.classNamePrefix + "-" + c)
     };
-    d.parseDefs = function(a, b) {
+    d.parseDefs = function (a, b) {
         for (var c in a) {
             var e = typeof a[c];
             if (0 < a[c].length && "object" == e)
@@ -677,10 +677,10 @@
         }
     }
 })();
-(function() {
+(function () {
     var d = window.AmCharts;
     d.AmDraw = d.Class({
-        construct: function(a, b, c, e) {
+        construct: function (a, b, c, e) {
             d.SVG_NS = "http://www.w3.org/2000/svg";
             d.SVG_XLINK = "http://www.w3.org/1999/xlink";
             d.hasSVG = !!document.createElementNS && !!document.createElementNS(d.SVG_NS, "svg").createSVGRect;
@@ -692,10 +692,10 @@
             this.rBin = document.createElement("div");
             d.hasSVG ? (d.SVG = !0, b = this.createSvgElement("svg"), a.appendChild(b), this.container = b, this.addDefs(e), this.R = new d.SVGRenderer(this)) : d.isIE && d.VMLRenderer && (d.VML = !0, d.vmlStyleSheet || (document.namespaces.add("amvml", "urn:schemas-microsoft-com:vml"), 31 > document.styleSheets.length ? (b = document.createStyleSheet(), b.addRule(".amvml", "behavior:url(#default#VML); display:inline-block; antialias:true"), d.vmlStyleSheet = b) : document.styleSheets[0].addRule(".amvml", "behavior:url(#default#VML); display:inline-block; antialias:true")), this.container = a, this.R = new d.VMLRenderer(this, e), this.R.disableSelection(a))
         },
-        createSvgElement: function(a) {
+        createSvgElement: function (a) {
             return document.createElementNS(d.SVG_NS, a)
         },
-        circle: function(a, b, c, e) {
+        circle: function (a, b, c, e) {
             var g = new d.AmDObject("circle", this);
             g.attr({
                 r: c,
@@ -705,7 +705,7 @@
             this.addToContainer(g.node, e);
             return g
         },
-        ellipse: function(a, b, c, e, g) {
+        ellipse: function (a, b, c, e, g) {
             var f = new d.AmDObject("ellipse", this);
             f.attr({
                 rx: c,
@@ -716,10 +716,10 @@
             this.addToContainer(f.node, g);
             return f
         },
-        setSize: function(a, b) {
+        setSize: function (a, b) {
             0 < a && 0 < b && (this.container.style.width = a + "px", this.container.style.height = b + "px")
         },
-        rect: function(a, b, c, e, g, f, k) {
+        rect: function (a, b, c, e, g, f, k) {
             var h = new d.AmDObject("rect", this);
             d.VML && (g = Math.round(100 * g / Math.min(c, e)), c += 2 * f, e += 2 * f, h.bw = f, h.node.style.marginLeft = -f, h.node.style.marginTop = -f);
             1 > c && (c = 1);
@@ -736,7 +736,7 @@
             this.addToContainer(h.node, k);
             return h
         },
-        image: function(a, b, c, e, g, f) {
+        image: function (a, b, c, e, g, f) {
             var k = new d.AmDObject("image", this);
             k.attr({
                 x: b,
@@ -748,14 +748,14 @@
             this.addToContainer(k.node, f);
             return k
         },
-        addToContainer: function(a, b) {
+        addToContainer: function (a, b) {
             b || (b = this.container);
             b.appendChild(a)
         },
-        text: function(a, b, c) {
+        text: function (a, b, c) {
             return this.R.text(a, b, c)
         },
-        path: function(a, b, c, e) {
+        path: function (a, b, c, e) {
             var g = new d.AmDObject("path", this);
             e || (e = "100,100");
             g.attr({
@@ -769,17 +769,17 @@
             this.addToContainer(g.node, b);
             return g
         },
-        set: function(a) {
+        set: function (a) {
             return this.R.set(a)
         },
-        remove: function(a) {
+        remove: function (a) {
             if (a) {
                 var b = this.rBin;
                 b.appendChild(a);
                 b.innerHTML = ""
             }
         },
-        renderFix: function() {
+        renderFix: function () {
             var a = this.container,
                 b = a.style;
             b.top = "0px";
@@ -790,12 +790,12 @@
                     d = c.top - Math.round(c.top);
                 e && (b.left = e + "px");
                 d && (b.top = d + "px")
-            } catch (f) {}
+            } catch (f) { }
         },
-        update: function() {
+        update: function () {
             this.R.update()
         },
-        addDefs: function(a) {
+        addDefs: function (a) {
             if (d.hasSVG) {
                 var b = this.createSvgElement("desc"),
                     c = this.container;
@@ -814,31 +814,31 @@
         }
     })
 })();
-(function() {
+(function () {
     var d = window.AmCharts;
     d.AmDObject = d.Class({
-        construct: function(a, b) {
+        construct: function (a, b) {
             this.D = b;
             this.R = b.R;
             this.node = this.R.create(this, a);
             this.y = this.x = 0;
             this.scale = 1
         },
-        attr: function(a) {
+        attr: function (a) {
             this.R.attr(this, a);
             return this
         },
-        getAttr: function(a) {
+        getAttr: function (a) {
             return this.node.getAttribute(a)
         },
-        setAttr: function(a, b) {
+        setAttr: function (a, b) {
             this.R.setAttr(this, a, b);
             return this
         },
-        clipRect: function(a, b, c, e) {
+        clipRect: function (a, b, c, e) {
             this.R.clipRect(this, a, b, c, e)
         },
-        translate: function(a, b, c, e) {
+        translate: function (a, b, c, e) {
             e || (a = Math.round(a), b = Math.round(b));
             this.R.move(this, a, b, c);
             this.x = a;
@@ -846,11 +846,11 @@
             this.scale = c;
             this.angle && this.rotate(this.angle)
         },
-        rotate: function(a, b) {
+        rotate: function (a, b) {
             this.R.rotate(this, a, b);
             this.angle = a
         },
-        animate: function(a, b, c) {
+        animate: function (a, b, c) {
             for (var e in a)
                 if (a.hasOwnProperty(e)) {
                     var g = e,
@@ -859,7 +859,7 @@
                     this.R.animate(this, g, f, b, c)
                 }
         },
-        push: function(a) {
+        push: function (a) {
             if (a) {
                 var b = this.node;
                 b.appendChild(a.node);
@@ -868,28 +868,28 @@
                 (a = a.grad) && b.appendChild(a)
             }
         },
-        text: function(a) {
+        text: function (a) {
             this.R.setText(this, a)
         },
-        remove: function() {
+        remove: function () {
             this.stop();
             this.R.remove(this)
         },
-        clear: function() {
+        clear: function () {
             var a = this.node;
             if (a.hasChildNodes())
                 for (; 1 <= a.childNodes.length;) a.removeChild(a.firstChild)
         },
-        hide: function() {
+        hide: function () {
             this.setAttr("visibility", "hidden")
         },
-        show: function() {
+        show: function () {
             this.setAttr("visibility", "visible")
         },
-        getBBox: function() {
+        getBBox: function () {
             return this.R.getBBox(this)
         },
-        toFront: function() {
+        toFront: function () {
             var a = this.node;
             if (a) {
                 this.prevNextNode = a.nextSibling;
@@ -897,11 +897,11 @@
                 b && b.appendChild(a)
             }
         },
-        toPrevious: function() {
+        toPrevious: function () {
             var a = this.node;
             a && this.prevNextNode && (a = a.parentNode) && a.insertBefore(this.prevNextNode, null)
         },
-        toBack: function() {
+        toBack: function () {
             var a = this.node;
             if (a) {
                 this.prevNextNode = a.nextSibling;
@@ -912,91 +912,91 @@
                 }
             }
         },
-        mouseover: function(a) {
+        mouseover: function (a) {
             this.R.addListener(this, "mouseover", a);
             return this
         },
-        mouseout: function(a) {
+        mouseout: function (a) {
             this.R.addListener(this, "mouseout", a);
             return this
         },
-        click: function(a) {
+        click: function (a) {
             this.R.addListener(this, "click", a);
             return this
         },
-        dblclick: function(a) {
+        dblclick: function (a) {
             this.R.addListener(this, "dblclick", a);
             return this
         },
-        mousedown: function(a) {
+        mousedown: function (a) {
             this.R.addListener(this, "mousedown", a);
             return this
         },
-        mouseup: function(a) {
+        mouseup: function (a) {
             this.R.addListener(this, "mouseup", a);
             return this
         },
-        touchmove: function(a) {
+        touchmove: function (a) {
             this.R.addListener(this, "touchmove", a);
             return this
         },
-        touchstart: function(a) {
+        touchstart: function (a) {
             this.R.addListener(this, "touchstart", a);
             return this
         },
-        touchend: function(a) {
+        touchend: function (a) {
             this.R.addListener(this, "touchend", a);
             return this
         },
-        keyup: function(a) {
+        keyup: function (a) {
             this.R.addListener(this, "keyup", a);
             return this
         },
-        focus: function(a) {
+        focus: function (a) {
             this.R.addListener(this, "focus", a);
             return this
         },
-        blur: function(a) {
+        blur: function (a) {
             this.R.addListener(this, "blur", a);
             return this
         },
-        contextmenu: function(a) {
+        contextmenu: function (a) {
             this.node.addEventListener ? this.node.addEventListener("contextmenu", a, !0) : this.R.addListener(this, "contextmenu", a);
             return this
         },
-        stop: function() {
+        stop: function () {
             d.removeFromArray(this.R.animations, this.an_translate);
             d.removeFromArray(this.R.animations, this.an_y);
             d.removeFromArray(this.R.animations, this.an_x)
         },
-        length: function() {
+        length: function () {
             return this.node.childNodes.length
         },
-        gradient: function(a, b, c) {
+        gradient: function (a, b, c) {
             this.R.gradient(this, a, b, c)
         },
-        pattern: function(a, b, c) {
+        pattern: function (a, b, c) {
             a && this.R.pattern(this, a, b, c)
         }
     })
 })();
-(function() {
+(function () {
     var d = window.AmCharts;
     d.SVGRenderer = d.Class({
-        construct: function(a) {
+        construct: function (a) {
             this.D = a;
             this.animations = []
         },
-        create: function(a, b) {
+        create: function (a, b) {
             return document.createElementNS(d.SVG_NS, b)
         },
-        attr: function(a, b) {
+        attr: function (a, b) {
             for (var c in b) b.hasOwnProperty(c) && this.setAttr(a, c, b[c])
         },
-        setAttr: function(a, b, c) {
+        setAttr: function (a, b, c) {
             void 0 !== c && a.node.setAttribute(b, c)
         },
-        animate: function(a, b, c, e, g) {
+        animate: function (a, b, c, e, g) {
             a.animationFinished = !1;
             var f = a.node;
             a["an_" + b] && d.removeFromArray(this.animations, a["an_" + b]);
@@ -1013,7 +1013,7 @@
             this.animations.push(c);
             a["an_" + b] = c
         },
-        update: function() {
+        update: function () {
             var a, b = this.animations;
             for (a = b.length - 1; 0 <= a; a--) {
                 var c = b[a],
@@ -1042,10 +1042,10 @@
                 } else "translate" == k ? (l = c.to.split(","), m = Number(l[0]), l = Number(l[1]), f.translate(m, l)) : (h = Number(c.to), this.setAttr(f, k, h)), f.animationFinished = !0, this.animations.splice(a, 1)
             }
         },
-        getBBox: function(a) {
+        getBBox: function (a) {
             if (a = a.node) try {
                 return a.getBBox()
-            } catch (b) {}
+            } catch (b) { }
             return {
                 width: 0,
                 height: 0,
@@ -1053,17 +1053,17 @@
                 y: 0
             }
         },
-        path: function(a, b) {
+        path: function (a, b) {
             a.node.setAttributeNS(d.SVG_XLINK, "xlink:href", b)
         },
-        clipRect: function(a, b, c, e, g) {
+        clipRect: function (a, b, c, e, g) {
             var f = a.node,
                 k = a.clipPath;
             k && this.D.remove(k);
             var h = f.parentNode;
             h && (f = document.createElementNS(d.SVG_NS, "clipPath"), k = d.getUniqueId(), f.setAttribute("id", k), this.D.rect(b, c, e, g, 0, 0, f), h.appendChild(f), b = "#", d.baseHref && !d.isIE && (b = this.removeTarget(window.location.href) + b), this.setAttr(a, "clip-path", "url(" + b + k + ")"), this.clipPathC++, a.clipPath = f)
         },
-        text: function(a, b, c) {
+        text: function (a, b, c) {
             var e = new d.AmDObject("text", this.D);
             a = String(a).split("\n");
             var g = d.removePx(b["font-size"]),
@@ -1080,24 +1080,24 @@
             this.D.addToContainer(e.node, c);
             return e
         },
-        setText: function(a, b) {
+        setText: function (a, b) {
             var c = a.node;
             c && (c.removeChild(c.firstChild), c.appendChild(document.createTextNode(b)))
         },
-        move: function(a, b, c, e) {
+        move: function (a, b, c, e) {
             isNaN(b) && (b = 0);
             isNaN(c) && (c = 0);
             b = "translate(" + b + "," + c + ")";
             e && (b = b + " scale(" + e + ")");
             this.setAttr(a, "transform", b)
         },
-        rotate: function(a, b) {
+        rotate: function (a, b) {
             var c = a.node.getAttribute("transform"),
                 e = "rotate(" + b + ")";
             c && (e = c + " " + e);
             this.setAttr(a, "transform", e)
         },
-        set: function(a) {
+        set: function (a) {
             var b = new d.AmDObject("g", this.D);
             this.D.container.appendChild(b.node);
             if (a) {
@@ -1106,10 +1106,10 @@
             }
             return b
         },
-        addListener: function(a, b, c) {
+        addListener: function (a, b, c) {
             a.node["on" + b] = c
         },
-        gradient: function(a, b, c, e) {
+        gradient: function (a, b, c, e) {
             var g = a.node,
                 f = a.grad;
             f && this.D.remove(f);
@@ -1134,10 +1134,10 @@
             g.setAttribute("fill", "url(" + c + f + ")");
             a.grad = b
         },
-        removeTarget: function(a) {
+        removeTarget: function (a) {
             return a.split("#")[0]
         },
-        pattern: function(a, b, c, e) {
+        pattern: function (a, b, c, e) {
             var g = a.node;
             isNaN(c) && (c = 1);
             var f = a.patternNode;
@@ -1174,7 +1174,7 @@
             a.patternNode = f;
             g.parentNode.appendChild(f)
         },
-        remove: function(a) {
+        remove: function (a) {
             a.clipPath && this.D.remove(a.clipPath);
             a.grad && this.D.remove(a.grad);
             a.patternNode && this.D.remove(a.patternNode);
@@ -1182,10 +1182,10 @@
         }
     })
 })();
-(function() {
+(function () {
     var d = window.AmCharts;
     d.AmChart = d.Class({
-        construct: function(a) {
+        construct: function (a) {
             this.svgIcons = this.tapToActivate = !0;
             this.theme = a;
             this.classNamePrefix = "amcharts";
@@ -1295,13 +1295,13 @@
             this.langObj = {};
             d.applyTheme(this, a, "AmChart")
         },
-        drawChart: function() {
+        drawChart: function () {
             0 < this.realWidth && 0 < this.realHeight && (this.drawBackground(), this.redrawLabels(), this.drawTitles(), this.brr(), this.renderFix(), this.chartDiv && (this.boundingRect = this.chartDiv.getBoundingClientRect()))
         },
-        makeAccessible: function(a, b, c) {
+        makeAccessible: function (a, b, c) {
             this.accessible && a && (c && a.setAttr("role", c), a.setAttr("aria-label", b))
         },
-        drawBackground: function() {
+        drawBackground: function () {
             d.remove(this.background);
             var a = this.container,
                 b = this.backgroundColor,
@@ -1318,7 +1318,7 @@
             e.push(b);
             if (b = this.backgroundImage) a = a.image(b, 0, 0, g, f), d.setCN(this, b, "bg-image"), this.bgImg = a, e.push(a)
         },
-        drawTitles: function(a) {
+        drawTitles: function (a) {
             var b = this.titles;
             this.titleHeight = 0;
             if (d.ifArray(b)) {
@@ -1354,7 +1354,7 @@
                 this.titleHeight = c - 10
             }
         },
-        write: function(a) {
+        write: function (a) {
             var b = this;
             if (b.listeners)
                 for (var c = 0; c < b.listeners.length; c++) {
@@ -1366,11 +1366,11 @@
                 chart: b
             });
             b.afterWriteTO && clearTimeout(b.afterWriteTO);
-            0 < b.processTimeout ? b.afterWriteTO = setTimeout(function() {
+            0 < b.processTimeout ? b.afterWriteTO = setTimeout(function () {
                 b.afterWrite.call(b, a)
             }, b.processTimeout) : b.afterWrite(a)
         },
-        afterWrite: function(a) {
+        afterWrite: function (a) {
             var b;
             if (b = "object" != typeof a ? document.getElementById(a) : a) {
                 for (; b.firstChild;) b.removeChild(b.firstChild);
@@ -1440,12 +1440,12 @@
                 this.initChart()
             }
         },
-        createLabelsSet: function() {
+        createLabelsSet: function () {
             d.remove(this.labelsSet);
             this.labelsSet = this.container.set();
             this.freeLabelsSet.push(this.labelsSet)
         },
-        initChart: function() {
+        initChart: function () {
             this.balloon = d.processObject(this.balloon, d.AmBalloon, this.theme);
             window.AmCharts_path && (this.path = window.AmCharts_path);
             void 0 === this.path && (this.path = d.getPath());
@@ -1480,19 +1480,19 @@
                 chart: this
             })
         },
-        premeasure: function() {
+        premeasure: function () {
             var a = this.div;
             if (a) {
                 try {
                     this.boundingRect = this.chartDiv.getBoundingClientRect()
-                } catch (e) {}
+                } catch (e) { }
                 var b = a.offsetWidth,
                     c = a.offsetHeight;
                 a.clientHeight && (b = a.clientWidth, c = a.clientHeight);
                 if (b != this.mw || c != this.mh) this.mw = b, this.mh = c, this.measure()
             }
         },
-        measure: function() {
+        measure: function () {
             var a = this.div;
             if (a) {
                 var b = this.chartDiv,
@@ -1514,7 +1514,7 @@
                 this.divRealHeight = e
             }
         },
-        checkDisplay: function() {
+        checkDisplay: function () {
             if (this.autoDisplay && this.container) {
                 var a = d.rect(this.container, 10, 10),
                     b = a.getBBox();
@@ -1522,7 +1522,7 @@
                 a.remove()
             }
         },
-        checkTransform: function(a) {
+        checkTransform: function (a) {
             if (this.autoTransform && window.getComputedStyle && a) {
                 if (a.style) {
                     var b = window.getComputedStyle(a, null);
@@ -1537,12 +1537,12 @@
                 a.parentNode && this.checkTransform(a.parentNode)
             }
         },
-        destroy: function() {
+        destroy: function () {
             this.chartDiv.innerHTML = "";
             this.clearTimeOuts();
             this.legend && this.legend.destroy && this.legend.destroy()
         },
-        clearTimeOuts: function() {
+        clearTimeOuts: function () {
             var a = this.timeOuts;
             if (a) {
                 var b;
@@ -1550,10 +1550,10 @@
             }
             this.timeOuts = []
         },
-        clear: function(a) {
+        clear: function (a) {
             try {
                 document.removeEventListener("touchstart", this.docfn1, !0), document.removeEventListener("touchend", this.docfn2, !0)
-            } catch (b) {}
+            } catch (b) { }
             d.callMethod("clear", [this.chartScrollbar, this.scrollbarV, this.scrollbarH, this.chartCursor]);
             this.chartCursor = this.scrollbarH = this.scrollbarV = this.chartScrollbar = null;
             this.clearTimeOuts();
@@ -1564,19 +1564,19 @@
             this.legend && this.legend.destroy && this.legend.destroy();
             this.AmExport && this.AmExport.clear && this.AmExport.clear()
         },
-        setMouseCursor: function(a) {
+        setMouseCursor: function (a) {
             "auto" == a && d.isNN && (a = "default");
             this.chartDiv.style.cursor = a;
             this.legendDiv.style.cursor = a
         },
-        redrawLabels: function() {
+        redrawLabels: function () {
             this.labels = [];
             var a = this.allLabels;
             this.createLabelsSet();
             var b;
             for (b = 0; b < a.length; b++) this.drawLabel(a[b])
         },
-        drawLabel: function(a) {
+        drawLabel: function (a) {
             var b = this;
             if (b.container && !1 !== a.enabled) {
                 a = d.processObject(a, d.Label, b.theme);
@@ -1607,14 +1607,14 @@
                 d.setCN(b, e, "label");
                 a.id && d.setCN(b, e, "label-" + a.id);
                 0 !== h && e.rotate(h);
-                a.url ? (e.setAttr("cursor", "pointer"), e.click(function() {
+                a.url ? (e.setAttr("cursor", "pointer"), e.click(function () {
                     d.getURL(a.url, b.urlTarget)
                 })) : e.node.style.pointerEvents = "none";
                 b.labelsSet.push(e);
                 b.labels.push(e)
             }
         },
-        addLabel: function(a, b, c, e, d, f, k, h, l, m) {
+        addLabel: function (a, b, c, e, d, f, k, h, l, m) {
             a = {
                 x: a,
                 y: b,
@@ -1631,14 +1631,14 @@
             this.container && this.drawLabel(a);
             this.allLabels.push(a)
         },
-        clearLabels: function() {
+        clearLabels: function () {
             var a = this.labels,
                 b;
             for (b = a.length - 1; 0 <= b; b--) a[b].remove();
             this.labels = [];
             this.allLabels = []
         },
-        updateHeight: function() {
+        updateHeight: function () {
             var a = this.divRealHeight,
                 b = this.legend;
             if (b) {
@@ -1652,7 +1652,7 @@
             }
             return a
         },
-        updateWidth: function() {
+        updateWidth: function () {
             var a = this.divRealWidth,
                 b = this.divRealHeight,
                 c = this.legend;
@@ -1676,11 +1676,11 @@
             }
             return a
         },
-        getTitleHeight: function() {
+        getTitleHeight: function () {
             this.drawTitles(!0);
             return this.titleHeight
         },
-        addTitle: function(a, b, c, e, d) {
+        addTitle: function (a, b, c, e, d) {
             isNaN(b) && (b = this.fontSize + 2);
             a = {
                 text: a,
@@ -1693,76 +1693,76 @@
             this.titles.push(a);
             return a
         },
-        handleWheel: function(a) {
+        handleWheel: function (a) {
             var b = 0;
             a || (a = window.event);
             a.wheelDelta ? b = a.wheelDelta / 120 : a.detail && (b = -a.detail / 3);
             b && this.handleWheelReal(b, a.shiftKey);
             a.preventDefault && a.preventDefault()
         },
-        handleWheelReal: function() {},
-        handleDocTouchStart: function() {
+        handleWheelReal: function () { },
+        handleDocTouchStart: function () {
             this.handleMouseMove();
             this.tmx = this.mouseX;
             this.tmy = this.mouseY;
             this.touchStartTime = (new Date).getTime()
         },
-        handleDocTouchEnd: function() {
+        handleDocTouchEnd: function () {
             -.5 < this.tmx && this.tmx < this.divRealWidth + 1 && 0 < this.tmy && this.tmy < this.divRealHeight ? (this.handleMouseMove(), 4 > Math.abs(this.mouseX - this.tmx) && 4 > Math.abs(this.mouseY - this.tmy) ? (this.tapped = !0, this.panRequired && this.panEventsEnabled && this.chartDiv && (this.chartDiv.style.msTouchAction = "none", this.chartDiv.style.touchAction = "none")) : this.mouseIsOver || this.resetTouchStyle()) : (this.tapped = !1, this.resetTouchStyle())
         },
-        resetTouchStyle: function() {
+        resetTouchStyle: function () {
             this.panEventsEnabled && this.chartDiv && (this.chartDiv.style.msTouchAction = "auto", this.chartDiv.style.touchAction = "auto")
         },
-        checkTouchDuration: function(a) {
+        checkTouchDuration: function (a) {
             var b = this,
                 c = (new Date).getTime();
             if (a)
                 if (a.touches) b.isTouchEvent = !0;
                 else if (!b.isTouchEvent) return !0;
             if (c - b.touchStartTime > b.touchClickDuration) return !0;
-            setTimeout(function() {
+            setTimeout(function () {
                 b.resetTouchDuration()
             }, 300)
         },
-        resetTouchDuration: function() {
+        resetTouchDuration: function () {
             this.isTouchEvent = !1
         },
-        checkTouchMoved: function() {
+        checkTouchMoved: function () {
             if (4 < Math.abs(this.mouseX - this.tmx) || 4 < Math.abs(this.mouseY - this.tmy)) return !0
         },
-        addListeners: function() {
+        addListeners: function () {
             var a = this,
                 b = a.chartDiv;
-            document.addEventListener ? ("ontouchstart" in document.documentElement && (b.addEventListener("touchstart", function(b) {
+            document.addEventListener ? ("ontouchstart" in document.documentElement && (b.addEventListener("touchstart", function (b) {
                 a.handleTouchStart.call(a, b)
-            }, !0), b.addEventListener("touchmove", function(b) {
+            }, !0), b.addEventListener("touchmove", function (b) {
                 a.handleMouseMove.call(a, b)
-            }, !0), b.addEventListener("touchend", function(b) {
+            }, !0), b.addEventListener("touchend", function (b) {
                 a.handleTouchEnd.call(a, b)
-            }, !0), a.docfn1 = function(b) {
+            }, !0), a.docfn1 = function (b) {
                 a.handleDocTouchStart.call(a, b)
-            }, a.docfn2 = function(b) {
+            }, a.docfn2 = function (b) {
                 a.handleDocTouchEnd.call(a, b)
-            }, document.addEventListener("touchstart", a.docfn1, !0), document.addEventListener("touchend", a.docfn2, !0)), b.addEventListener("mousedown", function(b) {
+            }, document.addEventListener("touchstart", a.docfn1, !0), document.addEventListener("touchend", a.docfn2, !0)), b.addEventListener("mousedown", function (b) {
                 a.mouseIsOver = !0;
                 a.handleMouseMove.call(a, b);
                 a.handleMouseDown.call(a, b);
                 a.handleDocTouchStart.call(a, b)
-            }, !0), b.addEventListener("mouseover", function(b) {
+            }, !0), b.addEventListener("mouseover", function (b) {
                 a.handleMouseOver.call(a, b)
-            }, !0), b.addEventListener("mouseout", function(b) {
+            }, !0), b.addEventListener("mouseout", function (b) {
                 a.handleMouseOut.call(a, b)
-            }, !0), b.addEventListener("mouseup", function(b) {
+            }, !0), b.addEventListener("mouseup", function (b) {
                 a.handleDocTouchEnd.call(a, b)
-            }, !0)) : (b.attachEvent("onmousedown", function(b) {
+            }, !0)) : (b.attachEvent("onmousedown", function (b) {
                 a.handleMouseDown.call(a, b)
-            }), b.attachEvent("onmouseover", function(b) {
+            }), b.attachEvent("onmouseover", function (b) {
                 a.handleMouseOver.call(a, b)
-            }), b.attachEvent("onmouseout", function(b) {
+            }), b.attachEvent("onmouseout", function (b) {
                 a.handleMouseOut.call(a, b)
             }))
         },
-        dispDUpd: function() {
+        dispDUpd: function () {
             this.skipEvents || (this.dispatchDataUpdated && (this.dispatchDataUpdated = !1, this.fire({
                 type: "dataUpdated",
                 chart: this
@@ -1778,7 +1778,7 @@
             }));
             this.skipEvents = !1
         },
-        validateSize: function() {
+        validateSize: function () {
             var a = this;
             a.premeasure();
             a.checkDisplay();
@@ -1791,7 +1791,7 @@
                     a.sizeChanged = !0;
                     if (b) {
                         a.legendInitTO && clearTimeout(a.legendInitTO);
-                        var c = setTimeout(function() {
+                        var c = setTimeout(function () {
                             b.invalidateSize()
                         }, 10);
                         a.timeOuts.push(c);
@@ -1799,7 +1799,7 @@
                     }
                     a.marginsUpdated = !1;
                     clearTimeout(a.initTO);
-                    c = setTimeout(function() {
+                    c = setTimeout(function () {
                         a.initChart()
                     }, 10);
                     a.timeOuts.push(c);
@@ -1809,7 +1809,7 @@
                 b && b.renderFix && b.renderFix();
                 a.positionCred();
                 clearTimeout(a.resizedTO);
-                a.resizedTO = setTimeout(function() {
+                a.resizedTO = setTimeout(function () {
                     a.fire({
                         type: "resized",
                         chart: a
@@ -1819,24 +1819,24 @@
                 a.previousWidth = a.divRealWidth
             }
         },
-        invalidateSize: function() {
+        invalidateSize: function () {
             this.previousHeight = this.previousWidth = NaN;
             this.invalidateSizeReal()
         },
-        invalidateSizeReal: function() {
+        invalidateSizeReal: function () {
             var a = this;
             a.marginsUpdated = !1;
             clearTimeout(a.validateTO);
-            var b = setTimeout(function() {
+            var b = setTimeout(function () {
                 a.validateSize()
             }, 5);
             a.timeOuts.push(b);
             a.validateTO = b
         },
-        validateData: function(a) {
+        validateData: function (a) {
             this.chartCreated && (this.dataChanged = !0, this.marginsUpdated = !1, this.initChart(a))
         },
-        validateNow: function(a, b) {
+        validateNow: function (a, b) {
             this.initTO && clearTimeout(this.initTO);
             a && (this.dataChanged = !0, this.marginsUpdated = !1);
             this.skipEvents = b;
@@ -1845,57 +1845,57 @@
             c && c.position != this.prevLegendPosition && (this.previousWidth = this.mw = 0, c.invalidateSize && (c.invalidateSize(), this.validateSize()));
             this.write(this.div)
         },
-        showItem: function(a) {
+        showItem: function (a) {
             a.hidden = !1;
             this.initChart()
         },
-        hideItem: function(a) {
+        hideItem: function (a) {
             a.hidden = !0;
             this.initChart()
         },
-        hideBalloon: function() {
+        hideBalloon: function () {
             var a = this;
             clearTimeout(a.hoverInt);
             clearTimeout(a.balloonTO);
-            a.hoverInt = setTimeout(function() {
+            a.hoverInt = setTimeout(function () {
                 a.hideBalloonReal.call(a)
             }, a.hideBalloonTime)
         },
-        cleanChart: function() {},
-        hideBalloonReal: function() {
+        cleanChart: function () { },
+        hideBalloonReal: function () {
             var a = this.balloon;
             a && a.hide && a.hide()
         },
-        showBalloon: function(a, b, c, e, d) {
+        showBalloon: function (a, b, c, e, d) {
             var f = this;
             clearTimeout(f.balloonTO);
             clearTimeout(f.hoverInt);
-            f.balloonTO = setTimeout(function() {
+            f.balloonTO = setTimeout(function () {
                 f.showBalloonReal.call(f, a, b, c, e, d)
             }, 1)
         },
-        showBalloonReal: function(a, b, c, e, d) {
+        showBalloonReal: function (a, b, c, e, d) {
             this.handleMouseMove();
             var f = this.balloon;
             f.enabled && (f.followCursor(!1), f.changeColor(b), !c || f.fixedPosition ? (f.setPosition(e, d), isNaN(e) || isNaN(d) ? f.followCursor(!0) : f.followCursor(!1)) : f.followCursor(!0), a && f.showBalloon(a))
         },
-        handleMouseOver: function() {
+        handleMouseOver: function () {
             this.outTO && clearTimeout(this.outTO);
             d.resetMouseOver();
             this.mouseIsOver = !0
         },
-        handleMouseOut: function() {
+        handleMouseOut: function () {
             var a = this;
             d.resetMouseOver();
             a.outTO && clearTimeout(a.outTO);
-            a.outTO = setTimeout(function() {
+            a.outTO = setTimeout(function () {
                 a.handleMouseOutReal()
             }, 10)
         },
-        handleMouseOutReal: function() {
+        handleMouseOutReal: function () {
             this.mouseIsOver = !1
         },
-        handleMouseMove: function(a) {
+        handleMouseMove: function (a) {
             a || (a = window.event);
             this.mouse2Y = this.mouse2X = NaN;
             var b, c, e, d;
@@ -1912,26 +1912,26 @@
                 this.autoTransform && (this.mouseX /= this.cssScale, this.mouseY /= this.cssScale)
             }
         },
-        handleTouchStart: function(a) {
+        handleTouchStart: function (a) {
             this.hideBalloonReal();
             a && (a.touches && this.tapToActivate && !this.tapped || !this.panRequired) || (this.handleMouseMove(a), this.handleMouseDown(a))
         },
-        handleTouchEnd: function(a) {
+        handleTouchEnd: function (a) {
             this.wasTouched = !0;
             this.handleMouseMove(a);
             d.resetMouseOver();
             this.handleReleaseOutside(a)
         },
-        handleReleaseOutside: function() {
+        handleReleaseOutside: function () {
             this.handleDocTouchEnd.call(this)
         },
-        handleMouseDown: function(a) {
+        handleMouseDown: function (a) {
             d.resetMouseOver();
             this.mouseIsOver = !0;
             a && a.preventDefault && (this.panEventsEnabled ? a.preventDefault() : a.touches || a.preventDefault())
         },
-        handleKeyUp: function(a) {},
-        addLegend: function(a, b) {
+        handleKeyUp: function (a) { },
+        addLegend: function (a, b) {
             a = d.processObject(a, d.AmLegend, this.theme);
             a.divId = b;
             a.ieW = 0;
@@ -1942,25 +1942,25 @@
             c ? (a.div = c, a.position = "outside", a.autoMargins = !1) : a.div = this.legendDiv;
             return a
         },
-        removeLegend: function() {
+        removeLegend: function () {
             this.legend = void 0;
             this.previousWidth = 0;
             this.legendDiv.innerHTML = ""
         },
-        handleResize: function() {
+        handleResize: function () {
             (d.isPercents(this.width) || d.isPercents(this.height)) && this.invalidateSizeReal();
             this.renderFix()
         },
-        renderFix: function() {
+        renderFix: function () {
             if (!d.VML) {
                 var a = this.container;
                 a && a.renderFix()
             }
         },
-        getSVG: function() {
+        getSVG: function () {
             if (d.hasSVG) return this.container
         },
-        animate: function(a, b, c, e, g, f, k) {
+        animate: function (a, b, c, e, g, f, k) {
             a["an_" + b] && d.removeFromArray(this.animations, a["an_" + b]);
             c = {
                 obj: a,
@@ -1976,14 +1976,14 @@
             this.animations.push(c);
             return c
         },
-        setLegendData: function(a) {
+        setLegendData: function (a) {
             var b = this.legend;
             b && b.setData(a)
         },
-        stopAnim: function(a) {
+        stopAnim: function (a) {
             d.removeFromArray(this.animations, a)
         },
-        updateAnimations: function() {
+        updateAnimations: function () {
             var a;
             this.container && this.container.update();
             if (this.animations)
@@ -2003,7 +2003,7 @@
                     } else g.node.style[f] = Number(b.to) + b.suffix, g.animationFinished = !0, this.animations.splice(a, 1)
                 }
         },
-        update: function() {
+        update: function () {
             this.updateAnimations();
             var a = this.animatable;
             if (0 < a.length) {
@@ -2017,14 +2017,14 @@
                 }), this.animatable = [])
             }
         },
-        inIframe: function() {
+        inIframe: function () {
             try {
                 return window.self !== window.top
             } catch (a) {
                 return !0
             }
         },
-        brr: function() {
+        brr: function () {
             if (!this.hideCredits) {
                 var a = "amcharts.com",
                     b = window.location.hostname.split("."),
@@ -2056,7 +2056,7 @@
                 }
             }
         },
-        positionCred: function() {
+        positionCred: function () {
             var a = this.amLink;
             if (a) {
                 var b = this.creditsPosition,
@@ -2080,37 +2080,37 @@
         }
     });
     d.Slice = d.Class({
-        construct: function() {}
+        construct: function () { }
     });
     d.SerialDataItem = d.Class({
-        construct: function() {}
+        construct: function () { }
     });
     d.GraphDataItem = d.Class({
-        construct: function() {}
+        construct: function () { }
     });
     d.Guide = d.Class({
-        construct: function(a) {
+        construct: function (a) {
             this.cname = "Guide";
             d.applyTheme(this, a, this.cname)
         }
     });
     d.Title = d.Class({
-        construct: function(a) {
+        construct: function (a) {
             this.cname = "Title";
             d.applyTheme(this, a, this.cname)
         }
     });
     d.Label = d.Class({
-        construct: function(a) {
+        construct: function (a) {
             this.cname = "Label";
             d.applyTheme(this, a, this.cname)
         }
     })
 })();
-(function() {
+(function () {
     var d = window.AmCharts;
     d.AmBalloon = d.Class({
-        construct: function(a) {
+        construct: function (a) {
             this.cname = "AmBalloon";
             this.enabled = !0;
             this.fillColor = "#FFFFFF";
@@ -2141,7 +2141,7 @@
             this.sdy = this.sdx = 0;
             d.applyTheme(this, a, this.cname)
         },
-        draw: function() {
+        draw: function () {
             var a = this.pointToX,
                 b = this.pointToY;
             d.isModern || (this.drop = !1);
@@ -2253,19 +2253,19 @@
                 }
             }
         },
-        fixPrevious: function() {
+        fixPrevious: function () {
             this.rPrevX = this.prevX;
             this.rPrevY = this.prevY;
             this.rPrevTX = this.prevTX;
             this.rPrevTY = this.prevTY
         },
-        restorePrevious: function() {
+        restorePrevious: function () {
             this.prevX = this.rPrevX;
             this.prevY = this.rPrevY;
             this.prevTX = this.rPrevTX;
             this.prevTY = this.rPrevTY
         },
-        followMouse: function() {
+        followMouse: function () {
             if (this.follow && this.show) {
                 var a = this.chart.mouseX - this.offsetX * this.deltaSignX -
                     this.sdx,
@@ -2291,20 +2291,20 @@
                     }
             }
         },
-        changeColor: function(a) {
+        changeColor: function (a) {
             this.balloonColor = a
         },
-        setBounds: function(a, b, c, e) {
+        setBounds: function (a, b, c, e) {
             this.l = a;
             this.t = b;
             this.r = c;
             this.b = e;
             this.destroyTO && clearTimeout(this.destroyTO)
         },
-        showBalloon: function(a) {
+        showBalloon: function (a) {
             if (this.text != a || this.positionChanged) this.text = a, this.isHiding = !1, this.show = !0, this.destroyTO && clearTimeout(this.destroyTO), a = this.chart, this.fadeAnim1 && a.stopAnim(this.fadeAnim1), this.fadeAnim2 && a.stopAnim(this.fadeAnim2), this.draw(), this.positionChanged = !1
         },
-        hide: function(a) {
+        hide: function (a) {
             var b = this;
             b.text = void 0;
             isNaN(a) && (a = b.fadeOutDuration);
@@ -2312,7 +2312,7 @@
             if (0 < a && !b.isHiding) {
                 b.isHiding = !0;
                 b.destroyTO && clearTimeout(b.destroyTO);
-                b.destroyTO = setTimeout(function() {
+                b.destroyTO = setTimeout(function () {
                     b.destroy.call(b)
                 }, 1E3 * a);
                 b.follow = !1;
@@ -2326,26 +2326,26 @@
                 }, "opacity", 1, 0, a, "easeInSine", ""))
             } else b.show = !1, b.follow = !1, b.destroy()
         },
-        setPosition: function(a, b) {
+        setPosition: function (a, b) {
             if (a != this.pointToX || b != this.pointToY) this.previousX = this.pointToX, this.previousY = this.pointToY, this.pointToX = a, this.pointToY = b, this.positionChanged = !0
         },
-        followCursor: function(a) {
+        followCursor: function (a) {
             var b = this;
             b.follow = a;
             clearInterval(b.interval);
             var c = b.chart.mouseX - b.sdx,
                 e = b.chart.mouseY - b.sdy;
-            !isNaN(c) && a && (b.pointToX = c - b.offsetX * b.deltaSignX, b.pointToY = e, b.followMouse(), b.interval = setInterval(function() {
+            !isNaN(c) && a && (b.pointToX = c - b.offsetX * b.deltaSignX, b.pointToY = e, b.followMouse(), b.interval = setInterval(function () {
                 b.followMouse.call(b)
             }, 40))
         },
-        removeDiv: function() {
+        removeDiv: function () {
             if (this.textDiv) {
                 var a = this.textDiv.parentNode;
                 a && a.removeChild(this.textDiv)
             }
         },
-        destroy: function() {
+        destroy: function () {
             clearInterval(this.interval);
             d.remove(this.set);
             this.removeDiv();
@@ -2353,9 +2353,9 @@
         }
     })
 })();
-(function() {
+(function () {
     var d = window.AmCharts;
-    d.circle = function(a, b, c, e, g, f, k, h, l) {
+    d.circle = function (a, b, c, e, g, f, k, h, l) {
         0 >= b && (b = .001);
         if (void 0 == g || 0 === g) g = .01;
         void 0 === f && (f = "#000000");
@@ -2371,7 +2371,7 @@
         h && a.gradient("radialGradient", [c, d.adjustLuminosity(c, -.6)]);
         return a
     };
-    d.text = function(a, b, c, e, g, f, k, h) {
+    d.text = function (a, b, c, e, g, f, k, h) {
         f || (f = "middle");
         "right" == f && (f = "end");
         "left" == f && (f = "start");
@@ -2387,7 +2387,7 @@
         c["text-anchor"] = f;
         return a.text(b, c)
     };
-    d.polygon = function(a, b, c, e, g, f, k, h, l, m, n) {
+    d.polygon = function (a, b, c, e, g, f, k, h, l, m, n) {
         isNaN(f) && (f = .01);
         isNaN(h) && (h = g);
         var p = e,
@@ -2413,7 +2413,7 @@
         r && a.gradient("linearGradient", e, l);
         return a
     };
-    d.rect = function(a, b, c, e, g, f, k, h, l, m, n) {
+    d.rect = function (a, b, c, e, g, f, k, h, l, m, n) {
         if (isNaN(b) || isNaN(c)) return a.set();
         isNaN(f) && (f = 0);
         void 0 === l && (l = 0);
@@ -2443,7 +2443,7 @@
         r && a.gradient("linearGradient", e, m);
         return a
     };
-    d.bullet = function(a, b, c, e, g, f, k, h, l, m, n, p, r) {
+    d.bullet = function (a, b, c, e, g, f, k, h, l, m, n, p, r) {
         var t;
         "circle" == b && (b = "round");
         switch (b) {
@@ -2489,7 +2489,7 @@
         t && t.pattern(n, NaN, p);
         return t
     };
-    d.triangle = function(a, b, c, e, d, f, k, h) {
+    d.triangle = function (a, b, c, e, d, f, k, h) {
         if (void 0 === f || 0 === f) f = 1;
         void 0 === k && (k = "#000");
         void 0 === h && (h = 0);
@@ -2508,7 +2508,7 @@
         270 == c && (l = " M" + -b + ",0 L" + b + "," + b + " L" + b + "," + -b + " Z");
         return a.path(l).attr(e)
     };
-    d.line = function(a, b, c, e, g, f, k, h, l, m, n) {
+    d.line = function (a, b, c, e, g, f, k, h, l, m, n) {
         if (a.handDrawn && !n) return d.handDrawnLine(a, b, c, e, g, f, k, h, l, m, n);
         f = {
             fill: "none",
@@ -2527,26 +2527,26 @@
         l && (k += " M0,0 L0,0");
         return a.path(k).attr(f)
     };
-    d.makeHD = function(a, b, c) {
+    d.makeHD = function (a, b, c) {
         for (var e = [], d = [], f = 1; f < a.length; f++)
             for (var k = Number(a[f - 1]), h = Number(b[f - 1]), l = Number(a[f]), m = Number(b[f]), n = Math.round(Math.sqrt(Math.pow(l -
-                    k, 2) + Math.pow(m - h, 2)) / 50) + 1, l = (l - k) / n, m = (m - h) / n, p = 0; p <= n; p++) {
+                k, 2) + Math.pow(m - h, 2)) / 50) + 1, l = (l - k) / n, m = (m - h) / n, p = 0; p <= n; p++) {
                 var r = h + p * m + Math.random() * c;
                 e.push(k + p * l + Math.random() * c);
                 d.push(r)
             }
         return [e, d]
     };
-    d.handDrawnLine = function(a, b, c, e, g, f, k, h, l, m) {
+    d.handDrawnLine = function (a, b, c, e, g, f, k, h, l, m) {
         var n, p = a.set();
         for (n = 1; n < b.length; n++)
             for (var r = [b[n - 1], b[n]], t = [c[n - 1], c[n]], t = d.makeHD(r, t, a.handDrawScatter), r = t[0], t = t[1], q = 1; q < r.length; q++) p.push(d.line(a, [r[q - 1], r[q]], [t[q - 1], t[q]], e, g, f + Math.random() * a.handDrawThickness - a.handDrawThickness / 2, k, h, l, m, !0));
         return p
     };
-    d.doNothing = function(a) {
+    d.doNothing = function (a) {
         return a
     };
-    d.drop = function(a, b, c, e, d, f, k, h) {
+    d.drop = function (a, b, c, e, d, f, k, h) {
         var l = 1 / 180 * Math.PI,
             m = c - 20,
             n = Math.sin(m * l) * b,
@@ -2571,7 +2571,7 @@
         b += " A" + q + "," + q + ",0,0,0," + n + "," + p;
         return a.path(b, void 0, void 0, "1000,1000").attr(c)
     };
-    d.wedge = function(a, b, c, e, g, f, k, h, l, m, n, p, r, t) {
+    d.wedge = function (a, b, c, e, g, f, k, h, l, m, n, p, r, t) {
         var q = Math.round;
         f = q(f);
         k = q(k);
@@ -2637,10 +2637,10 @@
         e.push(a);
         return e
     };
-    d.rgb2hex = function(a) {
+    d.rgb2hex = function (a) {
         return (a = a.match(/^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i)) && 4 === a.length ? "#" + ("0" + parseInt(a[1], 10).toString(16)).slice(-2) + ("0" + parseInt(a[2], 10).toString(16)).slice(-2) + ("0" + parseInt(a[3], 10).toString(16)).slice(-2) : ""
     };
-    d.adjustLuminosity = function(a, b) {
+    d.adjustLuminosity = function (a, b) {
         a && -1 != a.indexOf("rgb") && (a = d.rgb2hex(a));
         a = String(a).replace(/[^0-9a-f]/gi, "");
         6 > a.length && (a = String(a[0]) + String(a[0]) + String(a[1]) + String(a[1]) + String(a[2]) + String(a[2]));
@@ -2652,10 +2652,10 @@
         return c
     }
 })();
-(function() {
+(function () {
     var d = window.AmCharts;
     d.AmLegend = d.Class({
-        construct: function(a) {
+        construct: function (a) {
             this.enabled = !0;
             this.cname = "AmLegend";
             this.createEvents("rollOverMarker", "rollOverItem", "rollOutMarker", "rollOutItem", "showItem", "hideItem", "clickMarker", "clickLabel");
@@ -2694,18 +2694,18 @@
             this.labelDx = 0;
             d.applyTheme(this, a, this.cname)
         },
-        setData: function(a) {
+        setData: function (a) {
             this.legendData = a;
             this.invalidateSize()
         },
-        invalidateSize: function() {
+        invalidateSize: function () {
             this.destroy();
             this.entries = [];
             this.valueLabels = [];
             var a = this.legendData;
             this.enabled && (d.ifArray(a) || d.ifArray(this.data)) && this.drawLegend()
         },
-        drawLegend: function() {
+        drawLegend: function () {
             var a = this.chart,
                 b = this.position,
                 c = this.width,
@@ -2743,10 +2743,10 @@
             this.arrangeEntries();
             this.updateValues()
         },
-        arrangeEntries: function() {
+        arrangeEntries: function () {
             var a = this.position,
                 b = this.marginLeft +
-                this.titleWidth,
+                    this.titleWidth,
                 c = this.marginRight,
                 e = this.marginTop,
                 g = this.marginBottom,
@@ -2809,7 +2809,7 @@
             k.style.height = Math.round(e) + "px";
             q.setSize(this.divWidth, e)
         },
-        createEntry: function(a) {
+        createEntry: function (a) {
             if (!1 !== a.visibleInLegend && !a.hideFromLegend) {
                 var b = this,
                     c = b.chart,
@@ -2867,7 +2867,7 @@
                 f = d.massReplace(b.labelText, {
                     "[[title]]": a.title
                 });
-                void 0 !== b.tabIndex && (p.setAttr("tabindex", b.tabIndex), p.setAttr("role", "menuitem"), p.keyup(function(c) {
+                void 0 !== b.tabIndex && (p.setAttr("tabindex", b.tabIndex), p.setAttr("role", "menuitem"), p.keyup(function (c) {
                     13 == c.keyCode && b.clickMarker(a, c)
                 }));
                 c.accessible && b.accessibleLabel && (l = d.massReplace(b.accessibleLabel, {
@@ -2884,35 +2884,35 @@
                 b.index++
             }
         },
-        addListeners: function(a, b) {
+        addListeners: function (a, b) {
             var c = this;
-            a && a.mouseover(function(a) {
+            a && a.mouseover(function (a) {
                 c.rollOverMarker(b, a)
-            }).mouseout(function(a) {
+            }).mouseout(function (a) {
                 c.rollOutMarker(b, a)
-            }).click(function(a) {
+            }).click(function (a) {
                 c.clickMarker(b, a)
             })
         },
-        rollOverMarker: function(a, b) {
+        rollOverMarker: function (a, b) {
             this.switchable && this.dispatch("rollOverMarker", a, b);
             this.dispatch("rollOverItem", a, b)
         },
-        rollOutMarker: function(a, b) {
+        rollOutMarker: function (a, b) {
             this.switchable && this.dispatch("rollOutMarker", a, b);
             this.dispatch("rollOutItem", a, b)
         },
-        clickMarker: function(a, b) {
+        clickMarker: function (a, b) {
             this.switchable && (!0 === a.hidden ? this.dispatch("showItem", a, b) : this.dispatch("hideItem", a, b));
             this.dispatch("clickMarker", a, b)
         },
-        rollOverLabel: function(a, b) {
+        rollOverLabel: function (a, b) {
             a.hidden || this.textClickEnabled && a.legendLabel && a.legendLabel.attr({
                 fill: this.rollOverColor
             });
             this.dispatch("rollOverItem", a, b)
         },
-        rollOutLabel: function(a, b) {
+        rollOutLabel: function (a, b) {
             if (!a.hidden && this.textClickEnabled && a.legendLabel) {
                 var c = this.color;
                 void 0 !== this.selectedColor && a.showBalloon && (c = this.selectedColor);
@@ -2923,10 +2923,10 @@
             }
             this.dispatch("rollOutItem", a, b)
         },
-        clickLabel: function(a, b) {
+        clickLabel: function (a, b) {
             this.textClickEnabled ? a.hidden || this.dispatch("clickLabel", a, b) : this.switchable && (!0 === a.hidden ? this.dispatch("showItem", a, b) : this.dispatch("hideItem", a, b))
         },
-        dispatch: function(a, b, c) {
+        dispatch: function (a, b, c) {
             a = {
                 type: a,
                 dataItem: b,
@@ -2937,7 +2937,7 @@
             this.chart && this.chart.handleLegendEvent(a);
             this.fire(a)
         },
-        createValue: function(a) {
+        createValue: function (a) {
             var b = this,
                 c = b.fontSize,
                 e = b.chart;
@@ -2984,20 +2984,20 @@
                 e.dItem = a;
                 b.entries[b.index -
                     1].push(e);
-                e.mouseover(function(c) {
+                e.mouseover(function (c) {
                     b.rollOverLabel(a, c)
-                }).mouseout(function(c) {
+                }).mouseout(function (c) {
                     b.rollOutLabel(a, c)
-                }).click(function(c) {
+                }).click(function (c) {
                     b.clickLabel(a, c)
                 })
             }
         },
-        createV: function() {
+        createV: function () {
             var a = this.markerSize;
             return d.polygon(this.container, [a / 5, a / 2, a - a / 5, a / 2], [a / 3, a - a / 5, a / 5, a / 1.7], this.switchColor)
         },
-        createX: function() {
+        createX: function () {
             var a = (this.markerSize - 4) / 2,
                 b = {
                     stroke: this.switchColor,
@@ -3008,7 +3008,7 @@
                 a = d.line(c, [-a, a], [a, -a]).attr(b);
             return this.container.set([e, a])
         },
-        createMarker: function(a, b, c, e, g, f, k, h, l) {
+        createMarker: function (a, b, c, e, g, f, k, h, l) {
             var m = this.markerSize,
                 n = this.container;
             g || (g = this.markerBorderColor);
@@ -3017,10 +3017,10 @@
             isNaN(f) && (f = this.markerBorderAlpha);
             return d.bullet(n, a, m, b, c, e, g, f, m, k, h, this.chart.path, l)
         },
-        validateNow: function() {
+        validateNow: function () {
             this.invalidateSize()
         },
-        updateValues: function() {
+        updateValues: function () {
             var a = this.valueLabels,
                 b = this.chart,
                 c, e = this.data;
@@ -3059,23 +3059,23 @@
                     }
                 }
         },
-        renderFix: function() {
+        renderFix: function () {
             if (!d.VML && this.enabled) {
                 var a = this.container;
                 a && a.renderFix()
             }
         },
-        destroy: function() {
+        destroy: function () {
             this.div.innerHTML = "";
             d.remove(this.set)
         }
     })
 })();
-(function() {
+(function () {
     var d = window.AmCharts;
     d.AmMap = d.Class({
         inherits: d.AmChart,
-        construct: function(a) {
+        construct: function (a) {
             this.cname = "AmMap";
             this.type = "map";
             this.theme = a;
@@ -3109,7 +3109,7 @@
             this.updatableImages = [];
             d.applyTheme(this, a, this.cname)
         },
-        initChart: function() {
+        initChart: function () {
             this.zoomInstantly = !0;
             var a = this.container;
             this.panRequired = !0;
@@ -3136,26 +3136,26 @@
                 this.updateSmallMap();
                 this.linkSet.toFront();
                 this.zoomControl.update && this.zoomControl.update()
-            } else(d.AmMap.base.initChart.call(this), d.hasSVG) ? (this.dataChanged && (this.parseData(), this.dispatchDataUpdated = !0, this.dataChanged = !1, a = this.legend) && (a.position = "absolute", a.invalidateSize()), this.createDescriptionsDiv(), this.svgAreas = [], this.svgAreasById = {}, this.drawChart()) : (this.chartDiv.style.textAlign = "", this.chartDiv.setAttribute("class", "ammapAlert"), this.chartDiv.innerHTML = this.svgNotSupported, this.fire({
+            } else (d.AmMap.base.initChart.call(this), d.hasSVG) ? (this.dataChanged && (this.parseData(), this.dispatchDataUpdated = !0, this.dataChanged = !1, a = this.legend) && (a.position = "absolute", a.invalidateSize()), this.createDescriptionsDiv(), this.svgAreas = [], this.svgAreasById = {}, this.drawChart()) : (this.chartDiv.style.textAlign = "", this.chartDiv.setAttribute("class", "ammapAlert"), this.chartDiv.innerHTML = this.svgNotSupported, this.fire({
                 type: "failed",
                 chart: this
             }))
         },
-        storeTemp: function() {
+        storeTemp: function () {
             if (d.hasSVG && 0 < this.realWidth && 0 < this.realHeight) {
                 var a = this.mapContainer.getBBox();
                 0 < a.width && 0 < a.height && (a = this.zoomLongitude(), isNaN(a) || (this.zLongTemp = a), a = this.zoomLatitude(), isNaN(a) || (this.zLatTemp = a), a = this.zoomLevel(), isNaN(a) || (this.zLevelTemp = a))
             }
         },
-        invalidateSize: function() {
+        invalidateSize: function () {
             this.storeTemp();
             d.AmMap.base.invalidateSize.call(this)
         },
-        validateSize: function() {
+        validateSize: function () {
             this.storeTemp();
             d.AmMap.base.validateSize.call(this)
         },
-        handleWheelReal: function(a) {
+        handleWheelReal: function (a) {
             if (!this.wheelBusy) {
                 this.stopAnimation();
                 var b = this.zoomLevel(),
@@ -3170,7 +3170,7 @@
                 this.zoomTo(a, e, b)
             }
         },
-        addLegend: function(a, b) {
+        addLegend: function (a, b) {
             a.position = "absolute";
             a.autoMargins = !1;
             a.valueWidth = 0;
@@ -3179,8 +3179,8 @@
             void 0 === a.enabled && (a.enabled = !0);
             return a
         },
-        handleLegendEvent: function() {},
-        createDescriptionsDiv: function() {
+        handleLegendEvent: function () { },
+        createDescriptionsDiv: function () {
             if (!this.descriptionsDiv) {
                 var a = document.createElement("div"),
                     b = a.style;
@@ -3191,7 +3191,7 @@
             }
             this.containerDiv.appendChild(this.descriptionsDiv)
         },
-        drawChart: function() {
+        drawChart: function () {
             d.AmMap.base.drawChart.call(this);
             var a = this.dataProvider;
             this.dataProvider = a = d.extend(a, new d.MapData, !0);
@@ -3208,16 +3208,16 @@
             c ? (this.svgData = c.svg, this.getBounds(), this.buildEverything()) : (a = a.mapURL) && this.loadXml(a);
             this.balloonsSet.toFront()
         },
-        drawBg: function() {
+        drawBg: function () {
             var a = this;
-            a.background.click(function() {
+            a.background.click(function () {
                 a.handleBackgroundClick()
             });
-            a.background.mouseover(function() {
+            a.background.mouseover(function () {
                 a.rollOutMapObject(a.previouslyHovered)
             })
         },
-        buildEverything: function() {
+        buildEverything: function () {
             if (0 < this.realWidth && 0 < this.realHeight) {
                 var a = this.container,
                     b = this.dataProvider;
@@ -3245,18 +3245,18 @@
                 this.linkSet.toFront()
             } else this.cleanChart()
         },
-        hideGroup: function(a) {
+        hideGroup: function (a) {
             this.showHideGroup(a, !1)
         },
-        showGroup: function(a) {
+        showGroup: function (a) {
             this.showHideGroup(a, !0)
         },
-        showHideGroup: function(a, b) {
+        showHideGroup: function (a, b) {
             this.showHideReal(this.imagesProcessor.allObjects, a, b);
             this.showHideReal(this.areasProcessor.allObjects, a, b);
             this.showHideReal(this.linesProcessor.allObjects, a, b)
         },
-        showHideReal: function(a, b, c) {
+        showHideReal: function (a, b, c) {
             var e;
             for (e = 0; e < a.length; e++) {
                 var d = a[e];
@@ -3266,43 +3266,43 @@
                 }
             }
         },
-        makeObjectAccessible: function(a) {
+        makeObjectAccessible: function (a) {
             if (a.accessibleLabel) {
                 var b = this.formatString(a.accessibleLabel, a);
                 a.displayObject && this.makeAccessible(a.displayObject, b, "menuitem")
             }
         },
-        update: function() {
+        update: function () {
             if (d.hasSVG) {
                 d.AmMap.base.update.call(this);
                 this.zoomControl && this.zoomControl.update && this.zoomControl.update();
                 for (var a = 0, b = this.updatableImages.length; a < b; a++) this.updatableImages[a].update()
             }
         },
-        animateMap: function() {
+        animateMap: function () {
             var a = this;
             a.totalFrames = a.zoomDuration * d.updateRate;
             a.totalFrames += 1;
             a.frame = 0;
             a.tweenPercent = 0;
             a.balloon.hide(0);
-            setTimeout(function() {
+            setTimeout(function () {
                 a.updateSize.call(a)
             }, 1E3 / d.updateRate)
         },
-        updateSize: function() {
+        updateSize: function () {
             var a = this,
                 b = a.totalFrames;
             a.preventHover = !0;
-            a.frame <= b ? (a.frame++, b = d.easeOutSine(0, a.frame, 0, 1, b), 1 <= b ? (b = 1, a.preventHover = !1, a.wheelBusy = !1) : window.requestAnimationFrame ? window.requestAnimationFrame(function() {
+            a.frame <= b ? (a.frame++, b = d.easeOutSine(0, a.frame, 0, 1, b), 1 <= b ? (b = 1, a.preventHover = !1, a.wheelBusy = !1) : window.requestAnimationFrame ? window.requestAnimationFrame(function () {
                 a.updateSize.call(a)
-            }) : setTimeout(function() {
+            }) : setTimeout(function () {
                 a.updateSize.call(a)
             }, 1E3 / d.updateRate), .8 < b && (a.preventHover = !1)) : (b = 1, a.preventHover = !1, a.wheelBusy = !1);
             a.tweenPercent = b;
             a.rescaleMapAndObjects()
         },
-        rescaleMapAndObjects: function() {
+        rescaleMapAndObjects: function () {
             var a = this.initialScale,
                 b = this.initialX,
                 c = this.initialY,
@@ -3326,10 +3326,10 @@
                 chart: this
             })
         },
-        updateSmallMap: function() {
+        updateSmallMap: function () {
             this.smallMap && this.smallMap.update()
         },
-        rescaleObjects: function() {
+        rescaleObjects: function () {
             var a = this.mapContainer.scale,
                 b = this.imagesProcessor.objectsToResize,
                 c;
@@ -3348,12 +3348,12 @@
             b = b.objectsToResize;
             for (c = 0; c < b.length; c++) e = b[c], e.translate(e.x, e.y, 1 / a, !0)
         },
-        handleTouchEnd: function(a) {
+        handleTouchEnd: function (a) {
             this.initialDistance = NaN;
             this.mouseIsDown = this.isDragging = !1;
             d.AmMap.base.handleTouchEnd.call(this, a)
         },
-        handleMouseDown: function(a) {
+        handleMouseDown: function (a) {
             d.resetMouseOver();
             this.mouseIsDown = this.mouseIsOver = !0;
             this.balloon.hide(0);
@@ -3365,15 +3365,15 @@
                 e && this.panEventsEnabled && this.boundingRect && (a = e.clientX - this.boundingRect.left, e = e.clientY - this.boundingRect.top, this.middleXP = (b + (a - b) / 2) / this.realWidth, this.middleYP = (c + (e - c) / 2) / this.realHeight, this.initialDistance = Math.sqrt(Math.pow(a - b, 2) + Math.pow(e - c, 2)))
             }
         },
-        stopDrag: function() {
+        stopDrag: function () {
             this.isDragging = !1
         },
-        handleReleaseOutside: function() {
+        handleReleaseOutside: function () {
             if (d.isModern) {
                 var a = this;
                 d.AmMap.base.handleReleaseOutside.call(a);
                 a.mouseIsDown = !1;
-                setTimeout(function() {
+                setTimeout(function () {
                     a.resetPinch.call(a)
                 }, 100);
                 if (!a.preventHover) {
@@ -3405,10 +3405,10 @@
                 a.wasTouched = !1
             }
         },
-        resetPinch: function() {
+        resetPinch: function () {
             this.mapWasPinched = !1
         },
-        handleMouseMove: function(a) {
+        handleMouseMove: function (a) {
             var b = this;
             d.AmMap.base.handleMouseMove.call(b, a);
             if (!a || !a.touches || !b.tapToActivate || b.tapped) {
@@ -3427,7 +3427,7 @@
                     var h = b.mouse2X,
                         l = b.mouse2Y;
                     b.pinchTO && clearTimeout(b.pinchTO);
-                    b.pinchTO = setTimeout(function() {
+                    b.pinchTO = setTimeout(function () {
                         b.resetPinch.call(b)
                     }, 1E3);
                     var m = b.realHeight,
@@ -3461,7 +3461,7 @@
                 }
             }
         },
-        selectObject: function(a, b) {
+        selectObject: function (a, b) {
             var c = this;
             a || (a = c.dataProvider);
             a.isOver = !1;
@@ -3483,9 +3483,9 @@
             clearTimeout(c.selectedObjectTimeOut);
             clearTimeout(c.processObjectsTimeOut);
             e = c.zoomDuration;
-            !f && isNaN(a.zoomLevel) && isNaN(a.zoomX) && isNaN(a.zoomY) ? (c.showDescriptionAndGetUrl(), b || c.processObjects()) : (c.selectedObjectTimeOut = setTimeout(function() {
+            !f && isNaN(a.zoomLevel) && isNaN(a.zoomX) && isNaN(a.zoomY) ? (c.showDescriptionAndGetUrl(), b || c.processObjects()) : (c.selectedObjectTimeOut = setTimeout(function () {
                 c.showDescriptionAndGetUrl.call(c)
-            }, 1E3 * e + 200), c.showObjectsAfterZoom) ? b || (c.processObjectsTimeOut = setTimeout(function() {
+            }, 1E3 * e + 200), c.showObjectsAfterZoom) ? b || (c.processObjectsTimeOut = setTimeout(function () {
                 c.processObjects.call(c)
             }, 1E3 * e + 200)) : b || c.processObjects();
             e = a.displayObject;
@@ -3530,7 +3530,7 @@
                 chart: c
             })
         },
-        returnInitialColor: function(a, b) {
+        returnInitialColor: function (a, b) {
             this.returnInitialColorReal(a);
             b && (a.isFirst = !1);
             if (this.selectedObject.bringForwardOnHover) {
@@ -3544,20 +3544,20 @@
             }
             this.outlinesToFront()
         },
-        outlinesToFront: function() {
+        outlinesToFront: function () {
             if (this.outlines)
                 for (var a = 0; a < this.outlines.length; a++) this.outlines[a].toFront()
         },
-        closeAllDescriptions: function() {
+        closeAllDescriptions: function () {
             this.descriptionsDiv.innerHTML = ""
         },
-        fireClosed: function() {
+        fireClosed: function () {
             this.fire({
                 type: "descriptionClosed",
                 chart: this
             })
         },
-        returnInitialColorReal: function(a) {
+        returnInitialColorReal: function (a) {
             a.isOver = !1;
             var b = a.displayObject;
             if (b) {
@@ -3600,7 +3600,7 @@
                 (b = a.imageLabel) && !a.labelInactive && (a.showAsSelected && void 0 !== a.selectedLabelColor ? b.setAttr("fill", a.selectedLabelColor) : b.setAttr("fill", a.labelColorReal))
             }
         },
-        zoomToRectangle: function(a, b, c, e) {
+        zoomToRectangle: function (a, b, c, e) {
             var g = this.realWidth,
                 f = this.realHeight,
                 k = this.mapSet.scale,
@@ -3608,7 +3608,7 @@
                 g = d.fitToBounds(c / g > e / f ? .8 * g / (c * k) : .8 * f / (e * k), h.minZoomLevel, h.maxZoomLevel);
             this.zoomToMapXY(g, (a + c / 2) * k, (b + e / 2) * k)
         },
-        zoomToLatLongRectangle: function(a, b, c, e) {
+        zoomToLatLongRectangle: function (a, b, c, e) {
             var g = this.dataProvider,
                 f = this.zoomControl,
                 k = Math.abs(c - a),
@@ -3618,14 +3618,14 @@
                 f = d.fitToBounds(k / l > h / g ? .8 * l / k : .8 * g / h, f.minZoomLevel, f.maxZoomLevel);
             this.zoomToLongLat(f, a + (c - a) / 2, e + (b - e) / 2)
         },
-        getGroupById: function(a) {
+        getGroupById: function (a) {
             var b = [];
             this.getGroup(this.imagesProcessor.allObjects, a, b);
             this.getGroup(this.linesProcessor.allObjects, a, b);
             this.getGroup(this.areasProcessor.allObjects, a, b);
             return b
         },
-        zoomToGroup: function(a) {
+        zoomToGroup: function (a) {
             a = "object" == typeof a ? a : this.getGroupById(a);
             var b, c, d, g, f;
             for (f = 0; f < a.length; f++) {
@@ -3648,7 +3648,7 @@
             b += this.diffY;
             this.zoomToRectangle(c, b, d - c, g - b)
         },
-        getGroup: function(a, b, c) {
+        getGroup: function (a, b, c) {
             if (a) {
                 var d;
                 for (d = 0; d < a.length; d++) {
@@ -3657,7 +3657,7 @@
                 }
             }
         },
-        zoomToStageXY: function(a, b, c, e) {
+        zoomToStageXY: function (a, b, c, e) {
             if (!this.objectWasClicked) {
                 var g = this.zoomControl;
                 a = d.fitToBounds(a, g.minZoomLevel, g.maxZoomLevel);
@@ -3667,16 +3667,16 @@
                 this.zoomToLongLat(a, b.longitude, b.latitude, e)
             }
         },
-        zoomToLongLat: function(a, b, c, d) {
+        zoomToLongLat: function (a, b, c, d) {
             b = this.coordinatesToXY(b, c);
             this.zoomToMapXY(a, b.x, b.y, d)
         },
-        zoomToMapXY: function(a, b, c, d) {
+        zoomToMapXY: function (a, b, c, d) {
             var g = this.mapWidth,
                 f = this.mapHeight;
             this.zoomTo(a, -(b / g) * a + this.realWidth / g / 2, -(c / f) * a + this.realHeight / f / 2, d)
         },
-        zoomToObject: function(a) {
+        zoomToObject: function (a) {
             if (a) {
                 var b = a.zoomLatitude,
                     c = a.zoomLongitude;
@@ -3695,10 +3695,10 @@
                 this.zoomControl.update()
             }
         },
-        zoomToSelectedObject: function() {
+        zoomToSelectedObject: function () {
             this.zoomToObject(this.selectedObject)
         },
-        zoomTo: function(a, b, c, e) {
+        zoomTo: function (a, b, c, e) {
             var g = this.zoomControl;
             a = d.fitToBounds(a, g.minZoomLevel, g.maxZoomLevel);
             g = this.zoomLevel();
@@ -3707,7 +3707,7 @@
             this.stopAnimation();
             isNaN(a) || (g = this.mapContainer, this.initialX = g.x, this.initialY = g.y, this.initialScale = g.scale, this.finalX = this.mapWidth * b, this.finalY = this.mapHeight * c, this.finalScale = a, this.finalX != this.initialX || this.finalY != this.initialY || this.finalScale != this.initialScale ? e ? (this.tweenPercent = 1, this.rescaleMapAndObjects(), this.wheelBusy = !1) : this.animateMap() : this.wheelBusy = !1)
         },
-        loadXml: function(a) {
+        loadXml: function (a) {
             var b;
             window.XMLHttpRequest && (b = new XMLHttpRequest);
             b.overrideMimeType && b.overrideMimeType("text/xml");
@@ -3716,10 +3716,10 @@
             this.parseXMLObject(b.responseXML);
             this.svgData && this.buildEverything()
         },
-        stopAnimation: function() {
+        stopAnimation: function () {
             this.frame = this.totalFrames
         },
-        processObjects: function(a) {
+        processObjects: function (a) {
             var b = this.selectedObject;
             if (0 < b.images.length || 0 < b.areas.length || 0 < b.lines.length || b == this.dataProvider || a) {
                 a = this.container;
@@ -3744,10 +3744,10 @@
                 this.rescaleObjects()
             }
         },
-        processAreas: function() {
+        processAreas: function () {
             this.areasProcessor.process(this.dataProvider)
         },
-        buildSVGMap: function() {
+        buildSVGMap: function () {
             d.remove(this.mapSet);
             var a = this.svgData.g.path,
                 b = this.container,
@@ -3781,34 +3781,34 @@
             this.mapContainer.push(c);
             this.resizeMap()
         },
-        centerAlign: function() {},
-        setProjection: function(a) {
+        centerAlign: function () { },
+        setProjection: function (a) {
             this.projection = a;
             this.chartCreated = !1;
             this.buildEverything()
         },
-        addObjectEventListeners: function(a, b) {
+        addObjectEventListeners: function (a, b) {
             var c = this;
-            a.mousedown(function(a) {
+            a.mousedown(function (a) {
                 c.mouseDownMapObject(b, a)
-            }).mouseup(function(a) {
+            }).mouseup(function (a) {
                 c.clickMapObject(b, a)
-            }).mouseover(function(a) {
+            }).mouseover(function (a) {
                 c.balloonX = NaN;
                 c.rollOverMapObject(b, !0, a)
-            }).mouseout(function(a) {
+            }).mouseout(function (a) {
                 c.balloonX = NaN;
                 c.rollOutMapObject(b, a)
-            }).touchend(function(a) {
+            }).touchend(function (a) {
                 4 > Math.abs(c.mouseX - c.tmx) && 4 > Math.abs(c.mouseY - c.tmy) && (c.tapped = !0);
                 c.tapToActivate && !c.tapped || c.mapWasDragged || c.mapWasPinched || (c.balloonX = NaN, c.rollOverMapObject(b, !0, a), c.clickMapObject(b, a))
-            }).touchstart(function(a) {
+            }).touchstart(function (a) {
                 c.tmx = c.mouseX;
                 c.tmy = c.mouseY;
                 c.mouseDownMapObject(b, a)
-            }).keyup(function(a) {
+            }).keyup(function (a) {
                 13 == a.keyCode && c.clickMapObject(b, a)
-            }).focus(function(a) {
+            }).focus(function (a) {
                 var d, f;
                 "MapImage" != b.objectType || isNaN(b.longitude) || (d = b.longitude, f = b.latitude);
                 "MapArea" == b.objectType && (d = c.getAreaCenterLongitude(b), f = c.getAreaCenterLatitude(b));
@@ -3817,12 +3817,12 @@
                 c.balloonY = d.y;
                 c.rollOverMapObject(b, !0, a);
                 c.focusedItem = b
-            }).blur(function(a) {
+            }).blur(function (a) {
                 c.rollOutMapObject(b, a);
                 c.focusedItem = void 0
             })
         },
-        checkIfSelected: function(a) {
+        checkIfSelected: function (a) {
             var b = this.selectedObject;
             if (b == a) return !0;
             if (b = b.groupId) {
@@ -3833,27 +3833,27 @@
             }
             return !1
         },
-        clearMap: function() {
+        clearMap: function () {
             this.chartDiv.innerHTML = "";
             this.clearObjectList()
         },
-        clearObjectList: function() {
+        clearObjectList: function () {
             var a = this.objectList;
             a && a.div && (a.div.innerHTML = "")
         },
-        checkIfLast: function(a) {
+        checkIfLast: function (a) {
             if (a) {
                 var b = a.parentNode;
                 if (b && b.lastChild == a) return !0
             }
             return !1
         },
-        showAsRolledOver: function(a) {
+        showAsRolledOver: function (a) {
             var b = a.displayObject;
             if (!a.showAsSelected && b && !a.isOver) {
-                b.node.onmouseout = function() {};
-                b.node.onmouseover = function() {};
-                b.node.onclick = function() {};
+                b.node.onmouseout = function () { };
+                b.node.onmouseover = function () { };
+                b.node.onclick = function () { };
                 !a.isFirst && a.bringForwardOnHover && (b.toFront(), a.isFirst = !0);
                 var c = a.rollOverColorReal,
                     e;
@@ -3861,10 +3861,10 @@
                 "bubble" == a.type && (c = void 0);
                 void 0 == c && (isNaN(a.rollOverBrightnessReal) || (c = d.adjustLuminosity(a.colorReal, a.rollOverBrightnessReal / 100)));
                 if (void 0 != c)
-                    if ("MapImage" == a.objectType)(e = a.image) && e.setAttr("fill", c);
+                    if ("MapImage" == a.objectType) (e = a.image) && e.setAttr("fill", c);
                     else if ("MapLine" == a.objectType) {
-                    if ((e = a.lineSvg) && e.setAttr("stroke", c), e = a.arrowSvg) e.setAttr("fill", c), e.setAttr("stroke", c)
-                } else b.setAttr("fill", c);
+                        if ((e = a.lineSvg) && e.setAttr("stroke", c), e = a.arrowSvg) e.setAttr("fill", c), e.setAttr("stroke", c)
+                    } else b.setAttr("fill", c);
                 (c = a.imageLabel) && !a.labelInactive && (e = a.labelRollOverColorReal, void 0 != e && c.setAttr("fill", e));
                 c = a.rollOverOutlineColorReal;
                 void 0 != c && ("MapImage" == a.objectType ? (e = a.image) && e.setAttr("stroke", c) : b.setAttr("stroke", c));
@@ -3888,7 +3888,7 @@
             }
             this.outlinesToFront()
         },
-        rollOverMapObject: function(a, b, c) {
+        rollOverMapObject: function (a, b, c) {
             if (this.chartCreated) {
                 this.handleMouseMove();
                 var d = this.previouslyHovered;
@@ -3901,7 +3901,7 @@
                             for (g = 0; g < d.length; g++) d[g] != a && this.showAsRolledOver(d[g])
                         }
                         this.showAsRolledOver(a)
-                    } else(d = a.displayObject) && (this.allowClickOnSelectedObject ? d.setAttr("cursor", "pointer") : d.setAttr("cursor", "default"));
+                    } else (d = a.displayObject) && (this.allowClickOnSelectedObject ? d.setAttr("cursor", "pointer") : d.setAttr("cursor", "default"));
                     this.showDescriptionOnHover ? this.showDescription(a) : !this.showBalloonOnSelectedObject && this.checkIfSelected(a) || !1 === b || (g = this.balloon, this.balloon.fixedPosition = !1, b = a.colorReal, d = "", void 0 !== b && this.useObjectColorForBalloon || (b = g.fillColor), (g = a.balloonTextReal) && (d = this.formatString(g, a)), this.balloonLabelFunction && (d = this.balloonLabelFunction(a, this)), d && "" !== d && this.showBalloon(d, b, !1, this.balloonX, this.balloonY));
                     c = {
                         type: "rollOverMapObject",
@@ -3915,27 +3915,27 @@
                 }
             }
         },
-        longitudeToX: function(a) {
+        longitudeToX: function (a) {
             return (this.longitudeToCoordinate(a) + this.diffX * this.mapScale) * this.zoomLevel() + this.mapContainer.x
         },
-        latitudeToY: function(a) {
+        latitudeToY: function (a) {
             return (this.latitudeToCoordinate(a) + this.diffY * this.mapScale) * this.zoomLevel() + this.mapContainer.y
         },
-        latitudeToStageY: function(a) {
+        latitudeToStageY: function (a) {
             return this.latitudeToCoordinate(a) * this.zoomLevel() + this.mapContainer.y + this.diffY * this.mapScale
         },
-        longitudeToStageX: function(a) {
+        longitudeToStageX: function (a) {
             return this.longitudeToCoordinate(a) * this.zoomLevel() + this.mapContainer.x + this.diffX * this.mapScale
         },
-        stageXToLongitude: function(a) {
+        stageXToLongitude: function (a) {
             a = (a - this.mapContainer.x) / this.zoomLevel();
             return this.coordinateToLongitude(a)
         },
-        stageYToLatitude: function(a) {
+        stageYToLatitude: function (a) {
             a = (a - this.mapContainer.y) / this.zoomLevel();
             return this.coordinateToLatitude(a)
         },
-        rollOutMapObject: function(a, b) {
+        rollOutMapObject: function (a, b) {
             this.hideBalloon();
             if (a && this.chartCreated && a.isOver) {
                 this.checkIfSelected(a) || this.returnInitialColor(a);
@@ -3949,7 +3949,7 @@
                 this.fire(c)
             }
         },
-        formatString: function(a, b) {
+        formatString: function (a, b) {
             var c = this.nf,
                 e = this.pf,
                 g = b.title;
@@ -3971,7 +3971,7 @@
                 "[[customData]]": k
             })
         },
-        mouseDownMapObject: function(a, b) {
+        mouseDownMapObject: function (a, b) {
             this.fire({
                 type: "mouseDownMapObject",
                 mapObject: a,
@@ -3979,7 +3979,7 @@
                 event: b
             })
         },
-        clickMapObject: function(a, b) {
+        clickMapObject: function (a, b) {
             var c = this;
             b && (b.touches || isNaN(a.zoomLevel) && isNaN(a.zoomX) && isNaN(a.zoomY) || c.hideBalloon());
             if (c.chartCreated && !c.preventHover && c.checkTouchDuration(b) && !c.mapWasDragged && c.checkIfClickable(a) && !c.mapWasPinched) {
@@ -3989,7 +3989,7 @@
                     d = c.xyToCoordinates((c.mouseX - c.mapContainer.x) / d - g.x * c.mapScale, (c.mouseY - c.mapContainer.y) / d - g.y * c.mapScale);
                 c.clickLatitude = d.latitude;
                 c.clickLongitude = d.longitude;
-                b && b.touches && setTimeout(function() {
+                b && b.touches && setTimeout(function () {
                     c.showBalloonAfterZoom.call(c)
                 }, 1E3 * c.zoomDuration);
                 c.fire({
@@ -4001,7 +4001,7 @@
                 c.objectWasClicked = !0
             }
         },
-        showBalloonAfterZoom: function() {
+        showBalloonAfterZoom: function () {
             var a = this.clickLongitude,
                 b = this.clickLatitude,
                 c = this.selectedObject;
@@ -4011,11 +4011,11 @@
             this.balloonY = a.y;
             this.rollOverMapObject(this.selectedObject, !0)
         },
-        checkIfClickable: function(a) {
+        checkIfClickable: function (a) {
             var b = this.allowClickOnSelectedObject;
             return this.selectedObject == a && b ? !0 : this.selectedObject != a || b ? !0 === a.selectable || "MapArea" == a.objectType && a.autoZoomReal || a.url || a.linkToObject || 0 < a.images.length || 0 < a.lines.length || !isNaN(a.zoomLevel) || !isNaN(a.zoomX) || !isNaN(a.zoomY) || a.description ? !0 : !1 : !1
         },
-        resizeMap: function() {
+        resizeMap: function () {
             var a = this.mapSet;
             if (a) {
                 var b = 1,
@@ -4027,48 +4027,48 @@
                 0 < f && 0 < c && (this.fitMapToContainer && (b = f / d > c / g ? d / f : g / c), a.translate(0, 0, b, !0), this.mapScale = b, this.mapHeight = c * b, this.mapWidth = f * b)
             }
         },
-        zoomIn: function() {
+        zoomIn: function () {
             var a = this.zoomLevel() * this.zoomControl.zoomFactor;
             this.zoomTo(a)
         },
-        zoomOut: function() {
+        zoomOut: function () {
             var a = this.zoomLevel() / this.zoomControl.zoomFactor;
             this.zoomTo(a)
         },
-        moveLeft: function() {
+        moveLeft: function () {
             var a = this.zoomX() + this.zoomControl.panStepSize;
             this.zoomTo(this.zoomLevel(), a, this.zoomY())
         },
-        moveRight: function() {
+        moveRight: function () {
             var a = this.zoomX() - this.zoomControl.panStepSize;
             this.zoomTo(this.zoomLevel(), a, this.zoomY())
         },
-        moveUp: function() {
+        moveUp: function () {
             var a = this.zoomY() + this.zoomControl.panStepSize;
             this.zoomTo(this.zoomLevel(), this.zoomX(), a)
         },
-        moveDown: function() {
+        moveDown: function () {
             var a = this.zoomY() -
                 this.zoomControl.panStepSize;
             this.zoomTo(this.zoomLevel(), this.zoomX(), a)
         },
-        zoomX: function() {
+        zoomX: function () {
             return this.mapSet ? Math.round(1E4 * this.mapContainer.x / this.mapWidth) / 1E4 : NaN
         },
-        zoomY: function() {
+        zoomY: function () {
             return this.mapSet ? Math.round(1E4 * this.mapContainer.y / this.mapHeight) / 1E4 : NaN
         },
-        goHome: function() {
+        goHome: function () {
             this.selectObject(this.dataProvider);
             this.fire({
                 type: "homeButtonClicked",
                 chart: this
             })
         },
-        zoomLevel: function() {
+        zoomLevel: function () {
             return Math.round(1E5 * this.mapContainer.scale) / 1E5
         },
-        showDescriptionAndGetUrl: function() {
+        showDescriptionAndGetUrl: function () {
             var a = this.selectedObject;
             if (a) {
                 this.showDescription();
@@ -4087,26 +4087,27 @@
                 }
             }
         },
-        extendMapData: function(a) {
+        extendMapData: function (a) {
             var b = a.objectType;
             if ("MapImage" != b && "MapArea" != b && "MapLine" != b) return d.extend(a, new d.MapData, !0), this.dataProvider = a, this.zoomInstantly = !0, this.validateData(), !0
         },
-        showDescription: function(a) {
+        showDescription: function (a) {
             a || (a = this.selectedObject);
             this.allowMultipleDescriptionWindows || this.closeAllDescriptions();
             if (a.customData) {
-                kontinent=a.customData.kontinent;
-                drzava= a.customData.država;
-                grad=a.customData.glavni_grad;
-                smjestaj=a.customData.smještaj;
-                stanovnici=a.customData.broj_stanovnika;
-                zastava=a.customData.zastava_url;
-                opis_zastava=a.customData.zastava_opis;
-                grb=a.customData.grb_url;
-                grb_opis=a.customData.grb_opis,
-                enciklopedija=a.customData.doznaj_više_url;
-                podatci=
-                "<p class='metapodatci'><span id='kontinent'>KONTINENT: "+kontinent+"<br> </span><span id='drzava'>DRŽAVA: "+drzava+"<br></span><span id='grad'>GLAVNI GRAD: "+grad+"<br> </span><span id='smjestaj'>SMJEŠTAJ: "+smjestaj+"<br> </span><span id='stanovnici'>BROJ STANOVNIKA: "+stanovnici+"</p><p style='text-align:center' id='zastava'><img src='zastave/"+zastava+"'></p><p id='opis_zastava'>"+opis_zastava+"</p><p style='text-align:center' id='grb'><img src='grbovi/"+grb+"'></p><p id='grb_opis'>"+grb_opis+"</p><p style='text-align:center' id='enciklopedija'><a href='"+enciklopedija+"' target='_blank'>doznaj više...</a></p>";
+                kontinent = a.customData.kontinent;
+                drzava = a.customData.država;
+                grad = a.customData.glavni_grad;
+                smjestaj = a.customData.smještaj;
+                stanovnici = a.customData.broj_stanovnika;
+                povrsina = a.customData.površina;
+                zastava = a.customData.zastava_url;
+                opis_zastava = a.customData.zastava_opis;
+                grb = a.customData.grb_url;
+                grb_opis = a.customData.grb_opis,
+                    enciklopedija = a.customData.doznaj_više_url;
+                stranica = a.customData.original_pdf_str;
+                podatci="<p class='metapodatci'><span id='kontinent'>KONTINENT: " + kontinent + "<br> </span><span id='drzava'>DRŽAVA: " + drzava + "<br></span><span id='grad'>GLAVNI GRAD: " + grad + "<br> </span><span id='smjestaj'>SMJEŠTAJ: " + smjestaj + "<br> </span><span id='stanovnici'>BROJ STANOVNIKA: " + stanovnici + "<br> </span><span id='povrsina'>POVRŠINA: " + povrsina + "</p><p style='text-align:center' id='zastava'><img src='zastave/" + zastava + "'></p><p id='opis_zastava'>" + opis_zastava + "</p><p style='text-align:center' id='grb'><img src='grbovi/" + grb + "'></p><p id='grb_opis'>" + grb_opis + "</p><p style='text-align:center' id='stranica'><a href='./media/files/knjiga/#flipbook-df_manual_book/" + stranica + "' target='_blank'>vidi kako je bilo u knjizi</a></p><p style='text-align:center' id='enciklopedija'><a href='" + enciklopedija + "' target='_blank'>doznaj više...</a></p>";
                 var b = a.descriptionWindow;
                 b && b.close();
                 b = new d.DescriptionWindow;
@@ -4139,7 +4140,7 @@
                 a.top = f + "px"
             }
         },
-        parseXMLObject: function(a) {
+        parseXMLObject: function (a) {
             var b = {
                 root: {}
             };
@@ -4147,7 +4148,7 @@
             this.svgData = b.root.svg;
             this.getBounds()
         },
-        getBounds: function() {
+        getBounds: function () {
             var a = this.dataProvider;
             try {
                 var b = this.svgData.defs["amcharts:ammap"];
@@ -4159,13 +4160,13 @@
                 var c = b.wrappedLongitudes;
                 c && (a.rightLongitude += 360);
                 a.wrappedLongitudes = c
-            } catch (d) {}
+            } catch (d) { }
         },
-        recalcLongitude: function(a) {
+        recalcLongitude: function (a) {
             return this.dataProvider.wrappedLongitudes ? a < this.dataProvider.leftLongitude ? Number(a) +
                 360 : a : a
         },
-        latitudeToCoordinate: function(a) {
+        latitudeToCoordinate: function (a) {
             var b, c = this.dataProvider;
             if (this.mapSet) {
                 b = c.topLatitude;
@@ -4175,18 +4176,18 @@
             }
             return b
         },
-        longitudeToCoordinate: function(a) {
+        longitudeToCoordinate: function (a) {
             a = this.recalcLongitude(a);
             var b, c = this.dataProvider;
             this.mapSet && (b = c.leftLongitude, b = (a - b) / (c.rightLongitude - b) * this.mapWidth);
             return b
         },
-        mercatorLatitudeToCoordinate: function(a) {
+        mercatorLatitudeToCoordinate: function (a) {
             89.5 < a && (a = 89.5); - 89.5 > a && (a = -89.5);
             a = d.degreesToRadians(a);
             return d.radiansToDegrees(.5 * Math.log((1 + Math.sin(a)) / (1 - Math.sin(a))) / 2)
         },
-        zoomLatitude: function() {
+        zoomLatitude: function () {
             if (this.mapContainer) {
                 var a = this.mapSet.getBBox(),
                     b = (-this.mapContainer.x + this.previousWidth / 2) / this.zoomLevel() - a.x * this.mapScale,
@@ -4194,7 +4195,7 @@
                 return this.xyToCoordinates(b, a).latitude
             }
         },
-        zoomLongitude: function() {
+        zoomLongitude: function () {
             if (this.mapContainer) {
                 var a = this.mapSet.getBBox(),
                     b = (-this.mapContainer.x +
@@ -4203,27 +4204,27 @@
                 return this.xyToCoordinates(b, a).longitude
             }
         },
-        getAreaCenterLatitude: function(a) {
+        getAreaCenterLatitude: function (a) {
             a = a.displayObject.getBBox();
             var b = this.mapScale,
                 c = this.mapSet.getBBox();
             return this.xyToCoordinates((a.x + a.width / 2 + this.diffX) * b - c.x * b, (a.y + a.height / 2 + this.diffY) * b - c.y * b).latitude
         },
-        getAreaCenterLongitude: function(a) {
+        getAreaCenterLongitude: function (a) {
             a = a.displayObject.getBBox();
             var b = this.mapScale,
                 c = this.mapSet.getBBox();
             return this.xyToCoordinates((a.x + a.width / 2 + this.diffX) * b - c.x * b, (a.y + a.height / 2 + this.diffY) * b - c.y * b).longitude
         },
-        milesToPixels: function(a) {
+        milesToPixels: function (a) {
             var b = this.dataProvider;
             return this.mapWidth / (b.rightLongitude - b.leftLongitude) * a / 69.172
         },
-        kilometersToPixels: function(a) {
+        kilometersToPixels: function (a) {
             var b = this.dataProvider;
             return this.mapWidth / (b.rightLongitude - b.leftLongitude) * a / 111.325
         },
-        handleBackgroundClick: function() {
+        handleBackgroundClick: function () {
             if (this.backgroundZoomsToTop && !this.mapWasDragged) {
                 var a = this.dataProvider;
                 if (this.checkIfClickable(a)) this.clickMapObject(a);
@@ -4238,7 +4239,7 @@
                 }
             }
         },
-        parseXMLNode: function(a, b, c, d) {
+        parseXMLNode: function (a, b, c, d) {
             void 0 === d && (d = "");
             var g, f, k;
             if (c) {
@@ -4257,12 +4258,12 @@
                                 f ? a[b]["#text"] = m : a[b] = m
                             }
                         } else if (1 == f.nodeType) {
-                        var p;
-                        void 0 !== a[b][l] ? void 0 === a[b][l].length ? (p = a[b][l], a[b][l] = [], a[b][l].push(p), a[b][l].push({}), p = a[b][l][1]) : "object" == typeof a[b][l] && (a[b][l].push({}), p = a[b][l][a[b][l].length - 1]) : (a[b][l] = {}, p = a[b][l]);
-                        if (f.attributes && f.attributes.length)
-                            for (m = 0; m < f.attributes.length; m++) p[f.attributes[m].name] = f.attributes[m].value;
-                        void 0 !== a[b][l].length ? this.parseXMLNode(a[b][l], a[b][l].length - 1, f, d + "  ") : this.parseXMLNode(a[b], l, f, d + "  ")
-                    }
+                            var p;
+                            void 0 !== a[b][l] ? void 0 === a[b][l].length ? (p = a[b][l], a[b][l] = [], a[b][l].push(p), a[b][l].push({}), p = a[b][l][1]) : "object" == typeof a[b][l] && (a[b][l].push({}), p = a[b][l][a[b][l].length - 1]) : (a[b][l] = {}, p = a[b][l]);
+                            if (f.attributes && f.attributes.length)
+                                for (m = 0; m < f.attributes.length; m++) p[f.attributes[m].name] = f.attributes[m].value;
+                            void 0 !== a[b][l].length ? this.parseXMLNode(a[b][l], a[b][l].length - 1, f, d + "  ") : this.parseXMLNode(a[b], l, f, d + "  ")
+                        }
                 }
                 f = 0;
                 c = "";
@@ -4270,13 +4271,13 @@
                 0 === f && void 0 === a[b].length && (a[b] = c)
             }
         },
-        doDoubleClickZoom: function() {
+        doDoubleClickZoom: function () {
             if (!this.mapWasDragged) {
                 var a = this.zoomLevel() * this.zoomControl.zoomFactor;
                 this.zoomToStageXY(a, this.mouseX, this.mouseY)
             }
         },
-        getDevInfo: function() {
+        getDevInfo: function () {
             var a = this.zoomLevel(),
                 b = this.mapSet.getBBox(),
                 b = this.xyToCoordinates((this.mouseX - this.mapContainer.x) / a - b.x * this.mapScale, (this.mouseY - this.mapContainer.y) / a - b.y * this.mapScale),
@@ -4300,7 +4301,7 @@
                     percentBottom: Math.round((this.realHeight - this.mouseY) / this.realHeight * 100) + "%"
                 },
                 b = "zoomLevel:" +
-                a.zoomLevel + ", zoomLongitude:" + a.zoomLongitude + ", zoomLatitude:" + a.zoomLatitude + "\n",
+                    a.zoomLevel + ", zoomLongitude:" + a.zoomLongitude + ", zoomLatitude:" + a.zoomLatitude + "\n",
                 b = b + ("zoomX:" + a.zoomX + ", zoomY:" + a.zoomY + "\n"),
                 b = b + ("latitude:" + a.latitude + ", longitude:" + a.longitude + "\n"),
                 b = b + ("left:" + a.left + ", top:" + a.top + "\n"),
@@ -4311,11 +4312,11 @@
             this.fire(a);
             return a
         },
-        getXY: function(a, b, c) {
+        getXY: function (a, b, c) {
             void 0 !== a && (-1 != String(a).indexOf("%") ? (a = Number(a.split("%").join("")), c && (a = 100 - a), a = Number(a) * b / 100) : c && (a = b - a));
             return a
         },
-        getObjectById: function(a) {
+        getObjectById: function (a) {
             var b = this.dataProvider;
             if (b.areas) {
                 var c = this.getObject(a, b.areas);
@@ -4324,7 +4325,7 @@
             if (c = this.getObject(a, b.images)) return c;
             if (a = this.getObject(a, b.lines)) return a
         },
-        getObject: function(a, b) {
+        getObject: function (a, b) {
             if (b) {
                 var c;
                 for (c = 0; c < b.length; c++) {
@@ -4339,13 +4340,13 @@
                 }
             }
         },
-        parseData: function() {
+        parseData: function () {
             var a = this.dataProvider;
             this.processObject(a.areas, a, "area");
             this.processObject(a.images, a, "image");
             this.processObject(a.lines, a, "line")
         },
-        processObject: function(a, b, c) {
+        processObject: function (a, b, c) {
             if (a) {
                 var e;
                 for (e = 0; e < a.length; e++) {
@@ -4361,7 +4362,7 @@
                 }
             }
         },
-        positionChanged: function() {
+        positionChanged: function () {
             var a = {
                 type: "positionChanged",
                 zoomX: this.zoomX(),
@@ -4371,13 +4372,13 @@
             };
             this.fire(a)
         },
-        getX: function(a, b) {
+        getX: function (a, b) {
             return this.getXY(a, this.realWidth, b)
         },
-        getY: function(a, b) {
+        getY: function (a, b) {
             return this.getXY(a, this.realHeight, b)
         },
-        trim: function(a) {
+        trim: function (a) {
             if (a) {
                 var b;
                 for (b = 0; b < a.length; b++)
@@ -4391,18 +4392,18 @@
                     } return -1 === " \n\r\t\f\x0B\u00a0\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u200b\u2028\u2029\u3000".indexOf(a.charAt(0)) ? a : ""
             }
         },
-        destroy: function() {
+        destroy: function () {
             d.AmMap.base.destroy.call(this)
         },
-        x2c: function(a) {
+        x2c: function (a) {
             var b = this.dataProvider.leftLongitude;
             return Math.round(this.unscaledMapWidth * (a - b) / (this.dataProvider.rightLongitude - b) * 100) / 100
         },
-        y2c: function(a) {
+        y2c: function (a) {
             var b = this.dataProvider.topLatitude;
             return Math.round(this.unscaledMapHeight * (a - b) / (this.dataProvider.bottomLatitude - b) * 100) / 100
         },
-        normalize: function(a) {
+        normalize: function (a) {
             if (!a.pathsArray) {
                 var b;
                 if (a.normalized) b = a.normalized;
@@ -4418,7 +4419,7 @@
                 a.node.setAttribute("d", b)
             }
         },
-        redraw: function(a) {
+        redraw: function (a) {
             var b = a.normalized,
                 b = b.split(" Z").join(""),
                 b = b.split("M");
@@ -4439,7 +4440,7 @@
             a.node.setAttribute("d", b);
             a.path = b
         },
-        redrawArea: function(a) {
+        redrawArea: function (a) {
             for (var b = !1, c = "", e = 0; e < a.length; e++) {
                 var g = a[e][0],
                     f = a[e][1],
@@ -4469,7 +4470,7 @@
             }
             return c + " Z "
         },
-        normalizeMap: function() {
+        normalizeMap: function () {
             var a = d.degreesToRadians(this.dataProvider.leftLongitude),
                 b = d.degreesToRadians(this.dataProvider.rightLongitude),
                 c = d.degreesToRadians(this.dataProvider.topLatitude),
@@ -4498,7 +4499,7 @@
             this.unscaledMapHeight = this.sourceMapHeight * k;
             this.diffY = this.diffX = 0
         },
-        fixMapPosition: function() {
+        fixMapPosition: function () {
             var a = d.degreesToRadians(this.dataProvider.leftLongitude),
                 b = d.degreesToRadians(this.dataProvider.rightLongitude),
                 c = d.degreesToRadians(this.dataProvider.topLatitude),
@@ -4521,7 +4522,7 @@
             this.diffX = a.x / this.mapScale - c;
             for (e = 0; e < this.svgAreas.length; e++) this.svgAreas[e].translate(this.diffX, this.diffY)
         },
-        changeProjection: function() {
+        changeProjection: function () {
             this.minMapXX = Infinity;
             this.maxMapXX = -Infinity;
             this.minMapYY = Infinity;
@@ -4531,7 +4532,7 @@
             this.projectionChanged = !0;
             this.resizeMap()
         },
-        coordinatesToXY: function(a, b) {
+        coordinatesToXY: function (a, b) {
             var c, e;
             c = !1;
             this.dataProvider && (c = this.dataProvider.wrappedLongitudes) && (a = this.recalcLongitude(a));
@@ -4541,7 +4542,7 @@
                 y: e
             }
         },
-        coordinatesToStageXY: function(a, b) {
+        coordinatesToStageXY: function (a, b) {
             var c = this.coordinatesToXY(a, b),
                 d = c.x * this.zoomLevel() + this.mapContainer.x,
                 c = c.y * this.zoomLevel() + this.mapContainer.y;
@@ -4550,13 +4551,13 @@
                 y: c
             }
         },
-        stageXYToCoordinates: function(a, b) {
+        stageXYToCoordinates: function (a, b) {
             var c = this.mapSet.getBBox(),
                 d = (a - this.mapContainer.x) / this.zoomLevel() - c.x * this.mapScale,
                 c = (b - this.mapContainer.y) / this.zoomLevel() - c.y * this.mapScale;
             return this.xyToCoordinates(d, c)
         },
-        xyToCoordinates: function(a, b, c, e, g) {
+        xyToCoordinates: function (a, b, c, e, g) {
             var f;
             isNaN(e) && (e = this.mapWidth);
             isNaN(g) && (g = this.mapHeight);
@@ -4584,7 +4585,7 @@
                 latitude: d.roundTo(b, 4)
             }
         },
-        coordinateToLatitude: function(a, b) {
+        coordinateToLatitude: function (a, b) {
             var c;
             void 0 === b && (b = this.mapHeight);
             if (this.mapSet) {
@@ -4595,10 +4596,10 @@
             }
             return Math.round(1E6 * c) / 1E6
         },
-        handleKeyUp: function(a) {
+        handleKeyUp: function (a) {
             13 == a.keyCode && this.focusedItem && this.selectObject(this.focusedItem)
         },
-        coordinateToLongitude: function(a, b) {
+        coordinateToLongitude: function (a, b) {
             var c, d = this.dataProvider;
             void 0 === b && (b = this.mapWidth);
             this.mapSet && (c = a / b * (d.rightLongitude - d.leftLongitude) + d.leftLongitude);
@@ -4606,10 +4607,10 @@
         }
     })
 })();
-(function() {
+(function () {
     var d = window.AmCharts;
     d.ZoomControl = d.Class({
-        construct: function(a) {
+        construct: function (a) {
             this.cname = "ZoomControl";
             this.panStepSize = .1;
             this.zoomFactor = 2;
@@ -4636,7 +4637,7 @@
             this.top = this.left = 10;
             d.applyTheme(this, a, this.cname)
         },
-        init: function(a, b) {
+        init: function (a, b) {
             var c = this;
             c.chart = a;
             d.remove(c.set);
@@ -4673,9 +4674,9 @@
                 e.push(E);
                 c.set = e;
                 c.zoomSet = E;
-                5 < q && (f = d.rect(b, g + 6, q + 2 * g + 6, c.gridBackgroundColor, c.gridBackgroundAlpha, 0, "#000000", 0, 4), d.setCN(a, f, "zoom-bg"), f.translate(-3, -3), f.mouseup(function() {
+                5 < q && (f = d.rect(b, g + 6, q + 2 * g + 6, c.gridBackgroundColor, c.gridBackgroundAlpha, 0, "#000000", 0, 4), d.setCN(a, f, "zoom-bg"), f.translate(-3, -3), f.mouseup(function () {
                     c.handleBgUp()
-                }).touchend(function() {
+                }).touchend(function () {
                     c.handleBgUp()
                 }), E.push(f));
                 var F = g;
@@ -4720,18 +4721,18 @@
             c.homeButtonEnabled && (k = new d.SimpleButton, C ? k.svgIcon = d.polygon(b, [-x, 0, x, x - 1, x - 1, 2, 2, -2, -2, -x + 1, -x + 1], [0, -x, 0, 0, x - 1, x - 1, 2, 2, x - 1, x - 1, 0], w, v, 1, w, v) : k.setIcon(a.pathToImages + c.homeIconFile, c.iconSize), k.setClickHandler(a.goHome, a), c.panControlEnabled && (p = l = 0), k.init(b, g, g, h, l, m, n, p, r, t, v, w, A), c.panControlEnabled ? k.set.translate(g, g) : E && E.translate(0, 1.5 * g), d.setCN(a, k.set, "pan-home"), e.push(k.set));
             c.update()
         },
-        draggerDown: function() {
+        draggerDown: function () {
             this.chart.stopDrag();
             this.isDragging = !0
         },
-        draggerUp: function() {
+        draggerUp: function () {
             this.isDragging = !1
         },
-        handleBgUp: function() {
+        handleBgUp: function () {
             var a = this.chart;
             a.zoomTo(100 * Math.pow(this.zoomFactor, this.stepMax - (a.mouseY - this.zoomSet.y - this.set.y - this.buttonSize - this.realStepSize / 2) / this.realStepSize))
         },
-        update: function() {
+        update: function () {
             var a;
             a = this.zoomFactor;
             var b = this.realStepSize,
@@ -4743,11 +4744,11 @@
         }
     })
 })();
-(function() {
+(function () {
     var d = window.AmCharts;
     d.SimpleButton = d.Class({
-        construct: function() {},
-        init: function(a, b, c, e, g, f, k, h, l, m, n, p, r) {
+        construct: function () { },
+        init: function (a, b, c, e, g, f, k, h, l, m, n, p, r) {
             var t = this;
             t.rollOverColor = m;
             t.color = e;
@@ -4762,55 +4763,55 @@
             t.svgIcon && (q = t.svgIcon, r ? q.translate(b, b) : q.translate(b / 2, b / 2));
             m.setAttr("cursor", "pointer");
             q && (m.push(q), q.setAttr("opacity", n), q.node.style.pointerEvents = "none");
-            e.mousedown(function() {
+            e.mousedown(function () {
                 t.handleDown()
-            }).touchstart(function() {
+            }).touchstart(function () {
                 t.handleDown()
-            }).mouseup(function() {
+            }).mouseup(function () {
                 t.handleUp()
-            }).touchend(function() {
+            }).touchend(function () {
                 t.handleUp()
-            }).mouseover(function() {
+            }).mouseover(function () {
                 t.handleOver()
-            }).mouseout(function() {
+            }).mouseout(function () {
                 t.handleOut()
             });
             t.bg = e
         },
-        setIcon: function(a, b) {
+        setIcon: function (a, b) {
             this.iconPath = a;
             this.iconSize = b
         },
-        setClickHandler: function(a, b) {
+        setClickHandler: function (a, b) {
             this.clickHandler = a;
             this.scope = b
         },
-        setDownHandler: function(a, b) {
+        setDownHandler: function (a, b) {
             this.downHandler = a;
             this.scope = b
         },
-        handleUp: function() {
+        handleUp: function () {
             var a = this.clickHandler;
             a && a.call(this.scope)
         },
-        handleDown: function() {
+        handleDown: function () {
             var a = this.downHandler;
             a && a.call(this.scope)
         },
-        handleOver: function() {
+        handleOver: function () {
             this.container.chart.skipClick = !0;
             this.bg.setAttr("fill", this.rollOverColor)
         },
-        handleOut: function() {
+        handleOut: function () {
             this.container.chart.skipClick = !1;
             this.bg.setAttr("fill", this.color)
         }
     })
 })();
-(function() {
+(function () {
     var d = window.AmCharts;
     d.SmallMap = d.Class({
-        construct: function(a) {
+        construct: function (a) {
             this.cname = "SmallMap";
             this.mapColor = "#e6e6e6";
             this.rectangleColor = "#FFFFFF";
@@ -4826,7 +4827,7 @@
             this.enabled = !0;
             d.applyTheme(this, a, this.cname)
         },
-        init: function(a, b) {
+        init: function (a, b) {
             var c = this;
             if (c.enabled) {
                 c.chart = a;
@@ -4882,23 +4883,23 @@
                 e.translate(m, l);
                 n.translate(t, q);
                 k.translate(t, q);
-                g.mouseup(function() {
+                g.mouseup(function () {
                     c.handleMouseUp()
                 });
                 c.drawRectangle()
             } else d.remove(c.allSet), d.remove(c.downButtonSet), d.remove(c.upButtonSet)
         },
-        minimize: function() {
+        minimize: function () {
             this.downButtonSet.hide();
             this.upButtonSet.show();
             this.allSet.hide()
         },
-        maximize: function() {
+        maximize: function () {
             this.downButtonSet.show();
             this.upButtonSet.hide();
             this.allSet.show()
         },
-        buildSVGMap: function() {
+        buildSVGMap: function () {
             var a = this.chart,
                 b = {
                     fill: this.mapColor,
@@ -4933,7 +4934,7 @@
             this.mapX = g;
             this.mapY = f
         },
-        update: function() {
+        update: function () {
             var a = this.chart;
             if (a) {
                 var b = a.zoomLevel(),
@@ -4950,7 +4951,7 @@
                 this.rHeight = d
             }
         },
-        drawRectangle: function() {
+        drawRectangle: function () {
             var a = this.rectangle;
             d.remove(a);
             a = d.rect(this.container, 10, 10, "#000", 0, 1, this.rectangleColor, 1);
@@ -4958,20 +4959,20 @@
             this.rectangleC.push(a);
             this.rectangle = a
         },
-        handleMouseUp: function() {
+        handleMouseUp: function () {
             var a = this.chart,
                 b = a.zoomLevel();
             a.zoomToMapXY(b, (a.mouseX - this.set.x - this.mapX) / this.size + a.diffX * a.mapScale, (a.mouseY - this.set.y - this.mapY) / this.size + a.diffY * a.mapScale)
         }
     })
 })();
-(function() {
+(function () {
     var d = window.AmCharts;
     d.AreasProcessor = d.Class({
-        construct: function(a) {
+        construct: function (a) {
             this.chart = a
         },
-        process: function(a) {
+        process: function (a) {
             this.updateAllAreas();
             this.allObjects = [];
             a = a.areas;
@@ -4998,7 +4999,7 @@
             for (d = 0; d < c; d++) g = a[d], this.createArea(g);
             b.outlinesToFront()
         },
-        updateAllAreas: function() {
+        updateAllAreas: function () {
             var a = this.chart,
                 b = a.areasSettings,
                 c = b.unlistedAreasColor,
@@ -5029,7 +5030,7 @@
                 h.getAreasFromMap && !m[l.id] && (r = new d.MapArea(a.theme), r.parentObject = h, r.id = l.id, r.outline = l.outline, h.areas.push(r))
             }
         },
-        createArea: function(a) {
+        createArea: function (a) {
             var b = this.chart,
                 c = b.svgAreasById[a.id],
                 e = b.areasSettings;
@@ -5123,10 +5124,10 @@
         }
     })
 })();
-(function() {
+(function () {
     var d = window.AmCharts;
     d.AreasSettings = d.Class({
-        construct: function(a) {
+        construct: function (a) {
             this.cname = "AreasSettings";
             this.alpha = 1;
             this.autoZoom = !1;
@@ -5147,14 +5148,14 @@
         }
     })
 })();
-(function() {
+(function () {
     var d = window.AmCharts;
     d.ImagesProcessor = d.Class({
-        construct: function(a) {
+        construct: function (a) {
             this.chart = a;
             this.reset()
         },
-        process: function(a) {
+        process: function (a) {
             var b = a.images,
                 c;
             for (c = b.length - 1; 0 <= c; c--) {
@@ -5165,7 +5166,7 @@
             this.counter = c;
             a.parentObject && a.remainVisible && this.process(a.parentObject)
         },
-        createImage: function(a, b) {
+        createImage: function (a, b) {
             a = d.processObject(a, d.MapImage);
             a.arrays = [];
             isNaN(b) && (this.counter++, b = this.counter);
@@ -5314,7 +5315,7 @@
             a.animateAlongLine && (c.updatableImages.push(a), a.delayAnimateAlong());
             return a
         },
-        updateSizeAndPosition: function(a) {
+        updateSizeAndPosition: function (a) {
             var b = this.chart,
                 c = a.displayObject,
                 e = b.getX(a.left),
@@ -5345,7 +5346,7 @@
                 } else c.translate(e, g, NaN, !0);
             this.positionLabel(k, a, a.labelPositionReal)
         },
-        positionLabel: function(a, b, c) {
+        positionLabel: function (a, b, c) {
             if (a) {
                 var d = b.image,
                     g = 0,
@@ -5367,7 +5368,7 @@
                     4, NaN, !0)
             }
         },
-        createPredefinedImage: function(a, b, c, e, g, f) {
+        createPredefinedImage: function (a, b, c, e, g, f) {
             var k = this.chart.container,
                 h;
             switch (e) {
@@ -5385,7 +5386,7 @@
             }
             return h
         },
-        reset: function() {
+        reset: function () {
             this.objectsToResize = [];
             this.allSvgObjects = [];
             this.allObjects = [];
@@ -5394,10 +5395,10 @@
         }
     })
 })();
-(function() {
+(function () {
     var d = window.AmCharts;
     d.ImagesSettings = d.Class({
-        construct: function(a) {
+        construct: function (a) {
             this.cname = "ImagesSettings";
             this.balloonText = "[[title]]";
             this.alpha = 1;
@@ -5424,14 +5425,14 @@
         }
     })
 })();
-(function() {
+(function () {
     var d = window.AmCharts;
     d.LinesProcessor = d.Class({
-        construct: function(a) {
+        construct: function (a) {
             this.chart = a;
             this.reset()
         },
-        process: function(a) {
+        process: function (a) {
             var b = a.lines,
                 c;
             for (c = 0; c < b.length; c++) {
@@ -5442,7 +5443,7 @@
             this.counter = c;
             a.parentObject && a.remainVisible && this.process(a.parentObject)
         },
-        createLine: function(a, b) {
+        createLine: function (a, b) {
             a = d.processObject(a, d.MapLine);
             isNaN(b) && (this.counter++, b = this.counter);
             a.index = b;
@@ -5640,7 +5641,7 @@
                 }
             }
         },
-        processCoordinates: function(a, b) {
+        processCoordinates: function (a, b) {
             var c = [],
                 d;
             for (d = 0; d < a.length; d++) {
@@ -5651,7 +5652,7 @@
             }
             return c
         },
-        reset: function() {
+        reset: function () {
             this.objectsToResize = [];
             this.allSvgObjects = [];
             this.allObjects = [];
@@ -5659,10 +5660,10 @@
         }
     })
 })();
-(function() {
+(function () {
     var d = window.AmCharts;
     d.LinesSettings = d.Class({
-        construct: function(a) {
+        construct: function (a) {
             this.cname = "LinesSettings";
             this.balloonText = "[[title]]";
             this.thickness = 1;
@@ -5677,10 +5678,10 @@
         }
     })
 })();
-(function() {
+(function () {
     var d = window.AmCharts;
     d.MapObject = d.Class({
-        construct: function(a) {
+        construct: function (a) {
             this.fixedSize = this.mouseEnabled = !0;
             this.images = [];
             this.lines = [];
@@ -5691,7 +5692,7 @@
             d.applyTheme(this, a, "MapObject");
             this.arrays = []
         },
-        deleteObject: function() {
+        deleteObject: function () {
             this.remove();
             this.parentArray && d.removeFromArray(this.parentArray, this);
             if (this.arrays)
@@ -5700,25 +5701,25 @@
         }
     })
 })();
-(function() {
+(function () {
     var d = window.AmCharts;
     d.MapArea = d.Class({
         inherits: d.MapObject,
-        construct: function(a) {
+        construct: function (a) {
             this.cname = "MapArea";
             d.MapArea.base.construct.call(this, a);
             d.applyTheme(this, a, this.cname)
         },
-        validate: function() {
+        validate: function () {
             this.chart.areasProcessor.createArea(this)
         }
     })
 })();
-(function() {
+(function () {
     var d = window.AmCharts;
     d.MapLine = d.Class({
         inherits: d.MapObject,
-        construct: function(a) {
+        construct: function (a) {
             this.cname = "MapLine";
             this.longitudes = [];
             this.latitudes = [];
@@ -5729,14 +5730,14 @@
             d.MapLine.base.construct.call(this, a);
             d.applyTheme(this, a, this.cname)
         },
-        validate: function() {
+        validate: function () {
             this.chart.linesProcessor.createLine(this)
         },
-        remove: function() {
+        remove: function () {
             var a = this.displayObject;
             a && a.remove()
         },
-        getCoordinates: function(a, b) {
+        getCoordinates: function (a, b) {
             isNaN(b) && (b = 0);
             isNaN(this.arc);
             if (!isNaN(a)) {
@@ -5782,7 +5783,7 @@
                 }
             }
         },
-        fixToStage: function() {
+        fixToStage: function () {
             if (0 < this.latitudes.length) {
                 this.y = [];
                 for (var a = 0; a < this.latitudes.length; a++) {
@@ -5795,7 +5796,7 @@
             }
             this.validate()
         },
-        fixToMap: function() {
+        fixToMap: function () {
             if (0 < this.y.length) {
                 this.latitudes = [];
                 for (var a = 0; a < this.y.length; a++) {
@@ -5810,11 +5811,11 @@
         }
     })
 })();
-(function() {
+(function () {
     var d = window.AmCharts;
     d.MapImage = d.Class({
         inherits: d.MapObject,
-        construct: function(a) {
+        construct: function (a) {
             this.cname = "MapImage";
             this.scale = 1;
             this.widthAndHeightUnits = "pixels";
@@ -5828,18 +5829,18 @@
             d.applyTheme(this, a, this.cname);
             this.delayCounter = 0
         },
-        validate: function() {
+        validate: function () {
             this.chart.imagesProcessor.createImage(this)
         },
-        updatePosition: function() {
+        updatePosition: function () {
             this.chart.imagesProcessor.updateSizeAndPosition(this)
         },
-        remove: function() {
+        remove: function () {
             var a = this.displayObject;
             a && a.remove();
             (a = this.imageLabel) && a.remove()
         },
-        animateTo: function(a, b, c, d) {
+        animateTo: function (a, b, c, d) {
             isNaN(c) || (this.animationDuration = c);
             d && (this.easingFunction = d);
             this.finalX = a;
@@ -5853,7 +5854,7 @@
             this.animatingAlong = !1;
             this.animate()
         },
-        animateAlong: function(a, b, c) {
+        animateAlong: function (a, b, c) {
             1 == this.positionOnLine && this.flipDirection && (this.direction = -1, this.extraAngle = 180);
             isNaN(b) || (this.animationDuration = b);
             c && (this.easingFunction = c);
@@ -5862,7 +5863,7 @@
             this.animatingAlong = !0;
             this.animate()
         },
-        animate: function() {
+        animate: function () {
             var a = this.chart.imagesSettings,
                 b = this.animationDuration;
             isNaN(b) && (b = a.animationDuration);
@@ -5878,7 +5879,7 @@
                 direction: this.direction
             })
         },
-        update: function() {
+        update: function () {
             var a = this.totalFrames;
             this.frame++;
             this.delayCounter--;
@@ -5899,10 +5900,10 @@
                     direction: this.direction
                 }), this.line && this.animatingAlong && (1 == this.direction ? this.lineSegment < this.line.segments - 2 ? (this.lineSegment++, this.delayAnimateAlong(), this.positionOnLine = 0) : this.flipDirection ? (this.direction = -1, this.extraAngle = 180, this.delayAnimateAlong()) : this.loop && (this.delayAnimateAlong(), this.lineSegment = 0) : 0 < this.lineSegment ? (this.lineSegment--, this.delayAnimateAlong(), this.positionOnLine = 0) : this.loop && this.flipDirection ? (this.direction = 1, this.extraAngle = 0, this.delayAnimateAlong()) : this.loop && this.delayAnimateAlong()))
         },
-        delayAnimateAlong: function() {
+        delayAnimateAlong: function () {
             this.animateAlongLine && (this.delayCounter = this.chart.imagesSettings.pauseDuration * d.updateRate)
         },
-        fixToStage: function() {
+        fixToStage: function () {
             if (!isNaN(this.longitude)) {
                 var a = this.chart.coordinatesToStageXY(this.longitude, this.latitude);
                 this.left = a.x;
@@ -5911,7 +5912,7 @@
             }
             this.validate()
         },
-        fixToMap: function() {
+        fixToMap: function () {
             if (!isNaN(this.left)) {
                 var a = this.chart.stageXYToCoordinates(this.left, this.top);
                 this.longitude = a.longitude;
@@ -5922,15 +5923,15 @@
         }
     })
 })();
-(function() {
+(function () {
     var d = window.AmCharts;
-    d.degreesToRadians = function(a) {
+    d.degreesToRadians = function (a) {
         return a / 180 * Math.PI
     };
-    d.radiansToDegrees = function(a) {
+    d.radiansToDegrees = function (a) {
         return a / Math.PI * 180
     };
-    d.getColorFade = function(a, b, c) {
+    d.getColorFade = function (a, b, c) {
         var e = d.hex2RGB(b);
         b = e[0];
         var g = e[1],
@@ -5944,10 +5945,10 @@
         f += Math.round((e - f) * c);
         return "rgb(" + a + "," + k + "," + f + ")"
     };
-    d.hex2RGB = function(a) {
+    d.hex2RGB = function (a) {
         return [parseInt(a.substring(1, 3), 16), parseInt(a.substring(3, 5), 16), parseInt(a.substring(5, 7), 16)]
     };
-    d.processDescriptionWindow = function(a, b) {
+    d.processDescriptionWindow = function (a, b) {
         isNaN(b.descriptionWindowX) && (b.descriptionWindowX = a.descriptionWindowX);
         isNaN(b.descriptionWindowY) && (b.descriptionWindowY = a.descriptionWindowY);
         isNaN(b.descriptionWindowLeft) && (b.descriptionWindowLeft = a.descriptionWindowLeft);
@@ -5957,7 +5958,7 @@
         isNaN(b.descriptionWindowWidth) && (b.descriptionWindowWidth = a.descriptionWindowWidth);
         isNaN(b.descriptionWindowHeight) && (b.descriptionWindowHeight = a.descriptionWindowHeight)
     };
-    d.normalizePath = function(a) {
+    d.normalizePath = function (a) {
         for (var b = "", c = d.parsePath(a.getAttribute("d")), e, g, f = Infinity, k = -Infinity, h = Infinity, l = -Infinity, m = 0; m < c.length; m++) {
             var n = c[m],
                 p = n.letter,
@@ -5986,10 +5987,10 @@
             maxY: l
         }
     };
-    d.mercatorLatitudeToRadians = function(a) {
+    d.mercatorLatitudeToRadians = function (a) {
         return Math.log(Math.tan(Math.PI / 4 + d.degreesToRadians(a) / 2))
     };
-    d.parsePath = function(a) {
+    d.parsePath = function (a) {
         a = a.match(/([MmLlHhVvZz]{1}[0-9.,\-\s]*)/g);
         for (var b = [], c = 0; c < a.length; c++) {
             var d = a[c].match(/([MmLlHhVvZz]{1})|([0-9.\-]+)/g),
@@ -6016,23 +6017,23 @@
         }
         return b
     };
-    d.acos = function(a) {
+    d.acos = function (a) {
         return 1 < a ? 0 : -1 > a ? Math.PI : Math.acos(a)
     };
-    d.asin = function(a) {
+    d.asin = function (a) {
         return 1 < a ? Math.PI / 2 : -1 > a ? -Math.PI / 2 : Math.asin(a)
     };
-    d.sinci = function(a) {
+    d.sinci = function (a) {
         return a ? a / Math.sin(a) : 1
     };
-    d.asqrt = function(a) {
+    d.asqrt = function (a) {
         return 0 < a ? Math.sqrt(a) : 0
     };
-    d.winkel3 = function(a, b) {
+    d.winkel3 = function (a, b) {
         var c = d.aitoff(a, b);
         return [(c[0] + a / Math.PI * 2) / 2, (c[1] + b) / 2]
     };
-    d.winkel3.invert = function(a, b) {
+    d.winkel3.invert = function (a, b) {
         var c = a,
             e = b,
             g = 25,
@@ -6061,70 +6062,70 @@
             e = e - y; while ((1E-6 < Math.abs(A) || 1E-6 < Math.abs(y)) && 0 < --g);
         return [c, e]
     };
-    d.aitoff = function(a, b) {
+    d.aitoff = function (a, b) {
         var c = Math.cos(b),
             e = d.sinci(d.acos(c * Math.cos(a /= 2)));
         return [2 * c * Math.sin(a) * e, Math.sin(b) * e]
     };
-    d.orthographic = function(a, b) {
+    d.orthographic = function (a, b) {
         return [Math.cos(b) * Math.sin(a), Math.sin(b)]
     };
-    d.equirectangular = function(a, b) {
+    d.equirectangular = function (a, b) {
         return [a, b]
     };
-    d.equirectangular.invert = function(a, b) {
+    d.equirectangular.invert = function (a, b) {
         return [a, b]
     };
-    d.eckert5 = function(a, b) {
+    d.eckert5 = function (a, b) {
         var c = Math.PI;
         return [a * (1 + Math.cos(b)) / Math.sqrt(2 + c), 2 * b / Math.sqrt(2 + c)]
     };
-    d.eckert5.invert = function(a, b) {
+    d.eckert5.invert = function (a, b) {
         var c = Math.sqrt(2 + Math.PI),
             d = b * c / 2;
         return [c * a / (1 + Math.cos(d)), d]
     };
-    d.eckert6 = function(a, b) {
+    d.eckert6 = function (a, b) {
         for (var c = Math.PI, d = (1 + c / 2) * Math.sin(b), g = 0, f = Infinity; 10 > g && 1E-5 < Math.abs(f); g++) b -= f = (b + Math.sin(b) - d) / (1 + Math.cos(b));
         d = Math.sqrt(2 +
             c);
         return [a * (1 + Math.cos(b)) / d, 2 * b / d]
     };
-    d.eckert6.invert = function(a, b) {
+    d.eckert6.invert = function (a, b) {
         var c = 1 + Math.PI / 2,
             e = Math.sqrt(c / 2);
         return [2 * a * e / (1 + Math.cos(b *= e)), d.asin((b + Math.sin(b)) / c)]
     };
-    d.mercator = function(a, b) {
+    d.mercator = function (a, b) {
         b >= Math.PI / 2 - .02 && (b = Math.PI / 2 - .02);
         b <= -Math.PI / 2 + .02 && (b = -Math.PI / 2 + .02);
         return [a, Math.log(Math.tan(Math.PI / 4 + b / 2))]
     };
-    d.mercator.invert = function(a, b) {
+    d.mercator.invert = function (a, b) {
         return [a, 2 * Math.atan(Math.exp(b)) - Math.PI / 2]
     };
-    d.miller = function(a, b) {
+    d.miller = function (a, b) {
         return [a, 1.25 * Math.log(Math.tan(Math.PI / 4 + .4 * b))]
     };
-    d.miller.invert = function(a, b) {
+    d.miller.invert = function (a, b) {
         return [a, 2.5 * Math.atan(Math.exp(.8 * b)) - .625 * Math.PI]
     };
-    d.eckert3 = function(a, b) {
+    d.eckert3 = function (a, b) {
         var c = Math.PI,
             d = Math.sqrt(c * (4 + c));
         return [2 / d * a * (1 + Math.sqrt(1 - 4 * b * b / (c * c))), 4 / d * b]
     };
-    d.eckert3.invert = function(a, b) {
+    d.eckert3.invert = function (a, b) {
         var c = Math.PI,
             e = Math.sqrt(c * (4 + c)) / 2;
         return [a * e / (1 + d.asqrt(1 - b * b * (4 + c) / (4 * c))), b * e / 2]
     }
 })();
-(function() {
+(function () {
     var d = window.AmCharts;
     d.MapData = d.Class({
         inherits: d.MapObject,
-        construct: function() {
+        construct: function () {
             this.cname = "MapData";
             d.MapData.base.construct.call(this);
             this.projection = "mercator";
@@ -6137,11 +6138,11 @@
         }
     })
 })();
-(function() {
+(function () {
     var d = window.AmCharts;
     d.DescriptionWindow = d.Class({
-        construct: function() {},
-        show: function(a, b, c, d) {
+        construct: function () { },
+        show: function (a, b, c, d) {
             var g = this;
             g.chart = a;
             var f = document.createElement("div");
@@ -6157,19 +6158,19 @@
             l.src = a.pathToImages + "xIcon" + h;
             l.style.cssFloat = "right";
             l.style.cursor = "pointer";
-            l.onclick = function() {
+            l.onclick = function () {
                 g.close()
             };
-            l.onmouseover = function() {
+            l.onmouseover = function () {
                 l.src = a.pathToImages + "xIconH" + h
             };
-            l.onmouseout = function() {
+            l.onmouseout = function () {
                 l.src = a.pathToImages + "xIcon" + h
             };
             f.appendChild(l);
             b = document.createElement("div");
             b.className = "ammapDescriptionTitle " + k + "title-div";
-            b.onmousedown = function() {
+            b.onmousedown = function () {
                 g.div.style.zIndex = 1E3
             };
             f.appendChild(b);
@@ -6180,50 +6181,55 @@
             b.style.maxHeight = g.maxHeight - d - 20 + "px";
             f.appendChild(b);
             b.innerHTML = podatci;
-            if (kontinent==null || kontinent==""){
+            if (kontinent == null || kontinent == "") {
                 document.getElementById("kontinent").style.display = "none";
             }
-            if (drzava==null || drzava==""){
+            if (drzava == null || drzava == "") {
                 document.getElementById("drzava").style.display = "none";
             }
-            if (grad==null || grad==""){
+            if (grad == null || grad == "") {
                 document.getElementById("grad").style.display = "none";
             }
-            if (smjestaj==null || smjestaj==""){
+            if (smjestaj == null || smjestaj == "") {
                 document.getElementById("smjestaj").style.display = "none";
             }
-            if (stanovnici==null || stanovnici==""){
+            if (stanovnici == null || stanovnici == "") {
                 document.getElementById("stanovnici").style.display = "none";
+            } 
+            if (povrsina == null || povrsina == "") {
+                document.getElementById("povrsina").style.display = "none";
             }
-            if (zastava==null || zastava==""){
+            if (zastava == null || zastava == "") {
                 document.getElementById("zastava").style.display = "none";
             }
-            if (opis_zastava==null || opis_zastava==""){
+            if (opis_zastava == null || opis_zastava == "") {
                 document.getElementById("opis_zastava").style.display = "none";
             }
-            if (grb==null || grb==""){
+            if (grb == null || grb == "") {
                 document.getElementById("grb").style.display = "none";
             }
-            if (grb_opis==null || grb_opis==""){
+            if (grb_opis == null || grb_opis == "") {
                 document.getElementById("grb_opis").style.display = "none";
             }
-
-            if (enciklopedija==null || enciklopedija==""){
+            if (stranica == null || stranica == "") {
+                document.getElementById("stranica").style.display = "none";
+            }
+            if (enciklopedija == null || enciklopedija == "") {
                 document.getElementById("enciklopedija").style.display = "none";
             }
-         
+
         },
-        close: function() {
+        close: function () {
             try {
                 this.div.parentNode.removeChild(this.div), this.chart.fireClosed()
-            } catch (a) {}
+            } catch (a) { }
         }
     })
 })();
-(function() {
+(function () {
     var d = window.AmCharts;
     d.ValueLegend = d.Class({
-        construct: function(a) {
+        construct: function (a) {
             this.cname = "ValueLegend";
             this.enabled = !0;
             this.showAsGradient = !1;
@@ -6237,7 +6243,7 @@
             this.fontSize = 11;
             d.applyTheme(this, a, this.cname)
         },
-        init: function(a, b) {
+        init: function (a, b) {
             if (this.enabled) {
                 var c = a.areasSettings.color,
                     e = a.areasSettings.colorSolid,
@@ -6279,13 +6285,13 @@
         }
     })
 })();
-(function() {
+(function () {
     var d = window.AmCharts;
     d.ObjectList = d.Class({
-        construct: function(a) {
+        construct: function (a) {
             this.divId = a
         },
-        init: function(a) {
+        init: function (a) {
             this.chart = a;
             var b = this.divId;
             this.container && (b = this.container);
@@ -6295,7 +6301,7 @@
             this.div.appendChild(b);
             this.addObjects(a.dataProvider, b)
         },
-        addObjects: function(a, b) {
+        addObjects: function (a, b) {
             var c = this.chart,
                 d = document.createElement("ul");
             d.className = c.classNamePrefix + "-object-list-ul";
@@ -6312,7 +6318,7 @@
                 for (g = 0; g < a.lines.length; g++) f = a.lines[g], void 0 === f.showInList && (f.showInList = c.showLinesInList), this.addObject(f, d);
             0 < d.childNodes.length && b.appendChild(d)
         },
-        addObject: function(a, b) {
+        addObject: function (a, b) {
             var c = this;
             if (a.showInList && void 0 !== a.title) {
                 var d = c.chart,
@@ -6327,13 +6333,13 @@
                 g.appendChild(k);
                 b.appendChild(g);
                 this.addObjects(a, g);
-                k.onmouseover = function() {
+                k.onmouseover = function () {
                     c.chart.rollOverMapObject(a, !1)
                 };
-                k.onmouseout = function() {
+                k.onmouseout = function () {
                     c.chart.rollOutMapObject(a)
                 };
-                k.onclick = function() {
+                k.onclick = function () {
                     c.chart.clickMapObject(a)
                 }
             }
