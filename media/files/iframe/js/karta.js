@@ -68,9 +68,8 @@ function hamburger(x) {
 
 $(document).ready(function () {
 
-  $("#mapdiv").prepend('<header> <div class="hamburger" onclick="hamburger(this)"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></div><nav> <ul id="hambi"></ul> </nav></header>')
   $('#hambi').load("meni.html");
-
+  
   // Portfolio hover color change using ANIMATE method with plug-in script on index.html
   $("#portfolioItem").hover(function () {
     $("#portfolio").animate({ backgroundColor: "hsla(360, 100%, 100%, 0.33)" }, "slow");

@@ -4095,19 +4095,24 @@
             a || (a = this.selectedObject);
             this.allowMultipleDescriptionWindows || this.closeAllDescriptions();
             if (a.customData) {
-                kontinent = a.customData.kontinent;
-                drzava = a.customData.država;
+                podrucje = a.customData.područje;
+                drzava = a.customData.službeni_naziv;
                 grad = a.customData.glavni_grad;
-                smjestaj = a.customData.smještaj;
+                srediste = a.customData.središte;
                 stanovnici = a.customData.broj_stanovnika;
                 povrsina = a.customData.površina;
+                gustoca = a.customData.gustoča_naseljnosti;
+                jezik = a.customData.sluzbeni_jezik;
+                novac = a.customData.novcana_jedinica;
+                politika = a.customData.političko_uređenje;
+                clanstvo_UN = a.customData.članstvo_UN;
                 zastava = a.customData.zastava_url;
                 opis_zastava = a.customData.zastava_opis;
                 grb = a.customData.grb_url;
-                grb_opis = a.customData.grb_opis,
-                    enciklopedija = a.customData.doznaj_više_url;
+                grb_opis = a.customData.grb_opis;
+                enciklopedija = a.customData.doznaj_više_url;
                 stranica = a.customData.original_pdf_str;
-                podatci="<p class='metapodatci'><span id='kontinent'>KONTINENT: " + kontinent + "<br> </span><span id='drzava'>DRŽAVA: " + drzava + "<br></span><span id='grad'>GLAVNI GRAD: " + grad + "<br> </span><span id='smjestaj'>SMJEŠTAJ: " + smjestaj + "<br> </span><span id='stanovnici'>BROJ STANOVNIKA: " + stanovnici + "<br> </span><span id='povrsina'>POVRŠINA: " + povrsina + "</p><p style='text-align:center' id='zastava'><img src='zastave/" + zastava + "'></p><p id='opis_zastava'>" + opis_zastava + "</p><p style='text-align:center' id='grb'><img src='grbovi/" + grb + "'></p><p id='grb_opis'>" + grb_opis + "</p><p style='text-align:center' id='stranica'><a href='../../../media/files/knjiga/#flipbook-df_manual_book/" + stranica + "' target='_blank'>vidi kako je bilo u knjizi</a></p><p style='text-align:center' id='enciklopedija'><a href='" + enciklopedija + "' target='_blank'>doznaj više...</a></p>";
+                podatci = "<p class='metapodatci'><span id='drzava'>SLUŽBENI NAZIV: " + drzava + "<br></span><span id='podrucje'>SMJEŠTAJ: " + podrucje + "<br> </span><span id='grad'>GLAVNI GRAD: " + grad + "<br> </span><span id='srediste'>SREDIŠTE: " + srediste + "<br> </span><span id='povrsina'>POVRŠINA: " + povrsina + " km<sup>2</sup><br></span><span id='stanovnici'>BROJ STANOVNIKA: " + stanovnici + "<br> </span><span id='gustoca'>GUSTOĆA NASELJENOSTI: " + gustoca + "<br> </span><span id='jezik'>SLUŽBENI JEZIK: " + jezik + "<br> </span><span id='novac'>NOVČANA JEDINICA: " + novac + "<br> </span><span id='politika'>POLITIČKO UREĐENJE: " + politika + "<br> </span><span id='clanstvo_UN'>ČLANSTVO U UN: " + clanstvo_UN + "<br> </span></p><p style='text-align:center' id='zastava'><img src='zastave/" + zastava + "'></p><p id='opis_zastava'>" + opis_zastava + "</p><p style='text-align:center' id='grb'><img src='grbovi/" + grb + "'></p><p id='grb_opis'>" + grb_opis + "</p><p style='text-align:center' id='stranica'><a href='../../../media/files/knjiga/#flipbook-df_manual_book/" + stranica + "' target='_blank'>vidi kako je bilo u knjizi</a></p><p style='text-align:center' id='enciklopedija'><a href='" + enciklopedija + "' target='_blank'>doznaj više...</a></p>";
                 var b = a.descriptionWindow;
                 b && b.close();
                 b = new d.DescriptionWindow;
@@ -6181,8 +6186,8 @@
             b.style.maxHeight = g.maxHeight - d - 20 + "px";
             f.appendChild(b);
             b.innerHTML = podatci;
-            if (kontinent == null || kontinent == "") {
-                document.getElementById("kontinent").style.display = "none";
+            if (podrucje == null || podrucje == "") {
+                document.getElementById("podrucje").style.display = "none";
             }
             if (drzava == null || drzava == "") {
                 document.getElementById("drzava").style.display = "none";
@@ -6190,12 +6195,12 @@
             if (grad == null || grad == "") {
                 document.getElementById("grad").style.display = "none";
             }
-            if (smjestaj == null || smjestaj == "") {
-                document.getElementById("smjestaj").style.display = "none";
+            if (srediste == null || srediste == "") {
+                document.getElementById("srediste").style.display = "none";
             }
             if (stanovnici == null || stanovnici == "") {
                 document.getElementById("stanovnici").style.display = "none";
-            } 
+            }
             if (povrsina == null || povrsina == "") {
                 document.getElementById("povrsina").style.display = "none";
             }
@@ -6216,6 +6221,20 @@
             }
             if (enciklopedija == null || enciklopedija == "") {
                 document.getElementById("enciklopedija").style.display = "none";
+            }
+            if (gustoca == null || gustoca == "") {
+                document.getElementById("gustoca").style.display = "none";
+            }
+            if (jezik == null || jezik == "") {
+                document.getElementById("jezik").style.display = "none";
+            }
+            if (novac == null || novac == "") {
+                document.getElementById("novac").style.display = "none";
+            }
+            if (politika == null || politika == "") {
+                document.getElementById("politika").style.display = "none";
+            } if (clanstvo_UN == null || clanstvo_UN == "") {
+                document.getElementById("clanstvo_UN").style.display = "none";
             }
 
         },

@@ -15,6 +15,8 @@ body,html{margin: 0;overflow: hidden;}
   .ammapDescriptionTitle {
     font-weight: bold;
     margin-bottom: 15px;
+    text-align: center;
+    font-size: 2rem;
   }
   .ammapDescriptionText {
     max-height: 400px;
@@ -376,5 +378,6 @@ body,html{margin: 0;overflow: hidden;}
         width: 275px;
       }
     }
-  
- 
+    @media screen and (max-width: 600px) {
+    .ammapDescriptionWindow{width: 90vw!important;}
+    }
