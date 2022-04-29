@@ -10,7 +10,7 @@ body,html{margin: 0;overflow: hidden;}
     left: 50%!important;
     /* bring your own prefixes */
     transform: translate(-50%, -50%);
-  
+  z-index: 1000000000000000000;
   }
   .ammapDescriptionTitle {
     font-weight: bold;
@@ -379,5 +379,6 @@ body,html{margin: 0;overflow: hidden;}
       }
     }
     @media screen and (max-width: 600px) {
-    .ammapDescriptionWindow{width: 90vw!important;}
+    .ammapDescriptionWindow{width: 90vw!important; height: 80vh;
+      overflow: hidden;}
     }
