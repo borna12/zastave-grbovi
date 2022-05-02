@@ -10,7 +10,8 @@ body,html{margin: 0;overflow: hidden;}
     left: 50%!important;
     /* bring your own prefixes */
     transform: translate(-50%, -50%);
-  z-index: 1000000000000000000;
+    z-index: 1000000000000000000;
+    font-family: "Arial", sans-serif;
   }
   .ammapDescriptionTitle {
     font-weight: bold;

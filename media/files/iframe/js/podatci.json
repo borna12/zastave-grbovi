@@ -124,7 +124,7 @@
       "zastava_opis": "U službenoj je uporabi od 1996. varijanta zastave koja se koristi od 1866. Boje su odraz nekadašnje ovisnosti o Francuskoj i Španjolskoj. Plava i crvena boje su francuske zastave, a žuta i crvena boje španjolske zastave. U sredini je andorski grb.",
       "grb_url": "AS_0970.png",
       "grb_opis": "Grb je u službenoj uporabi od 1996. Odražava nekadašnju stvarnu ovisnost zemlje. Podijeljen je na četiri polja. Lijevo gornje polje predstavlja biskupa iz Urgela, a desno grofove iz francuskoga grada Foixa. Donja polja predstavljaju Kataloniju (lijevo), odnosno francusku povijesnu pokrajinu Béarn (desno). Moto na latinskom pri dnu grba glasi: »Ujedinjena je snaga jača«.",
-      "doznaj_više_url": "https://www.enciklopedija.hr/natuknica.aspx?id=2572",
+      "doznaj_više_url": "2572",
       "original_pdf_str": "12"
     }
   },
@@ -860,7 +860,7 @@
   {
     "id": "LT",
     "color": "#F29B28",
-    "title": " Lithuania",
+    "title": "Lithuania",
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
     "customData": {
