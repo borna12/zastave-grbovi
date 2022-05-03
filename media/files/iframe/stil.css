@@ -500,8 +500,7 @@ background: red;
       }
     }
     @media screen and (max-width: 600px) {
-    .ammapDescriptionWindow{width: 90vw!important; height: 80vh;
-      overflow: hidden;}
+    .ammapDescriptionWindow{width: 90vw!important; }
       .ammapDescriptionText{height: 60vh;
 
         overflow-y: auto;}
