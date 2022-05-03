@@ -11,7 +11,12 @@ body,html{margin: 0;overflow: hidden;}
     /* bring your own prefixes */
     transform: translate(-50%, -50%);
     z-index: 1000000000000000000;
-    font-family: "Arial", sans-serif;
+    font-family: 'Roboto Slab';
+    src: url('RobotoSlab-Regular.woff2') format('woff2'),
+        url('RobotoSlab-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
   }
   .ammapDescriptionTitle {
     font-weight: bold;
@@ -43,8 +48,12 @@ body,html{margin: 0;overflow: hidden;}
   #portfolio {
     background-color: hsla(360, 100%, 100%, 0); /* transparent ENTIRELY */
     color: hsla(360, 100%, 100%, 0.7); /* transparent white */
-    font-family: "Open Sans Condensed", Arial, Helvetica, sans-serif;
-    font-size: 26px;
+    font-family: 'Roboto Slab';
+    src: url('RobotoSlab-Regular.woff2') format('woff2'),
+        url('RobotoSlab-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;    font-size: 26px;
     font-style: italic;
     height: 75px;
     left: 10px;
@@ -65,8 +74,12 @@ body,html{margin: 0;overflow: hidden;}
   #codepen {
     background-color: hsla(360, 100%, 100%, 0); /* transparent ENTIRELY */
     color: hsla(360, 100%, 100%, 0.7); /* transparent white */
-    font-family: "Open Sans Condensed", Arial, Helvetica, sans-serif;
-    font-size: 26px;
+    font-family: 'Roboto Slab';
+    src: url('RobotoSlab-Regular.woff2') format('woff2'),
+        url('RobotoSlab-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;    font-size: 26px;
     font-style: italic;
     height: 75px;
     padding: 14px 5px 0 0;
@@ -81,7 +94,7 @@ body,html{margin: 0;overflow: hidden;}
   #hambi{padding: 0; margin: 0;height: 100vh;
     overflow-y: scroll;-ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none; /* for Firefox */
-    overflow-y: scroll;     background-color: #9A4D3D}
+    overflow-y: scroll;     background-color: rgb(165 162 214)}
 
     #hambi::-webkit-scrollbar {
       display: none; /* for Chrome, Safari, and Opera */
@@ -125,8 +138,12 @@ body,html{margin: 0;overflow: hidden;}
   }
   
   .hamburger p { /* creating the 3 lines */
-    font-family: "Arial", sans-serif;
-    font-size: 38px;
+    font-family: 'Roboto Slab';
+    src: url('RobotoSlab-Regular.woff2') format('woff2'),
+        url('RobotoSlab-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;    font-size: 38px;
     line-height: .25;
     margin-top: -9.5px;
   }
@@ -141,13 +158,16 @@ body,html{margin: 0;overflow: hidden;}
   }
   
   nav li a {
-    background-color: #9A4D3D; /* coffee bean black-brown */
     border-bottom: 1px dotted hsla(360, 100%, 100%, 0.7); /* transparent white */
     border-left: 1px dotted hsla(360, 100%, 100%, 0.7); /* transparent white */
     color: white;
     display: block;
-    font-family: "Arial", sans-serif;
-    font-size: 20px;
+    font-family: 'Roboto Slab';
+    src: url('RobotoSlab-Regular.woff2') format('woff2'),
+        url('RobotoSlab-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;    font-size: 20px;
     line-height: 1.2;
     padding: 12.5px 0 0 25px;
     text-decoration: none;
@@ -156,7 +176,6 @@ body,html{margin: 0;overflow: hidden;}
    }
   
   .firstNav {
-    background-color: #9A4D3D; /* coffee bean black-brown */
     border-left: 1px dotted hsla(360, 100%, 100%, 0.7); /* transparent dotted menu border white */
     color: hsla(360, 100%, 100%, 0.33); /* transparent CLOSE white */
     display: block;
@@ -215,8 +234,12 @@ body,html{margin: 0;overflow: hidden;}
     }
   
   .paralax h2 {
-    font-family: "Damion", cursive;
-    font-size: 50px;
+    font-family: 'Roboto Slab';
+    src: url('RobotoSlab-Regular.woff2') format('woff2'),
+        url('RobotoSlab-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;    font-size: 50px;
     padding-top: 100px;
     text-align: center;
   }
@@ -255,8 +278,12 @@ body,html{margin: 0;overflow: hidden;}
   .newPage {}
     .newPage h3 {
       display: block;
-      font-family: "Damion", cursive;
-      font-size: 50px;
+      font-family: 'Roboto Slab';
+      src: url('RobotoSlab-Regular.woff2') format('woff2'),
+          url('RobotoSlab-Regular.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;      font-size: 50px;
       margin-left: 10%;
       width: 90%;
     }
@@ -289,8 +316,12 @@ body,html{margin: 0;overflow: hidden;}
       width: 50px;
     }
     .homepageHamburger p { /* creating the 3 lines */
-      font-family: "Arial", sans-serif;
-      font-size: 38px;
+      font-family: 'Roboto Slab';
+      src: url('RobotoSlab-Regular.woff2') format('woff2'),
+          url('RobotoSlab-Regular.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;      font-size: 38px;
       line-height: .25;
       margin-top: -9.5px;
     }
@@ -304,7 +335,31 @@ body,html{margin: 0;overflow: hidden;}
       margin-left: 20px;
       width: 50%;
     }
-  
+  /* Chrome */
+.ammapDescriptionText::-webkit-scrollbar {
+  width: 5px;
+}
+
+.ammapDescriptionText::-webkit-scrollbar-track {
+/*background-color: grey;*/
+box-shadow: inset 0 0 5px grey; 
+border-radius: 15px;
+}
+
+.ammapDescriptionText::-webkit-scrollbar-thumb {
+background-color: orange; 
+border-radius: 15px;
+/*border: 1px solid red;*/
+}
+
+/*.container::-webkit-scrollbar-button {
+background-color: red;
+ border-radius: 15px;
+}*/
+
+.container::-webkit-scrollbar-thumb:hover {
+background: red; 
+}
     @media screen and (min-width: 700px) {
       .homepageContent img {
         display: block;
@@ -345,8 +400,12 @@ body,html{margin: 0;overflow: hidden;}
       padding-left: 0;
     }
     .menuGroup li {
-      font-family: "Roboto Condensed", Helvetica, sans-serif;
-      margin-left: 5%;
+      font-family: 'Roboto Slab';
+      src: url('RobotoSlab-Regular.woff2') format('woff2'),
+          url('RobotoSlab-Regular.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;      margin-left: 5%;
       overflow: hidden;
       width: 90%;
     }
