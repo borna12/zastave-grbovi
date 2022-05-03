@@ -356,7 +356,12 @@ border-radius: 15px;
 background-color: red;
  border-radius: 15px;
 }*/
-
+.amcharts-balloon-div *{font-family: 'Roboto Slab'!important;
+  src: url('RobotoSlab-Regular.woff2') format('woff2'),
+      url('RobotoSlab-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;  }
 .container::-webkit-scrollbar-thumb:hover {
 background: red; 
 }
