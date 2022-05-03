@@ -504,5 +504,6 @@ background: red;
       .ammapDescriptionText{height: 60vh;
 
         overflow-y: auto;}
+        .post__iframe, .post__video{padding-bottom: 50px;}
 
     }
