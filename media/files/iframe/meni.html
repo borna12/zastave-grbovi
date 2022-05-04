@@ -54,7 +54,7 @@
 
     $.getJSON("js/podatci.json", function (data) {
         var i = 0;
-        function sortResults(prop, asc) {
+      /*  function sortResults(prop, asc) {
             data.sort(function (a, b) {
                 if (asc) {
                     return (a[prop].localeCompare > b[prop].localeCompare) ? 1 : ((a[prop].localeCompare < b[prop].localeCompare) ? -1 : 0);
@@ -63,8 +63,8 @@
                 }
             });
         }
-        sortResults('title', true);
-
+        sortResults('title', true);*/
+        
         $.each(data, function () {
             if (data[i].customData.smještaj.indexOf("Europ") >= 0) { $(".Europa").append("<li><a  onclick='map.clickMapObject(map.getObjectById(" + '"' + data[i].id + '"' + "))'>" + data[i].title + "</a></li>") }
             else if (data[i].customData.smještaj.indexOf("Sjeverna Amer") >= 0 || data[i].customData.smještaj.indexOf("Sjeverne Amer") >= 0) {$(".SAmerika").append("<li><a  onclick='map.clickMapObject(map.getObjectById(" + '"' + data[i].id + '"' + "))'>" + data[i].title + "</a></li>")}
@@ -80,8 +80,6 @@
         });
     });
 
-    $('ul.zemlje-meni').each(function () {
-        $(this).children('li').sort((a, b) => a.innerText.localeCompare(b.innerText)).appendTo(this);
-    });
+    
 
 </script>
