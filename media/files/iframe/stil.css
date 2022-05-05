@@ -63,7 +63,7 @@
 body,html{margin: 0;overflow: hidden;}
 
 .ammapDescriptionWindow {
-    background: rgb(204 202 239 / 80%);
+    background: rgb(219 221 220 / 80%);
     padding: 10px;
     border-radius: 4px;
     border: 2px solid rgba(255, 255, 255, 1);
@@ -421,6 +421,8 @@ background-color: red;
 .container::-webkit-scrollbar-thumb:hover {
 background: red; 
 }
+
+#povrsina,#stanovnici,#gustoca{display: none;}
     @media screen and (min-width: 700px) {
       .homepageContent img {
         display: block;
