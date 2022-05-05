@@ -4102,7 +4102,7 @@
                 stanovnici = a.customData.broj_stanovnika;
                 povrsina = a.customData.površina;
                 gustoca = a.customData.gustoča_naseljnosti;
-                jezik = a.customData.sluzbeni_jezik;
+                jezik = a.customData.jezik;
                 novac = a.customData.novcana_jedinica;
                 politika = a.customData.političko_uređenje;
                 clanstvo_UN = a.customData.članstvo_UN;
