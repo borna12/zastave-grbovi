@@ -1485,7 +1485,7 @@
 	{
 	  "id": "EU",
 	  "showAsSelected": false,
-	  "color": "#F29B28",
+	  "color": "",
 	  "title": "Europska Unija",
 	  "zoomLevel": 5,
 	  "zoomLatitude": 53.87566495968231,
