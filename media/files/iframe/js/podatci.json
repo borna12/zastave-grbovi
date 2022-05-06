@@ -27,7 +27,7 @@
 	},
 	{
 	  "id": "AX",
-	  "color": "#F29B28",
+	  "color": " #F29B28",
 	  "title": "Ålandski otoci",
 	  "showAsSelected": false,
 	  "descriptionWindowWidth": 500,
@@ -547,6 +547,36 @@
 	  }
 	},
 	{
+	  "id": "Bav",
+	  "color": " #E74354",
+	  "title": "Bavarska",
+	  "showAsSelected": false,
+	  "descriptionWindowWidth": 500,
+	  "zoomLevel": 50,
+	  "zoomLatitude": 48.135124,
+	  "zoomLongitude": 11.581981,
+	  "customData": {
+		"službeni_naziv": "Bavarska (Bayern)",
+		"smještaj": "jugoistočna Njemačka",
+		"glavni_grad": "",
+		"status": "njemačka savezna zemlja",
+		"površina": "",
+		"broj_stanovnika": "",
+		"središte": "München",
+		"gustoča_naseljnosti": "",
+		"jezik": "",
+		"novcana_jedinica": "",
+		"političko_uređenje": "",
+		"članstvo_UN": "",
+		"grb_url": "",
+		"zastava_url": "Bavarska.jpg",
+		"zastava_opis": "Bavarska zastava propisana je uredbom zemaljske vlade 1953. Zastava s naizmjeničnim bijelim i plavim rombovima sastoji se od najmanje 21 polja (uključujući i nepotpuna). Gornje lijevo polje uvijek je bijelo. Dopuštena je i uporaba zastave s bijelim i plavim vodoravnim poljem. Bijela i plava tradicionalne su bavarske boje od XIV. stoljeća, a romboidna polja pojavljuju se na zastavi od XV. stoljeća.",
+		"grb_opis": "",
+		"doznaj_više_url": "6363",
+		"original_pdf_str": "217"
+	  }
+	},
+	{
 	  "id": "BE",
 	  "color": "#F29B28",
 	  "title": "Belgija",
@@ -908,6 +938,36 @@
 		"grb_opis": "",
 		"doznaj_više_url": "9558",
 		"original_pdf_str": ""
+	  }
+	},
+	{
+	  "id": "BRET",
+	  "color": " #FFCB00",
+	  "title": "Bretanja",
+	  "showAsSelected": false,
+	  "descriptionWindowWidth": 500,
+	  "zoomLevel": 64,
+	  "zoomLatitude": 48.106698,
+	  "zoomLongitude": -2.681399,
+	  "customData": {
+		"službeni_naziv": "Bretanja (Breizh, Bretagne)",
+		"smještaj": "sjeverozapadna Francuska",
+		"glavni_grad": "",
+		"površina": "",
+		"broj_stanovnika": "",
+		"gustoča_naseljnosti": "",
+		"jezik": "",
+		"status":"francuska administrativna regija",
+		"novcana_jedinica": "",
+		"političko_uređenje": "",
+		"članstvo_UN": "",
+		"grb_url": "",
+		"zastava_url": "Bretanja.jpg",
+		"zastava_opis": "Zastavu je 1923. osmislio bretonski aktivist Morvan Marchal po uzoru na grb grada Rennesa i američku zastavu. Prihvaćena je kao simbol Bretanje i naširoko je u uporabi. Popularni naziv za zastavu je <em>Gwenn-ha-du</em> (crno-bijela). <br>Devet pruga simboliziraju bretonske povijesne biskupije: crne simboliziraju pretežito frankofonske biskupije, a bijele pretežito keltske biskupije. Hermelinski ogrtač, prikazan s 11 simbolića u lijevom gornjem dijelu, povijesni je bretonski simbol. ",
+		"grb_opis": "",
+		"središte": "Rennes",
+		"doznaj_više_url": "9436",
+		"original_pdf_str": "215"
 	  }
 	},
 	{
@@ -1535,7 +1595,7 @@
 	},
 	{
 	  "id": "FO",
-	  "color": "#F29B28",
+	  "color": " #F29B28",
 	  "title": "Ferojski (Ovčji) otoci",
 	  "showAsSelected": false,
 	  "descriptionWindowWidth": 500,
@@ -1874,7 +1934,7 @@
 	},
 	{
 	  "id": "GL",
-	  "color": "#E74354",
+	  "color": " #E74354",
 	  "title": "Grenland",
 	  "showAsSelected": false,
 	  "descriptionWindowWidth": 500,
@@ -2187,7 +2247,7 @@
 	},
 	{
 	  "id": "HK",
-	  "color": "#FFCB00",
+	  "color": " #FFCB00",
 	  "title": "Hong Kong",
 	  "showAsSelected": false,
 	  "descriptionWindowWidth": 500,
@@ -3591,7 +3651,7 @@
 	},
 	{
 	  "id": "MO",
-	  "color": "#FFCB00",
+	  "color": " #FFCB00",
 	  "title": "Macao",
 	  "showAsSelected": false,
 	  "descriptionWindowWidth": 500,
@@ -4449,7 +4509,7 @@
 	},
 	{
 	  "id": "NC",
-	  "color": "#4F9CA9",
+	  "color": " #4F9CA9",
 	  "title": "Nova Kaledonija",
 	  "showAsSelected": false,
 	  "descriptionWindowWidth": 500,
@@ -4525,7 +4585,35 @@
 		"doznaj_više_url": "44525",
 		"original_pdf_str": "144"
 	  }
-	},
+	},{
+		"id": "OKCIT",
+		"color": " #FFCB00",
+		"title": "Okcitanija",
+		"showAsSelected": false,
+		"descriptionWindowWidth": 500,
+		"zoomLevel": 64,
+		"zoomLatitude": 43.689732,
+		"zoomLongitude": 2.259050,
+		"customData": {
+		  "službeni_naziv": "Okcitanija (Occitanie)",
+		  "smještaj": "južna Francuska",
+		  "glavni_grad": "",
+		  "površina": "",
+		  "broj_stanovnika": "",
+		  "središte": "Toulouse",
+		  "status": "francuska povijesna pokrajina (nekadašnje govorno područje okcitanskog jezika)",
+		  "gustoča_naseljnosti": "",
+		  "jezik": "",
+		  "novcana_jedinica": "",
+		  "političko_uređenje": "",
+		  "članstvo_UN": "",
+		  "grb_url": "",
+		  "zastava_url": "Okcitanija.jpg",
+		  "zastava_opis": "Okcitanska zastava povijesna je zastava  pokrajine Languedoc. Na crvenom  polju prikazan je tzv. tuluški križ (prema  glavnom gradu Toulouseu; javlja se od  XIII. stoljeća), a u gornjem desnom kutu  sedmerokraka zvijezda.",
+		  "doznaj_više_url": "44900",
+		  "original_pdf_str": "215"
+		}
+	  },
 	{
 	  "id": "OM",
 	  "color": "#FFCB00",
@@ -4632,7 +4720,7 @@
 	},
 	{
 	  "id": "IM",
-	  "color": "#F29B28",
+	  "color": " #F29B28",
 	  "title": "Otok Man",
 	  "showAsSelected": false,
 	  "descriptionWindowWidth": 500,
@@ -4763,11 +4851,11 @@
 	{
 	  "id": "PS",
 	  "color": "#FFCB00",
-	  "title": "Palestine, State of",
+	  "title": "Palestina",
 	  "showAsSelected": false,
 	  "descriptionWindowWidth": 500,
 	  "customData": {
-		"službeni_naziv": "Palestina",
+		"službeni_naziv": "",
 		"smještaj": "jugozapadna Azija",
 		"status": "privremena samouprava, političko predstavništvo međunarodno priznato",
 		"glavni_grad": "Palestinci glavnim gradom smatraju Istočni Jeruzalem (al-Quds), koji je pod izraelskim nadzorom",

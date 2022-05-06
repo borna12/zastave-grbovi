@@ -24,10 +24,10 @@
       "doznaj_više_url": "674",
       "original_pdf_str": "61"
     }
-  },,
+  },
   {
     "id": "AX",
-    "color": "#F29B28",
+    "color": "##F29B28",
     "title": "Ålandski otoci",
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
@@ -48,7 +48,7 @@
       "zastava_opis": "Zastava je u uporabi od 1954., a nastala je kombinacijom tradicionalnih boja otočke zastave (plavo-žuto-plavo), prevladavajuće boje finskoga grba (crvena) i skandinavskoga križa. Na plavom polju prikazan je crveni skandinavski križ obrubljen žutom bojom. Uporaba u službene svrhe zakonom je propisana 1993.",
       "grb_url": "Alandski.png",
       "grb_opis": "",
-      "doznaj_više_url": "https://www.enciklopedija.hr/natuknica.aspx?id=1325",
+      "doznaj_više_url": "1325",
       "original_pdf_str": "215"
     }
   },
@@ -74,7 +74,7 @@
       "zastava_opis": "Zastava je u službenoj uporabi od 1992. To je modificirana verzija tradicionalne albanske zastave koja se u raznim verzijama koristi od stjecanja neovisnosti 1912.",
       "grb_url": "AS_0990.png",
       "grb_opis": "Grb je u službenoj uporabi od 1993., a 2002. dodana je iznad štita legendarna Skenderbegova kaciga s kozjim rogovima. Motiv je dvoglavi orao na crvenom štitu. Orao se kao albanski nacionalni simbol javlja još od XV. stoljeća iz vremena Skenderbega i protuosmanlijske borbe.",
-      "doznaj_više_url": "https://www.enciklopedija.hr/natuknica.aspx?id=1368",
+      "doznaj_više_url": "1368",
       "original_pdf_str": "11"
     }
   },
@@ -111,7 +111,7 @@
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
     "customData": {
-      "službeni_naziv": "",
+      "službeni_naziv": "American Samoa",
       "smještaj": "Australija",
       "glavni_grad": "Pago Pago",
       "površina": "",
@@ -126,7 +126,7 @@
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "https://www.enciklopedija.hr/Natuknica.aspx?ID=54302",
+      "doznaj_više_url": "54302",
       "original_pdf_str": ""
     }
   },
@@ -137,7 +137,7 @@
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
     "customData": {
-      "službeni_naziv": "",
+      "službeni_naziv": "Virgin Islands of the United States",
       "smještaj": "Sjeverna Amerika",
       "glavni_grad": "Charlotte Amalie",
       "površina": "",
@@ -145,14 +145,14 @@
       "središte": "",
       "gustoča_naseljnosti": "",
       "jezik": "engleski",
-      "novcana_jedinica": "",
+      "novcana_jedinica": "američki dolar; 1 USD = 100 centa",
       "političko_uređenje": "",
       "članstvo_UN": "",
       "grb_url": "",
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "https://enciklopedija.hr/Natuknica.aspx?ID=64768",
+      "doznaj_više_url": "64768",
       "original_pdf_str": ""
     }
   },
@@ -178,7 +178,7 @@
       "zastava_opis": "U službenoj je uporabi od 1996. varijanta zastave koja se koristi od 1866. Boje su odraz nekadašnje ovisnosti o Francuskoj i Španjolskoj. Plava i crvena boje su francuske zastave, a žuta i crvena boje španjolske zastave. U sredini je andorski grb.",
       "grb_url": "AS_0970.png",
       "grb_opis": "Grb je u službenoj uporabi od 1996. Odražava nekadašnju stvarnu ovisnost zemlje. Podijeljen je na četiri polja. Lijevo gornje polje predstavlja biskupa iz Urgela, a desno grofove iz francuskoga grada Foixa. Donja polja predstavljaju Kataloniju (lijevo), odnosno francusku povijesnu pokrajinu Béarn (desno). Moto na latinskom pri dnu grba glasi: »Ujedinjena je snaga jača«.",
-      "doznaj_više_url": "https://www.enciklopedija.hr/natuknica.aspx?id=2572",
+      "doznaj_više_url": "2572",
       "original_pdf_str": "12"
     }
   },
@@ -230,7 +230,7 @@
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "https://enciklopedija.hr/Natuknica.aspx?ID=2787",
+      "doznaj_više_url": "2787",
       "original_pdf_str": ""
     }
   },
@@ -308,7 +308,7 @@
       "zastava_url": "AS_1133.jpg",
       "zastava_opis": "U službenoj je uporabi od 1990. trobojnica koja se koristila i u razdoblju 1918–21. Crvena boja simbolizira krv prolivenu u borbi za neovisnost, plava nadu i armensko nebo, a narančasta zemlju i plodove rada.",
       "grb_opis": "I grb je u službenoj uporabi od 1990., a također se prvobitno koristio u razdoblju 1918–21. Prikazuje lava i orla, simbole drevnoga armenskog kraljevstva iz II. tisućljeća prije Krista, koji pridržavaju štit. Na štitu su prikazana četiri znaka koji predstavljaju armenske dinastije iz razdoblja između I. stoljeća prije Krista i XIII. stoljeća. U sredini je prikazan biblijski motiv planine Ararat na kojoj se nakon potopa nasukala Noina arka. Ispod štita prikazan je uspravni mač koji prelama lanac, simbol otpora izvanjskim pritiscima. Pšenični klas simbolizira svetost armenskoga tla, a maslinova grančica težnju armenskoga naroda za mirom.",
-      "doznaj_više_url": "https://www.enciklopedija.hr/Natuknica.aspx?ID=3906",
+      "doznaj_više_url": "3906",
       "original_pdf_str": "13"
     }
   },
@@ -334,7 +334,7 @@
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "https://enciklopedija.hr/Natuknica.aspx?ID=4094",
+      "doznaj_više_url": "4094",
       "original_pdf_str": ""
     }
   },
@@ -345,7 +345,7 @@
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
     "customData": {
-      "službeni_naziv": "",
+      "službeni_naziv": "Johnston Island",
       "smještaj": "Australija",
       "glavni_grad": "",
       "površina": "",
@@ -412,7 +412,7 @@
       "zastava_url": "AS_1134.jpg",
       "zastava_opis": "Zastava je u uporabi od 1945., a zakonski je normirana 1984. Crveno-bijela zastava koristi se u austrijskim zemljama još od XII. stoljeća.",
       "grb_opis": "I grb je u uporabi od 1945 (zakonski normiran 1984). Prikazan je orao (umjesto habsburškoga dvoglavoga orla) koji na prsima ima štit u bojama zastave. U kandžama ima srp i čekić koji predstavljaju poljoprivredu i industriju. Raskinuti lanci pod orlom predstavljaju oslobođenje od nacizma. Prema legendi grb se vezuje za krvavi ogrtač križara Luitpolda V. Babenberga u bitci kod Acre 1191.",
-      "doznaj_više_url": "https://www.enciklopedija.hr/Natuknica.aspx?ID=4687",
+      "doznaj_više_url": "4687",
       "original_pdf_str": "14"
     }
   },
@@ -627,26 +627,26 @@
   {
     "id": "BM",
     "color": "#E74354",
-    "title": "Bermudi",
+    "title": "Bermudski otoci",
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
     "customData": {
-      "službeni_naziv": "",
+      "službeni_naziv": "Bermuda",
       "smještaj": "Sjeverna Amerika",
-      "glavni_grad": "",
+      "glavni_grad": "Hamilton",
       "površina": "",
       "broj_stanovnika": "",
       "središte": "",
       "gustoča_naseljnosti": "",
-      "jezik": "",
-      "novcana_jedinica": "",
+      "jezik": "engleski",
+      "novcana_jedinica": "bermudski dolar; 1 BMD = 100 centa",
       "političko_uređenje": "",
       "članstvo_UN": "",
       "grb_url": "",
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "",
+      "doznaj_više_url": "7137",
       "original_pdf_str": ""
     }
   },
@@ -731,18 +731,18 @@
   {
     "id": "BQ",
     "color": "#E74354",
-    "title": "Bonaire, Sint Eustatius and Saba[c]",
+    "title": "Bonaire",
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
     "customData": {
-      "službeni_naziv": "",
+      "službeni_naziv": "Bonaire",
       "smještaj": "Sjeverna Amerika",
-      "glavni_grad": "",
+      "glavni_grad": "Kralendijk",
       "površina": "",
       "broj_stanovnika": "",
       "središte": "",
       "gustoča_naseljnosti": "",
-      "jezik": "",
+      "jezik": "nizozemski i papiamento",
       "novcana_jedinica": "",
       "političko_uređenje": "",
       "članstvo_UN": "",
@@ -750,7 +750,7 @@
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "",
+      "doznaj_više_url": "70115",
       "original_pdf_str": ""
     }
   },
@@ -783,7 +783,7 @@
   {
     "id": "BV",
     "color": "#469025",
-    "title": "Bouvetov otok",
+    "title": "Bouvet",
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
     "customData": {
@@ -802,7 +802,7 @@
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "",
+      "doznaj_više_url": "9065",
       "original_pdf_str": ""
     }
   },
@@ -813,9 +813,9 @@
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
     "customData": {
-      "službeni_naziv": "",
+      "službeni_naziv": "Christmas Island",
       "smještaj": "Australija",
-      "glavni_grad": "",
+      "glavni_grad": "Flying Fish Cove",
       "površina": "",
       "broj_stanovnika": "",
       "središte": "",
@@ -828,7 +828,7 @@
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "https://www.enciklopedija.hr/Natuknica.aspx?ID=11710",
+      "doznaj_više_url": "11710",
       "original_pdf_str": ""
     }
   },
@@ -865,22 +865,22 @@
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
     "customData": {
-      "službeni_naziv": "",
+      "službeni_naziv": "British Virgin Islands",
       "smještaj": "Sjeverna Amerika",
-      "glavni_grad": "",
+      "glavni_grad": "Road Town",
       "površina": "",
       "broj_stanovnika": "",
       "središte": "",
       "gustoča_naseljnosti": "",
-      "jezik": "",
-      "novcana_jedinica": "",
+      "jezik": "engleski",
+      "novcana_jedinica": "američki dolar; 1 USD = 100 centa",
       "političko_uređenje": "",
       "članstvo_UN": "",
       "grb_url": "",
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "https://enciklopedija.hr/Natuknica.aspx?ID=64768",
+      "doznaj_više_url": "64768",
       "original_pdf_str": ""
     }
   },
@@ -891,7 +891,7 @@
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
     "customData": {
-      "službeni_naziv": "",
+      "službeni_naziv": "British Indian Ocean Territory",
       "smještaj": "Azija",
       "glavni_grad": "",
       "površina": "",
@@ -906,7 +906,7 @@
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "https://www.enciklopedija.hr/Natuknica.aspx?ID=9558",
+      "doznaj_više_url": "9558",
       "original_pdf_str": ""
     }
   },
@@ -1101,12 +1101,12 @@
     "customData": {
       "službeni_naziv": "",
       "smještaj": "Sjeverna Amerika",
-      "glavni_grad": "",
+      "glavni_grad": "Willemstad",
       "površina": "",
       "broj_stanovnika": "",
       "središte": "",
       "gustoča_naseljnosti": "",
-      "jezik": "",
+      "jezik": "papiamento, nizozemski i engleski",
       "novcana_jedinica": "",
       "političko_uređenje": "",
       "članstvo_UN": "",
@@ -1114,7 +1114,7 @@
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "",
+      "doznaj_više_url": "12991",
       "original_pdf_str": ""
     }
   },
@@ -1216,7 +1216,7 @@
       "članstvo_UN": "od 1945.",
       "grb_url": "AS_0968.png",
       "zastava_url": "AS_1141.jpg",
-      "zastava_opis": "Danska zastava, popularno nazivana Dannebrog (dansko platno na starodanskom), jedna je od najstarijih zastava na svijetu. U službenoj je uporabi od 1625., a koristila se i prije (prema legendi iz XIII. stoljeća). Prikazan je tzv. skandinavski križ, simbol koji koriste u raznim bojama i ostale skandinavske zemlje.",
+      "zastava_opis": "Danska zastava, popularno nazivana <em>Dannebrog</em> (dansko platno na starodanskom), jedna je od najstarijih zastava na svijetu. U službenoj je uporabi od 1625., a koristila se i prije (prema legendi iz XIII. stoljeća). Prikazan je tzv. skandinavski križ, simbol koji koriste u raznim bojama i ostale skandinavske zemlje.",
       "grb_opis": "U sadašnjem obliku grb je u uporabi od 1972. Lavovi su kao danski simboli poznati još od XII. stoljeća. Srdaca, odnosno ljiljanovih cvjetova ima 9. Na vrhu je kraljevska kruna.",
       "doznaj_više_url": "13890",
       "original_pdf_str": "23"
@@ -1503,39 +1503,39 @@
       "zastava_opis": "Europska unija koristi zastavu koja općenito simbolizira Europu, a koriste ju i neke druge europske organizacije, primjerice Vijeće Europe. Dvanaest kružno raspoređenih zlatnih zvjezdica na azurno-plavom polju simboliziraju savršenstvo i jedinstvo. Od 1955. koristi ju Vijeće Europe, a za službenu zastavu Europske unuje prihvaćena je 1985.",
       "grb_url": "",
       "grb_opis": "",
-      "doznaj_više_url": "https://www.enciklopedija.hr/Natuknica.aspx?ID=18657",
+      "doznaj_više_url": "18657",
       "original_pdf_str": "226"
     }
   },
   {
     "id": "FK",
     "color": "#F172AC",
-    "title": "Falklandi (Malvini)",
+    "title": "Falkland",
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
     "customData": {
-      "službeni_naziv": "",
+      "službeni_naziv": "Islas Malvinas",
       "smještaj": "Južna Amerika",
-      "glavni_grad": "",
+      "glavni_grad": "Stanley",
       "površina": "",
       "broj_stanovnika": "",
       "središte": "",
       "gustoča_naseljnosti": "",
       "jezik": "",
-      "novcana_jedinica": "",
+      "novcana_jedinica": "falklandska funta; 1 FKP = 100 penija",
       "političko_uređenje": "",
       "članstvo_UN": "",
       "grb_url": "",
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "",
+      "doznaj_više_url": "18916",
       "original_pdf_str": ""
     }
   },
   {
     "id": "FO",
-    "color": "#F29B28",
+    "color": "##F29B28",
     "title": "Ferojski (Ovčji) otoci",
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
@@ -1556,7 +1556,7 @@
       "zastava_url": "",
       "zastava_opis": "Zastava prikazuje crveni skandinavski križ obrubljen plavom bojom na bijeloj podlozi. Zastavu su 1919. u Kopenhagenu osmislili studenti s otokâ. Ističe se od 1919., a stanovništvo ju je ubrzo prigrlilo. Za vrijeme Drugoga svjetskog rata zastavu su prihvatile i britanske vojne vlasti, a uporaba je ozakonjena uvođenjem samouprave 1948.",
       "grb_opis": "",
-      "doznaj_više_url": "https://enciklopedija.hr/Natuknica.aspx?ID=18836",
+      "doznaj_više_url": "18836",
       "original_pdf_str": "215"
     }
   },
@@ -1667,13 +1667,13 @@
   {
     "id": "GF",
     "color": "#F172AC",
-    "title": "Francuska Gvajana",
+    "title": "Francuska Gijana",
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
     "customData": {
-      "službeni_naziv": "",
+      "službeni_naziv": "Département de la Guyane Française",
       "smještaj": "Južna Amerika",
-      "glavni_grad": "",
+      "glavni_grad": "Cayenne",
       "površina": "",
       "broj_stanovnika": "",
       "središte": "",
@@ -1686,7 +1686,7 @@
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "",
+      "doznaj_više_url": "20392",
       "original_pdf_str": ""
     }
   },
@@ -1697,9 +1697,9 @@
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
     "customData": {
-      "službeni_naziv": "",
+      "službeni_naziv": "Territoire de la Polynésie Française",
       "smještaj": "Australija",
-      "glavni_grad": "",
+      "glavni_grad": "Papeete",
       "površina": "",
       "broj_stanovnika": "",
       "središte": "",
@@ -1712,20 +1712,20 @@
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "https://enciklopedija.hr/Natuknica.aspx?ID=20396",
+      "doznaj_više_url": "20396",
       "original_pdf_str": ""
     }
   },
   {
     "id": "TF",
     "color": "#4F9CA9",
-    "title": "Francuski južni teritoriji",
+    "title": "Francuski južni i antarktički teritoriji",
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
     "customData": {
-      "službeni_naziv": "",
+      "službeni_naziv": "Terres australes et antarctiques françaises",
       "smještaj": "Australija",
-      "glavni_grad": "",
+      "glavni_grad": "Saint-Pierre",
       "površina": "",
       "broj_stanovnika": "",
       "središte": "",
@@ -1738,7 +1738,7 @@
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "",
+      "doznaj_više_url": "70267",
       "original_pdf_str": ""
     }
   },
@@ -1829,20 +1829,20 @@
     "customData": {
       "službeni_naziv": "",
       "smještaj": "Europa",
-      "glavni_grad": "",
+      "glavni_grad": "Gibraltar",
       "površina": "",
       "broj_stanovnika": "",
       "središte": "",
       "gustoča_naseljnosti": "",
-      "jezik": "",
-      "novcana_jedinica": "",
+      "jezik": "engleski, španjolski",
+      "novcana_jedinica": "gibraltarska funta; 1 GIP = 100 penija",
       "političko_uređenje": "",
       "članstvo_UN": "",
       "grb_url": "",
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "https://www.enciklopedija.hr/Natuknica.aspx?ID=21936",
+      "doznaj_više_url": "21936",
       "original_pdf_str": ""
     }
   },
@@ -1895,7 +1895,7 @@
       "zastava_url": "",
       "zastava_opis": "Zastava je u uporabi od 1985., a odabrana je nakon višegodišnje rasprave i natječaja. Bijelo polje predstavlja ledenu kapu, a crveno ocean. Bijela polovica kruga predstavlja ledene bregove, a crvena fjordove. Popularno se naziva Erfalasorput (»naša zastava«), odnosno Aappalaartoq (»crvena«, kao i danska zastava).",
       "grb_opis": "",
-      "doznaj_više_url": "https://enciklopedija.hr/Natuknica.aspx?ID=23315",
+      "doznaj_više_url": "23315",
       "original_pdf_str": "224"
     }
   },
@@ -1960,12 +1960,12 @@
     "customData": {
       "službeni_naziv": "",
       "smještaj": "Sjeverna Amerika",
-      "glavni_grad": "",
+      "glavni_grad": "Basse-Terre",
       "površina": "",
       "broj_stanovnika": "",
       "središte": "",
       "gustoča_naseljnosti": "",
-      "jezik": "francuski",
+      "jezik": "francuski, kreolski",
       "novcana_jedinica": "",
       "političko_uređenje": "",
       "članstvo_UN": "",
@@ -1973,7 +1973,7 @@
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "https://enciklopedija.hr/Natuknica.aspx?ID=23603",
+      "doznaj_više_url": "23603",
       "original_pdf_str": ""
     }
   },
@@ -1984,9 +1984,35 @@
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
     "customData": {
-      "službeni_naziv": "",
+      "službeni_naziv": "Guåhan",
       "smještaj": "Australija",
-      "glavni_grad": "",
+      "glavni_grad": "Hagåtña",
+      "površina": "",
+      "broj_stanovnika": "",
+      "središte": "",
+      "gustoča_naseljnosti": "",
+      "jezik": "ngleski i chamorro",
+      "novcana_jedinica": "",
+      "političko_uređenje": "",
+      "članstvo_UN": "",
+      "grb_url": "",
+      "zastava_url": "",
+      "zastava_opis": "",
+      "grb_opis": "",
+      "doznaj_više_url": "23608",
+      "original_pdf_str": ""
+    }
+  },
+  {
+    "id": "GG",
+    "color": "#F29B28",
+    "title": "Guernsey",
+    "showAsSelected": false,
+    "descriptionWindowWidth": 500,
+    "customData": {
+      "službeni_naziv": "Guernesey",
+      "smještaj": "Europa",
+      "glavni_grad": "Saint Peter Port (Saint-Pierre-Port)",
       "površina": "",
       "broj_stanovnika": "",
       "središte": "",
@@ -1999,33 +2025,7 @@
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "https://enciklopedija.hr/Natuknica.aspx?ID=23608",
-      "original_pdf_str": ""
-    }
-  },
-  {
-    "id": "GG",
-    "color": "#F29B28",
-    "title": "Guernsey",
-    "showAsSelected": false,
-    "descriptionWindowWidth": 500,
-    "customData": {
-      "službeni_naziv": "",
-      "smještaj": "",
-      "glavni_grad": "Saint Peter Port (Saint-Pierre-Port)",
-      "površina": "63.4",
-      "broj_stanovnika": "",
-      "središte": "",
-      "gustoča_naseljnosti": "",
-      "jezik": "",
-      "novcana_jedinica": "",
-      "političko_uređenje": "",
-      "članstvo_UN": "",
-      "grb_url": "",
-      "zastava_url": "",
-      "zastava_opis": "",
-      "grb_opis": "",
-      "doznaj_više_url": "https://enciklopedija.hr/Natuknica.aspx?ID=23692",
+      "doznaj_više_url": "23692",
       "original_pdf_str": ""
     }
   },
@@ -2187,7 +2187,7 @@
   },
   {
     "id": "HK",
-    "color": "#FFCB00",
+    "color": "##FFCB00",
     "title": "Hong Kong",
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
@@ -2208,7 +2208,7 @@
       "zastava_url": "",
       "zastava_opis": "Zastavu je prihvatilo posebno povjerenstvo nakon što je Hong Kong 1997. britansku upravu zamijenio kineskom. Na crvenom polju prikazan je cvijet lokalne vrste orhideje.",
       "grb_opis": "",
-      "doznaj_više_url": "https://www.enciklopedija.hr/Natuknica.aspx?ID=26069",
+      "doznaj_više_url": "26069",
       "original_pdf_str": "222"
     }
   },
@@ -2233,7 +2233,7 @@
       "zastava_opis": "Zastava, tradicionalna trobojnica s grbom u sredini, u službenoj je uporabi od 1990. Hrvatska trobojnica nastala je u ozračju francuskog slobodarskog duha te spajanjem tradicionalnih heraldičkih boja. Počela se isticati 1848. spajanjem crveno-bijele hrvatske i plavo-bijele slavonske zastave. Uporabu trobojnice propisala je i Hrvatsko-ugarska nagodba 1868.",
       "grb_url": "AS_0980.png",
       "grb_opis": "I grb je u službenoj uporabi od 1990. To je povijesni hrvatski grb, koji se koristi od XVI. stoljeća, podijeljen u 25 crvenih i bijelih (srebrnih) polja. Pet manjih štitova u kruni nad grbom povijesni su grbovi (s lijeva): najstariji poznati hrvatski grb, grb Dubrovačke Republike, Dalmacije, Istre i Slavonije.",
-      "doznaj_više_url": "https://www.enciklopedija.hr/Natuknica.aspx?ID=26390",
+      "doznaj_više_url": "26390",
       "original_pdf_str": "29"
     }
   },
@@ -2571,7 +2571,7 @@
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "",
+      "doznaj_više_url": "70146",
       "original_pdf_str": ""
     }
   },
@@ -2610,7 +2610,7 @@
     "customData": {
       "službeni_naziv": "",
       "smještaj": "",
-      "glavni_grad": "",
+      "glavni_grad": "Saint Helier",
       "površina": "",
       "broj_stanovnika": "",
       "središte": "",
@@ -2623,7 +2623,7 @@
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "https://www.enciklopedija.hr/Natuknica.aspx?ID=29071",
+      "doznaj_više_url": "29071",
       "original_pdf_str": ""
     }
   },
@@ -2675,7 +2675,7 @@
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "",
+      "doznaj_više_url": "70267",
       "original_pdf_str": ""
     }
   },
@@ -2686,7 +2686,7 @@
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
     "customData": {
-      "službeni_naziv": "",
+      "službeni_naziv": "outh Georgia and the South Sandwich Islands",
       "smještaj": "Južna Amerika",
       "glavni_grad": "",
       "površina": "",
@@ -2701,7 +2701,7 @@
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "",
+      "doznaj_više_url": "29649",
       "original_pdf_str": ""
     }
   },
@@ -2738,7 +2738,7 @@
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
     "customData": {
-      "službeni_naziv": "",
+      "službeni_naziv": "Cayman, Cayman Islands",
       "smještaj": "Sjeverna Amerika",
       "glavni_grad": "George Town",
       "površina": "",
@@ -2746,7 +2746,7 @@
       "središte": "",
       "gustoča_naseljnosti": "",
       "jezik": "",
-      "novcana_jedinica": "caymanski dolar",
+      "novcana_jedinica": "caymanski dolar (KYD)",
       "političko_uređenje": "",
       "članstvo_UN": "",
       "grb_url": "",
@@ -3024,7 +3024,7 @@
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
     "customData": {
-      "službeni_naziv": "",
+      "službeni_naziv": "Cocos (Keeling) Islands",
       "smještaj": "Australija",
       "glavni_grad": "",
       "površina": "",
@@ -3039,7 +3039,7 @@
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "https://www.enciklopedija.hr/Natuknica.aspx?ID=12165",
+      "doznaj_više_url": "12165",
       "original_pdf_str": ""
     }
   },
@@ -3180,22 +3180,22 @@
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
     "customData": {
-      "službeni_naziv": "",
+      "službeni_naziv": "Kosova; Republika Kosovo/Republika e Kosovës",
       "smještaj": "Europa",
-      "glavni_grad": "",
+      "glavni_grad": "Priština",
       "površina": "",
       "broj_stanovnika": "",
       "središte": "",
       "gustoča_naseljnosti": "",
-      "jezik": "",
-      "novcana_jedinica": "",
-      "političko_uređenje": "",
+      "jezik": "albanski i srpski",
+      "novcana_jedinica": "euro; 1 EUR = 100 eurocenta",
+      "političko_uređenje": "unitarna republika s parlamentarnim sustavom vlasti",
       "članstvo_UN": "",
-      "grb_url": "",
-      "zastava_url": "",
+      "grb_url": "AS_0796 R.png",
+      "zastava_url": "AS_1226.jpg",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "",
+      "doznaj_više_url": "33342",
       "original_pdf_str": ""
     }
   },
@@ -3254,18 +3254,18 @@
   {
     "id": "CK",
     "color": "#4F9CA9",
-    "title": "Kukovi otoci",
+    "title": "Cookovi otoci",
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
     "customData": {
-      "službeni_naziv": "",
+      "službeni_naziv": "Cook Islands",
       "smještaj": "Australija",
-      "glavni_grad": "",
+      "glavni_grad": "Avarua",
       "površina": "",
       "broj_stanovnika": "",
       "središte": "",
       "gustoča_naseljnosti": "",
-      "jezik": "",
+      "jezik": "engleski i maorski Cookovih otoka",
       "novcana_jedinica": "",
       "političko_uređenje": "",
       "članstvo_UN": "",
@@ -3273,7 +3273,7 @@
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "https://www.enciklopedija.hr/Natuknica.aspx?ID=12423",
+      "doznaj_više_url": "12423",
       "original_pdf_str": ""
     }
   },
@@ -3591,27 +3591,27 @@
   },
   {
     "id": "MO",
-    "color": "#FFCB00",
-    "title": "Makao",
+    "color": "##FFCB00",
+    "title": "Macao",
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
     "customData": {
-      "službeni_naziv": "",
+      "službeni_naziv": "Macau, Aomen",
       "smještaj": "Azija",
-      "glavni_grad": "",
+      "glavni_grad": "Macao",
       "površina": "",
       "broj_stanovnika": "",
       "središte": "",
       "gustoča_naseljnosti": "",
-      "jezik": "",
-      "novcana_jedinica": "",
+      "jezik": "kineski, portugalski, engleski",
+      "novcana_jedinica": "pataca; 1 MOP$, MOP = 100 avosa)",
       "političko_uređenje": "",
       "članstvo_UN": "",
       "grb_url": "",
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "",
+      "doznaj_više_url": "37808",
       "original_pdf_str": ""
     }
   },
@@ -3819,7 +3819,7 @@
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "https://enciklopedija.hr/Natuknica.aspx?ID=39180",
+      "doznaj_više_url": "39180",
       "original_pdf_str": ""
     }
   },
@@ -3908,14 +3908,14 @@
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
     "customData": {
-      "službeni_naziv": "",
+      "službeni_naziv": "Mahoré, Maoré",
       "smještaj": "Afrika",
-      "glavni_grad": "",
+      "glavni_grad": "Mamoudzou",
       "površina": "",
       "broj_stanovnika": "",
       "središte": "",
       "gustoča_naseljnosti": "",
-      "jezik": "",
+      "jezik": "francuski, mahorski",
       "novcana_jedinica": "",
       "političko_uređenje": "",
       "članstvo_UN": "",
@@ -3923,7 +3923,7 @@
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "https://www.enciklopedija.hr/Natuknica.aspx?ID=39616",
+      "doznaj_više_url": "39616",
       "original_pdf_str": ""
     }
   },
@@ -3963,7 +3963,7 @@
       "službeni_naziv": "",
       "smještaj": "Australija",
       "glavni_grad": "",
-      "površina": "",
+      "površina": "6,2 km²",
       "broj_stanovnika": "",
       "središte": "",
       "gustoča_naseljnosti": "",
@@ -3975,7 +3975,7 @@
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "",
+      "doznaj_više_url": "40597",
       "original_pdf_str": ""
     }
   },
@@ -4131,7 +4131,7 @@
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "https://enciklopedija.hr/Natuknica.aspx?ID=41832",
+      "doznaj_više_url": "41832",
       "original_pdf_str": ""
     }
   },
@@ -4326,7 +4326,7 @@
     "customData": {
       "službeni_naziv": "",
       "smještaj": "Australija",
-      "glavni_grad": "",
+      "glavni_grad": "Alofi",
       "površina": "",
       "broj_stanovnika": "",
       "središte": "",
@@ -4339,7 +4339,7 @@
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "https://enciklopedija.hr/Natuknica.aspx?ID=43927",
+      "doznaj_više_url": "43927",
       "original_pdf_str": ""
     }
   },
@@ -4398,13 +4398,13 @@
   {
     "id": "NF",
     "color": "#4F9CA9",
-    "title": "Norfolk Otok",
+    "title": "Norfolk",
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
     "customData": {
       "službeni_naziv": "",
       "smještaj": "Australija",
-      "glavni_grad": "",
+      "glavni_grad": "Kingston",
       "površina": "",
       "broj_stanovnika": "",
       "središte": "",
@@ -4417,7 +4417,7 @@
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "https://enciklopedija.hr/Natuknica.aspx?ID=44087",
+      "doznaj_više_url": "44087",
       "original_pdf_str": ""
     }
   },
@@ -4449,7 +4449,7 @@
   },
   {
     "id": "NC",
-    "color": "#4F9CA9",
+    "color": "##4F9CA9",
     "title": "Nova Kaledonija",
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
@@ -4469,7 +4469,8 @@
       "grb_url": "",
       "zastava_url": "",
       "zastava_opis": "Zastava je prihvaćena početkom 1980-ih kao simbol pokreta za neovisnost FLNKS-a. Zelena boja simbolizira zemlju predaka, crvena krv prolivenu u borbi za neovisnost i jedinstvo domorodačkog (kanačkog) stanovništva, a plava nebo i ocean. Zlatni krug predstavlja Sunce, a na njemu su konture krova tradicionalne kuće i školjke.",
-      "grb_opis": "https://enciklopedija.hr/Natuknica.aspx?ID=44227",
+      "grb_opis": "",
+      "doznaj_više_url": "44227",
       "original_pdf_str": "225"
     }
   },
@@ -4558,7 +4559,7 @@
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
     "customData": {
-      "službeni_naziv": "",
+      "službeni_naziv": "Baker Island",
       "smještaj": "Australija",
       "glavni_grad": "",
       "površina": "",
@@ -4584,7 +4585,7 @@
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
     "customData": {
-      "službeni_naziv": "",
+      "službeni_naziv": "Heard Island and McDonald Island",
       "smještaj": "Australija",
       "glavni_grad": "",
       "površina": "",
@@ -4599,7 +4600,7 @@
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "",
+      "doznaj_više_url": "70262",
       "original_pdf_str": ""
     }
   },
@@ -4610,7 +4611,7 @@
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
     "customData": {
-      "službeni_naziv": "",
+      "službeni_naziv": "Howland",
       "smještaj": "Australija",
       "glavni_grad": "",
       "površina": "",
@@ -4631,19 +4632,19 @@
   },
   {
     "id": "IM",
-    "color": "#F29B28",
+    "color": "##F29B28",
     "title": "Otok Man",
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
     "customData": {
-      "službeni_naziv": "",
+      "službeni_naziv": "Isle of Man",
       "smještaj": "",
-      "glavni_grad": "",
+      "glavni_grad": "Douglas",
       "površina": "",
       "broj_stanovnika": "",
       "središte": "",
       "gustoča_naseljnosti": "",
-      "jezik": "",
+      "jezik": "engleski",
       "novcana_jedinica": "",
       "političko_uređenje": "",
       "članstvo_UN": "",
@@ -4651,7 +4652,7 @@
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "",
+      "doznaj_više_url": "38521",
       "original_pdf_str": ""
     }
   },
@@ -4662,7 +4663,7 @@
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
     "customData": {
-      "službeni_naziv": "",
+      "službeni_naziv": "Wake",
       "smještaj": "Australija",
       "glavni_grad": "",
       "površina": "",
@@ -4677,7 +4678,7 @@
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "",
+      "doznaj_više_url": "65751",
       "original_pdf_str": ""
     }
   },
@@ -4703,7 +4704,7 @@
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "",
+      "doznaj_više_url": "70267",
       "original_pdf_str": ""
     }
   },
@@ -4762,11 +4763,11 @@
   {
     "id": "PS",
     "color": "#FFCB00",
-    "title": "Palestine, State of",
+    "title": "Palestina",
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
     "customData": {
-      "službeni_naziv": "Palestina",
+      "službeni_naziv": "",
       "smještaj": "jugozapadna Azija",
       "status": "privremena samouprava, političko predstavništvo međunarodno priznato",
       "glavni_grad": "Palestinci glavnim gradom smatraju Istočni Jeruzalem (al-Quds), koji je pod izraelskim nadzorom",
@@ -4782,7 +4783,7 @@
       "zastava_url": "AS_1088.jpg",
       "zastava_opis": "Palestinsko političko predstavništvo koristi zastavu koja je istaknuta 1916. kao zastava arapskog ustanka protiv Osmanlija. Palestinska oslobodilačka organizacija (PLO) prihvatila je tu zastavu 1964., a međunarodno je priznata od 1974. kada je PLO-u priznat promatrački status u UN-u. Zastava se sastoji od svearapskih boja koje simboliziraju značajne ličnosti i pojedince iz arapske i islamske prošlosti.",
       "grb_opis": "Koristi se grb koji prikazuje Saladinova orla sa štitom u bojama palestinske zastave. Na dnu grba na arapskom je natpis »Palestina«.",
-      "doznaj_više_url": "https://www.enciklopedija.hr/Natuknica.aspx?ID=46249",
+      "doznaj_više_url": "46249",
       "original_pdf_str": "104"
     }
   },
@@ -4897,14 +4898,14 @@
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
     "customData": {
-      "službeni_naziv": "",
+      "službeni_naziv": "Pitcairn",
       "smještaj": "Australija",
       "glavni_grad": "",
       "površina": "",
       "broj_stanovnika": "",
       "središte": "",
       "gustoča_naseljnosti": "",
-      "jezik": "",
+      "jezik": "engleski i pitkernski (kreolski engleski)",
       "novcana_jedinica": "",
       "političko_uređenje": "",
       "članstvo_UN": "",
@@ -4912,7 +4913,7 @@
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "",
+      "doznaj_više_url": "48481",
       "original_pdf_str": ""
     }
   },
@@ -4949,7 +4950,7 @@
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
     "customData": {
-      "službeni_naziv": "",
+      "službeni_naziv": "Puerto Rico, Estado Libre Asociado de Puerto Rico, Commonwealth of Puerto Rico",
       "smještaj": "Sjeverna Amerika",
       "glavni_grad": "San Juan",
       "površina": "",
@@ -4957,14 +4958,14 @@
       "središte": "",
       "gustoča_naseljnosti": "",
       "jezik": "španjolski i engleski",
-      "novcana_jedinica": "američki dolar",
+      "novcana_jedinica": "američki dolar; 1 USD = 100 centa",
       "političko_uređenje": "",
       "članstvo_UN": "",
       "grb_url": "",
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "https://enciklopedija.hr/Natuknica.aspx?ID=49607",
+      "doznaj_više_url": "49607",
       "original_pdf_str": ""
     }
   },
@@ -5094,7 +5095,7 @@
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "https://www.enciklopedija.hr/Natuknica.aspx?ID=52598",
+      "doznaj_više_url": "52598",
       "original_pdf_str": ""
     }
   },
@@ -5120,20 +5121,20 @@
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "",
+      "doznaj_više_url": "35833",
       "original_pdf_str": ""
     }
   },
   {
     "id": "MF",
     "color": "#E74354",
-    "title": "Saint Martin (French part)",
+    "title": "Saint Martin",
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
     "customData": {
-      "službeni_naziv": "",
+      "službeni_naziv": "Saint Martin (French part)",
       "smještaj": "Sjeverna Amerika",
-      "glavni_grad": "",
+      "glavni_grad": "Marigot",
       "površina": "",
       "broj_stanovnika": "",
       "središte": "",
@@ -5146,7 +5147,7 @@
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "",
+      "doznaj_više_url": "70117",
       "original_pdf_str": ""
     }
   },
@@ -5361,13 +5362,13 @@
   {
     "id": "SX",
     "color": "#E74354",
-    "title": "Sint Maarten (Dutch part)",
+    "title": "Sint Maarten",
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
     "customData": {
-      "službeni_naziv": "",
+      "službeni_naziv": "Sint Maarten (Dutch part)",
       "smještaj": "Sjeverna Amerika",
-      "glavni_grad": "",
+      "glavni_grad": "Philipsburg",
       "površina": "",
       "broj_stanovnika": "",
       "središte": "",
@@ -5380,7 +5381,7 @@
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "",
+      "doznaj_više_url": "70117",
       "original_pdf_str": ""
     }
   },
@@ -5443,7 +5444,7 @@
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
     "customData": {
-      "službeni_naziv": "",
+      "službeni_naziv": "Northern Mariana Islands",
       "smještaj": "Australija",
       "glavni_grad": "",
       "površina": "",
@@ -5458,7 +5459,7 @@
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "",
+      "doznaj_više_url": "38925",
       "original_pdf_str": ""
     }
   },
@@ -5569,19 +5570,19 @@
   {
     "id": "SS",
     "color": "#469025",
-    "title": "South Sudan (Južni Sudan)",
+    "title": "Južni Sudan",
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
     "customData": {
-      "službeni_naziv": "",
+      "službeni_naziv": "South Sudan, Republika Južni Sudan/Republic of South Sudan",
       "smještaj": "Afrika",
-      "glavni_grad": "",
+      "glavni_grad": "Juba",
       "površina": "",
       "broj_stanovnika": "",
       "središte": "",
       "gustoča_naseljnosti": "",
-      "jezik": "",
-      "novcana_jedinica": "",
+      "jezik": "engleski, arapski i jezici pojedinih naroda (dinka, nuerski, šilučki, zande i dr.)",
+      "novcana_jedinica": "južnosudanska funta; 1 SSP = 100 pijastera",
       "političko_uređenje": "",
       "članstvo_UN": "",
       "grb_url": "HOL_4390.png",
@@ -5755,9 +5756,9 @@
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
     "customData": {
-      "službeni_naziv": "",
+      "službeni_naziv": "Saint Helena, St. Helena",
       "smještaj": "Afrika",
-      "glavni_grad": "",
+      "glavni_grad": "Jamestown",
       "površina": "",
       "broj_stanovnika": "",
       "središte": "",
@@ -5770,7 +5771,7 @@
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "https://www.enciklopedija.hr/Natuknica.aspx?ID=54054",
+      "doznaj_više_url": "54054",
       "original_pdf_str": ""
     }
   },
@@ -5833,9 +5834,9 @@
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
     "customData": {
-      "službeni_naziv": "",
+      "službeni_naziv": "Saint-Pierre-et-Miquelon",
       "smještaj": "Sjeverna Amerika",
-      "glavni_grad": "",
+      "glavni_grad": "Saint-Pierre",
       "površina": "",
       "broj_stanovnika": "",
       "središte": "",
@@ -5848,7 +5849,7 @@
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "",
+      "doznaj_više_url": "54087",
       "original_pdf_str": ""
     }
   },
@@ -5937,7 +5938,7 @@
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
     "customData": {
-      "službeni_naziv": "Demokratska Socijalistička Republika Šri Lanka (sinhaleški Ṣrī Laṅkā Prajātāntrika Samājavādī Janarajaya, tamilski Ilaṅkaiś Sańanāyaka Ṣośaliśak Kuṭiyaraśa)",
+      "službeni_naziv": "Demokratska Socijalistička Republika Šri Lanka (sinhaleški Ṣrī Laṅkā Prajātāntrika Samājavādī Janarajaya, tamilski Ilaṅkaiś Śaṉanāyaka Ṣośaliśak Kuṭiyaraśa)",
       "smještaj": "južna Azija",
       "glavni_grad": "Kolamba (Colombo)",
       "površina": "65 610",
@@ -5955,7 +5956,8 @@
       "doznaj_više_url": "59869",
       "original_pdf_str": "96"
     }
-  },{
+  },
+  {
     "id": "SE",
     "color": "#F29B28",
     "title": "Švedska",
@@ -6159,7 +6161,7 @@
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "https://enciklopedija.hr/Natuknica.aspx?ID=61606",
+      "doznaj_više_url": "61606",
       "original_pdf_str": ""
     }
   },
@@ -6270,26 +6272,26 @@
   {
     "id": "TC",
     "color": "#E74354",
-    "title": "Turks i Kaikos Otoci",
+    "title": "Turks i Caicos",
     "showAsSelected": false,
     "descriptionWindowWidth": 500,
     "customData": {
       "službeni_naziv": "",
       "smještaj": "Sjeverna Amerika",
-      "glavni_grad": "",
+      "glavni_grad": "Cockburn Town",
       "površina": "",
       "broj_stanovnika": "",
       "središte": "",
       "gustoča_naseljnosti": "",
       "jezik": "engleski",
-      "novcana_jedinica": "",
+      "novcana_jedinica": "američki dolar; 1 USD = 100 centa",
       "političko_uređenje": "",
       "članstvo_UN": "",
       "grb_url": "",
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "https://enciklopedija.hr/Natuknica.aspx?ID=62788",
+      "doznaj_više_url": "62788",
       "original_pdf_str": ""
     }
   },
@@ -6614,7 +6616,7 @@
     "customData": {
       "službeni_naziv": "",
       "smještaj": "Australija",
-      "glavni_grad": "",
+      "glavni_grad": "Mata Utu (Matā‘utu)",
       "površina": "",
       "broj_stanovnika": "",
       "središte": "",
@@ -6627,7 +6629,7 @@
       "zastava_url": "",
       "zastava_opis": "",
       "grb_opis": "",
-      "doznaj_više_url": "https://enciklopedija.hr/Natuknica.aspx?ID=65791",
+      "doznaj_više_url": "65791",
       "original_pdf_str": ""
     }
   },
@@ -6679,7 +6681,7 @@
       "zastava_url": "AS_1053.jpg",
       "zastava_opis": "Zastava u panarapskim bojama u uporabi je od 1976. Crna boja predstavlja smrt, zelena život, a bijela mir. Prvotno ju je koristio oslobodilački pokret POLISARIO. Vrlo je slična palestinskoj zastavi.",
       "grb_opis": "I grb je u uporabi od 1976., također prvotno kao znak oslobodilačkoga pokreta. U sredini su dvije ukrižene puške sa zastavama i čekić. Iznad čekića su zvijezda i polumjesec, a na vrpci na dnu naziv je države na arapskom.",
-      "doznaj_više_url": "https://www.enciklopedija.hr/Natuknica.aspx?ID=66857",
+      "doznaj_više_url": "66857",
       "original_pdf_str": "160"
     }
   },

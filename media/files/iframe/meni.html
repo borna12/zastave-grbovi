@@ -72,7 +72,8 @@
             else if (data[i].color=="#4F9CA9") {$(".Australija").append("<li><a  onclick='map.clickMapObject(map.getObjectById(" + '"' + data[i].id + '"' + "))'>" + data[i].title + "</a></li>")}
             else if (data[i].color=="#469025") {$(".Afrika").append("<li><a  onclick='map.clickMapObject(map.getObjectById(" + '"' + data[i].id + '"' + "))'>" + data[i].title + "</a></li>")} 
             else if (data[i].color=="#FFCB00") {$(".Azija").append("<li><a  onclick='map.clickMapObject(map.getObjectById(" + '"' + data[i].id + '"' + "))'>" + data[i].title + "</a></li>")} 
-            else{
+            else if (data[i].color.indexOf(' #') !== -1) {$(".Nesamostalna").append("<li><a  onclick='map.clickMapObject(map.getObjectById(" + '"' + data[i].id + '"' + "))'>" + data[i].title + "</a></li>")} 
+            else if (data[i].color=="" || data[i].color==null){
                 $(".Organizacije").append("<li><a  onclick='map.clickMapObject(map.getObjectById(" + '"' + data[i].id + '"' + "))'>" + data[i].title + "</a></li>")
             }
             i++
