@@ -547,6 +547,36 @@
 	  }
 	},
 	{
+	  "id": "Bas",
+	  "color": " #E74354",
+	  "title": "Baskija",
+	  "showAsSelected": false,
+	  "descriptionWindowWidth": 500,
+	  "zoomLevel": 64,
+	  "zoomLatitude": 42.964310,
+	  "zoomLongitude": -2.589860,
+	  "customData": {
+		"službeni_naziv": "Baskija (Euskal Herria, País Vasco)",
+		"smještaj": "zapadni Pireneji",
+		"glavni_grad": "",
+		"status": "španjolska upravna jedinica (autonomna zajednica); povijesna Baskija obuhvaća veće područje u Španjolskoj i Francuskoj",
+		"površina": "",
+		"broj_stanovnika": "",
+		"središte": "Gasteiz-Vitoria",
+		"gustoča_naseljnosti": "",
+		"jezik": "",
+		"novcana_jedinica": "",
+		"političko_uređenje": "",
+		"članstvo_UN": "",
+		"grb_url": "",
+		"zastava_url": "Baskija.jpg",
+		"zastava_opis": "Baskijsku zastavu (baskijski <em>Ikurrina</em>, zastava) osmislio je 1894. Sabino Arana. Prvotno je bila zastava pokrajine Biskaje, no ubrzo je prihvaćena kao svebaskijska zastava. Andrijin križ označava neovisnost Baskije, a njegova zelena boja hrast u Guernici, simbol baskijske slobode. Bijeli križ označava Boga i upotpunjuje prvotnu Araninu poruku ≫Biskaja, neovisnost i Bog≪. Za druge španjolske republike zastavu su prihvatile sve demokratske snage, a za Francove diktature označena je separatističkim simbolom te je bila zabranjena. Nakon demokratizacije u Španjolskoj prihvaćena je za službenu zastavu autonomne zajednice Baskije. Korištena je i u francuskom dijelu Baskije, a nakon Drugoga svjetskog rata i službeno se ističe uz francusku zastavu.",
+		"grb_opis": "",
+		"doznaj_više_url": "6157",
+		"original_pdf_str": "217"
+	  }
+	},
+	{
 	  "id": "Bav",
 	  "color": " #E74354",
 	  "title": "Bavarska",
@@ -1465,6 +1495,36 @@
 	  }
 	},
 	{
+	  "id": "ENGLE",
+	  "color": " #E74354",
+	  "title": "Engleska",
+	  "showAsSelected": false,
+	  "descriptionWindowWidth": 500,
+	  "zoomLevel": 40,
+	  "zoomLatitude": 51.507351,
+	  "zoomLongitude": -0.127758,
+	  "customData": {
+		"službeni_naziv": "Engleska (England)",
+		"smještaj": "južni dio otoka Velike Britanije",
+		"glavni_grad": "",
+		"status": "zemlja sastavnica Ujedinjenog Kraljevstva",
+		"površina": "",
+		"broj_stanovnika": "",
+		"središte": "London",
+		"gustoča_naseljnosti": "",
+		"jezik": "",
+		"novcana_jedinica": "",
+		"političko_uređenje": "",
+		"članstvo_UN": "",
+		"grb_url": "",
+		"zastava_url": "Engleska.jpg",
+		"zastava_opis": "Engleska zastava prikazuje crveni križ svetoga Jurja, zaštitnika zemlje, na bijeloj podlozi. Uporaba zastave sa križem svetoga Jurja potvrđena je od XII. stoljeća, a kao nacionalna zastava prihvaćena je od XIV. stoljeća kada je sveti Juraj prevladao druge, dotad također slavljene svece (npr. svetog Edwarda).<br>Zastavu s križem svetoga Jurja kao simbol ističe i Engleska crkva (Church of England).",
+		"grb_opis": "",
+		"doznaj_više_url": "17961",
+		"original_pdf_str": "218"
+	  }
+	},
+	{
 	  "id": "ER",
 	  "color": "#469025",
 	  "title": "Eritreja",
@@ -1826,6 +1886,36 @@
 		"grb_opis": "Grb, u uporabi od 1963., sastoji se od štita koji pridržavaju dvije crne pantere i drveta okume. Na štitu je brod koji simbolizira Gabon kako se kreće prema svijetloj budućnosti. Tri novčića iznad broda simboliziraju bogate rudnike. Pod krošnjom stabla natpis je na latinskom »Ujedinjeni naprijed«. Na francuskom je pri dnu debla natpis »Jedinstvo, rad, pravda«.",
 		"doznaj_više_url": "20940",
 		"original_pdf_str": "119"
+	  }
+	},
+	{
+	  "id": "GAL",
+	  "color": " #E74354",
+	  "title": "Galicija",
+	  "showAsSelected": false,
+	  "descriptionWindowWidth": 500,
+	  "zoomLevel": 64,
+	  "zoomLatitude": 42.878212,
+	  "zoomLongitude": -8.544844,
+	  "customData": {
+		"službeni_naziv": "Galicija (Galicia)",
+		"smještaj": "sjeverozapadna Španjolska",
+		"glavni_grad": "",
+		"status": "španjolska upravna jedinica (<em>autonomna zajednica</em>)",
+		"površina": "",
+		"broj_stanovnika": "",
+		"središte": "Santiago de Compostela",
+		"gustoča_naseljnosti": "",
+		"jezik": "",
+		"novcana_jedinica": "",
+		"političko_uređenje": "",
+		"članstvo_UN": "",
+		"grb_url": "",
+		"zastava_url": "Galicija.jpg",
+		"zastava_opis": "Preteča suvremene galicijske zastave pomorska je zastava pokrajine La Coruñe kakva je isticana na brodovima koji su potkraj XIX. i u početku XX. stoljeća prevozili galicijske iseljenike u Argentinu. Kao galicijska zastava prvotno je i prihvaćena upravo od iseljeničke zajednice, a potom tek i u samoj Galiciji. Za Francove diktature bila je zabranjena. Službena varijanta zastave u sredini ima i grb koji se sastoji od štita na kojemu su prikazani kalež s hostijom i sedam križeva te kraljevske krune.",
+		"grb_opis": "",
+		"doznaj_više_url": "21071",
+		"original_pdf_str": "217"
 	  }
 	},
 	{
@@ -2922,6 +3012,36 @@
 	  }
 	},
 	{
+	  "id": "KATAL",
+	  "color": " #E74354",
+	  "title": "Katalonija",
+	  "showAsSelected": false,
+	  "descriptionWindowWidth": 500,
+	  "zoomLevel": 60,
+	  "zoomLatitude": 41.385063,
+	  "zoomLongitude": 2.173404,
+	  "customData": {
+		"službeni_naziv": "Katalonija (Catalunya, Cataluña)",
+		"smještaj": "sjeveroistočna Španjolska",
+		"glavni_grad": "",
+		"status": "španjolska upravna jedinica (<em>autonomna zajednica</em>)",
+		"površina": "",
+		"broj_stanovnika": "",
+		"središte": "Barcelona",
+		"gustoča_naseljnosti": "",
+		"jezik": "",
+		"novcana_jedinica": "",
+		"političko_uređenje": "",
+		"članstvo_UN": "",
+		"grb_url": "",
+		"zastava_url": "Katalonija.jpg",
+		"zastava_opis": "Katalonska zastava ima žutu boju u podlozi, a uzdužno je išarana s četiri ravnomjerno raspoređene crvene pruge. Popularno se naziva <em>Senyera</em>, a nastala je, prema legendi, nakon jedne od povijesnih bitaka tako da je katalonski junak Rajmund Be renguer na žutome štitu ostavio trag svojih pet krvavih prstiju.<br>Osim opisane temeljne verzije, u uporabi je i raširena verzija u kojoj je osnovna verzija kombinirana s križem svetoga Jurja (katalonski Jordi), zaštitnika Katalonije.",
+		"grb_opis": "",
+		"doznaj_više_url": "30824",
+		"original_pdf_str": "217"
+	  }
+	},
+	{
 	  "id": "QA",
 	  "color": "#FFCB00",
 	  "title": "Katar",
@@ -3337,6 +3457,36 @@
 		"original_pdf_str": ""
 	  }
 	},
+	{
+		"id": "KURD",
+		"color": " #FFCB00",
+		"title": "Kurdistan",
+		"showAsSelected": false,
+		"descriptionWindowWidth": 500,
+		"zoomLevel": 64,
+		"zoomLatitude": 37.916248,
+		"zoomLongitude": 40.225590,
+		"customData": {
+		  "službeni_naziv": "Kurdistan",
+		  "smještaj": "jugozapadna Azija (obuhvaća istočni dio Turske, sjeveroistočni Irak, sjeverozapadni Iran i sjeveroistočnu Siriju)",
+		  "glavni_grad": "",
+		  "status": "područje naseljeno kurdskim stanovništvom u Iraku, Iranu, Siriji i Turskoj; bez međunarodnog priznanja",
+		  "površina": "",
+		  "broj_stanovnika": "",
+		  "središte": "Diyarbakır (Turska), Mosul (Irak), Kermanshah (Iran)",
+		  "gustoča_naseljnosti": "",
+		  "jezik": "",
+		  "novcana_jedinica": "",
+		  "političko_uređenje": "",
+		  "članstvo_UN": "",
+		  "grb_url": "",
+		  "zastava_url": "Kurdistan.jpg",
+		  "zastava_opis": "Kurdistanska zastava je trobojnica sa Suncem u sredini. Crvena boja simbolizira krv prolivenu u obrani zemlje, bijela mir i čistoću, a zelena planinsku prirodu. Sunce s 21 zrakom prastari je kurdski simbol. Zastava se koristi kao kurdski simbol u borbi za slobodu od 1920-ih godina. Službeno se koristi u iračkom dijelu Kurdistana, dok je njezina uporaba u iranskom i sirijskom dijelu zabranjena, a u turskom se dijelu smatra kriminalnim činom.",
+		  "grb_opis": "",
+		  "doznaj_više_url": "34706",
+		  "original_pdf_str": "222"
+		}
+	  },
 	{
 	  "id": "KW",
 	  "color": "#FFCB00",
@@ -5526,6 +5676,36 @@
 	  }
 	},
 	{
+	  "id": "SJIRSKA",
+	  "color": " #E74354",
+	  "title": "Sjeverna Irska",
+	  "showAsSelected": false,
+	  "descriptionWindowWidth": 500,
+	  "zoomLevel": 64,
+	  "zoomLatitude": 54.597286,
+	  "zoomLongitude": -5.930120,
+	  "customData": {
+		"službeni_naziv": "Sjeverna Irska (Northern Ireland)",
+		"smještaj": "sjeverni dio otoka Irske",
+		"glavni_grad": "",
+		"status": "zemlja sastavnica Ujedinjenog Kraljevstva",
+		"površina": "",
+		"broj_stanovnika": "",
+		"središte": "Belfast",
+		"gustoča_naseljnosti": "",
+		"jezik": "",
+		"novcana_jedinica": "",
+		"političko_uređenje": "",
+		"članstvo_UN": "",
+		"grb_url": "",
+		"zastava_url": "SIrska.jpg",
+		"zastava_opis": "Službeno se sjevernoirska zastava ističe u vrijeme dok njome upravlja lokalna skupština (Stormont, prema dijelu Belfasta gdje je smještena), a ne izravno britanska vlada. To je zastava svetoga Jurja sa sjevernoirskim simbolom, crvenom desnom rukom prikazanom unutar šestokrake zvijezde, u sredini. Crvena desna ruka simbol je i irske povijesne pokrajine Ulstera, koja se najvećim dijelom, ali ne u cijelosti, nalazi u okviru Sjeverne Irske. Neslužbeno, zastavu s križem i crvenom desnom rukom ističe u najrazličitijim prigodama protestantska zajednica u Sjevernoj Irskoj.",
+		"grb_opis": "",
+		"doznaj_više_url": "56330",
+		"original_pdf_str": "220"
+	  }
+	},
+	{
 	  "id": "MP",
 	  "color": "#4F9CA9",
 	  "title": "Sjeverni Marijanski Otoci",
@@ -5994,6 +6174,36 @@
 	  }
 	},
 	{
+	  "id": "SKOT",
+	  "color": " #E74354",
+	  "title": "Škotska",
+	  "showAsSelected": false,
+	  "descriptionWindowWidth": 500,
+	  "zoomLevel": 60,
+	  "zoomLatitude": 55.953251,
+	  "zoomLongitude": -3.188267,
+	  "customData": {
+		"službeni_naziv": "Škotska (Scotland)",
+		"smještaj": "sjeverni dio otoka Velike Britanije",
+		"glavni_grad": "",
+		"status": "zemlja sastavnica Ujedinjenog Kraljevstva",
+		"površina": "",
+		"broj_stanovnika": "",
+		"središte": "Edinburgh",
+		"gustoča_naseljnosti": "",
+		"jezik": "",
+		"novcana_jedinica": "",
+		"političko_uređenje": "",
+		"članstvo_UN": "",
+		"grb_url": "",
+		"zastava_url": "Skotska.jpg",
+		"zastava_opis": "Škotska zastava prikazuje Andrijin križ, nazvan prema svecu koji je bio jedan od Kristovih učenika i koji je prema predaji raspet u grčkom gradu Patrasu na križ takva oblika. Njegove relikvije dospjele su u VIII. stoljeću do Škotske pa se otada tamo slavi kao svetac zaštitnik. Zastava je poznata od XII. stoljeća, a kao škotski simbol prihvaćena je od XIII. stoljeća. U službenoj je uporabi od 1999., od obnove rada škotskoga parlamenta.",
+		"grb_opis": "",
+		"doznaj_više_url": "59677",
+		"original_pdf_str": "220"
+	  }
+	},
+	{
 	  "id": "ES",
 	  "color": "#F29B28",
 	  "title": "Španjolska",
@@ -6201,6 +6411,36 @@
 		"original_pdf_str": "154"
 	  }
 	},
+	{
+		"id": "TIB",
+		"color": " #FFCB00",
+		"title": "Tibet",
+		"showAsSelected": false,
+		"descriptionWindowWidth": 500,
+		"zoomLevel": 60,
+		"zoomLatitude": 30.153360,
+		"zoomLongitude": 88.787865,
+		"customData": {
+		  "službeni_naziv": "Tibet (Xizang)",
+		  "smještaj": "središnja Kina",
+		  "glavni_grad": "",
+		  "status": "kineska autonomna regija",
+		  "površina": "",
+		  "broj_stanovnika": "",
+		  "središte": "Lasa (Lhasa)",
+		  "gustoča_naseljnosti": "",
+		  "jezik": "",
+		  "novcana_jedinica": "",
+		  "političko_uređenje": "",
+		  "članstvo_UN": "",
+		  "grb_url": "",
+		  "zastava_url": "Tibet.jpg",
+		  "zastava_opis": "Tradicionalna tibetanska zastava bila je u službenoj uporabi do 1951., a potom je njezina uporaba u Tibetu zabranjena, no koristi se kao simbol tibetanske borbe za neovisnost.<br>Zastava sadrži simbole budizma i zemlje. Bijeli trokut simbolizira snježne planine, plava boja nebo, a šest crvenih pruga predstavljaju tibetanska plemena. Sunce simbolizira slobodu te duhovno i materijalno zadovoljstvo za sva bića. Dva snježna lava predstavljaju hrabrost, a između njih je nekoliko budističkih simbola koji imaju religijsko značenje. Žuti obrub simbolizira širenje Buddhina učenja u svim smjerovima.",
+		  "grb_opis": "",
+		  "doznaj_više_url": "61256",
+		  "original_pdf_str": "223"
+		}
+	  },
 	{
 	  "id": "TG",
 	  "color": "#469025",
@@ -6695,6 +6935,36 @@
 		"original_pdf_str": "103"
 	  }
 	},
+	{
+		"id": "WALES",
+		"color": " #E74354",
+		"title": "Wales",
+		"showAsSelected": false,
+		"descriptionWindowWidth": 500,
+		"zoomLevel": 64,
+		"zoomLatitude": 51.481583,
+		"zoomLongitude": -3.179090,
+		"customData": {
+		  "službeni_naziv": "Wales",
+		  "smještaj": "zapadni dio otoka Velike Britanije",
+		  "glavni_grad": "",
+		  "status": "zemlja sastavnica Ujedinjenog Kraljevstva",
+		  "površina": "",
+		  "broj_stanovnika": "",
+		  "središte": "Cardiff",
+		  "gustoča_naseljnosti": "",
+		  "jezik": "",
+		  "novcana_jedinica": "",
+		  "političko_uređenje": "",
+		  "članstvo_UN": "",
+		  "grb_url": "",
+		  "zastava_url": "Wales.jpg",
+		  "zastava_opis": "Velška zastava naziva se prema glavnom nacionalnom simbolu, crvenome zmaju (velški <em>Y Ddraigh Goch</em>), koji je prikazan na bijelo-zelenom polju. Zmaj je često korišten heraldički motiv koji su keltski Briti, preteče današnjih Velšana, preuzeli od Rimljana, a motiv zmaja javlja se kao velški simbol od srednjega vijeka. Bijela i zelena bile su boje Tudora, velške dinastije koja je u XV. stoljeću zasjela na englesko prijestolje. Zastava je u službenoj uporabi od 1953.",
+		  "grb_opis": "",
+		  "doznaj_više_url": "65772",
+		  "original_pdf_str": "221"
+		}
+	  },
 	{
 	  "id": "WF",
 	  "color": "#4F9CA9",
