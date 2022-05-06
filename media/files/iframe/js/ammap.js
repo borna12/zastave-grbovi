@@ -6190,7 +6190,7 @@
             if (podrucje == null || podrucje == "") {
                 document.getElementById("podrucje").style.display = "none";
             }
-            if (status == null || podrucje == "") {
+            if (status == null || status == "" || status == "undefined") {
                 document.getElementById("status").style.display = "none";
             }
             if (drzava == null || drzava == "") {
