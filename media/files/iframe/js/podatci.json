@@ -1607,19 +1607,19 @@
 	  "showAsSelected": false,
 	  "color": "",
 	  "title": "Europska Unija",
-	  "zoomLevel": 5,
-	  "zoomLatitude": 53.87566495968231,
-	  "zoomLongitude": 11.84400114456873,
+	  "zoomLevel": 64,
+	  "zoomLatitude": 50.850346,
+	  "zoomLongitude": 4.351721,
 	  "descriptionWindowWidth": 500,
 	  "customData": {
-		"službeni_naziv": "EUROPSKA UNIJA",
+		"službeni_naziv": "",
 		"status": "međunarodna organizacija – savez država",
 		"smještaj": "",
 		"glavni_grad": "",
 		"površina": "",
 		"broj_stanovnika": "",
 		"središte": "",
-		"zastava_url": "AS_1216.png",
+		"zastava_url": "EU.jpg",
 		"zastava_opis": "Europska unija koristi zastavu koja općenito simbolizira Europu, a koriste ju i neke druge europske organizacije, primjerice Vijeće Europe. Dvanaest kružno raspoređenih zlatnih zvjezdica na azurno-plavom polju simboliziraju savršenstvo i jedinstvo. Od 1955. koristi ju Vijeće Europe, a za službenu zastavu Europske unuje prihvaćena je 1985.",
 		"grb_url": "",
 		"grb_opis": "",
@@ -4765,6 +4765,31 @@
 		  "original_pdf_str": "215"
 		}
 	  },
+	  {
+		"id": "OLIMP",
+		"color": "",
+		"title": "Olimpijski pokret",
+		"showAsSelected": false,
+		"descriptionWindowWidth": 500,
+		"zoomLevel": 64,
+		"zoomLatitude": 46.519630,
+		"zoomLongitude": 6.632130,
+		"customData": {
+			  "službeni_naziv": "",
+			  "status": "međunarodni športski savez",
+			  "smještaj": "",
+			  "glavni_grad": "",
+			  "površina": "",
+			  "broj_stanovnika": "",
+			  "središte": "",
+			  "zastava_url": "Olimp.jpg",
+			  "zastava_opis": "Zastava Olimpijskog pokreta i Olimpijskih igara prihvaćena je 1913., a prvi put istaknuta na Igrama održanima 1920. u Antwerpenu. Pet prstenova simboliziraju jedinstvo i sklad pet kontinenata. Najmanje jedna od boja sa zastave Olimpijskoga pokreta javlja se na zastavama svih država svijeta.",
+			  "grb_url": "",
+			  "grb_opis": "",
+			  "doznaj_više_url": "",
+			"original_pdf_str": "227"
+		}
+	  },
 	{
 	  "id": "OM",
 	  "color": "#FFCB00",
@@ -5732,6 +5757,31 @@
 		"original_pdf_str": ""
 	  }
 	},
+	{
+		"id": "NATO",
+		"color": "",
+		"title": "Sjevernoatlanski savez (NATO)",
+		"showAsSelected": false,
+		"descriptionWindowWidth": 500,
+		"zoomLevel": 64,
+		"zoomLatitude": 50.850346,
+		"zoomLongitude": 4.351721,
+		"customData": {
+			  "službeni_naziv": "",
+			  "status": "međunarodna organizacija",
+			  "smještaj": "",
+			  "glavni_grad": "",
+			  "površina": "",
+			  "broj_stanovnika": "",
+			  "središte": "",
+			  "zastava_url": "NATO.jpg",
+			  "zastava_opis": "Zastava vojnosigurnosne organizacije sjevernoameričkih i europskih država prikazuje bijelo-plavi kompas na plavome polju. Plava boja simbolizira Atlantski ocean, a kompas koji pokazuje na sve četiri strane svijeta članice organizacije s obiju strana oceana. Ističe se od 1953., a izgled je osmislio jedan od članova Međunarodnog vojnog odbora, glavnog savjetodavnog tijela organizacije.",
+			  "grb_url": "",
+			  "grb_opis": "",
+		  "doznaj_više_url": "56345",
+		  "original_pdf_str": "227"
+		}
+	  },
 	{
 	  "id": "SK",
 	  "color": "#F29B28",
@@ -6726,6 +6776,31 @@
 		"grb_opis": "Grb je u uporabi od 1973. Prikazan je kurejšitski sokol, simbol staroarapskoga plemena iz kojeg potječe Muhamed, kojemu je na prsima jedrenjak. U sokolovim je kandžama arapski natpis s imenom države.",
 		"doznaj_više_url": "63042",
 		"original_pdf_str": "101"
+	  }
+	},
+	{
+	  "id": "UNAROD",
+	  "color": "",
+	  "title": "Ujedinjeni narodi",
+	  "showAsSelected": false,
+	  "descriptionWindowWidth": 500,
+	  "zoomLevel": 64,
+	  "zoomLatitude": 40.712776,
+	  "zoomLongitude": -74.005974,
+	  "customData": {
+			"službeni_naziv": "",
+			"status": "međunarodna organizacija",
+			"smještaj": "",
+			"glavni_grad": "",
+			"površina": "",
+			"broj_stanovnika": "",
+			"središte": "",
+			"zastava_url": "UN.jpg",
+			"zastava_opis": "Zastava svjetske organizacije država je svijetloplava sa službenim znakom u sredini. Znak je prikaz karte svijeta u azimutnoj ekvidistantnoj projekciji, centriranoj na Sjeverni pol. S obiju je strana karte po jedna maslinova grančica, simbol mira. Zastava je u uporabi od 1946.",
+			"grb_url": "",
+			"grb_opis": "",
+		"doznaj_više_url": "63043",
+		"original_pdf_str": "226"
 	  }
 	},
 	{
