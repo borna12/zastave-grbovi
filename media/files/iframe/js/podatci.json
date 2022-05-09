@@ -85,7 +85,7 @@
 	  "showAsSelected": false,
 	  "descriptionWindowWidth": 500,
 	  "customData": {
-		"službeni_naziv": "Demokratska Narodna Republika Alžir (al-Ǧumhūriyya al-Ǧazā’iriyya ad- -Dīmuqrāṭiyya aš-Ša’biyya)",
+		"službeni_naziv": "Demokratska Narodna Republika Alžir (al-Ǧumhūriyya al-Ǧazā’iriyya ad-Dīmuqrāṭiyya aš-Ša’biyya)",
 		"smještaj": "sjeverna Afrika",
 		"glavni_grad": "Alžir (arap. el-Jazā’ir, franc. Alger)",
 		"površina": "2 381 741",
@@ -501,7 +501,7 @@
 	  "showAsSelected": false,
 	  "descriptionWindowWidth": 500,
 	  "customData": {
-		"službeni_naziv": "Narodna Republika Bangladeš (Gana Prajatantri Bangladesh",
+		"službeni_naziv": "Narodna Republika Bangladeš (Gana Prajatantri Bangladesh)",
 		"smještaj": "južna Azija",
 		"glavni_grad": "Dhāka (Dacca)",
 		"površina": "147 570",
@@ -553,8 +553,8 @@
 	  "showAsSelected": false,
 	  "descriptionWindowWidth": 500,
 	  "zoomLevel": 64,
-	  "zoomLatitude": 42.964310,
-	  "zoomLongitude": -2.589860,
+	  "zoomLatitude": 42.96431,
+	  "zoomLongitude": -2.58986,
 	  "customData": {
 		"službeni_naziv": "Baskija (Euskal Herria, País Vasco)",
 		"smještaj": "zapadni Pireneji",
@@ -673,7 +673,7 @@
 		"središte": "",
 		"gustoča_naseljnosti": "",
 		"jezik": "francuski",
-		"novcana_jedinica": "franak; 1 XOF = 100 santima",
+		"novcana_jedinica": "CFA franak; 1 XOF = 100 santima",
 		"političko_uređenje": "predsjednička republika",
 		"članstvo_UN": "od 1960.",
 		"grb_url": "AS_0838.png",
@@ -987,7 +987,7 @@
 		"broj_stanovnika": "",
 		"gustoča_naseljnosti": "",
 		"jezik": "",
-		"status":"francuska administrativna regija",
+		"status": "francuska administrativna regija",
 		"novcana_jedinica": "",
 		"političko_uređenje": "",
 		"članstvo_UN": "",
@@ -1315,7 +1315,7 @@
 	{
 	  "id": "CD",
 	  "color": "#469025",
-	  "title": "Demokratska Republika Kongo",
+	  "title": "Kongo, DR",
 	  "showAsSelected": false,
 	  "descriptionWindowWidth": 500,
 	  "customData": {
@@ -1656,11 +1656,11 @@
 	{
 	  "id": "FO",
 	  "color": " #F29B28",
-	  "title": "Ferojski (Ovčji) otoci",
+	  "title": "Ferojski otoci",
 	  "showAsSelected": false,
 	  "descriptionWindowWidth": 500,
 	  "customData": {
-		"službeni_naziv": "FEROJSKI OTOCI (Færøerne, Føroyar)",
+		"službeni_naziv": "Ferojski otoci (Færøerne, Føroyar)",
 		"smještaj": "otočna skupina u sjevernom dijelu Atlantskog oceana",
 		"status": "dansko samoupravno područje",
 		"glavni_grad": "",
@@ -1668,7 +1668,7 @@
 		"broj_stanovnika": "",
 		"središte": "Tórshavn",
 		"gustoča_naseljnosti": "",
-		"jezik": "danski i ferojski",
+		"jezik": "",
 		"novcana_jedinica": "",
 		"političko_uređenje": "",
 		"članstvo_UN": "",
@@ -2037,18 +2037,43 @@
 		"središte": "Godthåb (Nuuk)",
 		"status": "dansko samoupravno područje",
 		"gustoča_naseljnosti": "",
-		"jezik": "grenlandski inuit (zapadnogrenlandski ili kalaallisut) i danski",
+		"jezik": "",
 		"novcana_jedinica": "",
 		"političko_uređenje": "",
 		"članstvo_UN": "",
 		"grb_url": "",
-		"zastava_url": "Greenland.jpg",
+		"zastava_url": "Grenland.jpg",
 		"zastava_opis": "Zastava je u uporabi od 1985., a odabrana je nakon višegodišnje rasprave i natječaja. Bijelo polje predstavlja ledenu kapu, a crveno ocean. Bijela polovica kruga predstavlja ledene bregove, a crvena fjordove. Popularno se naziva Erfalasorput (»naša zastava«), odnosno Aappalaartoq (»crvena«, kao i danska zastava).",
 		"grb_opis": "",
 		"doznaj_više_url": "23315",
 		"original_pdf_str": "224"
 	  }
-	},
+	},{
+		"id": "GR",
+		"color": "#F29B28",
+		"title": "Grčka",
+		"showAsSelected": false,
+		"descriptionWindowWidth": 500,
+		"customData": {
+		  "službeni_naziv": "Grčka Republika (Elliniki Dimokratía)",
+		  "smještaj": "jugoistočna Europa",
+		  "glavni_grad": "Atena (Athḗna)",
+		  "površina": "131 957",
+		  "broj_stanovnika": "",
+		  "središte": "",
+		  "gustoča_naseljnosti": "",
+		  "jezik": "grčki",
+		  "novcana_jedinica": "euro; 1 EUR = 100 centa",
+		  "političko_uređenje": "parlamentarna republika",
+		  "članstvo_UN": "od 1945.",
+		  "grb_url": "AS_0961.png",
+		  "zastava_url": "AS_1145.jpg",
+		  "zastava_opis": "Zastava je u uporabi od 1822. i stjecanja neovisnosti (1970. i 1978. mijenjala se propisana dimenzija). Križ simbolizira vjeru u Boga. Plava boja predstavlja more i nebo, a bijela je odraz čistoće grčke borbe za slobodu. Devet pruga predstavljaju jednak broj slogova u motu pod kojim se vodila borba za neovisnost: »Sloboda ili smrt«.",
+		  "grb_opis": "Grb je u službenoj uporabi od 1975. U sredini je štit sa znakom križa u bojama nacionalne zastave. Oko štita je vijenac od lovorova lišća.",
+		  "doznaj_više_url": "23212",
+		  "original_pdf_str": "27"
+		}
+	  },
 	{
 	  "id": "GE",
 	  "color": "#F29B28",
@@ -2075,32 +2100,7 @@
 		"original_pdf_str": "28"
 	  }
 	},
-	{
-	  "id": "GR",
-	  "color": "#F29B28",
-	  "title": "Grčka",
-	  "showAsSelected": false,
-	  "descriptionWindowWidth": 500,
-	  "customData": {
-		"službeni_naziv": "Grčka Republika (Elliniki Dimokratía)",
-		"smještaj": "jugoistočna Europa",
-		"glavni_grad": "Atena (Athḗna)",
-		"površina": "131 957",
-		"broj_stanovnika": "",
-		"središte": "",
-		"gustoča_naseljnosti": "",
-		"jezik": "grčki",
-		"novcana_jedinica": "euro; 1 EUR = 100 centa",
-		"političko_uređenje": "parlamentarna republika",
-		"članstvo_UN": "od 1945.",
-		"grb_url": "AS_0961.png",
-		"zastava_url": "AS_1145.jpg",
-		"zastava_opis": "Zastava je u uporabi od 1822. i stjecanja neovisnosti (1970. i 1978. mijenjala se propisana dimenzija). Križ simbolizira vjeru u Boga. Plava boja predstavlja more i nebo, a bijela je odraz čistoće grčke borbe za slobodu. Devet pruga predstavljaju jednak broj slogova u motu pod kojim se vodila borba za neovisnost: »Sloboda ili smrt«.",
-		"grb_opis": "Grb je u službenoj uporabi od 1975. U sredini je štit sa znakom križa u bojama nacionalne zastave. Oko štita je vijenac od lovorova lišća.",
-		"doznaj_više_url": "23212",
-		"original_pdf_str": "27"
-	  }
-	},
+	
 	{
 	  "id": "GP",
 	  "color": "#E74354",
@@ -2342,7 +2342,7 @@
 	  "showAsSelected": false,
 	  "descriptionWindowWidth": 500,
 	  "customData": {
-		"službeni_naziv": "HONG KONG (Xianggang)",
+		"službeni_naziv": "Hong Kong (Xianggang)",
 		"smještaj": "jugoistočna Kina",
 		"status": "posebna administrativna jedinica u sastavu Kine (britanski posjed do 1997)",
 		"glavni_grad": "",
@@ -2361,7 +2361,33 @@
 		"doznaj_više_url": "26069",
 		"original_pdf_str": "222"
 	  }
-	},
+	},{
+		"id": "IM",
+		"color": " #F29B28",
+		"title": "Isle of Man",
+		"showAsSelected": false,
+		"descriptionWindowWidth": 500,
+		"customData": {
+		  "službeni_naziv": "Isle of Man",
+		  "smještaj": "otok u Irskom moru",
+		  "status": "britanski krunski posjed",
+		  "glavni_grad": "Douglas",
+		  "površina": "",
+		  "broj_stanovnika": "",
+		  "središte": "",
+		  "gustoča_naseljnosti": "",
+		  "jezik": "engleski",
+		  "novcana_jedinica": "",
+		  "političko_uređenje": "",
+		  "članstvo_UN": "",
+		  "grb_url": "",
+		  "zastava_url": "Otok_man.jpg",
+		  "zastava_opis": "Zastava je crvene boje s tronožnim simbolom otoka u sredini. Simbol je u uporabi od XIII. stoljeća, a o njegovu podrijetlu postoje dvije teorije: prema jednoj podrijetlo vuče sa Sicilije, a prema drugoj je stigao iz Skandinavije.",
+		  "grb_opis": "",
+		  "doznaj_više_url": "38521",
+		  "original_pdf_str": "219"
+		}
+	  },
 	{
 	  "id": "HR",
 	  "showAsSelected": false,
@@ -2546,32 +2572,6 @@
 	{
 	  "id": "TL",
 	  "color": "#FFCB00",
-	  "title": "Istočni Timor",
-	  "showAsSelected": false,
-	  "descriptionWindowWidth": 500,
-	  "customData": {
-		"službeni_naziv": "Demokratska Republika Istočni Timor (Repúblika Demokrátika Timór Lorosa’e)",
-		"smještaj": "jugoistočna Azija",
-		"glavni_grad": "Dili",
-		"površina": "14 604",
-		"broj_stanovnika": "",
-		"središte": "",
-		"gustoča_naseljnosti": "",
-		"jezik": "tetunski (tetum) i portugalski",
-		"novcana_jedinica": "američki dolar; 1 USD = 100 centa",
-		"političko_uređenje": "predsjednička republika",
-		"članstvo_UN": "od 2002.",
-		"grb_url": "AS_0889 R.png",
-		"zastava_url": "AS_1066.jpg",
-		"zastava_opis": "Zastava je u službenoj uporabi od 2002. To je modificirana zastava iz razdoblja samoproglašene neovisnosti 1975. Bijela petokraka označava svjetlo koje vodi.",
-		"grb_opis": "Grb je u službenoj uporabi od 2002. Objedinjava motive koje su prije stjecanja neovisnosti koristile organizacije CNRT (Nacionalno vijeće istočnotimorskog otpora) i FALINTIL (Oružane snage nacionalnog oslobođenja Istočnog Timora), štit i natpis na portugalskom »Ponos, domovina, narod«.",
-		"doznaj_više_url": "27993",
-		"original_pdf_str": "71"
-	  }
-	},
-	{
-	  "id": "TL",
-	  "color": "#4F9CA9",
 	  "title": "Istočni Timor",
 	  "showAsSelected": false,
 	  "descriptionWindowWidth": 500,
@@ -2854,7 +2854,32 @@
 		"doznaj_više_url": "29649",
 		"original_pdf_str": ""
 	  }
-	},
+	},{
+		"id": "SS",
+		"color": "#469025",
+		"title": "Južni Sudan",
+		"showAsSelected": false,
+		"descriptionWindowWidth": 500,
+		"customData": {
+		  "službeni_naziv": "South Sudan, Republika Južni Sudan/Republic of South Sudan",
+		  "smještaj": "Afrika",
+		  "glavni_grad": "Juba",
+		  "površina": "",
+		  "broj_stanovnika": "",
+		  "središte": "",
+		  "gustoča_naseljnosti": "",
+		  "jezik": "engleski, arapski i jezici pojedinih naroda (dinka, nuerski, šilučki, zande i dr.)",
+		  "novcana_jedinica": "južnosudanska funta; 1 SSP = 100 pijastera",
+		  "političko_uređenje": "",
+		  "članstvo_UN": "",
+		  "grb_url": "HOL_4390.png",
+		  "zastava_url": "HOL_4391.jpg",
+		  "zastava_opis": "",
+		  "grb_opis": "",
+		  "doznaj_više_url": "69306",
+		  "original_pdf_str": ""
+		}
+	  },
 	{
 	  "id": "ZA",
 	  "color": "#469025",
@@ -2988,7 +3013,7 @@
 	{
 	  "id": "CV",
 	  "color": "#469025",
-	  "title": "Kapverdski otoci (Zelenortski otoci)",
+	  "title": "Kapverdski otoci",
 	  "showAsSelected": false,
 	  "descriptionWindowWidth": 500,
 	  "customData": {
@@ -3178,7 +3203,7 @@
 	  "showAsSelected": false,
 	  "descriptionWindowWidth": 500,
 	  "customData": {
-		"službeni_naziv": "Republika Kiribati (Ribaberikin Kiribati, Republic of Kiribati",
+		"službeni_naziv": "Republika Kiribati (Ribaberikin Kiribati, Republic of Kiribati)",
 		"smještaj": "istočni dio Mikronezije i središnji dio Polinezije, središnji dio Tihog oceana",
 		"glavni_grad": "Bairiki",
 		"površina": "811",
@@ -3304,7 +3329,7 @@
 	{
 	  "id": "KP",
 	  "color": "#FFCB00",
-	  "title": "Koreja, DNR (Sjeverna Koreja)",
+	  "title": "Koreja, DNR",
 	  "showAsSelected": false,
 	  "descriptionWindowWidth": 500,
 	  "customData": {
@@ -3330,7 +3355,7 @@
 	{
 	  "id": "KR",
 	  "color": "#FFCB00",
-	  "title": "Koreja, Republika (Južna Koreja)",
+	  "title": "Koreja, Republika",
 	  "showAsSelected": false,
 	  "descriptionWindowWidth": 500,
 	  "customData": {
@@ -3371,7 +3396,7 @@
 		"novcana_jedinica": "euro; 1 EUR = 100 eurocenta",
 		"političko_uređenje": "unitarna republika s parlamentarnim sustavom vlasti",
 		"članstvo_UN": "",
-		"grb_url": "AS_0796 R.png",
+		"grb_url": "AS_0796_R.png",
 		"zastava_url": "AS_1226.jpg",
 		"zastava_opis": "",
 		"grb_opis": "",
@@ -3458,35 +3483,35 @@
 	  }
 	},
 	{
-		"id": "KURD",
-		"color": " #FFCB00",
-		"title": "Kurdistan",
-		"showAsSelected": false,
-		"descriptionWindowWidth": 500,
-		"zoomLevel": 64,
-		"zoomLatitude": 37.916248,
-		"zoomLongitude": 40.225590,
-		"customData": {
-		  "službeni_naziv": "Kurdistan",
-		  "smještaj": "jugozapadna Azija (obuhvaća istočni dio Turske, sjeveroistočni Irak, sjeverozapadni Iran i sjeveroistočnu Siriju)",
-		  "glavni_grad": "",
-		  "status": "područje naseljeno kurdskim stanovništvom u Iraku, Iranu, Siriji i Turskoj; bez međunarodnog priznanja",
-		  "površina": "",
-		  "broj_stanovnika": "",
-		  "središte": "Diyarbakır (Turska), Mosul (Irak), Kermanshah (Iran)",
-		  "gustoča_naseljnosti": "",
-		  "jezik": "",
-		  "novcana_jedinica": "",
-		  "političko_uređenje": "",
-		  "članstvo_UN": "",
-		  "grb_url": "",
-		  "zastava_url": "Kurdistan.jpg",
-		  "zastava_opis": "Kurdistanska zastava je trobojnica sa Suncem u sredini. Crvena boja simbolizira krv prolivenu u obrani zemlje, bijela mir i čistoću, a zelena planinsku prirodu. Sunce s 21 zrakom prastari je kurdski simbol. Zastava se koristi kao kurdski simbol u borbi za slobodu od 1920-ih godina. Službeno se koristi u iračkom dijelu Kurdistana, dok je njezina uporaba u iranskom i sirijskom dijelu zabranjena, a u turskom se dijelu smatra kriminalnim činom.",
-		  "grb_opis": "",
-		  "doznaj_više_url": "34706",
-		  "original_pdf_str": "222"
-		}
-	  },
+	  "id": "KURD",
+	  "color": " #FFCB00",
+	  "title": "Kurdistan",
+	  "showAsSelected": false,
+	  "descriptionWindowWidth": 500,
+	  "zoomLevel": 64,
+	  "zoomLatitude": 37.916248,
+	  "zoomLongitude": 40.22559,
+	  "customData": {
+		"službeni_naziv": "Kurdistan",
+		"smještaj": "jugozapadna Azija (obuhvaća istočni dio Turske, sjeveroistočni Irak, sjeverozapadni Iran i sjeveroistočnu Siriju)",
+		"glavni_grad": "",
+		"status": "područje naseljeno kurdskim stanovništvom u Iraku, Iranu, Siriji i Turskoj; bez međunarodnog priznanja",
+		"površina": "",
+		"broj_stanovnika": "",
+		"središte": "Diyarbakır (Turska), Mosul (Irak), Kermanshah (Iran)",
+		"gustoča_naseljnosti": "",
+		"jezik": "",
+		"novcana_jedinica": "",
+		"političko_uređenje": "",
+		"članstvo_UN": "",
+		"grb_url": "",
+		"zastava_url": "Kurdistan.jpg",
+		"zastava_opis": "Kurdistanska zastava je trobojnica sa Suncem u sredini. Crvena boja simbolizira krv prolivenu u obrani zemlje, bijela mir i čistoću, a zelena planinsku prirodu. Sunce s 21 zrakom prastari je kurdski simbol. Zastava se koristi kao kurdski simbol u borbi za slobodu od 1920-ih godina. Službeno se koristi u iračkom dijelu Kurdistana, dok je njezina uporaba u iranskom i sirijskom dijelu zabranjena, a u turskom se dijelu smatra kriminalnim činom.",
+		"grb_opis": "",
+		"doznaj_više_url": "34706",
+		"original_pdf_str": "222"
+	  }
+	},
 	{
 	  "id": "KW",
 	  "color": "#FFCB00",
@@ -3520,7 +3545,7 @@
 	  "showAsSelected": false,
 	  "descriptionWindowWidth": 500,
 	  "customData": {
-		"službeni_naziv": "Demokratska Narodna Republika Laos (Sathalanalat Paxathipatai Paxaxȏn L",
+		"službeni_naziv": "Demokratska Narodna Republika Laos (Sathalanalat Paxathipatai Paxaxȏn Lao)",
 		"smještaj": "jugoistočna Azija",
 		"glavni_grad": "Vientiane (Viangchan)",
 		"površina": "236 800",
@@ -3650,7 +3675,7 @@
 	  "showAsSelected": false,
 	  "descriptionWindowWidth": 500,
 	  "customData": {
-		"službeni_naziv": "Velika Socijalistička Narodna Libijska Arapska Republika (Al-Ǧamāhīriyya al-’Arabiyya al-Lībiyya al-Ša’abiyya al-Ištirakiyya al-’Uzmā",
+		"službeni_naziv": "Velika Socijalistička Narodna Libijska Arapska Republika (Al-Ǧamāhīriyya al-’Arabiyya al-Lībiyya al-Ša’abiyya al-Ištirakiyya al-’Uzmā)",
 		"smještaj": "sjeverna Afrika",
 		"glavni_grad": "Tripoli (Tarābulus)",
 		"površina": "1 759 540",
@@ -3806,13 +3831,13 @@
 	  "showAsSelected": false,
 	  "descriptionWindowWidth": 500,
 	  "customData": {
-		"službeni_naziv": "Macau (Aomen, Macau)",
+		"službeni_naziv": "Macao (Aomen, Macau)",
 		"smještaj": "jugoistočna Kina",
-		"glavni_grad": "Macao",
+		"glavni_grad": "",
 		"površina": "",
 		"broj_stanovnika": "",
 		"središte": "Aomen (Macao)",
-		"status": "posebna administrativna jedinica u sastavu",
+		"status": "posebna administrativna jedinica u sastavu Kine (portugalski posjed od 1999)",
 		"gustoča_naseljnosti": "",
 		"jezik": "",
 		"novcana_jedinica": "",
@@ -4059,7 +4084,32 @@
 		"doznaj_više_url": "39122",
 		"original_pdf_str": "202"
 	  }
-	},
+	},{
+		"id": "MR",
+		"color": "#469025",
+		"title": "Mauretanija",
+		"showAsSelected": false,
+		"descriptionWindowWidth": 500,
+		"customData": {
+		  "službeni_naziv": "Islamska Republika Mauretanija (al-Gumhūriyya al-Islāmīyya al-Mauritāniyya)",
+		  "smještaj": "zapadna Afrika",
+		  "glavni_grad": "Nouakchott (Nawākšūt)",
+		  "površina": "1 030 700",
+		  "broj_stanovnika": "",
+		  "središte": "",
+		  "gustoča_naseljnosti": "",
+		  "jezik": "arapski",
+		  "novcana_jedinica": "ouguiya; 1 MRO = 5 khouma",
+		  "političko_uređenje": "predsjednička republika",
+		  "članstvo_UN": "od 1961.",
+		  "grb_url": "AS_0821.png",
+		  "zastava_url": "AS_1033.jpg",
+		  "zastava_opis": "Zastava je u službenoj uporabi od 1959. Zelena boja simbolizira odanost zemlje islamu. Polumjesec i zvijezda također su islamski simboli. Žuta i zelena boja dvije su od triju sveafričkih boja, a simboliziraju i pripadnost zemlje Africi te Saharu.",
+		  "grb_opis": "Grb je u službenoj uporabi od 1960. U sredini su simboli islama zvijezda i polumjesec te palmina grana i stabljika prosa, motivi dviju najvažnijih poljodjelskih kultura. U vanjskom je prstenu natpis »Islamska Republika Mauretanija« na arapskom i francuskom.",
+		  "doznaj_više_url": "39548",
+		  "original_pdf_str": "138"
+		}
+	  },
 	{
 	  "id": "MU",
 	  "color": "#469025",
@@ -4084,32 +4134,6 @@
 		"grb_opis": "Grb je u uporabi još od 1906. U sredini je štit, podijeljen u četiri polja. Brod simbolizira kolonizaciju otoka, a palme tropsku vegetaciju. Ključ i zvijezda pojmovi su iz nacionalnog mota koji je napisan na latinskom jeziku »Zvijezda i ključ Indijskog oceana«. Sa strane su jelen i ptica dodo te po jedna stabljika šećerne trske.",
 		"doznaj_više_url": "39553",
 		"original_pdf_str": "139"
-	  }
-	},
-	{
-	  "id": "MR",
-	  "color": "#469025",
-	  "title": "Mauritanija",
-	  "showAsSelected": false,
-	  "descriptionWindowWidth": 500,
-	  "customData": {
-		"službeni_naziv": "Islamska Republika Maure tanija (al-Gumhūriyya al-Islāmīyya al-Mauritāniyya)",
-		"smještaj": "zapadna Afrika",
-		"glavni_grad": "Nouakchott (Nawākšūt)",
-		"površina": "1 030 700",
-		"broj_stanovnika": "",
-		"središte": "",
-		"gustoča_naseljnosti": "",
-		"jezik": "arapski",
-		"novcana_jedinica": "ouguiya; 1 MRO = 5 khouma",
-		"političko_uređenje": "predsjednička republika",
-		"članstvo_UN": "od 1961.",
-		"grb_url": "AS_0821.png",
-		"zastava_url": "AS_1033.jpg",
-		"zastava_opis": "Zastava je u službenoj uporabi od 1959. Zelena boja simbolizira odanost zemlje islamu. Polumjesec i zvijezda također su islamski simboli. Žuta i zelena boja dvije su od triju sveafričkih boja, a simboliziraju i pripadnost zemlje Africi te Saharu.",
-		"grb_opis": "Grb je u službenoj uporabi od 1960. U sredini su simboli islama zvijezda i polumjesec te palmina grana i stabljika prosa, motivi dviju najvažnijih poljodjelskih kultura. U vanjskom je prstenu natpis »Islamska Republika Mauretanija« na arapskom i francuskom.",
-		"doznaj_više_url": "39548",
-		"original_pdf_str": "138"
 	  }
 	},
 	{
@@ -4193,7 +4217,7 @@
 	{
 	  "id": "MM",
 	  "color": "#FFCB00",
-	  "title": "Mijanmar (Burma)",
+	  "title": "Mijanmar",
 	  "showAsSelected": false,
 	  "descriptionWindowWidth": 500,
 	  "customData": {
@@ -4275,7 +4299,7 @@
 	  "showAsSelected": false,
 	  "descriptionWindowWidth": 500,
 	  "customData": {
-		"službeni_naziv": "Kneževina Monako (Principauté de Monaco",
+		"službeni_naziv": "Kneževina Monako (Principauté de Monaco)",
 		"smještaj": "južna Europa",
 		"glavni_grad": "Monaco-Ville",
 		"površina": "1,95",
@@ -4579,7 +4603,32 @@
 		"doznaj_više_url": "43943",
 		"original_pdf_str": "42"
 	  }
-	},
+	},{
+		"id": "NO",
+		"color": "#F29B28",
+		"title": "Norveška",
+		"showAsSelected": false,
+		"descriptionWindowWidth": 500,
+		"customData": {
+		  "službeni_naziv": "Kraljevina Norveška (Kongeriket Norge)",
+		  "smještaj": "sjeverna Europa",
+		  "glavni_grad": "Oslo",
+		  "površina": "323 758",
+		  "broj_stanovnika": "",
+		  "središte": "",
+		  "gustoča_naseljnosti": "",
+		  "jezik": "norveški",
+		  "novcana_jedinica": "norveška kruna; 1 NOK = 100 ørea",
+		  "političko_uređenje": "parlamentarna monarhija",
+		  "članstvo_UN": "od 1945.",
+		  "grb_url": "AS_0953.png",
+		  "zastava_url": "AS_1157.jpg",
+		  "zastava_opis": "Zastava je u uporabi od 1821. Odražava povijesni utjecaj Danske (crvena i bijela boja) i Švedske (križ) na zemlju te slobodarski utjecaj Francuske (izbor boja).",
+		  "grb_opis": "Grb je u uporabi od 1280. Uporaba je standardizirana 1937. i 1992. Glavni motiv je lav sa sjekirom kralja Olava.",
+		  "doznaj_više_url": "44133",
+		  "original_pdf_str": "43"
+		}
+	  },
 	{
 	  "id": "DE",
 	  "color": "#F29B28",
@@ -4632,32 +4681,7 @@
 		"original_pdf_str": ""
 	  }
 	},
-	{
-	  "id": "NO",
-	  "color": "#F29B28",
-	  "title": "Norveška",
-	  "showAsSelected": false,
-	  "descriptionWindowWidth": 500,
-	  "customData": {
-		"službeni_naziv": "Kraljevina Norveška (Kongeriket Norge)",
-		"smještaj": "sjeverna Europa",
-		"glavni_grad": "Oslo",
-		"površina": "323 758",
-		"broj_stanovnika": "",
-		"središte": "",
-		"gustoča_naseljnosti": "",
-		"jezik": "norveški",
-		"novcana_jedinica": "norveška kruna; 1 NOK = 100 ørea",
-		"političko_uređenje": "parlamentarna monarhija",
-		"članstvo_UN": "od 1945.",
-		"grb_url": "AS_0953.png",
-		"zastava_url": "AS_1157.jpg",
-		"zastava_opis": "Zastava je u uporabi od 1821. Odražava povijesni utjecaj Danske (crvena i bijela boja) i Švedske (križ) na zemlju te slobodarski utjecaj Francuske (izbor boja).",
-		"grb_opis": "Grb je u uporabi od 1280. Uporaba je standardizirana 1937. i 1992. Glavni motiv je lav sa sjekirom kralja Olava.",
-		"doznaj_više_url": "44133",
-		"original_pdf_str": "43"
-	  }
-	},
+	
 	{
 	  "id": "NC",
 	  "color": " #4F9CA9",
@@ -4665,7 +4689,7 @@
 	  "showAsSelected": false,
 	  "descriptionWindowWidth": 500,
 	  "customData": {
-		"službeni_naziv": "NOVA KALEDONIJA (Nouvelle Calédonie, Balade)",
+		"službeni_naziv": "Nova Kaledonija (Nouvelle Calédonie, Balade)",
 		"smještaj": "jugozapadni dio Tihog oceana",
 		"status": "francuski prekomorski teritorij s ograničenom samoupravom",
 		"glavni_grad": "",
@@ -4736,60 +4760,61 @@
 		"doznaj_više_url": "44525",
 		"original_pdf_str": "144"
 	  }
-	},{
-		"id": "OKCIT",
-		"color": " #FFCB00",
-		"title": "Okcitanija",
-		"showAsSelected": false,
-		"descriptionWindowWidth": 500,
-		"zoomLevel": 64,
-		"zoomLatitude": 43.689732,
-		"zoomLongitude": 2.259050,
-		"customData": {
-		  "službeni_naziv": "Okcitanija (Occitanie)",
-		  "smještaj": "južna Francuska",
-		  "glavni_grad": "",
-		  "površina": "",
-		  "broj_stanovnika": "",
-		  "središte": "Toulouse",
-		  "status": "francuska povijesna pokrajina (nekadašnje govorno područje okcitanskog jezika)",
-		  "gustoča_naseljnosti": "",
-		  "jezik": "",
-		  "novcana_jedinica": "",
-		  "političko_uređenje": "",
-		  "članstvo_UN": "",
-		  "grb_url": "",
-		  "zastava_url": "Okcitanija.jpg",
-		  "zastava_opis": "Okcitanska zastava povijesna je zastava  pokrajine Languedoc. Na crvenom  polju prikazan je tzv. tuluški križ (prema  glavnom gradu Toulouseu; javlja se od  XIII. stoljeća), a u gornjem desnom kutu  sedmerokraka zvijezda.",
-		  "doznaj_više_url": "44900",
-		  "original_pdf_str": "215"
-		}
-	  },
-	  {
-		"id": "OLIMP",
-		"color": "",
-		"title": "Olimpijski pokret",
-		"showAsSelected": false,
-		"descriptionWindowWidth": 500,
-		"zoomLevel": 64,
-		"zoomLatitude": 46.519630,
-		"zoomLongitude": 6.632130,
-		"customData": {
-			  "službeni_naziv": "",
-			  "status": "međunarodni športski savez",
-			  "smještaj": "",
-			  "glavni_grad": "",
-			  "površina": "",
-			  "broj_stanovnika": "",
-			  "središte": "",
-			  "zastava_url": "Olimp.jpg",
-			  "zastava_opis": "Zastava Olimpijskog pokreta i Olimpijskih igara prihvaćena je 1913., a prvi put istaknuta na Igrama održanima 1920. u Antwerpenu. Pet prstenova simboliziraju jedinstvo i sklad pet kontinenata. Najmanje jedna od boja sa zastave Olimpijskoga pokreta javlja se na zastavama svih država svijeta.",
-			  "grb_url": "",
-			  "grb_opis": "",
-			  "doznaj_više_url": "",
-			"original_pdf_str": "227"
-		}
-	  },
+	},
+	{
+	  "id": "OKCIT",
+	  "color": " #FFCB00",
+	  "title": "Okcitanija",
+	  "showAsSelected": false,
+	  "descriptionWindowWidth": 500,
+	  "zoomLevel": 64,
+	  "zoomLatitude": 43.689732,
+	  "zoomLongitude": 2.25905,
+	  "customData": {
+		"službeni_naziv": "Okcitanija (Occitanie)",
+		"smještaj": "južna Francuska",
+		"glavni_grad": "",
+		"površina": "",
+		"broj_stanovnika": "",
+		"središte": "Toulouse",
+		"status": "francuska povijesna pokrajina (nekadašnje govorno područje okcitanskog jezika)",
+		"gustoča_naseljnosti": "",
+		"jezik": "",
+		"novcana_jedinica": "",
+		"političko_uređenje": "",
+		"članstvo_UN": "",
+		"grb_url": "",
+		"zastava_url": "Okcitanija.jpg",
+		"zastava_opis": "Okcitanska zastava povijesna je zastava  pokrajine Languedoc. Na crvenom  polju prikazan je tzv. tuluški križ (prema  glavnom gradu Toulouseu; javlja se od  XIII. stoljeća), a u gornjem desnom kutu  sedmerokraka zvijezda.",
+		"doznaj_više_url": "44900",
+		"original_pdf_str": "215"
+	  }
+	},
+	{
+	  "id": "OLIMP",
+	  "color": "",
+	  "title": "Olimpijski pokret",
+	  "showAsSelected": false,
+	  "descriptionWindowWidth": 500,
+	  "zoomLevel": 64,
+	  "zoomLatitude": 46.51963,
+	  "zoomLongitude": 6.63213,
+	  "customData": {
+		"službeni_naziv": "",
+		"status": "međunarodni športski savez",
+		"smještaj": "",
+		"glavni_grad": "",
+		"površina": "",
+		"broj_stanovnika": "",
+		"središte": "",
+		"zastava_url": "Olimp.jpg",
+		"zastava_opis": "Zastava Olimpijskog pokreta i Olimpijskih igara prihvaćena je 1913., a prvi put istaknuta na Igrama održanima 1920. u Antwerpenu. Pet prstenova simboliziraju jedinstvo i sklad pet kontinenata. Najmanje jedna od boja sa zastave Olimpijskoga pokreta javlja se na zastavama svih država svijeta.",
+		"grb_url": "",
+		"grb_opis": "",
+		"doznaj_više_url": "",
+		"original_pdf_str": "227"
+	  }
+	},
 	{
 	  "id": "OM",
 	  "color": "#FFCB00",
@@ -4891,32 +4916,6 @@
 		"zastava_opis": "",
 		"grb_opis": "",
 		"doznaj_više_url": "",
-		"original_pdf_str": ""
-	  }
-	},
-	{
-	  "id": "IM",
-	  "color": " #F29B28",
-	  "title": "Otok Man",
-	  "showAsSelected": false,
-	  "descriptionWindowWidth": 500,
-	  "customData": {
-		"službeni_naziv": "Isle of Man",
-		"smještaj": "otok u Irskom moru",
-		"glavni_grad": "Douglas",
-		"površina": "",
-		"broj_stanovnika": "",
-		"središte": "",
-		"gustoča_naseljnosti": "",
-		"jezik": "engleski",
-		"novcana_jedinica": "",
-		"političko_uređenje": "",
-		"članstvo_UN": "",
-		"grb_url": "",
-		"zastava_url": "Otok_man.jpg",
-		"zastava_opis": "Zastava je crvene boje s tronožnim simbolom otoka u sredini. Simbol je u uporabi od XIII. stoljeća, a o njegovu podrijetlu postoje dvije teorije: prema jednoj podrijetlo vuče sa Sicilije, a prema drugoj je stigao iz Skandinavije.",
-		"grb_opis": "",
-		"doznaj_više_url": "38521",
 		"original_pdf_str": ""
 	  }
 	},
@@ -5239,6 +5238,9 @@
 	  "title": "Portugal",
 	  "showAsSelected": false,
 	  "descriptionWindowWidth": 500,
+	  "zoomLevel": 20,
+	  "zoomLatitude": 39.399872,
+	  "zoomLongitude": -8.224454,
 	  "customData": {
 		"službeni_naziv": "Portugalska Republika (República Portuguesa)",
 		"smještaj": "južna Europa",
@@ -5502,7 +5504,7 @@
 	  "customData": {
 		"službeni_naziv": "Kraljevina Saudijska Arabija (al-Mamlaka al-’Arabiyya as-Sáūdiyya)",
 		"smještaj": "jugozapadna Azija",
-		"glavni_grad": "Rijad (ar-Riyā)",
+		"glavni_grad": "Rijad (ar-Riyāḍ)",
 		"površina": "2 149 690",
 		"broj_stanovnika": "",
 		"središte": "",
@@ -5578,7 +5580,7 @@
 	  "showAsSelected": false,
 	  "descriptionWindowWidth": 500,
 	  "customData": {
-		"službeni_naziv": "Republika Sijera Leone (Repub lic of Sierra Leone)",
+		"službeni_naziv": "Republika Sijera Leone (Republic of Sierra Leone)",
 		"smještaj": "zapadna Afrika",
 		"glavni_grad": "Freetown",
 		"površina": "71 740",
@@ -5678,7 +5680,7 @@
 	{
 	  "id": "US",
 	  "color": "#E74354",
-	  "title": "Sjedinjene Američke Države (SAD)",
+	  "title": "Sjedinjene Američke Države",
 	  "showAsSelected": false,
 	  "descriptionWindowWidth": 500,
 	  "customData": {
@@ -5709,7 +5711,7 @@
 	  "descriptionWindowWidth": 500,
 	  "zoomLevel": 64,
 	  "zoomLatitude": 54.597286,
-	  "zoomLongitude": -5.930120,
+	  "zoomLongitude": -5.93012,
 	  "customData": {
 		"službeni_naziv": "Sjeverna Irska (Northern Ireland)",
 		"smještaj": "sjeverni dio otoka Irske",
@@ -5758,30 +5760,30 @@
 	  }
 	},
 	{
-		"id": "NATO",
-		"color": "",
-		"title": "Sjevernoatlanski savez (NATO)",
-		"showAsSelected": false,
-		"descriptionWindowWidth": 500,
-		"zoomLevel": 64,
-		"zoomLatitude": 50.850346,
-		"zoomLongitude": 4.351721,
-		"customData": {
-			  "službeni_naziv": "",
-			  "status": "međunarodna organizacija",
-			  "smještaj": "",
-			  "glavni_grad": "",
-			  "površina": "",
-			  "broj_stanovnika": "",
-			  "središte": "",
-			  "zastava_url": "NATO.jpg",
-			  "zastava_opis": "Zastava vojnosigurnosne organizacije sjevernoameričkih i europskih država prikazuje bijelo-plavi kompas na plavome polju. Plava boja simbolizira Atlantski ocean, a kompas koji pokazuje na sve četiri strane svijeta članice organizacije s obiju strana oceana. Ističe se od 1953., a izgled je osmislio jedan od članova Međunarodnog vojnog odbora, glavnog savjetodavnog tijela organizacije.",
-			  "grb_url": "",
-			  "grb_opis": "",
-		  "doznaj_više_url": "56345",
-		  "original_pdf_str": "227"
-		}
-	  },
+	  "id": "NATO",
+	  "color": "",
+	  "title": "Sjevernoatlanski savez (NATO)",
+	  "showAsSelected": false,
+	  "descriptionWindowWidth": 500,
+	  "zoomLevel": 64,
+	  "zoomLatitude": 50.850346,
+	  "zoomLongitude": 4.351721,
+	  "customData": {
+		"službeni_naziv": "",
+		"status": "međunarodna organizacija",
+		"smještaj": "",
+		"glavni_grad": "",
+		"površina": "",
+		"broj_stanovnika": "",
+		"središte": "",
+		"zastava_url": "NATO.jpg",
+		"zastava_opis": "Zastava vojnosigurnosne organizacije sjevernoameričkih i europskih država prikazuje bijelo-plavi kompas na plavome polju. Plava boja simbolizira Atlantski ocean, a kompas koji pokazuje na sve četiri strane svijeta članice organizacije s obiju strana oceana. Ističe se od 1953., a izgled je osmislio jedan od članova Međunarodnog vojnog odbora, glavnog savjetodavnog tijela organizacije.",
+		"grb_url": "",
+		"grb_opis": "",
+		"doznaj_više_url": "56345",
+		"original_pdf_str": "227"
+	  }
+	},
 	{
 	  "id": "SK",
 	  "color": "#F29B28",
@@ -5837,7 +5839,7 @@
 	{
 	  "id": "SB",
 	  "color": "#4F9CA9",
-	  "title": "Solomonski Otoci",
+	  "title": "Salomonski Otoci",
 	  "showAsSelected": false,
 	  "descriptionWindowWidth": 500,
 	  "customData": {
@@ -5867,7 +5869,7 @@
 	  "showAsSelected": false,
 	  "descriptionWindowWidth": 500,
 	  "customData": {
-		"službeni_naziv": "Demokratska Republika Somalija (Samhuuriyadda Dimograadīya Soomaalīy",
+		"službeni_naziv": "Demokratska Republika Somalija (Samhuuriyadda Dimograadīya Soomaalīya)",
 		"smještaj": "istočna Afrika",
 		"glavni_grad": "Mogadiš (Muqdīšo)",
 		"površina": "637 657",
@@ -5884,32 +5886,6 @@
 		"grb_opis": "Grb je u službenoj uporabi od 1956. U sredini je štit s motivom nacionalne zastave. Štit pridržavaju dva leoparda – leopard kao simbol preuzet je iz kolonijalnoga razdoblja. Pod štitom su dvije palmine grane i dva koplja.",
 		"doznaj_više_url": "57119",
 		"original_pdf_str": "149"
-	  }
-	},
-	{
-	  "id": "SS",
-	  "color": "#469025",
-	  "title": "Južni Sudan",
-	  "showAsSelected": false,
-	  "descriptionWindowWidth": 500,
-	  "customData": {
-		"službeni_naziv": "South Sudan, Republika Južni Sudan/Republic of South Sudan",
-		"smještaj": "Afrika",
-		"glavni_grad": "Juba",
-		"površina": "",
-		"broj_stanovnika": "",
-		"središte": "",
-		"gustoča_naseljnosti": "",
-		"jezik": "engleski, arapski i jezici pojedinih naroda (dinka, nuerski, šilučki, zande i dr.)",
-		"novcana_jedinica": "južnosudanska funta; 1 SSP = 100 pijastera",
-		"političko_uređenje": "",
-		"članstvo_UN": "",
-		"grb_url": "HOL_4390.png",
-		"zastava_url": "HOL_4391.jpg",
-		"zastava_opis": "",
-		"grb_opis": "",
-		"doznaj_više_url": "69306",
-		"original_pdf_str": ""
 	  }
 	},
 	{
@@ -5973,7 +5949,7 @@
 	  "customData": {
 		"službeni_naziv": "Republika Sudan (Ǧumhūriyya as-Sūdān)",
 		"smještaj": "sjeverna Afrika",
-		"glavni_grad": "Kartum (al-arţūm)",
+		"glavni_grad": "Kartum (al-<img class='hextext' style='height: 1em;vertical-align: middle;' src='HE_f0e0.png' alt='61664'>arţūm)",
 		"površina": "2 505 810",
 		"broj_stanovnika": "",
 		"središte": "",
@@ -5981,7 +5957,7 @@
 		"jezik": "arapski",
 		"novcana_jedinica": "sudanski dinar; 1 SDD = 100 pijastera",
 		"političko_uređenje": "islamska republika",
-		"članstvo_UN": "islamska republika",
+		"članstvo_UN": "od 1956.",
 		"grb_url": "AS_0835.png",
 		"zastava_url": "AS_1046.jpg",
 		"zastava_opis": "Zastava je u službenoj uporabi od 1970. Zelena je boja islama, a crvena, bijela i crna su svearapske boje. Zelena boja predstavlja prosperitet i blagostanje, crvena borbu i žrtve, bijela optimizam i svjetlo, a crna Mahdijevu revoluciju iz XIX. stoljeća.",
@@ -6287,7 +6263,7 @@
 	  "showAsSelected": false,
 	  "descriptionWindowWidth": 500,
 	  "customData": {
-		"službeni_naziv": "Demokratska Socijalistička Republika Šri Lanka (sinhaleški Ṣrī Laṅkā Prajātāntrika Samājavādī Janarajaya, tamilski Ilaṅkaiś Śaṉanāyaka Ṣośaliśak Kuṭiyaraśa)",
+		"službeni_naziv": "Demokratska Socijalistička Republika Šri Lanka (sinhaleški Ṣrī Laṅkā Prajātāntrika Samājavādī Janarajaya, tamilski Ilaṅkaiś Śańanāyaka Ṣośaliśak Kuṭiyaraśa)",
 		"smještaj": "južna Azija",
 		"glavni_grad": "Kolamba (Colombo)",
 		"površina": "65 610",
@@ -6463,35 +6439,35 @@
 	  }
 	},
 	{
-		"id": "TIB",
-		"color": " #FFCB00",
-		"title": "Tibet",
-		"showAsSelected": false,
-		"descriptionWindowWidth": 500,
-		"zoomLevel": 60,
-		"zoomLatitude": 30.153360,
-		"zoomLongitude": 88.787865,
-		"customData": {
-		  "službeni_naziv": "Tibet (Xizang)",
-		  "smještaj": "središnja Kina",
-		  "glavni_grad": "",
-		  "status": "kineska autonomna regija",
-		  "površina": "",
-		  "broj_stanovnika": "",
-		  "središte": "Lasa (Lhasa)",
-		  "gustoča_naseljnosti": "",
-		  "jezik": "",
-		  "novcana_jedinica": "",
-		  "političko_uređenje": "",
-		  "članstvo_UN": "",
-		  "grb_url": "",
-		  "zastava_url": "Tibet.jpg",
-		  "zastava_opis": "Tradicionalna tibetanska zastava bila je u službenoj uporabi do 1951., a potom je njezina uporaba u Tibetu zabranjena, no koristi se kao simbol tibetanske borbe za neovisnost.<br>Zastava sadrži simbole budizma i zemlje. Bijeli trokut simbolizira snježne planine, plava boja nebo, a šest crvenih pruga predstavljaju tibetanska plemena. Sunce simbolizira slobodu te duhovno i materijalno zadovoljstvo za sva bića. Dva snježna lava predstavljaju hrabrost, a između njih je nekoliko budističkih simbola koji imaju religijsko značenje. Žuti obrub simbolizira širenje Buddhina učenja u svim smjerovima.",
-		  "grb_opis": "",
-		  "doznaj_više_url": "61256",
-		  "original_pdf_str": "223"
-		}
-	  },
+	  "id": "TIB",
+	  "color": " #FFCB00",
+	  "title": "Tibet",
+	  "showAsSelected": false,
+	  "descriptionWindowWidth": 500,
+	  "zoomLevel": 60,
+	  "zoomLatitude": 30.15336,
+	  "zoomLongitude": 88.787865,
+	  "customData": {
+		"službeni_naziv": "Tibet (Xizang)",
+		"smještaj": "središnja Kina",
+		"glavni_grad": "",
+		"status": "kineska autonomna regija",
+		"površina": "",
+		"broj_stanovnika": "",
+		"središte": "Lasa (Lhasa)",
+		"gustoča_naseljnosti": "",
+		"jezik": "",
+		"novcana_jedinica": "",
+		"političko_uređenje": "",
+		"članstvo_UN": "",
+		"grb_url": "",
+		"zastava_url": "Tibet.jpg",
+		"zastava_opis": "Tradicionalna tibetanska zastava bila je u službenoj uporabi do 1951., a potom je njezina uporaba u Tibetu zabranjena, no koristi se kao simbol tibetanske borbe za neovisnost.<br>Zastava sadrži simbole budizma i zemlje. Bijeli trokut simbolizira snježne planine, plava boja nebo, a šest crvenih pruga predstavljaju tibetanska plemena. Sunce simbolizira slobodu te duhovno i materijalno zadovoljstvo za sva bića. Dva snježna lava predstavljaju hrabrost, a između njih je nekoliko budističkih simbola koji imaju religijsko značenje. Žuti obrub simbolizira širenje Buddhina učenja u svim smjerovima.",
+		"grb_opis": "",
+		"doznaj_više_url": "61256",
+		"original_pdf_str": "223"
+	  }
+	},
 	{
 	  "id": "TG",
 	  "color": "#469025",
@@ -6603,7 +6579,7 @@
 	  "showAsSelected": false,
 	  "descriptionWindowWidth": 500,
 	  "customData": {
-		"službeni_naziv": "Republika Tunis (al-Ǧum hūriyya at-Tūnisiyya)",
+		"službeni_naziv": "Republika Tunis (al-Ǧumhūriyya at-Tūnisiyya)",
 		"smještaj": "sjeverna Afrika",
 		"glavni_grad": "Tunis",
 		"površina": "163 610",
@@ -6761,7 +6737,7 @@
 	  "customData": {
 		"službeni_naziv": "Ujedinjeni Arapski Emirati (Dawlat al-Imārāt al-’Arabiyya al-Muttaḥida)",
 		"smještaj": "jugozapadna Azija",
-		"glavni_grad": "Abu Dhabi (Abū Zabī)",
+		"glavni_grad": "Abu Dhabi (Abū Ẓabī)",
 		"površina": "83 600",
 		"broj_stanovnika": "",
 		"središte": "",
@@ -6788,17 +6764,17 @@
 	  "zoomLatitude": 40.712776,
 	  "zoomLongitude": -74.005974,
 	  "customData": {
-			"službeni_naziv": "",
-			"status": "međunarodna organizacija",
-			"smještaj": "",
-			"glavni_grad": "",
-			"površina": "",
-			"broj_stanovnika": "",
-			"središte": "",
-			"zastava_url": "UN.jpg",
-			"zastava_opis": "Zastava svjetske organizacije država je svijetloplava sa službenim znakom u sredini. Znak je prikaz karte svijeta u azimutnoj ekvidistantnoj projekciji, centriranoj na Sjeverni pol. S obiju je strana karte po jedna maslinova grančica, simbol mira. Zastava je u uporabi od 1946.",
-			"grb_url": "",
-			"grb_opis": "",
+		"službeni_naziv": "",
+		"status": "međunarodna organizacija",
+		"smještaj": "",
+		"glavni_grad": "",
+		"površina": "",
+		"broj_stanovnika": "",
+		"središte": "",
+		"zastava_url": "UN.jpg",
+		"zastava_opis": "Zastava svjetske organizacije država je svijetloplava sa službenim znakom u sredini. Znak je prikaz karte svijeta u azimutnoj ekvidistantnoj projekciji, centriranoj na Sjeverni pol. S obiju je strana karte po jedna maslinova grančica, simbol mira. Zastava je u uporabi od 1946.",
+		"grb_url": "",
+		"grb_opis": "",
 		"doznaj_više_url": "63043",
 		"original_pdf_str": "226"
 	  }
@@ -7012,35 +6988,35 @@
 	  }
 	},
 	{
-		"id": "WALES",
-		"color": " #E74354",
-		"title": "Wales",
-		"showAsSelected": false,
-		"descriptionWindowWidth": 500,
-		"zoomLevel": 64,
-		"zoomLatitude": 51.481583,
-		"zoomLongitude": -3.179090,
-		"customData": {
-		  "službeni_naziv": "Wales",
-		  "smještaj": "zapadni dio otoka Velike Britanije",
-		  "glavni_grad": "",
-		  "status": "zemlja sastavnica Ujedinjenog Kraljevstva",
-		  "površina": "",
-		  "broj_stanovnika": "",
-		  "središte": "Cardiff",
-		  "gustoča_naseljnosti": "",
-		  "jezik": "",
-		  "novcana_jedinica": "",
-		  "političko_uređenje": "",
-		  "članstvo_UN": "",
-		  "grb_url": "",
-		  "zastava_url": "Wales.jpg",
-		  "zastava_opis": "Velška zastava naziva se prema glavnom nacionalnom simbolu, crvenome zmaju (velški <em>Y Ddraigh Goch</em>), koji je prikazan na bijelo-zelenom polju. Zmaj je često korišten heraldički motiv koji su keltski Briti, preteče današnjih Velšana, preuzeli od Rimljana, a motiv zmaja javlja se kao velški simbol od srednjega vijeka. Bijela i zelena bile su boje Tudora, velške dinastije koja je u XV. stoljeću zasjela na englesko prijestolje. Zastava je u službenoj uporabi od 1953.",
-		  "grb_opis": "",
-		  "doznaj_više_url": "65772",
-		  "original_pdf_str": "221"
-		}
-	  },
+	  "id": "WALES",
+	  "color": " #E74354",
+	  "title": "Wales",
+	  "showAsSelected": false,
+	  "descriptionWindowWidth": 500,
+	  "zoomLevel": 64,
+	  "zoomLatitude": 51.481583,
+	  "zoomLongitude": -3.17909,
+	  "customData": {
+		"službeni_naziv": "Wales",
+		"smještaj": "zapadni dio otoka Velike Britanije",
+		"glavni_grad": "",
+		"status": "zemlja sastavnica Ujedinjenog Kraljevstva",
+		"površina": "",
+		"broj_stanovnika": "",
+		"središte": "Cardiff",
+		"gustoča_naseljnosti": "",
+		"jezik": "",
+		"novcana_jedinica": "",
+		"političko_uređenje": "",
+		"članstvo_UN": "",
+		"grb_url": "",
+		"zastava_url": "Wales.jpg",
+		"zastava_opis": "Velška zastava naziva se prema glavnom nacionalnom simbolu, crvenome zmaju (velški <em>Y Ddraigh Goch</em>), koji je prikazan na bijelo-zelenom polju. Zmaj je često korišten heraldički motiv koji su keltski Briti, preteče današnjih Velšana, preuzeli od Rimljana, a motiv zmaja javlja se kao velški simbol od srednjega vijeka. Bijela i zelena bile su boje Tudora, velške dinastije koja je u XV. stoljeću zasjela na englesko prijestolje. Zastava je u službenoj uporabi od 1953.",
+		"grb_opis": "",
+		"doznaj_više_url": "65772",
+		"original_pdf_str": "221"
+	  }
+	},
 	{
 	  "id": "WF",
 	  "color": "#4F9CA9",
@@ -7094,32 +7070,6 @@
 	  }
 	},
 	{
-	  "id": "EH",
-	  "color": "#469025",
-	  "title": "Zapadna Sahara",
-	  "showAsSelected": false,
-	  "descriptionWindowWidth": 500,
-	  "customData": {
-		"službeni_naziv": "Saharska Arapska Demokratska Republika (al-Ǧumhūriyya as-Sahrāwiyya ad-Dīmuqrātiyya al-’Arabiyya)",
-		"smještaj": "zapadna Afrika",
-		"glavni_grad": "al-‘Ayūn",
-		"površina": "266 000",
-		"broj_stanovnika": "",
-		"središte": "",
-		"gustoča_naseljnosti": "",
-		"jezik": "arapski",
-		"novcana_jedinica": "marokanski dirham; 1 MAD = 100 santima",
-		"političko_uređenje": "republika (neovisnost osporava Maroko)",
-		"članstvo_UN": "-",
-		"grb_url": "AS_0853.png",
-		"zastava_url": "AS_1053.jpg",
-		"zastava_opis": "Zastava u panarapskim bojama u uporabi je od 1976. Crna boja predstavlja smrt, zelena život, a bijela mir. Prvotno ju je koristio oslobodilački pokret POLISARIO. Vrlo je slična palestinskoj zastavi.",
-		"grb_opis": "I grb je u uporabi od 1976., također prvotno kao znak oslobodilačkoga pokreta. U sredini su dvije ukrižene puške sa zastavama i čekić. Iznad čekića su zvijezda i polumjesec, a na vrpci na dnu naziv je države na arapskom.",
-		"doznaj_više_url": "66857",
-		"original_pdf_str": "160"
-	  }
-	},
-	{
 	  "id": "ZW",
 	  "color": "#469025",
 	  "title": "Zimbabve",
@@ -7143,6 +7093,32 @@
 		"grb_opis": "Grb je u službenoj uporabi od 1981. Zelena boja štita predstavlja plodnu zemlju, dok plavo-bijele pruge simboliziraju vodu koja donosi prosperitet. Motiv staroga grada Velikoga Zimbabvea predstavlja povijesno naslijeđe, zajedno s motivom skulpture ptice pronađene u Velikom Zimbabveu koja se pojavljuje i na zastavi. Puška i motika predstavljaju prijelaz s ratnog na mirnodopsko stanje. Zvijezda je općenit simbol nade, a u crvenoj boji i socijalistički simbol internacionalizma. Štit leži na isječku zemljišta s biljkama važnima za prehranu i preradu. Antilopa kudu u prirodnim bojama primjer je sklada. Na dnu je natpis na engleskom »Jedinstvo, sloboda, rad«.",
 		"doznaj_više_url": "67246",
 		"original_pdf_str": "159"
+	  }
+	},
+	{
+	  "id": "EH",
+	  "color": "#469025",
+	  "title": "Zapadna Sahara",
+	  "showAsSelected": false,
+	  "descriptionWindowWidth": 500,
+	  "customData": {
+		"službeni_naziv": "Saharska Arapska Demokratska Republika (al-Ǧumhūriyya as-Sahrāwiyya ad-Dīmuqrātiyya al-’Arabiyya)",
+		"smještaj": "zapadna Afrika",
+		"glavni_grad": "al-‘Ayūn",
+		"površina": "266 000",
+		"broj_stanovnika": "",
+		"središte": "",
+		"gustoča_naseljnosti": "",
+		"jezik": "arapski",
+		"novcana_jedinica": "marokanski dirham; 1 MAD = 100 santima",
+		"političko_uređenje": "republika (neovisnost osporava Maroko)",
+		"članstvo_UN": "-",
+		"grb_url": "AS_0853.png",
+		"zastava_url": "AS_1053.jpg",
+		"zastava_opis": "Zastava u panarapskim bojama u uporabi je od 1976. Crna boja predstavlja smrt, zelena život, a bijela mir. Prvotno ju je koristio oslobodilački pokret POLISARIO. Vrlo je slična palestinskoj zastavi.",
+		"grb_opis": "I grb je u uporabi od 1976., također prvotno kao znak oslobodilačkoga pokreta. U sredini su dvije ukrižene puške sa zastavama i čekić. Iznad čekića su zvijezda i polumjesec, a na vrpci na dnu naziv je države na arapskom.",
+		"doznaj_više_url": "66857",
+		"original_pdf_str": "160"
 	  }
 	}
   ]

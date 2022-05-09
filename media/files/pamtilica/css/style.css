@@ -1,0 +1,559 @@
+@font-face {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/robotoslab/v23/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISmYmRjRdE.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  /* cyrillic */
+  @font-face {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/robotoslab/v23/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISma2RjRdE.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  /* greek-ext */
+  @font-face {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/robotoslab/v23/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISmY2RjRdE.woff2) format('woff2');
+    unicode-range: U+1F00-1FFF;
+  }
+  /* greek */
+  @font-face {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/robotoslab/v23/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISmbGRjRdE.woff2) format('woff2');
+    unicode-range: U+0370-03FF;
+  }
+  /* vietnamese */
+  @font-face {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/robotoslab/v23/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISmYGRjRdE.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/robotoslab/v23/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISmYWRjRdE.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/robotoslab/v23/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISmb2Rj.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+/* brandico */
+
+[class*="brandico-"]:before {
+    font-family: 'brandico', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+
+.crvenko::before{ width: 100%;
+    height: 100%;
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: -moz-linear-gradient(top left, rgba(173, 164, 164, 0.8), rgba(35, 31, 48, 0.55));
+    background-image: -ms-linear-gradient(top left, rgba(173, 164, 164, 0.8), rgba(35, 31, 48, 0.55));
+    background-image: -webkit-linear-gradient(top left, rgba(173, 164, 164, 0.8), rgba(35, 31, 48, 0.55));
+    background-image: -o-linear-gradient(top left, rgba(173, 164, 164, 0.8), rgba(35, 31, 48, 0.55));
+    background-image: linear-gradient(to bottom right, rgba(173, 164, 164, 0.8), rgba(35, 31, 48, 0.55));
+    background-size: auto;}
+
+.plavko::before{  width: 100%;
+    height: 100%;
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: -moz-linear-gradient(top left, rgba(173, 164, 164, 0.8), rgba(76, 117, 204, 0.55));
+    background-image: -ms-linear-gradient(top left, rgba(173, 164, 164, 0.8), rgba(76, 117, 204, 0.55));
+    background-image: -webkit-linear-gradient(top left, rgba(173, 164, 164, 0.8), rgba(76, 117, 204, 0.55));
+    background-image: -o-linear-gradient(top left, rgba(173, 164, 164, 0.8), rgba(76, 117, 204, 0.55));
+    background-image: linear-gradient(to bottom right, rgba(173, 164, 164, 0.8), rgba(76, 117, 204, 0.55));
+    background-size: auto;}
+
+a {
+    color: aliceblue;
+}
+
+.front span {
+    position: absolute;
+    top: 50%;
+    font-size: 30px;
+    text-align: center;
+    right: 0;
+    left: 0;
+    color: black;
+    transform: translate(0, -50%);
+    
+}
+.front{  -webkit-hyphens: manual;
+  -ms-hyphens: manual;
+  hyphens: manual;}
+.brojevi {
+    font-size: 10vmin;
+    font-size: 10vm;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-shadow: 0px 0px 5px #939eb3;
+}
+
+.plavi_broj{color: #87a5e4;}
+.crveni_broj{color: #4c70ba;}
+
+.matched .front {
+    opacity: 0.5;
+}
+
+.ikone {
+    max-width: 100%;
+    margin-bottom: 10px;
+    max-height: 300px;
+}
+
+body {
+    background-image: url("../pozadina.jpg");
+    background-position: center center;
+    background-size: cover;
+    min-height: 100%;
+    font-family: "Roboto Slab"
+}
+
+.time {
+    text-align: center;
+    text-shadow: 0px 1px 0 black;
+    font-size: 30px;
+}
+
+.wrap {
+    position: relative;
+    height: 100%;
+    min-height: 500px;
+    padding-bottom: 20px;
+}
+
+.game {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-perspective: 500px;
+    perspective: 500px;
+    min-height: 100%;
+    height: 100%;
+    display: none
+}
+
+@-webkit-keyframes matchAnim {
+    0% {
+        background: #bcffcc;
+    }
+    100% {
+        background: white;
+    }
+}
+
+@keyframes matchAnim {
+    0% {
+        background: #bcffcc;
+    }
+    100% {
+        background: white;
+    }
+}
+
+.card {
+    float: left;
+    width: 16.66666%;
+    height: 25%;
+    padding: 5px;
+    text-align: center;
+    display: block;
+    -webkit-perspective: 500px;
+    perspective: 500px;
+    position: relative;
+    cursor: pointer;
+    z-index: 50;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 30px;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+.card .inside {
+    width: 100%;
+    height: 100%;
+    display: block;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: .4s ease-in-out;
+    transition: .4s ease-in-out;
+    background: white;
+}
+
+.card .inside.picked,
+.card .inside.matched {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.card .inside.matched {
+    -webkit-animation: 1s matchAnim ease-in-out;
+    animation: 1s matchAnim ease-in-out;
+    -webkit-animation-delay: .4s;
+    animation-delay: .4s;
+}
+
+.card .front,
+.card .back {
+    border: 1px solid black;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    z-index: 1;
+}
+.swal2-modal h2{line-height: 40px;}
+.back {}
+
+.pozadina-zastave {
+    background: url("pozadina.png") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+}
+
+.pozadina-grbovi {
+    background: url("grbovi.png") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+}
+
+
+
+
+.card .front img,
+.card .back img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+.card .front {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+
+.modal-overlay {
+    background: rgba(173, 164, 164, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.modal {
+    position: relative;
+    width: 450px;
+    max-height: 90%;
+    max-width: 90%;
+    margin: 0 auto;
+    background: white;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding: 30px 10px;
+    border-radius: 20px;
+    overflow-y: auto;
+}
+
+.modal .winner {
+    font-size: 32px;
+    text-align: center;
+    color: #4d4d4d;
+    text-transform: uppercase
+}
+
+
+
+.modal .gumb,
+#prva,.swal2-styled,
+#druga,
+#treca,#form-submit {
+    margin: 30px auto;
+    padding: 10px 10px;
+    display: block;
+    font-size: 16px;
+    border: none;
+    background: -webkit-linear-gradient(#939EB3,#939EB3);
+    background: linear-gradient(#939EB3,#939EB3);
+    border: 1px solid #222;
+    border-radius: 5px;
+    color: white;
+    text-shadow: 0px 1px 0 black;
+    cursor: pointer;
+    font-family: "Roboto Slab";
+    width: 95%;
+    
+}
+
+
+.modal .gumb:hover,
+#prva:hover,
+#druga:hover,
+#treca:hover,.swal2-styled:hover {
+    background: -webkit-linear-gradient(#DBDCDD,#939EB3);
+    background: linear-gradient(#DBDCDD,#939EB3);
+}
+
+.modal .restart:hover {
+    background: -webkit-linear-gradient(#DBDCDD,#3228B0);
+    background: linear-gradient(#DBDCDD,#3228B0);
+}
+.swal2-content a{color:#939EB3}
+
+.modal .message {
+    text-align: center;
+}
+
+.modal .message a {
+    text-decoration: none;
+    color: #28afe6;
+    font-weight: bold;
+}
+
+.modal .message a:hover {
+    color: #56c0eb;
+    border-bottom: 1px dotted #56c0eb;
+}
+
+.modal .share-text {
+    text-align: center;
+    margin: 10px auto;
+}
+
+.modal .social {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.modal .social li {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+}
+
+.modal .social li:last-child {
+    margin-right: 0;
+}
+
+.modal .social li a {
+    display: block;
+    line-height: 50px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.modal .social li a.facebook {
+    background: #3b5998;
+}
+
+.modal .social li a.facebook:hover {
+    background: #4c70ba;
+}
+
+.modal .social li a.google {
+    background: #D34836;
+}
+
+.modal .social li a.google:hover {
+    background: #dc6e60;
+}
+
+.modal .social li a.twitter {
+    background: #4099FF;
+}
+
+.modal .social li a.twitter:hover {
+    background: #73b4ff;
+}
+
+footer {
+    height: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+footer .disclaimer {
+    line-height: 15px;
+    font-size: 12px;
+    color: #4738ac;
+    text-align: center;
+    font-size: 20px;
+}
+
+ .front {
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+.swal2-modal p{text-align: justify;}
+
+@media (max-width: 1600px) {
+    .front span {
+        font-size: 22px;
+    }
+    
+    
+}
+
+@media (max-width: 1400px) {
+    .front span {
+        font-size: 20px;
+    }
+      .front {
+    -webkit-hyphens: manual;
+    -ms-hyphens: manual;
+    hyphens: manual;
+}
+}
+@media (max-width: 900px) {
+    .card .front {
+        padding: 30px;
+    }
+    .card span {
+        font-size: "20px"
+    }
+    .card .back {
+        padding: 10px;
+    }
+  
+}
+
+@media (max-width: 800px) {
+    .card {
+        width: 25%;
+        height: 20%;
+    }
+    
+    .front span {
+        font-size: 14px
+    }
+    .card {
+        font-size: 20px;
+    }
+
+    #food{font-size:12px!important}
+}
+
+@media (max-width: 767px) {
+    footer .disclaimer {
+        font-size: 12px;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .modal .winner {
+        font-size: 40px;
+    }
+    .card {
+        font-size: 15px;
+    }
+    .front span {
+        font-size: 10px
+    }
+    .card .front {
+        padding: 5px;
+    }
+    
+    .modal .zivotinje, .modal .ljudi, .modal .zanimanja, #prva, #druga, #treca {padding: 10px 10px;}
+    #food{font-size:9px!important}
+
+}
+
+
+.swal2-modal h2{line-height: 30px!important;font-size: 20px!important;padding-bottom: 10px!important}
+em{font-style: italic;}
+
+@media (max-width: 300px) {
+    .modal .winner {
+        font-size: 30px;
+    }
+    .modal .restart {
+        margin: 15px auto;
+        padding: 10px 15px;
+        display: block;
+        font-size: 15px;
+        border: none;
+        background: #4d4d4d;
+        background: -webkit-linear-gradient(#4d4d4d, #222);
+        background: linear-gradient(#4d4d4d, #222);
+        border: 1px solid #222;
+        border-radius: 5px;
+        color: white;
+        text-shadow: 0px 1px 0 black;
+        cursor: pointer;
+    }
+}
+
+

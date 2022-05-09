@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Spoji sličice te nauči zastave i grbove zemlja unutar kontinenata.">
+    <meta name="keywords" content="memori, zastave i grbovi, LZMK">
+    <meta name="author" content="Josip Mihaljević">
+    <title>Pamtilica Zastave i grbovi</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Pamtilica Zastave i grbovi" />
+    <meta property="og:description" content="Spoji sličice te nauči zastave i grbove zemlja unutar kontinenata." />
+    <meta property="og:image" content="og-slika.png" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Anton'>
+    <!-- Latest compiled and minified CSS -->
+    <!-- Optional theme -->
+    <!-- Latest compiled and minified JavaScript -->
+    <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/animate.css">
+    <script src="js/sweetalert2.min.js"></script>
+    <script src="https://kit.fontawesome.com/9b2be0a113.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+    <script src="js/emoji.js" charset="utf-8"></script>
+</head>
+<body>
+    <audio class="audios" id="okretanje" preload="none"> 
+        <source src="zvuk/okretanje_karte.mp3" type="audio/mpeg">
+     </audio>
+     <audio class="audios" id="okret" preload="none"> 
+        <source src="zvuk/okret.mp3" type="audio/mpeg">
+     </audio>
+
+     <audio class="audios" id="win" preload="none"> 
+        <source src="zvuk/win.mp3" type="audio/mpeg">
+     </audio>
+
+     
+    <div class="wrap">
+        <div class="game"></div>
+
+        <div class="modal-overlay">
+            <div class="modal">
+                <h2 class="winner">odaberi tip igre</h2>
+                <hr>
+                <p class="time"></p>
+                <button class="zastave gumb">zastave <i class="fas fa-flag"></i></button> 
+                <button class="grbovi gumb">grbovi <i class="fa fa-shield" aria-hidden="true"></i>
+                </button>
+                <p style="text-align: center;"><a href="../index.html" style="color:#2F22A6">odaberite drugu igru</a></p>
+                <br>
+            </div>
+        </div>
+        <footer>
+            <p class="disclaimer"><a href="index.html">nova igra pamtilice</a></p>
+        </footer>
+
+    </div>
+    <!-- End Wrap -->
+    <script src='js/jquery.min.js'></script>
+
+    <script src="js/jquery.form.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
