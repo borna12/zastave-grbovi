@@ -1312,32 +1312,7 @@
 		"original_pdf_str": "23"
 	  }
 	},
-	{
-	  "id": "CD",
-	  "color": "#469025",
-	  "title": "Kongo, DR",
-	  "showAsSelected": false,
-	  "descriptionWindowWidth": 500,
-	  "customData": {
-		"službeni_naziv": "Demokratska Republika Kongo (République Démocratique du Congo)",
-		"smještaj": "ekvatorska Afrika",
-		"glavni_grad": "Kinshasa",
-		"površina": "2 344 858",
-		"broj_stanovnika": "",
-		"središte": "",
-		"gustoča_naseljnosti": "",
-		"jezik": "francuski i engleski",
-		"novcana_jedinica": " kongoanski franak; 1 CDF = 100 santima",
-		"političko_uređenje": "predsjednička republika",
-		"članstvo_UN": "od 1960.",
-		"grb_url": "AS_0999.png",
-		"zastava_url": "AS_1023.jpg",
-		"zastava_opis": "Od 2006. u uporabi je zastava koja se isticala u razdoblju 1963–71., jedino je plava boja svjetlija nego tada. Crvena simbolizira prolivenu krv, žuta napredak, plava nadu, a zvijezda jedinstvo.",
-		"grb_opis": "I grb, također propisan novim Ustavom 2006., temelji se na prijašnjem nacionalnom grbu. U sredini je prikazana lavlja glava. Lijevo od glave je bjelokost, a desno koplje, nacionalni simboli. Ispod je natpis na francuskom »Pravda, mir, rad«.",
-		"doznaj_više_url": "32792",
-		"original_pdf_str": "130"
-	  }
-	},
+	
 	{
 	  "id": "DM",
 	  "color": "#E74354",
@@ -3202,6 +3177,9 @@
 	  "title": "Kiribati",
 	  "showAsSelected": false,
 	  "descriptionWindowWidth": 500,
+	  "zoomLevel": 10,
+	  "zoomLatitude": 1.531316,
+	  "zoomLongitude": -154.300386,
 	  "customData": {
 		"službeni_naziv": "Republika Kiribati (Ribaberikin Kiribati, Republic of Kiribati)",
 		"smještaj": "istočni dio Mikronezije i središnji dio Polinezije, središnji dio Tihog oceana",
@@ -3301,31 +3279,58 @@
 	  }
 	},
 	{
-	  "id": "CG",
-	  "color": "#469025",
-	  "title": "Kongo",
-	  "showAsSelected": false,
-	  "descriptionWindowWidth": 500,
-	  "customData": {
-		"službeni_naziv": "Republika Kongo (République du Congo)",
-		"smještaj": "ekvatorska Afrika",
-		"glavni_grad": "Brazzaville",
-		"površina": "342 000",
-		"broj_stanovnika": "",
-		"središte": "",
-		"gustoča_naseljnosti": "",
-		"jezik": "francuski",
-		"novcana_jedinica": "CFA franak; 1 XAF = 100 santima",
-		"političko_uređenje": "predsjednička republika",
-		"članstvo_UN": "od 1960.",
-		"grb_url": "AS_0814.png",
-		"zastava_url": "AS_1024.jpg",
-		"zastava_opis": "Zastava je u panafričkim bojama, a njihov dijagonalni raspored također je svojstven afričkim zemljama. U službenoj je uporabi od 1991., a koristila se i u vrijeme stjecanja neovisnosti pa do revolucije 1969.",
-		"grb_opis": "Grb slijedi europsku heraldičku tradiciju. U sredini je štit na kojem je prikazan lav s bakljom u šapama. Iznad štita natpis je na francuskom »Republika Kongo«, a pod štitom je natpis »Jedinstvo, rad, napredak«. Štit zaklanja dva slona koja stoje na deblu. U službenoj je uporabi od 1991.",
-		"doznaj_više_url": "32793",
-		"original_pdf_str": "129"
-	  }
-	},
+		"id": "CG",
+		"color": "#469025",
+		"title": "Kongo",
+		"showAsSelected": false,
+		"descriptionWindowWidth": 500,
+		"customData": {
+		  "službeni_naziv": "Republika Kongo (République du Congo)",
+		  "smještaj": "ekvatorska Afrika",
+		  "glavni_grad": "Brazzaville",
+		  "površina": "342 000",
+		  "broj_stanovnika": "",
+		  "središte": "",
+		  "gustoča_naseljnosti": "",
+		  "jezik": "francuski",
+		  "novcana_jedinica": "CFA franak; 1 XAF = 100 santima",
+		  "političko_uređenje": "predsjednička republika",
+		  "članstvo_UN": "od 1960.",
+		  "grb_url": "AS_0814.png",
+		  "zastava_url": "AS_1024.jpg",
+		  "zastava_opis": "Zastava je u panafričkim bojama, a njihov dijagonalni raspored također je svojstven afričkim zemljama. U službenoj je uporabi od 1991., a koristila se i u vrijeme stjecanja neovisnosti pa do revolucije 1969.",
+		  "grb_opis": "Grb slijedi europsku heraldičku tradiciju. U sredini je štit na kojem je prikazan lav s bakljom u šapama. Iznad štita natpis je na francuskom »Republika Kongo«, a pod štitom je natpis »Jedinstvo, rad, napredak«. Štit zaklanja dva slona koja stoje na deblu. U službenoj je uporabi od 1991.",
+		  "doznaj_više_url": "32793",
+		  "original_pdf_str": "129"
+		}
+	  },
+	{
+		"id": "CD",
+		"color": "#469025",
+		"title": "Kongo, DR",
+		"showAsSelected": false,
+		"descriptionWindowWidth": 500,
+		"customData": {
+		  "službeni_naziv": "Demokratska Republika Kongo (République Démocratique du Congo)",
+		  "smještaj": "ekvatorska Afrika",
+		  "glavni_grad": "Kinshasa",
+		  "površina": "2 344 858",
+		  "broj_stanovnika": "",
+		  "središte": "",
+		  "gustoča_naseljnosti": "",
+		  "jezik": "francuski i engleski",
+		  "novcana_jedinica": " kongoanski franak; 1 CDF = 100 santima",
+		  "političko_uređenje": "predsjednička republika",
+		  "članstvo_UN": "od 1960.",
+		  "grb_url": "AS_0999.png",
+		  "zastava_url": "AS_1023.jpg",
+		  "zastava_opis": "Od 2006. u uporabi je zastava koja se isticala u razdoblju 1963–71., jedino je plava boja svjetlija nego tada. Crvena simbolizira prolivenu krv, žuta napredak, plava nadu, a zvijezda jedinstvo.",
+		  "grb_opis": "I grb, također propisan novim Ustavom 2006., temelji se na prijašnjem nacionalnom grbu. U sredini je prikazana lavlja glava. Lijevo od glave je bjelokost, a desno koplje, nacionalni simboli. Ispod je natpis na francuskom »Pravda, mir, rad«.",
+		  "doznaj_više_url": "32792",
+		  "original_pdf_str": "130"
+		}
+	  },
+
 	{
 	  "id": "KP",
 	  "color": "#FFCB00",
@@ -5442,7 +5447,32 @@
 		"doznaj_više_url": "54247",
 		"original_pdf_str": "189"
 	  }
-	},
+	},{
+		"id": "SB",
+		"color": "#4F9CA9",
+		"title": "Salomonski Otoci",
+		"showAsSelected": false,
+		"descriptionWindowWidth": 500,
+		"customData": {
+		  "službeni_naziv": "Salomonski Otoci (Solomon Islands)",
+		  "smještaj": "Melanezija, jugozapadni dio Tihog oceana",
+		  "glavni_grad": "Honiara",
+		  "površina": "28 400",
+		  "broj_stanovnika": "",
+		  "središte": "",
+		  "gustoča_naseljnosti": "",
+		  "jezik": "engleski",
+		  "novcana_jedinica": "salomonskootočni dolar; 1 SBD = 100 centa",
+		  "političko_uređenje": "parlamentarna monarhija (u sastavu Commonwealtha)",
+		  "članstvo_UN": "od 1976.",
+		  "grb_url": "AS_0931.png",
+		  "zastava_url": "AS_1128.jpg",
+		  "zastava_opis": "Zastava je u uporabi od 1977. Zvijezde na plavoj podlozi predstavljaju upravne cjeline, odnosno otočne skupine u oceanu. Zelena boja predstavlja otoke i njihovu bujnu vegetaciju, a žuta Sunce.",
+		  "grb_opis": "Grb je u uporabi od 1978., a temelji se na grbu iz kolonijalnog razdoblja. Na štitu su motivi koji predstavljaju različite upravne jedinice. U kruni je prikazano Sunce iznad tradicionalnoga lokalnog čamca. Štit pridržavaju predstavnici lokalne faune, australski krokodil i morski pas. Štit stoji na silueti ptice brzana s natpisom »Voditi znači služiti«.",
+		  "doznaj_više_url": "57087",
+		  "original_pdf_str": "208"
+		}
+	  },
 	{
 	  "id": "WS",
 	  "color": "#4F9CA9",
@@ -5836,32 +5866,7 @@
 		"original_pdf_str": "51"
 	  }
 	},
-	{
-	  "id": "SB",
-	  "color": "#4F9CA9",
-	  "title": "Salomonski Otoci",
-	  "showAsSelected": false,
-	  "descriptionWindowWidth": 500,
-	  "customData": {
-		"službeni_naziv": "Salomonski Otoci (Solomon Islands)",
-		"smještaj": "Melanezija, jugozapadni dio Tihog oceana",
-		"glavni_grad": "Honiara",
-		"površina": "28 400",
-		"broj_stanovnika": "",
-		"središte": "",
-		"gustoča_naseljnosti": "",
-		"jezik": "engleski",
-		"novcana_jedinica": "salomonskootočni dolar; 1 SBD = 100 centa",
-		"političko_uređenje": "parlamentarna monarhija (u sastavu Commonwealtha)",
-		"članstvo_UN": "od 1976.",
-		"grb_url": "AS_0931.png",
-		"zastava_url": "AS_1128.jpg",
-		"zastava_opis": "Zastava je u uporabi od 1977. Zvijezde na plavoj podlozi predstavljaju upravne cjeline, odnosno otočne skupine u oceanu. Zelena boja predstavlja otoke i njihovu bujnu vegetaciju, a žuta Sunce.",
-		"grb_opis": "Grb je u uporabi od 1978., a temelji se na grbu iz kolonijalnog razdoblja. Na štitu su motivi koji predstavljaju različite upravne jedinice. U kruni je prikazano Sunce iznad tradicionalnoga lokalnog čamca. Štit pridržavaju predstavnici lokalne faune, australski krokodil i morski pas. Štit stoji na silueti ptice brzana s natpisom »Voditi znači služiti«.",
-		"doznaj_više_url": "57087",
-		"original_pdf_str": "208"
-	  }
-	},
+	
 	{
 	  "id": "SO",
 	  "color": "#469025",

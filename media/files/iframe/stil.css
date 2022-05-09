@@ -418,6 +418,61 @@ background: red;
 }
 
 #povrsina,#stanovnici,#gustoca{display: none;}
+
+
+#hambi #GI,
+#hambi #GG,
+#hambi #JE,
+#hambi #SJ,
+#hambi #IO,
+#hambi #BV,
+#hambi #JU,
+#hambi #YT,
+#hambi #GO,
+#hambi #RE,
+#hambi #SH,
+#hambi #FK,
+#hambi #GF,
+#hambi #GS,
+#hambi #VI,
+#hambi #AI,
+#hambi #AW,
+#hambi #BM,
+#hambi #BQ,
+#hambi #VG,
+#hambi #CW,
+#hambi #GP,
+#hambi #KY,
+#hambi #MQ,
+#hambi #MS,
+#hambi #PR,
+#hambi #BL,
+#hambi #MF,
+#hambi #SX,
+#hambi #PM,
+#hambi #TC,
+#hambi #AS,
+#hambi #UM-JQ,
+#hambi #CX,
+#hambi #PF,
+#hambi #TF,
+#hambi #GU,
+#hambi #UM-DQ,
+#hambi #CC,
+#hambi #CK,
+#hambi #UM-MQ,
+#hambi #NU,
+#hambi #NF,
+#hambi #UM-FQ,
+#hambi #HM,
+#hambi #UM-HQ,
+#hambi #UM-WQ,
+#hambi #PN,
+#hambi #MP,
+#hambi #TK,
+#hambi #WF{display:none}
+
+
     @media screen and (min-width: 700px) {
       .homepageContent img {
         display: block;

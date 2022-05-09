@@ -66,15 +66,15 @@
         sortResults('title', true);*/
         
         $.each(data, function () {
-            if (data[i].color=="#F29B28") {$(".Europa").append("<li><a  onclick='map.clickMapObject(map.getObjectById(" + '"' + data[i].id + '"' + "))'>" + data[i].title + "</a></li>")}
-            else if (data[i].color=="#E74354") {$(".SAmerika").append("<li><a  onclick='map.clickMapObject(map.getObjectById(" + '"' + data[i].id + '"' + "))'>" + data[i].title + "</a></li>")}
-            else if (data[i].color=="#F172AC") {$(".JAmerika").append("<li><a  onclick='map.clickMapObject(map.getObjectById(" + '"' + data[i].id + '"' + "))'>" + data[i].title + "</a></li>")}
-            else if (data[i].color=="#4F9CA9") {$(".Australija").append("<li><a  onclick='map.clickMapObject(map.getObjectById(" + '"' + data[i].id + '"' + "))'>" + data[i].title + "</a></li>")}
-            else if (data[i].color=="#469025") {$(".Afrika").append("<li><a  onclick='map.clickMapObject(map.getObjectById(" + '"' + data[i].id + '"' + "))'>" + data[i].title + "</a></li>")} 
-            else if (data[i].color=="#FFCB00") {$(".Azija").append("<li><a  onclick='map.clickMapObject(map.getObjectById(" + '"' + data[i].id + '"' + "))'>" + data[i].title + "</a></li>")} 
-            else if (data[i].color.indexOf(' #') !== -1) {$(".Nesamostalna").append("<li><a  onclick='map.clickMapObject(map.getObjectById(" + '"' + data[i].id + '"' + "))'>" + data[i].title + "</a></li>")} 
+            if (data[i].color=="#F29B28") {$(".Europa").append("<li id='"+data[i].id+"'><a  onclick='map.clickMapObject(map.getObjectById(" + '"' + data[i].id + '"' + "))'>" + data[i].title + "</a></li>")}
+            else if (data[i].color=="#E74354") {$(".SAmerika").append("<li id='"+data[i].id+"'><a  onclick='map.clickMapObject(map.getObjectById(" + '"' + data[i].id + '"' + "))'>" + data[i].title + "</a></li>")}
+            else if (data[i].color=="#F172AC") {$(".JAmerika").append("<li id='"+data[i].id+"'><a  onclick='map.clickMapObject(map.getObjectById(" + '"' + data[i].id + '"' + "))'>" + data[i].title + "</a></li>")}
+            else if (data[i].color=="#4F9CA9") {$(".Australija").append("<li id='"+data[i].id+"'><a  onclick='map.clickMapObject(map.getObjectById(" + '"' + data[i].id + '"' + "))'>" + data[i].title + "</a></li>")}
+            else if (data[i].color=="#469025") {$(".Afrika").append("<li id='"+data[i].id+"'><a  onclick='map.clickMapObject(map.getObjectById(" + '"' + data[i].id + '"' + "))'>" + data[i].title + "</a></li>")} 
+            else if (data[i].color=="#FFCB00") {$(".Azija").append("<li id='"+data[i].id+"'><a  onclick='map.clickMapObject(map.getObjectById(" + '"' + data[i].id + '"' + "))'>" + data[i].title + "</a></li>")} 
+            else if (data[i].color.indexOf(' #') !== -1) {$(".Nesamostalna").append("<li id='"+data[i].id+"'><a  onclick='map.clickMapObject(map.getObjectById(" + '"' + data[i].id + '"' + "))'>" + data[i].title + "</a></li>")} 
             else if (data[i].color=="" || data[i].color==null){
-                $(".Organizacije").append("<li><a  onclick='map.clickMapObject(map.getObjectById(" + '"' + data[i].id + '"' + "))'>" + data[i].title + "</a></li>")
+                $(".Organizacije").append("<li id='"+data[i].id+"'><a  onclick='map.clickMapObject(map.getObjectById(" + '"' + data[i].id + '"' + "))'>" + data[i].title + "</a></li>")
             }
             i++
         });
