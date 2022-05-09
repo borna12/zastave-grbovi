@@ -7,20 +7,30 @@ $("footer").hide();
 
 $(".gumb").click(function () {
     sadrzaj = $(this).attr('class').split(' ')[0]
-    $(".modal").html("<h2 class='winner'>odaberi područje</h2><button id='Afrika'>4</button><button id='druga'>Australija i oceanija</button> <button id='druga'>Azija</button> <button id='treca'>Europa</button> <button id='treca'>Sjeverna Amerika</button>")
-    $(".modal").html("<h2 class='winner'>odaberi broj parova</h2><button id='prva'>4</button> <button id='druga'>8</button> <button id='treca'>12</button>");
-    $("#prva").click(function () {
-        razina = "1";
-        igra()
+    $(".modal").html("<h2 class='winner'>odaberi područje</h2><button class='kontinentb' id='afrika'>Afrika</button><button class='kontinentb' id='australija'>Australija i oceanija</button> <button class='kontinentb' id='Azija'>Azija</button> <button class='kontinentb' id='europa'>Europa</button> <button class='kontinentb' id='jamerika'>Južna Amerika</button> <button class='kontinentb' id='samerika'>Sjeverna Amerika</button>  <button class='kontinentb' id='nesamostalna'>Nesamostalna područja</button>")
+    if (sadrzaj=="grbovi"){
+        $("#nesamostalna").hide()
+    }
+    podrucje=""
+    $(".kontinentb").click(function (e) {
+        $(".modal").html("<h2 class='winner'>odaberi broj parova</h2><button id='prva'>4</button> <button id='druga'>8</button> <button id='treca'>12</button>");
+        podrucje=e.target.id
+
+        $("#prva").click(function () {
+            razina = "1";
+            igra()
+        })
+        $("#druga").click(function () {
+            razina = "2";
+            igra()
+        })
+        $("#treca").click(function () {
+            razina = "3";
+            igra()
+        })
     })
-    $("#druga").click(function () {
-        razina = "2";
-        igra()
-    })
-    $("#treca").click(function () {
-        razina = "3";
-        igra()
-    })
+
+   
 
 
     function igra() {
@@ -368,20 +378,36 @@ $(".gumb").click(function () {
             return json;
         })();
 
+        //micanje praznih
+        mici=["GI","GG","JE","SJ","IO","BV","JU","YT","GO","RE","SH","FK","GF","GS","VI","AI","AW","BM","BQ","VG","CW","GP","KY","MQ","MS","PR","BL","MF","SX","PM","TC","AS","UM-JQ","CX","PF","TF","GU","UM-DQ","CC","CK","UM-MQ","NU","NF","UM-FQ","HM","UM-HQ","UM-WQ","PN","MP","TK","WF"]
+
+        var arrayLength = mici.length;
+        for (var i = 0; i < arrayLength; i++) {
+            var cards=cards.filter(item=>item.id !=mici[i] );
+        }
+       
+        
         //europa
-        var cards = cards.filter(a => a.color == "#F29B28");
+        if (podrucje=="europa")
+        {var cards = cards.filter(a => a.color == "#F29B28");}
         //samerika
-        var cards = cards.filter(a => a.color == "#E74354");
+        else if (podrucje=="samerika")
+       {var cards = cards.filter(a => a.color == "#E74354");}
         //južnaamerika
-        var cards = cards.filter(a => a.color == "#F172AC");
+        else if (podrucje=="jamerika")
+        {var cards = cards.filter(a => a.color == "#F172AC");}
         //afrika
-        var cards = cards.filter(a => a.color == "#469025");
+        else if (podrucje=="afrika")
+        {var cards = cards.filter(a => a.color == "#469025");}
         //azija
-        var cards = cards.filter(a => a.color == "#FFCB00");
+        else if (podrucje=="azija")
+        {var cards = cards.filter(a => a.color == "#FFCB00");}
         //Australija i oceanija
-        var cards = cards.filter(a => a.color == "#4F9CA9");
+        else if (podrucje=="australija")
+        {var cards = cards.filter(a => a.color == "#4F9CA9");}
         //Nesamostalna područja jedino zastave
-        var cards = cards.filter(a => a.color.indexOf(' #') !== -1);
+        else if (podrucje=="australija")
+        {var cards = cards.filter(a => a.color.indexOf(' #') !== -1);}
         
         function shuffle(array) {
             var currentIndex = array.length,
