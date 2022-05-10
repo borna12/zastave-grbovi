@@ -4,6 +4,7 @@
 var initPage,
     questionsPage,
     resultsPage,
+    podrucje,
     // buttons
     startBtn,
     submitBtn,
@@ -51,7 +52,9 @@ var initPage,
     clearHighlightsAndFeedback,
     prekidac, countdownTimer, bodovi = 0,
     vrijeme = 0,
-    zastave, grbovi;
+    zastave, grbovi, zemlje2;
+zemlje = []
+
 
 function ProgressCountdown(timeleft, bar, text) {
     return new Promise((resolve, reject) => {
@@ -121,8 +124,6 @@ $(document).ready(function () {
     prikazBodova = $('.results-page__bodovi');
 
     // QUIZ CONTENT ------
-
-
     var podatci = (function () {
         var json = null;
         $.ajax({
@@ -144,14 +145,81 @@ $(document).ready(function () {
     for (var i = 0; i < arrayLength; i++) {
         var podatci = podatci.filter(item => item.id != mici[i]);
     }
-    shuffle(podatci)
-    zemlje = []
 
-    for (var i in podatci) {
-        zemlje.push(podatci[i].title)
-    };
+    $("#Europa").click(function () {
+        podatci = podatci.filter(a => a.color == "#F29B28");
+        shuffle(podatci)
+        for (var i in podatci) {
+            zemlje.push(podatci[i].title)
+        };
+        zemlje2 = zemlje
+    })
 
-    zemlje2 = zemlje
+    $("#Afrika").click(function () {
+        podatci = podatci.filter(a => a.color == "#469025");
+        shuffle(podatci)
+        for (var i in podatci) {
+            zemlje.push(podatci[i].title)
+        };
+        zemlje2 = zemlje
+    })    
+    $("#Azija").click(function () {
+        podatci = podatci.filter(a => a.color == "#FFCB00");
+        shuffle(podatci)
+        for (var i in podatci) {
+            zemlje.push(podatci[i].title)
+        };
+        zemlje2 = zemlje
+    })    
+    $("#Australija").click(function () {
+        podatci = podatci.filter(a => a.color == "#4F9CA9");
+        shuffle(podatci)
+        for (var i in podatci) {
+            zemlje.push(podatci[i].title)
+        };
+        zemlje2 = zemlje
+    })    
+    $("#JAmerika").click(function () {
+        podatci = podatci.filter(a => a.color == "#F172AC");
+        shuffle(podatci)
+        for (var i in podatci) {
+            zemlje.push(podatci[i].title)
+        };
+        zemlje2 = zemlje
+    })    
+    $("#SAmerika").click(function () {
+        podatci = podatci.filter(a => a.color == "#E74354");
+        shuffle(podatci)
+        for (var i in podatci) {
+            zemlje.push(podatci[i].title)
+        };
+        zemlje2 = zemlje
+    })    
+    $("#Nesamostalna").click(function () {
+        podatci = podatci.filter(a => a.color.indexOf(' #') !== -1);
+        shuffle(podatci)
+        for (var i in podatci) {
+            zemlje.push(podatci[i].title)
+        };
+        zemlje2 = zemlje
+    })    
+   
+    /*//europa
+    if (podrucje == "europa") {}
+    //samerika
+    else if (podrucje == "samerika") { var podatci = podatci.filter(a => a.color == "#E74354"); }
+    //južnaamerika
+    else if (podrucje == "jamerika") { var podatci = podatci.filter(a => a.color == "#F172AC"); }
+    //afrika
+    else if (podrucje == "afrika") { var podatci = podatci.filter(a => a.color == "#469025"); }
+    //azija
+    else if (podrucje == "azija") { var podatci = podatci.filter(a => a.color == "#FFCB00"); }
+    //Australija i oceanija
+    else if (podrucje == "australija") { var podatci = podatci.filter(a => a.color == "#4F9CA9"); }
+    //Nesamostalna područja jedino zastave
+    else if (podrucje == "nesamostalna") { var podatci = podatci.filter(a => a.color.indexOf(' #') !== -1); }
+*/
+
     function stvori(tekst, tekst2, tekst3) {
         do {
             predmet = zemlje[Math.floor(Math.random() * zemlje.length)];
@@ -159,8 +227,6 @@ $(document).ready(function () {
         while (predmet == tekst || predmet == tekst2 || predmet == tekst3);
         return predmet
     }
-
-
 
     // FUNCTION DECLARATIONS ------
     $.fn.declasse = function (re) {
@@ -172,7 +238,6 @@ $(document).ready(function () {
             }
         })
     }
-
 
     function shuffle(array) { //izmješaj pitanja
         var i = 0,
@@ -236,11 +301,15 @@ $(document).ready(function () {
         } else {
             answerDivD.show()
         };
-        slikica.attr("src", "../iframe/zastave/" + podatci[questionCounter].customData.zastava_url)
-        //slikica.attr("data-zoom-image", podatci[questionCounter].customData.zastava_url)
+        if (zastave==1){slikica.attr("src", "../iframe/zastave/" + podatci[questionCounter].customData.zastava_url);
         $("#opis").html("<p>" + podatci[questionCounter].customData.zastava_opis + "</p>")
+    }
+        else{slikica.attr("src", "../iframe/grbovi/" + podatci[questionCounter].customData.grb_url)
+        $("#opis").html("<p>" + podatci[questionCounter].customData.grb_opis + "</p>")
+    }
+        //slikica.attr("data-zoom-image", podatci[questionCounter].customData.zastava_url)
         $(".vrijeme").html('<progress value="10" max="10" id="pageBeginCountdown"></progress><p><span id="ostalo">ostalo</span> je još <span id="pageBeginCountdownText">10 </span> <span id="sekunde">sekunda</span> za odgovor</p>')
-      
+
         if (prekidac == 1) {
             ProgressCountdown(10, 'pageBeginCountdown', 'pageBeginCountdownText').then(value => odgovor());
         }
@@ -325,56 +394,45 @@ $(document).ready(function () {
     $(".tip").on('click', function () {
         $(".init-page__btn").show()
         $(".tip").hide()
+        if(grbovi==1){
+            $("#Nesamostalna").hide()
+        }
     })
     // Clicking on start button:
     startBtn.on('click', function () {
-
         newQuiz();
-
         // Advance to questions page
         initPage.hide();
         questionsPage.show(300);
-
         // Load question and answers
         generateQuestionAndAnswers();
-
         // Store the correct answer in a variable
         getCorrectAnswer();
-
         // Hide the submit and continue buttons
         submitBtn.hide();
         continueBtn.hide();
-
     });
 
     /* --- PAGE 2/3 --- */
 
     // Clicking on an answer:
     answerDiv.on('click', function () {
-
         // Make the submit button visible
-
         // Remove pointer from any answer that already has it
         deselectAnswer();
-
         // Put pointer on clicked answer
         selectAnswer(this);
-
         // Store current selection as user answer
         getUserAnswer(this);
-
         // Store current answer div for highlighting purposes
         getSelectedAnswerDivs(this);
         odgovor();
-
     });
 
 
     function odgovor() {
-
         vrijeme = parseInt($("#pageBeginCountdownText").text())
         bodovi += vrijeme
-
         prekidac = 0;
         var ide = 0
         // Disable ability to select an answer
@@ -383,6 +441,7 @@ $(document).ready(function () {
             ide = 1
         } else {
             ide = 0
+            resultsPage.show();
         }
 
         // Make correct answer green and add a checkmark
@@ -394,15 +453,25 @@ $(document).ready(function () {
             $("#krivo")[0].play();
 
             bodovi -= 10;
-
+            if (zastave==1){
             swal({
                 title: "Isteklo je vrijeme.",
-                html: "<p style='text-align:center'><strong>Točan odgovor je <span style='color:#bb422a; font-size:34px' >" + podatci[questionCounter].title + "</span></strong>.</p><br><p>" + podatci[questionCounter].customData.zastava_opis + "</p><br><img src='../iframe/zastave/" + podatci[questionCounter].customData.zastava_url + "'class='slikica2'/>",
+                html: "<p style='text-align:center'><strong>Točan odgovor je <span style='color:#bb422a; font-size:20px' >" + podatci[questionCounter].title + "</span></strong>.</p><br><p>" + podatci[questionCounter].customData.zastava_opis + "</p><br><img src='../iframe/zastave/" + podatci[questionCounter].customData.zastava_url + "'class='slikica2'/>",
                 showCloseButton: true,
                 confirmButtonText: ' dalje',
                 backdrop: false,
                 allowOutsideClick: false, allowEscapeKey: false
-            });
+            });}
+            else{
+                swal({
+                    title: "Isteklo je vrijeme.",
+                    html: "<p style='text-align:center'><strong>Točan odgovor je <span style='color:#bb422a; font-size:20px' >" + podatci[questionCounter].title + "</span></strong>.</p><br><p>" + podatci[questionCounter].customData.grb_opis + "</p><br><img src='../iframe/grbovi/" + podatci[questionCounter].customData.grb_url + "'class='slikica2'/>",
+                    showCloseButton: true,
+                    confirmButtonText: ' dalje',
+                    backdrop: false,
+                    allowOutsideClick: false, allowEscapeKey: false
+                });
+            }
             $(".swal2-confirm").click(function () {
                 clearInterval(countdownTimer)
                 if (ide == 1) {
@@ -424,7 +493,8 @@ $(document).ready(function () {
                 correctAnswersCounter++;
                 bodovi += 10;
                 $("#tocno")[0].play();
-                broj = vrijeme + 10
+                broj = vrijeme + 10;
+                if (zastave==1){
                 swal({
                     title: "<span style='color:green'>Točno</span>",
                     html: "<p style='text-align:center'>+" + broj + "</p><br><p>" + podatci[questionCounter].customData.zastava_opis + "</p><br><img src='../iframe/zastave/" + podatci[questionCounter].customData.zastava_url + "'class='slikica2'/>",
@@ -433,15 +503,24 @@ $(document).ready(function () {
                     backdrop: false,
                     allowOutsideClick: false, allowEscapeKey: false
 
-                });
+                });}
+                else{
+                    swal({
+                        title: "<span style='color:green'>Točno</span>",
+                        html: "<p style='text-align:center'>+" + broj + "</p><br><p>" + podatci[questionCounter].customData.grb_opis + "</p><br><img src='../iframe/grbovi/" + podatci[questionCounter].customData.grb_url + "'class='slikica2'/>",
+                        showCloseButton: true,
+                        confirmButtonText: ' dalje',
+                        backdrop: false,
+                        allowOutsideClick: false, allowEscapeKey: false
+    
+                    });
+                }
 
                 $(".swal2-confirm").click(function () {
                     clearInterval(countdownTimer)
                     if (ide == 1) {
                         ProgressCountdown(10, 'pageBeginCountdown', 'pageBeginCountdownText').then(value => odgovor());
                     }
-
-
                 })
                 $(".swal2-close").click(function () {
                     clearInterval(countdownTimer)
@@ -455,15 +534,26 @@ $(document).ready(function () {
                 highlightIncorrectAnswerRed();
                 bodovi -= 10;
                 $("#krivo")[0].play();
+                if (zastave==1){
 
                 swal({
                     title: " <span style='color:#bb422a' >Netočno</span>",
-                    html: "<p style='text-align:center'><strong>Točan odgovor je <span style='color:#bb422a; font-size:34px' >" + podatci[questionCounter].title + "</span></strong>.</p><br><p>" + podatci[questionCounter].customData.zastava_opis + "</p><br><img src='../iframe/zastave/" + podatci[questionCounter].customData.zastava_url + " 'class='slikica2'/>",
+                    html: "<p style='text-align:center'><strong>Točan odgovor je <span style='color:#bb422a; font-size:20px' >" + podatci[questionCounter].title + "</span></strong>.</p><br><p>" + podatci[questionCounter].customData.zastava_opis + "</p><br><img src='../iframe/zastave/" + podatci[questionCounter].customData.zastava_url + " 'class='slikica2'/>",
                     showCloseButton: true,
                     confirmButtonText: ' dalje',
                     backdrop: false,
                     allowOutsideClick: false, allowEscapeKey: false
-                });
+                });}
+                else{
+                    swal({
+                        title: " <span style='color:#bb422a' >Netočno</span>",
+                        html: "<p style='text-align:center'><strong>Točan odgovor je <span style='color:#bb422a; font-size:20px' >" + podatci[questionCounter].title + "</span></strong>.</p><br><p>" + podatci[questionCounter].customData.grb_opis + "</p><br><img src='../iframe/grbovi/" + podatci[questionCounter].customData.grb_url + " 'class='slikica2'/>",
+                        showCloseButton: true,
+                        confirmButtonText: ' dalje',
+                        backdrop: false,
+                        allowOutsideClick: false, allowEscapeKey: false
+                    });
+                }
 
                 $(".swal2-confirm").click(function () {
                     clearInterval(countdownTimer)
@@ -515,11 +605,8 @@ $(document).ready(function () {
         // Remove all selections, highlighting, and feedback
         deselectAnswer();
         clearHighlightsAndFeedback();
-
-
         // Hide the continue button
         continueBtn.hide(300);
-
         // Enable ability to select an answer
         answerDiv.on('click', function () {
             // Make the submit button visible
@@ -538,9 +625,6 @@ $(document).ready(function () {
 
     // Clicking on the continue button:
     continueBtn.on('click', function () {
-
-
-
     });
 
     $(".questions-page__answer-div").dblclick(function () {

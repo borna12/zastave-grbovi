@@ -339,8 +339,6 @@ form {
 }
 
 
-}
-
 .results-page__spanish-btn {
     margin-top: 3rem;
 }
@@ -416,7 +414,7 @@ footer {
 .slikica2 {
     margin-top: 20px;
     max-width: 100%;
-    max-height: 300px;
+    max-height: 200px;
     display: block;
     margin: auto;
 }
