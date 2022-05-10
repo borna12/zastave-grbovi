@@ -447,6 +447,12 @@ $(".gumb").click(function () {
                 "height": "25%"
             })
         }
+        else if (razina == 3) {
+            $(".card").css({
+                "width": "16.66666%",
+                "height": "25%"
+            })
+        }
         if (sadrzaj == "zastave") {
             $(".back").addClass("pozadina-zastave");
         }
