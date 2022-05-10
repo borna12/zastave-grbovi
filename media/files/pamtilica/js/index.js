@@ -7,13 +7,14 @@ $("footer").hide();
 
 $(".gumb").click(function () {
     sadrzaj = $(this).attr('class').split(' ')[0]
-    $(".modal").html("<h2 class='winner'>odaberi područje</h2><button class='kontinentb' id='afrika'>Afrika</button><button class='kontinentb' id='australija'>Australija i oceanija</button> <button class='kontinentb' id='Azija'>Azija</button> <button class='kontinentb' id='europa'>Europa</button> <button class='kontinentb' id='jamerika'>Južna Amerika</button> <button class='kontinentb' id='samerika'>Sjeverna Amerika</button>  <button class='kontinentb' id='nesamostalna'>Nesamostalna područja</button>")
-    if (sadrzaj=="grbovi"){
+    $(".modal").html("<h2 class='winner'>odaberi područje</h2><hr><button class='kontinentb' id='afrika'>Afrika</button><button class='kontinentb' id='australija'>Australija i oceanija</button> <button class='kontinentb' id='azija'>Azija</button> <button class='kontinentb' id='europa'>Europa</button> <button class='kontinentb' id='jamerika'>Južna Amerika</button> <button class='kontinentb' id='samerika'>Sjeverna Amerika</button>  <button class='kontinentb' id='nesamostalna'>Nesamostalna područja</button>")
+    if (sadrzaj=="grbovi" || sadrzaj=="zastave-grbovi"){
         $("#nesamostalna").hide()
+        $("#samerika").css({"margin-bottom":"0"})
     }
     podrucje=""
     $(".kontinentb").click(function (e) {
-        $(".modal").html("<h2 class='winner'>odaberi broj parova</h2><button id='prva'>4</button> <button id='druga'>8</button> <button id='treca'>12</button>");
+        $(".modal").html("<h2 class='winner'>odaberi broj parova</h2><hr><button id='prva'>4</button> <button id='druga'>8</button> <button id='treca' style='margin-bottom:0;'>12</button>");
         podrucje=e.target.id
 
         $("#prva").click(function () {
@@ -56,9 +57,7 @@ $(".gumb").click(function () {
         var pokusaj = 0;
         var vrijeme = 1;
         var bodovi = 0;
-        var najbolje_vrijeme;
-        var najmanji_broj_pokusaja;
-        var karte;
+
         function pad(val) {
             return val > 9 ? val : "0" + val;
         }
@@ -113,8 +112,22 @@ $(".gumb").click(function () {
                         _.guess = null;
                         $(".matched").find('p').remove();
                         pokusaj++;
-
                         vrijeme = 0;
+                        if (sadrzaj=="zastave-grbovi"){
+                            swal({
+                                title: '' + $(this).attr('data-ime'),
+                                html: '<img src="../iframe/zastave/' + $(this).attr('data-img') + '" class="ikone2"/><p>' + $(this).attr('data-opis') + '</p><br><img src="../iframe/grbovi/' + $(this).attr('data-img2') + '" class="ikone2"/><br><p>' + $(this).attr('data-opis2') + '</p><br><p style="text-align:center"><a href="'+$(this).attr('data-url')+'" target="_blank">doznaj više o području</a></p>',
+                                showCloseButton: true,
+                                confirmButtonText: 'dalje',
+                                /*allowOutsideClick: false,*/
+                                /*allowEscapeKey: false*/
+                                onClose: () => {
+                                    vrijeme = 1;
+                                    $.stopSound();
+                                }
+                            })
+                        }
+                        else{
                         swal({
                             title: '' + $(this).attr('data-ime'),
                             html: '<img src="../iframe/' + sadrzaj + "/" + $(this).attr('data-img') + '" class="ikone"/><p>' + $(this).attr('data-opis') + '</p><br><p style="text-align:center"><a href="'+$(this).attr('data-url')+'" target="_blank">doznaj više o području</a></p>',
@@ -126,7 +139,7 @@ $(".gumb").click(function () {
                                 vrijeme = 1;
                                 $.stopSound();
                             }
-                        })
+                        })}
                     } else {
                         pokusaj++;
                         $(this).find('p').toggle();
@@ -209,91 +222,6 @@ $(".gumb").click(function () {
                     option.value = code;
                     target.appendChild(option);
                 }
-
-
-                if (localStorage.getItem("ime") != null) {
-                    $('#312289462').val(localStorage.getItem("ime"))
-                    $('#ikona').val(localStorage.getItem("ikona"))
-                }
-
-                if (razina == 1) {
-                    $('#bootstrapForm').attr('action', 'https://docs.google.com/forms/d/e/1FAIpQLSd_F9j04sMHdgMDx6DOc0Svl4-jUBzpr97POIdI0pbKXfWHMg/formResponse?');
-                    $('#bootstrapForm').submit(function (event) {
-                        localStorage.setItem("ime", $('#312289462').val())
-                        localStorage.setItem("ikona", $('#ikona').val())
-                        localStorage.setItem('pokrenuto', "da")
-                        event.preventDefault()
-                        $("#predaj").hide(300)
-                        $('#312289462').val(
-                            document.getElementById("ikona").value + document.getElementById("312289462").value
-                        )
-                        var extraData = {}
-                        $('#bootstrapForm').ajaxSubmit({
-                            data: extraData,
-                            dataType: 'jsonp', // This won't really work. It's just to use a GET instead of a POST to allow cookies from different domain.
-                            error: function () {
-                                // Submit of form should be successful but JSONP callback will fail because Google Forms
-                                // does not support it, so this is handled as a failure.
-                                window.open("rez.html", "_self");
-                                // You can also redirect the user to a custom thank-you page:
-                                // window.location = 'http://www.mydomain.com/thankyoupage.html'
-                            }
-                        })
-                    })
-                }
-                else if (razina == 2) {
-                    $('#bootstrapForm').attr('action', 'https://docs.google.com/forms/d/e/1FAIpQLScYqT8mytAHD7xYHScmDNPLZxhF38l36YnP5lJZGHqaNfGQCA/formResponse?');
-                    $('#bootstrapForm').submit(function (event) {
-                        localStorage.setItem("ime", $('#312289462').val())
-                        localStorage.setItem("ikona", $('#ikona').val())
-                        localStorage.setItem('pokrenuto', "da")
-                        event.preventDefault()
-                        $("#predaj").hide(300)
-                        $('#312289462').val(
-                            document.getElementById("ikona").value + document.getElementById("312289462").value
-                        )
-                        var extraData = {}
-                        $('#bootstrapForm').ajaxSubmit({
-                            data: extraData,
-                            dataType: 'jsonp', // This won't really work. It's just to use a GET instead of a POST to allow cookies from different domain.
-                            error: function () {
-                                // Submit of form should be successful but JSONP callback will fail because Google Forms
-                                // does not support it, so this is handled as a failure.
-                                window.open("rez2.html", "_self");
-                                // You can also redirect the user to a custom thank-you page:
-                                // window.location = 'http://www.mydomain.com/thankyoupage.html'
-                            }
-                        })
-                    })
-
-                } else {
-                    $('#bootstrapForm').attr('action', 'https://docs.google.com/forms/d/e/1FAIpQLScKOTZf6lV3VtOu9r_DmnF5D8sZ0LRXrnxXRqiHcV7eMJJdkw/formResponse?');
-                    $('#bootstrapForm').submit(function (event) {
-                        localStorage.setItem("ime", $('#312289462').val())
-                        localStorage.setItem("ikona", $('#ikona').val())
-                        localStorage.setItem('pokrenuto', "da")
-                        event.preventDefault()
-                        $("#predaj").hide(300)
-                        $('#312289462').val(
-                            document.getElementById("ikona").value + document.getElementById("312289462").value
-                        )
-                        var extraData = {}
-                        $('#bootstrapForm').ajaxSubmit({
-                            data: extraData,
-                            dataType: 'jsonp', // This won't really work. It's just to use a GET instead of a POST to allow cookies from different domain.
-                            error: function () {
-                                // Submit of form should be successful but JSONP callback will fail because Google Forms
-                                // does not support it, so this is handled as a failure.
-                                window.open("rez3.html", "_self");
-                                // You can also redirect the user to a custom thank-you page:
-                                // window.location = 'http://www.mydomain.com/thankyoupage.html'
-                            }
-                        })
-                    })
-
-                }
-
-
             },
 
             hideModal: function () {
@@ -333,8 +261,7 @@ $(".gumb").click(function () {
             buildHTML: function () {
                 var frag = '';
                 br = 1;
-                var lista_slika = [];
-                var lista_imena = [];
+       
                 if (sadrzaj=="zastave"){
                 this.$cards.each(function (k, v) {
                     frag += '<div class="card" data-id="' + v.id + '" data-url="https://www.enciklopedija.hr/Natuknica.aspx?ID=' + v.customData.doznaj_više_url + '" data-img="' + v.customData.zastava_url + '" data-opis="' + v.customData.zastava_opis + '" data-ime="' + v.customData.službeni_naziv + '"><div class="inside">\
@@ -359,6 +286,64 @@ $(".gumb").click(function () {
                         };
                     });
 
+                }
+                else if (sadrzaj=="zastave-grbovi")
+                {
+                    var lista_slika = [];
+                    var lista_imena = [];
+
+                    this.$cards.each(function (k, v) {
+                        if (Math.floor((Math.random() * 2) + 1) == 1) {
+                            if ($.inArray(v.customData.zastava_opis, lista_imena) == -1) {
+                                     frag += '<div class="card" data-id="' + v.id + '" data-url="https://www.enciklopedija.hr/Natuknica.aspx?ID=' + v.customData.doznaj_više_url + '" data-img="' + v.customData.zastava_url + '" data-img2="' + v.customData.grb_url + '"data-opis="' + v.customData.zastava_opis + '" data-opis2="'+v.customData.grb_opis+'" data-ime="' + v.customData.službeni_naziv + '"><div class="inside">\
+                    <div class="front"><img src="../iframe/zastave/' + v.customData.zastava_url + '"\
+                    alt="' + v.id + '" data-ime="' + v.customData.službeni_naziv + '" /></div>\
+                    <div class="back"><p class="brojevi">' + br + '</p></div></div>\
+                    </div>';
+                                if (br < cards.length) {
+                                    br++;
+                                };
+    
+                                lista_imena.push(v.customData.zastava_opis);
+    
+                            } else {
+                                frag += '<div class="card" data-id="' + v.id + '" data-url="https://www.enciklopedija.hr/Natuknica.aspx?ID=' + v.customData.doznaj_više_url + '" data-img="' + v.customData.zastava_url + 'data-img2="' + v.customData.grb_url + '"data-opis="' + v.customData.zastava_opis + '" data-opis2="'+v.customData.grb_opis+'" data-ime="' + v.customData.službeni_naziv + '"><div class="inside">\
+                                <div class="front"><img src="../iframe/grbovi/' + v.customData.grb_url + '"\
+                                alt="' + v.id + '" data-ime="' + v.customData.službeni_naziv + '" /></div>\
+                                <div class="back"><p class="brojevi">' + br + '</p></div></div>\
+                                </div>';
+                                if (br < cards.length) {
+                                    br++;
+                                };
+                                lista_slika.push(v.customData.zastava_url);
+                            }
+                        } else {
+                            if ($.inArray(v.customData.zastava_url, lista_slika) == -1) {
+                                frag += '<div class="card" data-id="' + v.id + '" data-url="https://www.enciklopedija.hr/Natuknica.aspx?ID=' + v.customData.doznaj_više_url + '" data-img="' + v.customData.zastava_url + '" data-img2="' + v.customData.grb_url + '" data-opis="' + v.customData.zastava_opis + '" data-opis2="'+v.customData.grb_opis+'" data-ime="' + v.customData.službeni_naziv + '"><div class="inside">\
+                                <div class="front"><img src="../iframe/grbovi/' + v.customData.grb_url + '"\
+                                alt="' + v.id + '" data-ime="' + v.customData.službeni_naziv + '" /></div>\
+                                <div class="back"><p class="brojevi">' + br + '</p></div></div>\
+                                </div>';
+                                if (br < cards.length) {
+                                    br++;
+                                };
+    
+                                lista_slika.push(v.customData.zastava_url);
+    
+    
+                            } else {
+                                frag += '<div class="card" data-id="' + v.id + '" data-url="https://www.enciklopedija.hr/Natuknica.aspx?ID=' + v.customData.doznaj_više_url + '" data-img="' + v.customData.zastava_url + '" data-img2="' + v.customData.grb_url + '"data-opis="' + v.customData.zastava_opis + '" data-opis2="'+v.customData.grb_opis+'" data-ime="' + v.customData.službeni_naziv + '"><div class="inside">\
+                    <div class="front"><img src="../iframe/zastave/' + v.customData.zastava_url + '"\
+                    alt="' + v.id + '" data-ime="' + v.customData.službeni_naziv + '" /></div>\
+                    <div class="back"><p class="brojevi">' + br + '</p></div></div>\
+                    </div>';
+                                if (br < cards.length) {
+                                    br++;
+                                };
+                                lista_imena.push(v.customData.zastava_opis);
+                            }
+                        }
+                    });
                 }
                 return frag;
             }
@@ -406,7 +391,7 @@ $(".gumb").click(function () {
         else if (podrucje=="australija")
         {var cards = cards.filter(a => a.color == "#4F9CA9");}
         //Nesamostalna područja jedino zastave
-        else if (podrucje=="australija")
+        else if (podrucje=="nesamostalna")
         {var cards = cards.filter(a => a.color.indexOf(' #') !== -1);}
         
         function shuffle(array) {
@@ -457,6 +442,7 @@ $(".gumb").click(function () {
             $(".back").addClass("pozadina-zastave");
         }
         else if (sadrzaj == "grbovi") { $(".back").addClass("pozadina-grbovi"); }
+        else if (sadrzaj == "zastave-grbovi") { $(".back").addClass("pozadina-mix"); }
     }
 });
 

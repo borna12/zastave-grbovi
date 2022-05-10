@@ -53,6 +53,8 @@
     src: url(https://fonts.gstatic.com/s/robotoslab/v23/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISmb2Rj.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
+
+  .swal2-modal .swal2-content, .swal2-modal h2{  font-family: 'Roboto Slab';}
 /* brandico */
 
 [class*="brandico-"]:before {
@@ -78,11 +80,11 @@ body {
     top: 0;
     left: 0;
     z-index: -1;
-    background-image: -moz-linear-gradient(top left, rgba(173, 164, 164, 0.8), rgba(35, 31, 48, 0.55));
-    background-image: -ms-linear-gradient(top left, rgba(173, 164, 164, 0.8), rgba(35, 31, 48, 0.55));
-    background-image: -webkit-linear-gradient(top left, rgba(173, 164, 164, 0.8), rgba(35, 31, 48, 0.55));
-    background-image: -o-linear-gradient(top left, rgba(173, 164, 164, 0.8), rgba(35, 31, 48, 0.55));
-    background-image: linear-gradient(to bottom right, rgba(173, 164, 164, 0.8), rgba(35, 31, 48, 0.55));
+    background-image: -moz-linear-gradient(top left, #879ecd38, #879ecd38);
+    background-image: -ms-linear-gradient(top left, #879ecd38, #879ecd38);
+    background-image: -webkit-linear-gradient(top left, #879ecd38, #879ecd38);
+    background-image: -o-linear-gradient(top left, #879ecd38, #879ecd38);
+    background-image: linear-gradient(to bottom right, #879ecd38, #879ecd38);
     background-size: auto;}
 
 .plavko::before{  width: 100%;
@@ -92,15 +94,15 @@ body {
     top: 0;
     left: 0;
     z-index: -1;
-    background-image: -moz-linear-gradient(top left, rgba(173, 164, 164, 0.8), rgba(76, 117, 204, 0.55));
-    background-image: -ms-linear-gradient(top left, rgba(173, 164, 164, 0.8), rgba(76, 117, 204, 0.55));
-    background-image: -webkit-linear-gradient(top left, rgba(173, 164, 164, 0.8), rgba(76, 117, 204, 0.55));
-    background-image: -o-linear-gradient(top left, rgba(173, 164, 164, 0.8), rgba(76, 117, 204, 0.55));
-    background-image: linear-gradient(to bottom right, rgba(173, 164, 164, 0.8), rgba(76, 117, 204, 0.55));
+    background-image: -moz-linear-gradient(top left, #879ecd38, rgba(76, 117, 204, 0.55));
+    background-image: -ms-linear-gradient(top left, #879ecd38, rgba(76, 117, 204, 0.55));
+    background-image: -webkit-linear-gradient(top left, #879ecd38, rgba(76, 117, 204, 0.55));
+    background-image: -o-linear-gradient(top left, #879ecd38, rgba(76, 117, 204, 0.55));
+    background-image: linear-gradient(to bottom right, #879ecd38, rgba(76, 117, 204, 0.55));
     background-size: auto;}
 
 a {
-    color: aliceblue;
+    color: #2F22A6;
 }
 
 .front span {
@@ -141,7 +143,11 @@ a {
     margin-bottom: 10px;
     max-height: 300px;
 }
-
+.ikone2 {
+    max-width: 100%;
+    margin-bottom: 10px;
+    max-height: 150px;
+}
 body {
     background-image: url("../pozadina.jpg");
     background-position: center center;
@@ -273,6 +279,13 @@ body {
     -o-background-size: contain;
     background-size: contain;
 }
+.pozadina-mix {
+    background: url("zastave-grbovi.png") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+}
 
 
 
@@ -297,7 +310,7 @@ body {
 }
 
 .modal-overlay {
-    background: rgba(173, 164, 164, 0.8);
+    background: #879ecd38;
     position: fixed;
     top: 0;
     left: 0;
@@ -350,6 +363,7 @@ body {
     
 }
 
+.kontinentb:last-child{margin-bottom: 0;}
 
 .modal .gumb:hover,
 #prva:hover,
