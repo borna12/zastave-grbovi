@@ -129,7 +129,7 @@ $(document).ready(function () {
         $.ajax({
             'async': false,
             'global': false,
-            'url': "../iframe/js/podatci.json",
+            'url': "../karta/js/podatci.json",
             'dataType': "json",
             'success': function (data) {
                 json = data;
@@ -301,10 +301,10 @@ $(document).ready(function () {
         } else {
             answerDivD.show()
         };
-        if (zastave==1){slikica.attr("src", "../iframe/zastave/" + podatci[questionCounter].customData.zastava_url);
+        if (zastave==1){slikica.attr("src", "../karta/zastave/" + podatci[questionCounter].customData.zastava_url);
         $("#opis").html("<p>" + podatci[questionCounter].customData.zastava_opis + "</p>")
     }
-        else{slikica.attr("src", "../iframe/grbovi/" + podatci[questionCounter].customData.grb_url)
+        else{slikica.attr("src", "../karta/grbovi/" + podatci[questionCounter].customData.grb_url)
         $("#opis").html("<p>" + podatci[questionCounter].customData.grb_opis + "</p>")
     }
         //slikica.attr("data-zoom-image", podatci[questionCounter].customData.zastava_url)
@@ -456,7 +456,7 @@ $(document).ready(function () {
             if (zastave==1){
             swal({
                 title: "Isteklo je vrijeme.",
-                html: "<p style='text-align:center'><strong>Točan odgovor je <span style='color:#bb422a; font-size:20px' >" + podatci[questionCounter].title + "</span></strong>.</p><br><p>" + podatci[questionCounter].customData.zastava_opis + "</p><br><img src='../iframe/zastave/" + podatci[questionCounter].customData.zastava_url + "'class='slikica2'/>",
+                html: "<p style='text-align:center'><strong>Točan odgovor je <span style='color:#bb422a; font-size:20px' >" + podatci[questionCounter].title + "</span></strong>.</p><br><p>" + podatci[questionCounter].customData.zastava_opis + "</p><br><img src='../karta/zastave/" + podatci[questionCounter].customData.zastava_url + "'class='slikica2'/>",
                 showCloseButton: true,
                 confirmButtonText: ' dalje',
                 backdrop: false,
@@ -465,7 +465,7 @@ $(document).ready(function () {
             else{
                 swal({
                     title: "Isteklo je vrijeme.",
-                    html: "<p style='text-align:center'><strong>Točan odgovor je <span style='color:#bb422a; font-size:20px' >" + podatci[questionCounter].title + "</span></strong>.</p><br><p>" + podatci[questionCounter].customData.grb_opis + "</p><br><img src='../iframe/grbovi/" + podatci[questionCounter].customData.grb_url + "'class='slikica2'/>",
+                    html: "<p style='text-align:center'><strong>Točan odgovor je <span style='color:#bb422a; font-size:20px' >" + podatci[questionCounter].title + "</span></strong>.</p><br><p>" + podatci[questionCounter].customData.grb_opis + "</p><br><img src='../karta/grbovi/" + podatci[questionCounter].customData.grb_url + "'class='slikica2'/>",
                     showCloseButton: true,
                     confirmButtonText: ' dalje',
                     backdrop: false,
@@ -497,7 +497,7 @@ $(document).ready(function () {
                 if (zastave==1){
                 swal({
                     title: "<span style='color:green'>Točno</span>",
-                    html: "<p style='text-align:center'>+" + broj + "</p><br><p>" + podatci[questionCounter].customData.zastava_opis + "</p><br><img src='../iframe/zastave/" + podatci[questionCounter].customData.zastava_url + "'class='slikica2'/>",
+                    html: "<p style='text-align:center'>+" + broj + "</p><br><p>" + podatci[questionCounter].customData.zastava_opis + "</p><br><img src='../karta/zastave/" + podatci[questionCounter].customData.zastava_url + "'class='slikica2'/>",
                     showCloseButton: true,
                     confirmButtonText: ' dalje',
                     backdrop: false,
@@ -507,7 +507,7 @@ $(document).ready(function () {
                 else{
                     swal({
                         title: "<span style='color:green'>Točno</span>",
-                        html: "<p style='text-align:center'>+" + broj + "</p><br><p>" + podatci[questionCounter].customData.grb_opis + "</p><br><img src='../iframe/grbovi/" + podatci[questionCounter].customData.grb_url + "'class='slikica2'/>",
+                        html: "<p style='text-align:center'>+" + broj + "</p><br><p>" + podatci[questionCounter].customData.grb_opis + "</p><br><img src='../karta/grbovi/" + podatci[questionCounter].customData.grb_url + "'class='slikica2'/>",
                         showCloseButton: true,
                         confirmButtonText: ' dalje',
                         backdrop: false,
@@ -538,7 +538,7 @@ $(document).ready(function () {
 
                 swal({
                     title: " <span style='color:#bb422a' >Netočno</span>",
-                    html: "<p style='text-align:center'><strong>Točan odgovor je <span style='color:#bb422a; font-size:20px' >" + podatci[questionCounter].title + "</span></strong>.</p><br><p>" + podatci[questionCounter].customData.zastava_opis + "</p><br><img src='../iframe/zastave/" + podatci[questionCounter].customData.zastava_url + " 'class='slikica2'/>",
+                    html: "<p style='text-align:center'><strong>Točan odgovor je <span style='color:#bb422a; font-size:20px' >" + podatci[questionCounter].title + "</span></strong>.</p><br><p>" + podatci[questionCounter].customData.zastava_opis + "</p><br><img src='../karta/zastave/" + podatci[questionCounter].customData.zastava_url + " 'class='slikica2'/>",
                     showCloseButton: true,
                     confirmButtonText: ' dalje',
                     backdrop: false,
@@ -547,7 +547,7 @@ $(document).ready(function () {
                 else{
                     swal({
                         title: " <span style='color:#bb422a' >Netočno</span>",
-                        html: "<p style='text-align:center'><strong>Točan odgovor je <span style='color:#bb422a; font-size:20px' >" + podatci[questionCounter].title + "</span></strong>.</p><br><p>" + podatci[questionCounter].customData.grb_opis + "</p><br><img src='../iframe/grbovi/" + podatci[questionCounter].customData.grb_url + " 'class='slikica2'/>",
+                        html: "<p style='text-align:center'><strong>Točan odgovor je <span style='color:#bb422a; font-size:20px' >" + podatci[questionCounter].title + "</span></strong>.</p><br><p>" + podatci[questionCounter].customData.grb_opis + "</p><br><img src='../karta/grbovi/" + podatci[questionCounter].customData.grb_url + " 'class='slikica2'/>",
                         showCloseButton: true,
                         confirmButtonText: ' dalje',
                         backdrop: false,

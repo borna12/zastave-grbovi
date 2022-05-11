@@ -116,7 +116,7 @@ $(".gumb").click(function () {
                         if (sadrzaj=="zastave-grbovi"){
                             swal({
                                 title: '' + $(this).attr('data-ime'),
-                                html: '<img src="../iframe/zastave/' + $(this).attr('data-img') + '" class="ikone2"/><p>' + $(this).attr('data-opis') + '</p><br><img src="../iframe/grbovi/' + $(this).attr('data-img2') + '" class="ikone2"/><br><p>' + $(this).attr('data-opis2') + '</p><br><p style="text-align:center"><a href="'+$(this).attr('data-url')+'" target="_blank">doznaj više o području</a></p>',
+                                html: '<img src="../karta/zastave/' + $(this).attr('data-img') + '" class="ikone2"/><p>' + $(this).attr('data-opis') + '</p><br><img src="../karta/grbovi/' + $(this).attr('data-img2') + '" class="ikone2"/><br><p>' + $(this).attr('data-opis2') + '</p><br><p style="text-align:center"><a href="'+$(this).attr('data-url')+'" target="_blank">doznaj više o području</a></p>',
                                 showCloseButton: true,
                                 confirmButtonText: 'dalje',
                                 /*allowOutsideClick: false,*/
@@ -130,7 +130,7 @@ $(".gumb").click(function () {
                         else{
                         swal({
                             title: '' + $(this).attr('data-ime'),
-                            html: '<img src="../iframe/' + sadrzaj + "/" + $(this).attr('data-img') + '" class="ikone"/><p>' + $(this).attr('data-opis') + '</p><br><p style="text-align:center"><a href="'+$(this).attr('data-url')+'" target="_blank">doznaj više o području</a></p>',
+                            html: '<img src="../karta/' + sadrzaj + "/" + $(this).attr('data-img') + '" class="ikone"/><p>' + $(this).attr('data-opis') + '</p><br><p style="text-align:center"><a href="'+$(this).attr('data-url')+'" target="_blank">doznaj više o području</a></p>',
                             showCloseButton: true,
                             confirmButtonText: 'dalje',
                             /*allowOutsideClick: false,*/
@@ -265,7 +265,7 @@ $(".gumb").click(function () {
                 if (sadrzaj=="zastave"){
                 this.$cards.each(function (k, v) {
                     frag += '<div class="card" data-id="' + v.id + '" data-url="https://www.enciklopedija.hr/Natuknica.aspx?ID=' + v.customData.doznaj_više_url + '" data-img="' + v.customData.zastava_url + '" data-opis="' + v.customData.zastava_opis + '" data-ime="' + v.customData.službeni_naziv + '"><div class="inside">\
-                    <div class="front"><img src="../iframe/'+ sadrzaj + "/" + v.customData.zastava_url + '"\
+                    <div class="front"><img src="../karta/'+ sadrzaj + "/" + v.customData.zastava_url + '"\
                     alt="' + v.id + '" data-ime="' + v.customData.službeni_naziv + '" /></div>\
                     <div class="back"><p class="brojevi">' + br + '</p></div></div>\
                     </div>';
@@ -277,7 +277,7 @@ $(".gumb").click(function () {
                 else if (sadrzaj=="grbovi"){
                     this.$cards.each(function (k, v) {
                         frag += '<div class="card" data-id="' + v.id + '" data-url="https://www.enciklopedija.hr/Natuknica.aspx?ID=' + v.customData.doznaj_više_url + '" data-img="' + v.customData.grb_url + '"data-opis="' + v.customData.grb_opis + '" data-ime="' + v.customData.službeni_naziv + '"><div class="inside">\
-                        <div class="front"><img src="../iframe/'+ sadrzaj + "/" + v.customData.grb_url + '"\
+                        <div class="front"><img src="../karta/'+ sadrzaj + "/" + v.customData.grb_url + '"\
                         alt="' + v.id + '" data-ime="' + v.customData.službeni_naziv + '" /></div>\
                         <div class="back"><p class="brojevi">' + br + '</p></div></div>\
                         </div>';
@@ -296,7 +296,7 @@ $(".gumb").click(function () {
                         if (Math.floor((Math.random() * 2) + 1) == 1) {
                             if ($.inArray(v.customData.zastava_opis, lista_imena) == -1) {
                                      frag += '<div class="card" data-id="' + v.id + '" data-url="https://www.enciklopedija.hr/Natuknica.aspx?ID=' + v.customData.doznaj_više_url + '" data-img="' + v.customData.zastava_url + '" data-img2="' + v.customData.grb_url + '"data-opis="' + v.customData.zastava_opis + '" data-opis2="'+v.customData.grb_opis+'" data-ime="' + v.customData.službeni_naziv + '"><div class="inside">\
-                    <div class="front"><img src="../iframe/zastave/' + v.customData.zastava_url + '"\
+                    <div class="front"><img src="../karta/zastave/' + v.customData.zastava_url + '"\
                     alt="' + v.id + '" data-ime="' + v.customData.službeni_naziv + '" /></div>\
                     <div class="back"><p class="brojevi">' + br + '</p></div></div>\
                     </div>';
@@ -308,7 +308,7 @@ $(".gumb").click(function () {
     
                             } else {
                                 frag += '<div class="card" data-id="' + v.id + '" data-url="https://www.enciklopedija.hr/Natuknica.aspx?ID=' + v.customData.doznaj_više_url + '" data-img="' + v.customData.zastava_url + 'data-img2="' + v.customData.grb_url + '"data-opis="' + v.customData.zastava_opis + '" data-opis2="'+v.customData.grb_opis+'" data-ime="' + v.customData.službeni_naziv + '"><div class="inside">\
-                                <div class="front"><img src="../iframe/grbovi/' + v.customData.grb_url + '"\
+                                <div class="front"><img src="../karta/grbovi/' + v.customData.grb_url + '"\
                                 alt="' + v.id + '" data-ime="' + v.customData.službeni_naziv + '" /></div>\
                                 <div class="back"><p class="brojevi">' + br + '</p></div></div>\
                                 </div>';
@@ -320,7 +320,7 @@ $(".gumb").click(function () {
                         } else {
                             if ($.inArray(v.customData.zastava_url, lista_slika) == -1) {
                                 frag += '<div class="card" data-id="' + v.id + '" data-url="https://www.enciklopedija.hr/Natuknica.aspx?ID=' + v.customData.doznaj_više_url + '" data-img="' + v.customData.zastava_url + '" data-img2="' + v.customData.grb_url + '" data-opis="' + v.customData.zastava_opis + '" data-opis2="'+v.customData.grb_opis+'" data-ime="' + v.customData.službeni_naziv + '"><div class="inside">\
-                                <div class="front"><img src="../iframe/grbovi/' + v.customData.grb_url + '"\
+                                <div class="front"><img src="../karta/grbovi/' + v.customData.grb_url + '"\
                                 alt="' + v.id + '" data-ime="' + v.customData.službeni_naziv + '" /></div>\
                                 <div class="back"><p class="brojevi">' + br + '</p></div></div>\
                                 </div>';
@@ -333,7 +333,7 @@ $(".gumb").click(function () {
     
                             } else {
                                 frag += '<div class="card" data-id="' + v.id + '" data-url="https://www.enciklopedija.hr/Natuknica.aspx?ID=' + v.customData.doznaj_više_url + '" data-img="' + v.customData.zastava_url + '" data-img2="' + v.customData.grb_url + '"data-opis="' + v.customData.zastava_opis + '" data-opis2="'+v.customData.grb_opis+'" data-ime="' + v.customData.službeni_naziv + '"><div class="inside">\
-                    <div class="front"><img src="../iframe/zastave/' + v.customData.zastava_url + '"\
+                    <div class="front"><img src="../karta/zastave/' + v.customData.zastava_url + '"\
                     alt="' + v.id + '" data-ime="' + v.customData.službeni_naziv + '" /></div>\
                     <div class="back"><p class="brojevi">' + br + '</p></div></div>\
                     </div>';
@@ -354,7 +354,7 @@ $(".gumb").click(function () {
             $.ajax({
                 'async': false,
                 'global': false,
-                'url': "../iframe/js/podatci.json",
+                'url': "../karta/js/podatci.json",
                 'dataType': "json",
                 'success': function (data) {
                     json = data;
