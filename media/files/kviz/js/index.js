@@ -395,6 +395,7 @@ $(document).ready(function () {
         if ($(this).attr('id') == "bez") {
             iskljuci_v = 1;
             $(".vrijeme").hide()
+            tajming=0
         } else if ($(this).attr('id') == "10") {
             tajming = 10;
             iskljuci_v=0
