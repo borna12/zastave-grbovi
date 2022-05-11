@@ -270,7 +270,7 @@ form {
     margin: 0 auto;
     width: 100%;
     cursor: pointer;
-    border: 1px solid #bb422a;
+    border: 1px solid #939EB3;
     border-radius: 5px;
     margin-bottom: 20px;
 }
@@ -410,7 +410,7 @@ footer {
     width: 100%;
     bottom: 0
 }
-.init-page__btn{display: none;}
+.init-page__btn,.podrucje{display: none;}
 .slikica2 {
     margin-top: 20px;
     max-width: 100%;

@@ -51,7 +51,7 @@ var initPage,
     slikica,
     clearHighlightsAndFeedback,
     prekidac, countdownTimer, bodovi = 0,
-    vrijeme = 0,
+    vrijeme = 0,iskljuci_v = 1,
     zastave, grbovi, zemlje2;
 zemlje = []
 
@@ -203,22 +203,7 @@ $(document).ready(function () {
         };
         zemlje2 = zemlje
     })    
-   
-    /*//europa
-    if (podrucje == "europa") {}
-    //samerika
-    else if (podrucje == "samerika") { var podatci = podatci.filter(a => a.color == "#E74354"); }
-    //južnaamerika
-    else if (podrucje == "jamerika") { var podatci = podatci.filter(a => a.color == "#F172AC"); }
-    //afrika
-    else if (podrucje == "afrika") { var podatci = podatci.filter(a => a.color == "#469025"); }
-    //azija
-    else if (podrucje == "azija") { var podatci = podatci.filter(a => a.color == "#FFCB00"); }
-    //Australija i oceanija
-    else if (podrucje == "australija") { var podatci = podatci.filter(a => a.color == "#4F9CA9"); }
-    //Nesamostalna područja jedino zastave
-    else if (podrucje == "nesamostalna") { var podatci = podatci.filter(a => a.color.indexOf(' #') !== -1); }
-*/
+
 
     function stvori(tekst, tekst2, tekst3) {
         do {
@@ -308,10 +293,11 @@ $(document).ready(function () {
         $("#opis").html("<p>" + podatci[questionCounter].customData.grb_opis + "</p>")
     }
         //slikica.attr("data-zoom-image", podatci[questionCounter].customData.zastava_url)
-        $(".vrijeme").html('<progress value="10" max="10" id="pageBeginCountdown"></progress><p><span id="ostalo">ostalo</span> je još <span id="pageBeginCountdownText">10 </span> <span id="sekunde">sekunda</span> za odgovor</p>')
+        
+        $(".vrijeme").html('<progress value="'+tajming+'" max="'+tajming+'" id="pageBeginCountdown"></progress><p><span id="ostalo">ostalo</span> je još <span id="pageBeginCountdownText">'+tajming+'</span> <span id="sekunde">sekunda</span> za odgovor</p>')
 
-        if (prekidac == 1) {
-            ProgressCountdown(10, 'pageBeginCountdown', 'pageBeginCountdownText').then(value => odgovor());
+        if (prekidac == 1 && iskljuci_v==0) {
+            ProgressCountdown(tajming, 'pageBeginCountdown', 'pageBeginCountdownText').then(value => odgovor());
         }
     };
 
@@ -392,14 +378,31 @@ $(document).ready(function () {
     continueBtn.hide();
 
     $(".tip").on('click', function () {
-        $(".init-page__btn").show()
+        $(".podrucje").show()
         $(".tip").hide()
         if(grbovi==1){
             $("#Nesamostalna").hide()
         }
     })
+
+    $(".podrucje").on('click', function () {
+        $(".init-page__btn").show()
+        $(".podrucje").hide()
+    })
     // Clicking on start button:
     startBtn.on('click', function () {
+
+        if ($(this).attr('id') == "bez") {
+            iskljuci_v = 1;
+            $(".vrijeme").hide()
+        } else if ($(this).attr('id') == "10") {
+            tajming = 10;
+            iskljuci_v=0
+        }
+        else if ($(this).attr('id') == "20") {
+            tajming = 20;
+            iskljuci_v=0
+        }
         newQuiz();
         // Advance to questions page
         initPage.hide();
@@ -448,10 +451,8 @@ $(document).ready(function () {
         highlightCorrectAnswerGreen();
         clearInterval(countdownTimer);
 
-
-        if (document.getElementById("pageBeginCountdown").value == "0") {
+        if (document.getElementById("pageBeginCountdown").value == "0" && iskljuci_v==0) {
             $("#krivo")[0].play();
-
             bodovi -= 10;
             if (zastave==1){
             swal({
@@ -460,7 +461,7 @@ $(document).ready(function () {
                 showCloseButton: true,
                 confirmButtonText: ' dalje',
                 backdrop: false,
-                allowOutsideClick: false, allowEscapeKey: false
+                allowOutsideClick: false, allowEscapeKey: false,allowEnterKey:false
             });}
             else{
                 swal({
@@ -469,19 +470,21 @@ $(document).ready(function () {
                     showCloseButton: true,
                     confirmButtonText: ' dalje',
                     backdrop: false,
-                    allowOutsideClick: false, allowEscapeKey: false
+                    allowOutsideClick: false, allowEscapeKey: false,allowEnterKey:false
                 });
             }
-            $(".swal2-confirm").click(function () {
+            $(".swal2-confirm").unbind("click").click(function () {
                 clearInterval(countdownTimer)
-                if (ide == 1) {
-                    ProgressCountdown(10, 'pageBeginCountdown', 'pageBeginCountdownText').then(value => odgovor());
+                nastavi()
+                if (ide == 1 && iskljuci_v == 0) {
+                    ProgressCountdown(tajming, 'pageBeginCountdown', 'pageBeginCountdownText').then(value => odgovor());
                 }
             })
-            $(".swal2-close").click(function () {
+            $(".swal2-close").unbind("click").click(function () {
                 clearInterval(countdownTimer)
-                if (ide == 1) {
-                    ProgressCountdown(10, 'pageBeginCountdown', 'pageBeginCountdownText').then(value => odgovor());
+                nastavi()
+                if (ide == 1 && iskljuci_v == 0) {
+                    ProgressCountdown(tajming, 'pageBeginCountdown', 'pageBeginCountdownText').then(value => odgovor());
                 }
             })
 
@@ -491,6 +494,10 @@ $(document).ready(function () {
 
                 // Increment the total correct answers counter
                 correctAnswersCounter++;
+
+                if (iskljuci_v == 1) {
+                    vrijeme = 0
+                }
                 bodovi += 10;
                 $("#tocno")[0].play();
                 broj = vrijeme + 10;
@@ -516,16 +523,18 @@ $(document).ready(function () {
                     });
                 }
 
-                $(".swal2-confirm").click(function () {
+                $(".swal2-confirm").unbind("click").click(function () {
                     clearInterval(countdownTimer)
-                    if (ide == 1) {
-                        ProgressCountdown(10, 'pageBeginCountdown', 'pageBeginCountdownText').then(value => odgovor());
+                    nastavi()
+                    if (ide == 1 && iskljuci_v == 0) {
+                        ProgressCountdown(tajming, 'pageBeginCountdown', 'pageBeginCountdownText').then(value => odgovor());
                     }
                 })
-                $(".swal2-close").click(function () {
+                $(".swal2-close").unbind("click").click(function () {
                     clearInterval(countdownTimer)
-                    if (ide == 1) {
-                        ProgressCountdown(10, 'pageBeginCountdown', 'pageBeginCountdownText').then(value => odgovor());
+                    nastavi()
+                    if (ide == 1 && iskljuci_v == 0) {
+                        ProgressCountdown(tajming, 'pageBeginCountdown', 'pageBeginCountdownText').then(value => odgovor());
                     }
                 })
 
@@ -555,16 +564,18 @@ $(document).ready(function () {
                     });
                 }
 
-                $(".swal2-confirm").click(function () {
+                $(".swal2-confirm").unbind("click").click(function () {
                     clearInterval(countdownTimer)
-                    if (ide == 1) {
-                        ProgressCountdown(10, 'pageBeginCountdown', 'pageBeginCountdownText').then(value => odgovor());
+                    nastavi()
+                    if (ide == 1 && iskljuci_v == 0) {
+                        ProgressCountdown(tajming, 'pageBeginCountdown', 'pageBeginCountdownText').then(value => odgovor());
                     }
                 })
-                $(".swal2-close").click(function () {
+                $(".swal2-close").unbind("click").click(function () {
                     clearInterval(countdownTimer)
-                    if (ide == 1) {
-                        ProgressCountdown(10, 'pageBeginCountdown', 'pageBeginCountdownText').then(value => odgovor());
+                    nastavi()
+                    if (ide == 1 && iskljuci_v == 0) {
+                        ProgressCountdown(tajming, 'pageBeginCountdown', 'pageBeginCountdownText').then(value => odgovor());
                     }
                 })
             }
@@ -572,7 +583,7 @@ $(document).ready(function () {
 
         // Substitute the submit button for the continue button:
         submitBtn.hide(300);
-        nastavi()
+      
     }
     // Clicking on the submit button:
 

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8">
     <title>Nauči zastave i grbove</title>
@@ -35,18 +34,22 @@
 <br>
             <h1 class="init-page__title" style="padding-top: 2%;">Nauči zastave i grbove</h1>
             <p class="opis">Kviz u kojem morate prepoznati zemlju za zadanu zastavu ili grb. Za svako
-                pitanje imate 10 sekundi za odgovor.</p><br>
+                pitanje imate 10 sekunda za odgovor.</p><br>
             
             <button class="tip btn" onClick="zastave=1;grbovi=0">zastave <i class="fas fa-flag" aria-hidden="true"></i></button>
             <button class="tip btn" onClick="zastave=0;grbovi=1">grbovi <i class="fa fa-shield" aria-hidden="true"></i></button>
             
-            <button class="init-page__btn btn" id="Afrika">Afrika</button>
-            <button class="init-page__btn btn" id="Australija">Australija i oceanija</button>
-            <button class="init-page__btn btn" id="Azija">Azija</button>
-            <button class="init-page__btn btn" id="Europa">Europa</button>
-            <button class="init-page__btn btn" id="JAmerika">Južna Amerika</button>
-            <button class="init-page__btn btn" id="SAmerika">Sjeverna Amerika</button>
-            <button class="init-page__btn btn" id="Nesamostalna">Nesamostalna područja</button>
+            <button class="btn podrucje" id="Afrika">Afrika</button>
+            <button class="btn podrucje" id="Australija">Australija i oceanija</button>
+            <button class="btn podrucje" id="Azija">Azija</button>
+            <button class="btn podrucje" id="Europa">Europa</button>
+            <button class="btn podrucje" id="JAmerika">Južna Amerika</button>
+            <button class="btn podrucje" id="SAmerika">Sjeverna Amerika</button>
+            <button class="btn podrucje" id="Nesamostalna">Nesamostalna područja</button>
+
+            <button class="init-page__btn btn" id="bez">igra bez vremenskoga ograničenja</button>
+            <button class="init-page__btn btn" id="10">10 sekunda po pitanju</button>
+            <button class="init-page__btn btn" id="20">20 sekunda po pitanju</button>
         </div>
     </div>
     <div class="questions-page">
@@ -109,7 +112,6 @@
                                 questions-page__answer-D"></span></li>
                 </div>
             </ul>
-
             <!--  ICON NAMES: x is   ion-close-round  , check is   ion-checkmark-round-->
             <div class="btn-holder">
                 <button class="questions-page__submit-btn btn mrzim">potvrdi
@@ -119,7 +121,6 @@
 
         </div>
     </div>
-
     <div class="results-page">
         <div class="container sakri" style="top: 60%;
                 position: relative;
@@ -134,16 +135,11 @@
                 bodova:</p>
             <h3 class="results-page__bodovi">postavljenih pitanja!</h3>
             <br>
-
             <p>
-                <button class="results-page__retake-btn btn" onclick="location.reload();">nova igra</button>
+            <button class="results-page__retake-btn btn" onclick="location.reload();">nova igra</button>
         </div>
     </div>
     <script src='js/lightzoom.js'></script>
-
     <script src="js/index.js"></script>
-
-
 </body>
-
 </html>
