@@ -145,6 +145,7 @@ body,html{margin: 0;overflow: hidden;}
     width: 100px;
     z-index: 100;
   }
+  .hero.is-info{background-color: #683129;}
   #hambi{padding: 0; margin: 0;height: 100vh;
     overflow-y: scroll;-ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none; /* for Firefox */
